@@ -1,0 +1,69 @@
+SOURCE ID: SRC005
+
+Organization:
+Citrus Research & Extension Knowledge Base (Horticultural Economics & Production Analysis)
+
+Source Title:
+Citrus Varietal Distribution, Agro-Climatic Siting Norms, and 1-Hectare Commercial Orchard Economics
+
+Source URL:
+https://icar.org.in / https://nhb.gov.in
+
+================================================================================
+1. GLOBAL VS. INDIAN CITRUS SPECIES DISTRIBUTION
+================================================================================
+Citrus Type      Global Share (%)   India Share (%)   Major Indian States
+--------------------------------------------------------------------------------
+Mandarin              13%                44%          Maharashtra (Nagpur), MP, North-East India
+Lime / Lemon          10%                28%          Andhra Pradesh, Karnataka, Rajasthan
+Sweet Orange          71%                18%          Punjab, Rajasthan, Uttar Pradesh, Maharashtra
+Others                 6%                10%          Various states
+
+================================================================================
+2. KEY COMMERCIAL CULTIVARS IN INDIA
+================================================================================
+- Nagpur Mandarin (Citrus reticulata): Central India (Vidarbha, Maharashtra / Chhindwara, MP); most famous Indian mandarin.
+- Kinnow: North-West India (Punjab / Rajasthan); high-juice processing hybrid.
+- Coorg Mandarin: South India (Karnataka / Tamil Nadu).
+- Mosambi (Sweet Orange - Citrus sinensis): Maharashtra; highly popular for fresh juice stalls & commercial juicing.
+- Kagzi Lime (Acid Lime - Citrus aurantifolia): Andhra Pradesh, Karnataka, Rajasthan; most widely cultivated lime.
+
+================================================================================
+3. AGRO-CLIMATIC & SITING DECISION REQUIREMENTS (DSS RULES)
+================================================================================
+Requirement            Optimum Value / Range     Tolerance & Critical Notes
+--------------------------------------------------------------------------------
+Temperature            13°C – 37°C               Below -4°C injures young plants & shoots
+Soil pH                5.5 – 7.5                 Can tolerate 4.0 – 9.0
+Soil Type              Sandy loam to Clay loam   Must be deep, permeable, well-drained
+Root Temperature       ~25°C optimum             Optimal root development and nutrient uptake
+Humidity               Low humidity              High humidity promotes fungal diseases
+
+CRITICAL SITING CRITERION:
+- Citrus is extremely sensitive to waterlogging. Good soil drainage is the #1 mandatory siting requirement.
+- Root rot and collar rot (caused by Phytophthora fungi) represent the single biggest disease threat in poorly drained or waterlogged soils.
+
+================================================================================
+4. 1-HECTARE (HA) COMMERCIAL PROJECT FINANCE & CAPITAL MODEL
+================================================================================
+Parameter                                 Value / Benchmark
+--------------------------------------------------------------------------------
+Total Project Cost (5-Year Development)   Rs. 1.00 – 1.10 Lakh / ha
+Bank Loan Portion (85%)                   ~Rs. 0.94 Lakh / ha
+Margin Money / Farmer Equity (15%)        ~Rs. 0.16 Lakh / ha
+Moratorium Period                         4 Years (First commercial harvest in Year 5)
+Repayment Period                          7 – 9 Years
+
+================================================================================
+5. YIELD, REVENUE & OPERATING ECONOMICS (Per Hectare)
+================================================================================
+Parameter                                 Value / Benchmark
+--------------------------------------------------------------------------------
+First Bearing                             Year 3 – 4 (Limited yield)
+Full Bearing Stage                        Year 6 – 7 onwards
+Yield (Full Bearing - Nagpur Mandarin)    12 – 15 Tonnes / ha
+Potential with Best Agronomic Practices   Up to 20 Tonnes / ha
+Prevailing Farm-Gate Price                Rs. 20 – 40 / kg (Rs. 2,000 – 4,000 / quintal)
+Gross Annual Income (Full Bearing)        Rs. 2.40 – 6.00 Lakh / ha / year
+Annual Operating Cost                     Rs. 0.60 – 0.80 Lakh / ha / year
+Net Annual Income (Farmer Profit)         Rs. 1.80 – 5.20 Lakh / ha / year

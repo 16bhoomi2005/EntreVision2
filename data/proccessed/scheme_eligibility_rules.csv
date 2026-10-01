@@ -1,0 +1,14 @@
+rule_id,scheme_id,rule_type,parameter,operator,value,description
+ER001,SCH001,ENTERPRISE_TYPE,enterprise_type,EQUALS,micro_food_processing,Must be an individual or group micro food processing enterprise
+ER002,SCH001,BENEFICIARY_CONTRIBUTION,minimum_equity_percent,GTE,10,Beneficiary must contribute at least 10% of eligible project cost
+ER003,SCH001,SUBSIDY_CAP,max_assistance_inr,EQUALS,1000000,Maximum credit-linked capital subsidy capped at Rs 10 Lakhs
+ER004,SCH001,FINANCING_TYPE,bank_loan_mandatory,EQUALS,true,Remaining project balance must be funded via commercial bank loan
+ER005,SCH002,ACTIVITY,activity_type,IN,commercial_horticulture|hi_tech_nursery,Must be commercial orchard plantation or accredited hi-tech nursery
+ER006,SCH002,TECHNICAL_STANDARD,nhb_standards,EQUALS,compliant,Planting material and infrastructure must adhere to NHB accreditation
+ER007,SCH003,ACTIVITY,activity_type,IN,packhouse|cold_chain|optical_sorting,Must be post-harvest sorting grading packing or cold storage facility
+ER008,SCH003,TECHNICAL_STANDARD,nccd_nhb_guidelines,EQUALS,compliant,Project must satisfy official NCCD/NHB technical specifications
+ER009,SCH004,ENTERPRISE_TYPE,enterprise_type,EQUALS,new_micro_enterprise,Applicant must be establishing a new micro-enterprise unit
+ER010,SCH004,PROJECT_LIMIT,max_manufacturing_cost_inr,LTE,5000000,Manufacturing project cost must not exceed Rs 50 Lakhs
+ER011,SCH004,PROJECT_LIMIT,max_services_cost_inr,LTE,2000000,Service project cost must not exceed Rs 20 Lakhs
+ER012,SCH005,ACTIVITY,activity_type,EQUALS,solar_agri_pump,Must be off-grid or grid-connected solar agricultural irrigation pump
+ER013,SCH005,LAND_DOCUMENT,7_12_extract,EQUALS,verified,Farmer must hold valid 7/12 land extract and open water source

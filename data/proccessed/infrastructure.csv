@@ -1,0 +1,9 @@
+facility_id,facility_name,facility_type,location_area,taluka_district,capacity_mt,subsidy_assistance_lakhs,key_relevance
+INF01,Kailasya Agro Industries Pvt. Ltd.,Cold Storage,Behind APMC Market Kalamna Yard,Nagpur,5000.00,50.00,Citrus wholesale market storage & trading
+INF02,Meghvya Cold Chain Pvt. Ltd.,Cold Chain & Storage,Bhewri Nagpur-Bhandara Road,Kamthi,5000.00,130.48,Large-scale citrus cold chain & pre-cooling
+INF03,Ras Frozen Foods Pvt. Ltd.,Frozen Food & Storage,Food Park MIDC Butibori,Hingna,3500.00,13.38,Frozen citrus pulp & juice concentrate
+INF04,B.K. Spices & Flowers,Processing & Cold Storage,Five Star Industrial Area MIDC,Hingna,733.64,19.98,Citrus aroma oil & spice processing
+INF05,Chhotalal Madhavji Cold Storage Pvt. Ltd.,Cold Storage,Dharangaon Kamthi-Kapri Highway,Kamthi,3034.15,84.98,Post-harvest storage & off-season holding
+INF06,ICAR-CCRI Agri-Business Incubator (ABI),Testing & Pilot Processing Lab,Amravati Road,Nagpur,Pilot Plant,-,Technology transfer & FSSAI product testing
+INF07,Dr. PDKV Regional Fruit Research Station,Rootstock & Demonstration Farm,Wandali Farm,Katol,Demonstration,-,Certified rootstock saplings & field training
+INF08,MIHAN Multi-Modal Cargo Hub,Export Air Cargo & Logistics,Wardha Road,Nagpur,Freight Terminal,-,Reefer container handling & international air export

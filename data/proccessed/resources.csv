@@ -1,0 +1,13 @@
+resource_id,category_group,user_label,internal_name,description
+RES01,Land & Agriculture,Farm land (1 Acre or more),Agricultural Land Parcel,Ownership or long-term lease of agricultural land suitable for orchard planting or nursery setup.
+RES02,Land & Agriculture,Reliable water supply,Borewell or Canal Irrigation Source,Operational borewell or open well with submersible pump capable of supporting drip irrigation.
+RES03,Land & Agriculture,Tractor or farm equipment,Tractor & Implements,Tractor with trolley and cultivator or orchard spray attachments.
+RES04,Land & Agriculture,Nursery or greenhouse structure,Shade Net House / Polyhouse,Climate-controlled polyhouse or 50% shade-net structure for sapling hardening.
+RES05,Business Infrastructure,Work shed / Room for business,Pucca Industrial Shed (500-2000 sq ft),Covered concrete floor structure for installing processing machinery or packing lines.
+RES06,Business Infrastructure,Reliable electricity supply,3-Phase Industrial Electric Connection (>15 HP),Dedicated 3-phase power supply for commercial motors and coolers and dryers.
+RES07,Business Infrastructure,Storage or packing space,Dry Storage Floor,Ventilated dry storage space for crates and packaging boxes and raw fruit holding.
+RES08,Business Infrastructure,Food-processing equipment,SS-304 Food-Grade Machinery,Stainless steel fruit pulper and kettle and pasteurizer and filling line.
+RES09,Business Infrastructure,Oil / By-product extraction unit,Distillation & Extraction Apparatus,Mechanical peel rasper and hydro-distillation still or solvent extraction unit.
+RES10,Transport & Storage,Vehicle for transporting goods,Commercial Pickup Truck / Mini-Van,Commercial goods transport vehicle (e.g. Tata Ace, Bolero Maxi Truck) for mandi delivery.
+RES11,Transport & Storage,Fruit sorting & grading machine,Mechanized Sorting & Waxing Line,Conveyor roller grading table with sizing drums and fungicide/wax sprayers.
+RES12,Transport & Storage,Cold storage access,Cold Room / Pre-Cooling Unit,Operational insulated cold storage chamber maintained at 8-10C and 90-95% RH.

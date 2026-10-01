@@ -1,0 +1,325 @@
+SOURCE ID: SRC004
+
+Organization:
+National Horticulture Board (NHB), Ministry of Agriculture & Farmers Welfare, Govt. of India
+
+Source Title:
+Commercial Cultivation of Mandarin Orange (1-Acre Bankable Model with Drip Irrigation)
+
+Source URL:
+http://nhb.gov.in
+
+================================================================================
+1. INTRODUCTION
+================================================================================
+Mandarin orange (Citrus reticulata) is most common among citrus fruits grown in India. It occupies nearly 40% of the total area under citrus cultivation in India. The most important commercial citrus species in India are mandarin (Citrus reticulata) 41%, sweet orange (Citrus sinensis) 23%, and acid lime (Citrus aurantifolia) 23%.
+
+================================================================================
+2. OBJECTIVE
+================================================================================
+To present a bankable one-acre model for high quality commercial cultivation of Mandarin Orange.
+
+================================================================================
+3. AREA, PRODUCTION & PRODUCTIVITY
+================================================================================
+- Maharashtra leads orange production with 124.2 thousand hectares area, 1117.5 thousand MT production, and 9.0 MT/ha productivity.
+- Important citrus belts in Maharashtra: Nagpur, Akola, Amravati, Wardha (Satpura hills of Vidarbha region).
+
+================================================================================
+4. MARKET ANALYSIS & STRATEGY
+================================================================================
+- India ranks 9th among top orange producing countries contributing 3% to world production.
+- Only 1.72% of India's orange production is currently exported.
+- Nagpur mandarin is renowned for high quality.
+- Mrig crop (monsoon blossom maturing in Feb-March) has great export potential as international arrivals of mandarin fruit in global markets are lowest during this period.
+- Major export destinations: Bangladesh (28,229 MT), Nepal, Oman, Sri Lanka, Canada, USA, UK, UAE.
+- Distant exports to Europe, Gulf, and SE Asia require refrigerated container ships and pre-cooling/post-harvest treatments.
+
+================================================================================
+5. PRODUCTION TECHNOLOGY
+================================================================================
+5.1 Agro-climatic Requirements:
+- Frost-free tropical/subtropical up to 1,500m MSL.
+- Rainfall: 100-120 cm.
+- Temperature: 10°C to 35°C.
+- Soil: Medium or light loamy soils with slightly heavy sub-soil, well-drained, pH 6.0-8.0.
+
+5.2 Spacing & Planting:
+- Spacing: 6m x 6m (Square system) accommodating 120 plants/acre.
+- Pit size: 50cm x 50cm x 50cm.
+- Propagation: T-budding / Shield budding in Jan-Feb; transplanting in July-August.
+
+5.3 Drip Irrigation & Water Requirements:
+- Young trees (1-4 years): 5 - 15 Litres/day/tree
+- Middle-aged trees (5-8 years): 35 - 105 Litres/day/tree
+- Mature trees (9+ years): 60 - 170 Litres/day/tree
+- Annual requirement: 900 - 1100 mm/year
+- 50-60% water saving with drip irrigation vs flood irrigation.
+
+5.4 Crop Regulation (Bahar Treatment):
+- Ambe Bahar: Feb flowering, harvest Nov-Jan
+- Mrig Bahar: June flowering, harvest Feb-April (preferred in Central India due to water conservation in April-May resting and higher export window prices).
+- Hast Bahar: Oct flowering.
+
+5.5 Intercropping:
+- Intercrops during gestation (Years 1-4): Pea, cowpea, gram generating ~Rs. 30,000/year/acre.
+
+5.6 Yield & Lifespan:
+- Bearing starts year 4; substantial yield from year 6.
+- Yield: 40 quintals (Year 5/6) increasing to 50-80 quintals in mature years (500-800 fruits/tree).
+- Average yield: 4.8 tonnes/acre (12 tonnes/ha).
+- Productive lifespan: 15-20 years after 5 gestation years.
+
+================================================================================
+6. POST-HARVEST MANAGEMENT
+================================================================================
+- Washing with chlorine (1000 ppm).
+- Stayfresh high shine wax (2.5%) with Bavistin (4000 ppm) + tunnel drying at 50-55°C.
+- Storage in evaporative cool chambers at 8-10°C & 90-95% RH for up to 3 weeks.
+- Degreening with Ethrel (50 ppm) within 5 days.
+- Packaging in ventilated corrugated fibreboard (CFB) cartons.
+
+================================================================================
+7. ITEMIZED BASIS OF COSTING & CAPITAL EXPENDITURE (1-Acre Model)
+================================================================================
+(Rs. in Thousands)
+
+Sr. No. | Particulars                          | Scale    | Unit Cost | Qty    | Total Cost (Rs.)
+--------------------------------------------------------------------------------------------------
+1.      | LAND & SITE DEVELOPMENT              |          |           |        |
+        | - Land Area                          | Acre     | -         | 1.00   | -
+        | - Land Levelling & Dressing          | Acre     | 4,000     | 1.00   | 4.00
+        | - Fencing & Gates                    | Per RFT  | 35        | 843    | 29.50
+        | SUB TOTAL (Land & Site Dev.)         |          |           |        | 33.50
+--------------------------------------------------------------------------------------------------
+2.      | BUILDINGS                            |          |           |        |
+        | - Store / Pump House                 | Sq. Ft.  | 150       | 200    | 30.00
+        | - Labour Shed                        | Sq. Ft.  | 50        | 100    | 5.00
+        | SUB TOTAL (Buildings)                |          |           |        | 35.00
+--------------------------------------------------------------------------------------------------
+3.      | PLANT & MACHINERY                    |          |           |        |
+        | - Borewell (Irrigation)              | Nos.     | 25,000    | 1      | 25.00
+        | - Submersible Pump & Electrical Inst.| Lump Sum | 20,000    | 1      | 20.00
+        | - Drip & Fertigation System          | Lump Sum | 26,500    | 1      | 26.50
+        | - Farm Equipment & Implements        | Lump Sum | 5,000     | 1      | 5.00
+        | SUB TOTAL (Plant & Machinery)        |          |           |        | 76.50
+--------------------------------------------------------------------------------------------------
+4.      | COST OF PLANTATION                   |          |           |        |
+        | - Planting Material                  | -        | -         | -      | 3.00
+        | - Inputs (Manures & Chemicals)       | -        | -         | -      | 10.90
+        | - Land Preparation / Labour          | -        | -         | -      | 12.50
+        | - Power Cost                         | -        | -         | -      | 3.60
+        | SUB TOTAL (Plantation Cost)          |          |           |        | 30.00
+--------------------------------------------------------------------------------------------------
+TOTAL PROJECT COST (Per Acre)                                                  | Rs. 175.00 Thousand
+==================================================================================================
+
+Means of Financing:
+├── Farmer's Equity Share (50%): Rs. 87.50 Thousand
+├── Government Capital Subsidy: Rs. 35.00 Thousand (NHM / MIDH)
+└── Bank Term Loan (30%): Rs. 52.50 Thousand (12% interest, 72-month moratorium, 11 semi-annual installments)
+
+================================================================================
+8. COST OF PRODUCTION & PROFITABILITY (Annexure-II)
+================================================================================
+(Rs. in Thousands)
+
+Particulars                     Year-I    Year-II   Year-III   Year-IV   Year-V to XV
+-------------------------------------------------------------------------------------
+INCOME / GROSS SALES            48.00     60.00      60.00      60.00       60.00
+-------------------------------------------------------------------------------------
+OPERATING COSTS:
+- Manures/Fertilizers/Chemicals 12.00     12.00      12.00      12.00       12.00
+- Direct Labour Cost             5.60      5.60       5.60       5.60        5.60
+- Power / Other Costs            3.60      3.60       3.60       3.60        3.60
+- Harvesting & Transportation    6.50      8.30       8.30       8.30        8.30
+- General Expenses               0.50      0.50       0.50       0.50        0.50
+TOTAL PRODUCTION COST           28.20     30.00      30.00      30.00       30.00
+-------------------------------------------------------------------------------------
+GROSS PROFIT                    19.80     30.00      30.00      30.00       30.00
+- Depreciation                   7.80      7.80       7.80       7.80        7.80
+- Interest on Term Loan          6.30      6.30       6.00       4.90        3.70
+PROFIT BEFORE & AFTER TAX        5.70     15.90      16.20      17.30       18.50
+RETAINED PROFIT                  5.70     15.90      16.20      17.30       18.50
+-------------------------------------------------------------------------------------
+NET CASH ACCRUAL                13.50     23.70      24.00      25.10       26.30
+=====================================================================================
+
+================================================================================
+9. PROJECTED PROFIT AND LOSS ACCOUNT & RETAINED EARNINGS (Annexure-VI)
+================================================================================
+(Rs. in Thousands)
+
+Particulars                     Year I    Year II   Year III   Year IV    Year V
+-------------------------------------------------------------------------------------
+Sales Realisation               48.00     60.00      60.00      60.00      60.00
+Total Operating Costs           28.20     30.00      30.00      30.00      30.00
+Gross Profit                    19.80     30.00      30.00      30.00      30.00
+- Depreciation                   7.80      7.80       7.80       7.80       7.80
+- Interest on Term Loan          6.30      6.30       6.00       4.90       3.70
+Profit Before & After Tax        5.70     15.90      16.20      17.30      18.50
+Retained Profit for the Year     5.70     15.90      16.20      17.30      18.50
+Net Cash Accruals               13.50     23.70      24.00      25.10      26.30
+-------------------------------------------------------------------------------------
+CUMULATIVE P&L ACCOUNT:
+- Opening Retained Balance       0.00      5.70      21.50      37.70      55.00
+- Closing Retained Earnings      5.70     21.50      37.70      55.00      73.50
+=====================================================================================
+
+================================================================================
+10. PROJECTED BALANCE SHEET (Annexure-IV)
+================================================================================
+(Rs. in Thousands)
+
+Particulars                     Year 0    Year I    Year II   Year III   Year IV
+-------------------------------------------------------------------------------------
+LIABILITIES:
+- Farmer's Share (Equity)        87.50     87.50      87.50      87.50      87.50
+- Capital Subsidy                35.00     35.00      35.00      35.00      35.00
+- Reserves & Surpluses            -         5.70      21.50      37.70      55.00
+- Bank Term Loan                 52.50     52.50      43.00      33.40      23.00
+TOTAL LIABILITIES               175.00    180.70     187.00     193.60     201.40
+-------------------------------------------------------------------------------------
+ASSETS:
+- Fixed Assets (Gross Block)    175.00    175.00     175.00     175.00     175.00
+- Less Cumulative Depreciation    -         7.80      15.60      23.50      31.30
+- Net Block                     175.00    167.20     159.40     151.50     143.70
+- Cash & Bank Balance             -        13.50      27.60      42.10      57.60
+TOTAL ASSETS                    175.00    180.70     187.00     193.60     201.40
+=====================================================================================
+
+================================================================================
+11. CASH FLOW STATEMENT (Annexure-V)
+================================================================================
+(Rs. in Thousands)
+
+PARTICULARS                     Year 0    Year I    Year II   Year III   Year IV
+-------------------------------------------------------------------------------------
+SOURCES OF FUNDS:
+- Increase in Farmer's Share     87.50       -         -         -          -
+- Increase in Capital Subsidy    35.00       -         -         -          -
+- Increase in Term Loan          52.50       -         -         -          -
+- Net Profit After Tax             -        5.67      15.87      16.16      17.30
+- Depreciation (Non-Cash)          -        7.83       7.83       7.83       7.83
+TOTAL SOURCES                   175.00     13.50      23.70      23.99      25.13
+-------------------------------------------------------------------------------------
+DEPLOYMENT OF FUNDS:
+- Increase in Fixed Assets      175.00       -         -         -          -
+- Decrease in Term Loan (Pr.)      -         -         9.55       9.55       9.55
+TOTAL DEPLOYMENT                175.00       -         9.56       9.56       9.56
+-------------------------------------------------------------------------------------
+CASH BALANCES:
+- Opening Cash Balance             -         -        13.50      27.63      42.07
+- Net Cash Surplus                 -       13.50      14.14      14.43      15.58
+- Closing Cash Balance             -       13.50      27.63      42.07      57.64
+=====================================================================================
+
+================================================================================
+12. REPAYMENT OF TERM LOAN & HALF-YEARLY SCHEDULE (Annexure-VII & VII-A)
+================================================================================
+(Rs. in Thousands)
+
+Loan Terms:
+- Term Loan Amount:         Rs. 52.50 Thousand
+- Moratorium Period:        72 Months (6 Years Gestation)
+- Repayment Period:         5 Years (Years 7 to 11)
+- Gestation Period:         60 Months
+- Installment Amount:       Rs. 4.77 Thousand (Half-Yearly)
+- Number of Installments:   11 Half-Yearly
+- Interest Rate:            12% per annum
+
+Half-Yearly Amortization Schedule:
+Year       Half-Year   Principal Opening   Installment   Outstanding Principal   Half-Yr Interest   Total Yearly Interest
+-------------------------------------------------------------------------------------------------------------------------
+Year 0         1            52.50             0.00               52.50                3.15                  3.15
+               2            52.50             0.00               52.50                3.15                  -
+Year 1         1            52.50             0.00               52.50                3.15                  6.30
+               2            52.50             0.00               52.50                3.15                  -
+Year 2         1            52.50             0.00               52.50                3.15                  6.30
+               2            52.50             0.00               52.50                3.15                  -
+Year 3         1            52.50             0.00               52.50                3.15                  6.30
+               2            52.50             0.00               52.50                3.15                  -
+Year 4         1            52.50             0.00               52.50                3.15                  6.30
+               2            52.50             0.00               52.50                3.15                  -
+Year 5         1            52.50             0.00               52.50                3.15                  6.30
+               2            52.50             0.00               52.50                3.15                  -
+Year 6         1            52.50             0.00               52.50                3.15                  6.01
+               2            52.50             0.00               52.50                3.15                  -
+Year 7         1            52.50             4.77               47.73                2.86                  4.87
+               2            47.73             4.77               42.95                2.58                  -
+Year 8         1            42.95             4.77               38.18                2.29                  3.72
+               2            38.18             4.77               33.41                2.00                  -
+Year 9         1            33.41             4.77               28.64                1.72                  2.58
+               2            28.64             4.77               23.86                1.43                  -
+Year 10        1            23.86             4.77               19.09                1.15                  0.86
+               2            19.09             4.77               14.32                0.86                  -
+Year 11        1            14.32             4.77                9.55                0.57                  0.29
+               2             9.55             4.77                4.77                0.29                  -
+Year 12        1             4.77             4.77                0.00                0.00                  0.00
+-------------------------------------------------------------------------------------------------------------------------
+TOTAL PRINCIPAL REPAID: Rs. 52.50 Thousand
+
+Yearly Debt Coverage Matrix (Annexure-VII A):
+Particulars                     Year 1    Year 2    Year 3    Year 4    Year 5
+------------------------------------------------------------------------------
+Net Accruals                    19.80     30.00     30.00     30.00     30.00
+Loan Balance at Year End        52.50     42.95     33.41     23.86     14.32
+Total Repayment (Principal+Int)  6.30     15.85     15.56     14.41     13.27
+- Principal Portion              0.00      9.55      9.55      9.55      9.55
+- Interest Portion               6.30      6.30      6.01      4.87      3.72
+NET SURPLUS AFTER DEBT SERVICE  13.50     14.15     14.44     15.59     16.73
+==============================================================================
+
+================================================================================
+13. DEPRECIATION SCHEDULE (Annexure-VIII)
+================================================================================
+(Rs. in Thousands)
+
+Particulars           Value (Rs.)   Depreciation Rate (%)   Annual Depreciation (Rs.)
+-------------------------------------------------------------------------------------
+Buildings                68.50              3.34%                    2.29
+Plant & Machinery        76.50              5.28%                    4.04
+Cost of Plantation       30.00              5.00%                    1.50
+-------------------------------------------------------------------------------------
+TOTAL                   175.00                                       7.83
+
+================================================================================
+14. PAYBACK PERIOD SCHEDULE (Annexure-XI)
+================================================================================
+(Rs. in Thousands)
+
+Particulars                  Year I    Year II   Year III   Year IV    Year V to VIII
+-------------------------------------------------------------------------------------
+Capital Investment           175.00       -         -          -             -
+Net Cash Accruals             13.50     23.70      24.00      25.10        26.30/yr
+Cumulative Cash Inflow        13.50     37.20      61.20      86.30       175.00+
+-------------------------------------------------------------------------------------
+PAYBACK PERIOD:              7.73 Years
+=====================================================================================
+
+================================================================================
+15. BREAK-EVEN ANALYSIS AT OPTIMUM LEVEL (Annexure-XII)
+================================================================================
+(Rs. in Thousands - Calculated at Year III Optimum Bearing Level)
+
+Particulars                               Amount (Rs. in Thousands)
+--------------------------------------------------------------------
+Gross Sales Realisation                              60.00
+Fixed Cost (incl. Depreciation & Interest)           43.80
+Variable Cost                                         0.00
+Contribution                                         60.00
+--------------------------------------------------------------------
+Break Even Point (% of capacity/sales)               73.10%
+Cash Break Even Point (%)                            60.00%
+====================================================================
+
+================================================================================
+16. FINANCIAL VIABILITY METRICS SUMMARY
+================================================================================
+- Internal Rate of Return (IRR): 18.1%
+- Benefit-Cost Ratio (BCR): 1.20
+- Average Debt Service Coverage Ratio (DSCR): 2.35 (Safe for Bank Financing)
+- Payback Period: 7.73 Years
+- Break-even Point: Reached in 3rd Year (73.10% of gross sales)
+- Cash Break-even Point: 60.00%
+- Annual Gross Returns at bearing: Rs. 48,000 to Rs. 60,000+/acre/year + Rs. 30,000/year during gestation.

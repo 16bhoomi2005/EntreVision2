@@ -1,0 +1,16 @@
+skill_id,category_group,user_label,internal_name,description
+SKL01,Farming & Agriculture,Growing plants / managing a nursery,Citrus Budding Grafting & STG Nursery Protocol,Skills in preparing containerized citrus saplings and vegetative propagation by T-budding or shoot tip grafting.
+SKL02,Farming & Agriculture,Managing irrigation and water,Drip Irrigation & Fertigation Operation,Skills in operating micro-irrigation systems and scheduling water and fertilizer dosage for orchards.
+SKL03,Farming & Agriculture,Taking care of fruit trees,Orchard Pruning Training & Canopy Management,Skills in tree shaping and removing water sprouts dead wood and canopy training for yield optimization.
+SKL04,Farming & Agriculture,Managing crop pests and diseases,Integrated Pest Management (IPM) & Phytophthora Control,Knowledge of diagnosing citrus blackfly and Phytophthora root rot and applying bio-pesticides.
+SKL05,Storage & Logistics,Harvesting and handling fruits,Mechanical Harvesting & Fruit Handling,Techniques for gentle harvesting with clippers and field-box handling to prevent bruising.
+SKL06,Storage & Logistics,Sorting and packing fruits,Optical Sorting & Post-Harvest Waxing Line Operation,Operating automated grading tables and applying stayfresh wax coatings and corrugated box packing.
+SKL07,Storage & Logistics,Managing cold storage,Cold Room & Refrigeration Maintenance,Maintaining evaporative cool chambers and controlled atmosphere temperatures (8-10C, 90-95% RH).
+SKL08,Processing & Production,Making fruit drinks & food products,Fruit Pulping Pasteurization & Juice Bottling,Operating fruit washers and juice extractors and thermal pasteurizers for FSSAI-compliant bottling.
+SKL09,Processing & Production,Maintaining food hygiene & safety,Food Safety Hygiene & FSSAI Compliance,Ensuring sanitary processing standards and lab testing for microbial limits and shelf-life compliance.
+SKL10,Processing & Production,Processing fruits into powders,Spray Drying & Powder Processing,Operating industrial spray dryers and reconstituting fruit juice powders and premixes.
+SKL11,Processing & Production,Making products from peels & oils,Essential Oil Extraction & Pectin Recovery,Mechanical rasping and cold-pressing or steam distillation for citrus essential oils and albedo pectin.
+SKL12,Processing & Production,Working with biological products,Bio-Fermentation & Microbial Formulation,Culturing Trichoderma harzianum and organic bio-fertilizers from agricultural waste.
+SKL13,Business & Sales,Handling export paperwork,Export Phytosanitary & APEDA Documentation,Managing export documentation and customs clearance and phytosanitary certificates for Gulf/EU trade.
+SKL14,Business & Sales,Buying & selling in wholesale markets,B2B Wholesale Trading & Mandi Operations,Navigating APMC auction mechanisms and price discovery and bulk fruit procurement.
+SKL15,Business & Sales,Selling products directly to customers,D2C Branding E-Commerce & Retail Packaging,Branding premium packaged goods and retail distribution and digital customer acquisition.

@@ -1,0 +1,11 @@
+location_id,location_name,location_type,district,key_advantages,supported_sectors
+LOC001,Katol,High-Density Orchard Belt,Nagpur,"Highest concentration of orange orchards, fertile black/loamy soil, PDKV Fruit Research Station","Nurseries, Micro-Budding, Custom Hiring Pruning, Solar Cold Rooms, 1-Acre Cultivation"
+LOC002,Narkhed,High-Density Orchard Belt,Nagpur,"Intense citrus cultivation, proximity to MP border, progressive growers","High-Density Cultivation, Electrostatic Spraying, Drone Services, Aggregation"
+LOC003,Kalmeshwar,Agro-Industrial Belt,Nagpur,"Direct highway connectivity to Nagpur, semi-urban industrial base","Polyhouses, RTS Bottling, Confectionery, Candied Peel"
+LOC004,Mohpa,Agro-Processing Corridor,Nagpur,"Proximity to orchards and highway, established beverage bottling hub (Paliwal Udyog)","RTS Juice Bottling, Carbonated Citrus Drinks, Primary Pulping"
+LOC005,Kalamna APMC,Market & Trading Hub,Nagpur,"Asia's largest citrus wholesale market, highest national trade volume","Wholesale Trading, Export Aggregation, Waxing & Sorting, Refrigerator Storage"
+LOC006,Warud-Morshi Corridor,Citrus Packing Corridor,Amravati Border,"Major citrus assembly market, high daily arrivals, packhouse infrastructure","Mechanized Optical Grading, Washing & Waxing, 3-Tier Packhouse"
+LOC007,Hingna MIDC,Industrial SME Cluster,Nagpur,"Subsidized industrial land, 3-phase power, proximity to city market & Agri-Business Incubator (ABI)","D2C Cold-Pressed Juices, Nutri-Jelly, Artisan Marmalades, Bio-Fertilizers"
+LOC008,Butibori MIDC,Mega Industrial Zone,Nagpur,"Largest industrial estate in Asia, 5-star MIDC, CETP, high-capacity water/power","Spray-Dried Powder Plant, Essential Oil Extraction, Pectin Plant, Aseptic Puree"
+LOC009,MIHAN SEZ & Multi-Modal Logistics,Export Logistics Hub,Nagpur,"International air cargo, container freight rail, SEZ tax incentives","GI-Tagged Citrus Export, Reefer Logistics, CA Container Shipping"
+LOC010,Saoner & Ramtek,Agri & Eco-Tourism Belt,Nagpur,"Scenic orchard slopes, water reservoirs, religious/historical tourist flow","Rootstock Seed Supply, Citrus Agri-Tourism, Experiential Farm Stays"

@@ -1,0 +1,61 @@
+SOURCE ID: SRC007
+
+Organization:
+Ministry of Food Processing Industries (MoFPI), Ministry of Agriculture & Farmers Welfare (NHB/MIDH), Khadi and Village Industries Commission (KVIC), Maharashtra Energy Development Agency (MEDA)
+
+Source Title:
+Government Financial Assistance, Credit-Linked Capital Subsidies, and Scheme Eligibility Guidelines (2025-26)
+
+Source URLs:
+- PMFME: https://mofpi.gov.in/pmfme
+- MIDH 2025 Guidelines: https://nhb.gov.in
+- PMEGP: https://www.kviconline.gov.in/pmegpeportal
+- MEDA MahaUrja: https://www.mahaurja.com
+
+================================================================================
+1. PMFME (PRADHAN MANTRI FORMALISATION OF MICRO FOOD PROCESSING ENTERPRISES)
+================================================================================
+- Department: Ministry of Food Processing Industries (MoFPI)
+- Focus in Nagpur: One District One Product (ODOP) - Citrus / Mandarin Orange
+- Pattern of Assistance: 35% Credit-Linked Capital Subsidy on eligible project cost
+- Maximum Ceiling: Rs. 10.00 Lakhs per individual micro-enterprise
+- Beneficiary Contribution: Minimum 10% of total project cost (equity)
+- Loan Requirement: Mandatory commercial bank term loan for the remaining project balance
+- Eligibility: Existing and new individual micro food processing units, FPOs, SHGs, and Producer Co-operatives
+- Validation Status: VERIFIED
+
+================================================================================
+2. MIDH (MISSION FOR INTEGRATED DEVELOPMENT OF HORTICULTURE) / NHB
+================================================================================
+- Department: Ministry of Agriculture and Farmers Welfare
+- Applicable Activities:
+  a) Commercial Horticulture & Hi-Tech Nurseries (Component SCH002)
+  b) Post-Harvest Management, Packhouses & Cold Chain (Component SCH003)
+- Pattern of Assistance: Component-specific capital investment subsidy
+  - Hi-Tech Nurseries: 50% of cost norm (up to Rs. 12.50 Lakhs/ha)
+  - Packhouses / Pre-cooling / Cold Rooms: 35% for general areas, 50% for SC/ST/FPO projects in hilly/scheduled areas
+- Technical Standards: Must comply with mandatory NHB/NCCD technical standards
+- Validation Status: VERIFIED (NHB MIDH 2025 Guidelines)
+
+================================================================================
+3. PMEGP (PRIME MINISTER'S EMPLOYMENT GENERATION PROGRAMME)
+================================================================================
+- Department: Ministry of MSME / KVIC (Khadi and Village Industries Commission)
+- Applicable Activity: Setting up new micro-enterprises in manufacturing or services
+- Project Cost Limits: Up to Rs. 50 Lakhs for Manufacturing, up to Rs. 20 Lakhs for Services
+- Margin Money Subsidy Rates:
+  - General Category: 15% (Urban) / 25% (Rural) | Own Contribution: 10%
+  - Special Category (SC/ST/OBC/Women/Ex-Servicemen): 25% (Urban) / 35% (Rural) | Own Contribution: 5%
+- Loan Requirement: Bank loan mandatory for remaining project balance
+- Validation Status: VERIFY_REQUIRED (Component-specific verification against latest KVIC portal)
+
+================================================================================
+4. PM-KUSUM / MAHAURJA SAUR KRUSHI PUMP YOJANA
+================================================================================
+- Department: MNRE / Maharashtra Energy Development Agency (MEDA) & Mahavitaran
+- Applicable Activity: Off-grid and Grid-connected Solar Agricultural Irrigation Pumps (3 HP to 7.5 HP)
+- Financial Assistance Structure:
+  - Central Financial Assistance (MNRE): 30%
+  - State Government Share (Maharashtra): 60% – 65% (Category-dependent)
+  - Farmer / Beneficiary Contribution: 5% (SC/ST) to 10% (General category)
+- Validation Status: VERIFY_REQUIRED (Category-specific verification against MEDA state notifications)

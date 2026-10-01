@@ -1,0 +1,33 @@
+SOURCE ID: SRC006
+
+Organization:
+Department of Agriculture & Horticulture, Government of Maharashtra / National Horticulture Mission (NHM)
+
+Source Title:
+Sanctioned Cold Storage and Agro-Processing Infrastructure Facilities in Nagpur District
+
+Source URL:
+https://krishi.maharashtra.gov.in / https://nhb.gov.in
+
+================================================================================
+1. COLD STORAGE & AGRO-PROCESSING FACILITIES IN NAGPUR DISTRICT
+================================================================================
+
+Sr. No. | Facility Name                              | Location Area & Taluka                     | Sanction Year | Subsidy (Rs. Lakhs) | Capacity (MT)
+----------------------------------------------------------------------------------------------------------------------------------------------
+1.      | Kailasya (Calypso) Agro Industries Pvt. Ltd.| Behind APMC Market, Kalamna Yard, Nagpur   | 2007-08       | Rs. 50.00 Lakhs     | 5,000.00 MT
+2.      | Meghvya (Melghat) Cold Chain Pvt. Ltd.     | At Post Bhewri (Bhovari), Taluka Kamthi    | 2010-11       | Rs. 130.48 Lakhs    | 5,000.00 MT
+3.      | Ras Frozen Foods Pvt. Ltd.                 | Food Park, MIDC Butibori, Taluka Hingna    | 2011-12       | Rs. 13.38 Lakhs     | 3,500.00 MT
+4.      | B.K. Spices & Flowers                      | Plot FP-8, Five Star Industrial Area, MIDC | 2017-18       | Rs. 19.98 Lakhs     | 733.64 MT
+5.      | Chhotalal Madhavji Cold Storage Pvt. Ltd.  | Gat No. 129, Dharangaon, Taluka Kamthi     | 2020-21       | Rs. 84.98 Lakhs     | 3,034.15 MT
+----------------------------------------------------------------------------------------------------------------------------------------------
+NAGPUR DISTRICT TOTAL: 5 Units | Total Assistance: Rs. 298.82 Lakhs | Total Storage Capacity: 17,267.79 MT
+MAHARASHTRA STATE TOTAL: 183 Units | Total Assistance: Rs. 11,550.42 Lakhs | Total Storage Capacity: 4,01,393.84 MT
+
+================================================================================
+2. INSTITUTIONAL & RESEARCH INFRASTRUCTURE IN NAGPUR REGION
+================================================================================
+6. ICAR - Central Citrus Research Institute (CCRI) Agri-Business Incubator (ABI): Amravati Road, Nagpur (Testing labs, Pilot Processing Plants, Technology Licensing).
+7. Dr. PDKV Regional Fruit Research Station: Wandali Farm, Taluka Katol, Nagpur (Commercial Citrus Multiplication & Training Farm).
+8. MIHAN Multi-Modal International Cargo Hub: Wardha Road, Nagpur (Air Cargo & Container Freight Rail Logistics).
+9. Kalamna APMC Citrus Market Yard: Central Avenue, Nagpur (Asia's Largest Citrus Mandi).
