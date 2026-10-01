@@ -14,7 +14,6 @@ import {
   ArrowLeft,
   Compass,
   Layers,
-  Factory,
   Wheat,
   ExternalLink,
   ShieldCheck,
@@ -248,49 +247,6 @@ const FLEXIBILITY_OPTIONS = [
   },
 ];
 
-const PRIORITY_OPTIONS = [
-  {
-    id: "raw_material",
-    label: "Farm-Gate Orange Supply (High Crop Density)",
-    icon: "🍊",
-  },
-  {
-    id: "mandi_access",
-    label: "APMC Mandi & Direct Wholesale Trading Access",
-    icon: "🏪",
-  },
-  {
-    id: "cold_storage",
-    label: "Cold Storage & Pre-Cooling Units (within 15 km)",
-    icon: "❄️",
-  },
-  {
-    id: "industrial_midc",
-    label: "MIDC Industrial Zone with Continuous 3-Phase Power",
-    icon: "🏭",
-  },
-  {
-    id: "logistics_highway",
-    label: "National Highway & Rail Logistics Connectivity",
-    icon: "🚛",
-  },
-  {
-    id: "research_labs",
-    label: "ICAR-CCRI / KVK Research & Testing Support",
-    icon: "🔬",
-  },
-  {
-    id: "labor_force",
-    label: "Skilled Agro-Food Grading & Sorting Workforce",
-    icon: "👥",
-  },
-  {
-    id: "export_terminal",
-    label: "APEDA Export Inspection & Multimodal Freight",
-    icon: "✈️",
-  },
-];
-
 export default function LocationStep({
   locationData = DEFAULT_LOCATION_STATE,
   locationsList = [],
@@ -310,19 +266,6 @@ export default function LocationStep({
       locationData: {
         ...data,
         selectedCluster: clusterKey,
-      },
-    });
-  };
-
-  const togglePriority = (id) => {
-    const current = data.locationPriorities || [];
-    const next = current.includes(id)
-      ? current.filter((item) => item !== id)
-      : [...current, id];
-    onChange({
-      locationData: {
-        ...data,
-        locationPriorities: next,
       },
     });
   };
@@ -715,44 +658,6 @@ export default function LocationStep({
           </div>
         </div>
 
-        {/* ====================================================================
-            4. ⚡ LOCATION PRIORITIES & INFRASTRUCTURE NEEDS
-           ==================================================================== */}
-        <div className="doc-category-box">
-          <div className="doc-category-header">
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <Factory size={20} color="var(--electric-blue)" />
-              <div>
-                <strong style={{ fontSize: "1.05rem", color: "var(--text-heading)" }}>
-                  ⚡ INFRASTRUCTURE PRIORITIES ("WHAT MATTERS TO YOU?")
-                </strong>
-                <span style={{ fontSize: "0.78rem", color: "var(--muted)", display: "block" }}>
-                  Select the critical local facilities your business model depends on
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
-            {PRIORITY_OPTIONS.map((p) => {
-              const isSelected = (data.locationPriorities || []).includes(p.id);
-              return (
-                <div
-                  key={p.id}
-                  className={`goal-checkbox-card ${isSelected ? "checked" : ""}`}
-                  style={{ padding: "10px 14px", fontSize: "0.84rem" }}
-                  onClick={() => togglePriority(p.id)}
-                >
-                  <div className="custom-checkbox-square" style={{ width: 18, height: 18 }}>
-                    {isSelected && <span style={{ fontSize: "0.75rem" }}>✓</span>}
-                  </div>
-                  <span style={{ fontSize: "1.1rem" }}>{p.icon}</span>
-                  <span style={{ fontWeight: isSelected ? 700 : 500 }}>{p.label}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
 
         {/* ====================================================================
             5. 💡 LIVE HYPER-LOCAL ECOSYSTEM INTELLIGENCE CARD
