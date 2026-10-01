@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Sparkles,
   ArrowRight,
@@ -9,7 +8,6 @@ import {
   Calendar,
   ShieldAlert,
   Users,
-  Target,
   GraduationCap,
   CheckCircle2,
   HelpCircle,
@@ -108,16 +106,6 @@ const STARTING_APPROACH_OPTIONS = [
   { id: "open_collaboration", label: "Open to collaboration / FPO", desc: "Interested in FPO aggregation or joint ventures", icon: "🌐" },
 ];
 
-const CORE_PRIORITIES_OPTIONS = [
-  { id: "low_investment", label: "Low initial investment & fast breakeven", icon: "💵" },
-  { id: "existing_resources", label: "Leverage my existing land / shed / tractor", icon: "🚜" },
-  { id: "existing_skills", label: "Directly utilize my current skills", icon: "🎯" },
-  { id: "steady_income", label: "Steady predictable monthly cash flow", icon: "📈" },
-  { id: "high_growth", label: "High long-term scalability & margins", icon: "🚀" },
-  { id: "local_market", label: "Strong local Vidarbha / Nagpur mandi demand", icon: "📍" },
-  { id: "social_impact", label: "Support local farmers & environmental impact", icon: "🌱" },
-];
-
 const LEARNING_OPTIONS = [
   {
     id: "willing_to_learn",
@@ -163,14 +151,6 @@ export default function BusinessPreferencesStep({
       current = current.includes(id) ? current.filter((t) => t !== id) : [...current, id];
     }
     onChange({ preferencesData: { ...data, businessTypes: current } });
-  };
-
-  const togglePriority = (id) => {
-    const current = data.corePriorities || [];
-    const next = current.includes(id)
-      ? current.filter((p) => p !== id)
-      : [...current, id];
-    onChange({ preferencesData: { ...data, corePriorities: next } });
   };
 
   const handleSubmit = (e) => {
@@ -452,46 +432,7 @@ export default function BusinessPreferencesStep({
         </div>
 
         {/* ====================================================================
-            7. 🎯 WHAT MATTERS MOST TO YOU? (Core Priorities)
-           ==================================================================== */}
-        <div className="doc-category-box">
-          <div className="doc-category-header">
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <Target size={20} color="var(--ok)" />
-              <div>
-                <strong style={{ fontSize: "1.05rem", color: "var(--text-heading)" }}>
-                  7. WHAT MATTERS MOST TO YOU?
-                </strong>
-                <span style={{ fontSize: "0.78rem", color: "var(--muted)", display: "block" }}>
-                  Select the key outcomes and criteria defining success for you
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
-            {CORE_PRIORITIES_OPTIONS.map((p) => {
-              const isSelected = (data.corePriorities || []).includes(p.id);
-              return (
-                <div
-                  key={p.id}
-                  className={`goal-checkbox-card ${isSelected ? "checked" : ""}`}
-                  style={{ padding: "10px 14px", fontSize: "0.84rem" }}
-                  onClick={() => togglePriority(p.id)}
-                >
-                  <div className="custom-checkbox-square" style={{ width: 18, height: 18 }}>
-                    {isSelected && <span style={{ fontSize: "0.75rem" }}>✓</span>}
-                  </div>
-                  <span style={{ fontSize: "1.1rem" }}>{p.icon}</span>
-                  <span style={{ fontWeight: isSelected ? 700 : 500 }}>{p.label}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* ====================================================================
-            8. 🎓 WILLINGNESS TO BUILD NEW SKILLS (Mentor Concept Addition)
+            7. 🎓 WILLINGNESS TO BUILD NEW SKILLS (Mentor Concept Addition)
            ==================================================================== */}
         <div
           className="doc-category-box"
@@ -505,7 +446,7 @@ export default function BusinessPreferencesStep({
               <GraduationCap size={20} color="var(--cyan)" />
               <div>
                 <strong style={{ fontSize: "1.05rem", color: "var(--text-heading)" }}>
-                  8. ARE YOU WILLING TO BUILD NEW SKILLS IF AN OPPORTUNITY REQUIRES THEM?
+                  7. ARE YOU WILLING TO BUILD NEW SKILLS IF AN OPPORTUNITY REQUIRES THEM?
                 </strong>
                 <span style={{ fontSize: "0.78rem", color: "var(--muted)", display: "block" }}>
                   EntreVision mentors you: if a great business has a skill gap, we provide learning pathways rather than rejecting it.
