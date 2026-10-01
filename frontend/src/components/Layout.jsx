@@ -129,6 +129,15 @@ export default function Layout() {
               <span>Vidarbha Focus</span>
             </div>
 
+            <NavLink
+              to="/profile"
+              className={({ isActive }) => `glass-btn ${isActive ? "active-glow" : ""}`}
+              style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6 }}
+            >
+              <User size={16} color="var(--cyan)" />
+              <span style={{ fontWeight: 600 }}>Profile</span>
+            </NavLink>
+
             <button
               className="glass-btn"
               onClick={toggleTheme}
@@ -139,7 +148,7 @@ export default function Layout() {
               ) : (
                 <Moon size={15} color="var(--electric-blue)" />
               )}
-              <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+              <span>{theme === "dark" ? "Light" : "Dark"}</span>
             </button>
           </div>
         </header>

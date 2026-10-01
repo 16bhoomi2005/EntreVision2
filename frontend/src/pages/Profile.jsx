@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import {
   User,
   MapPin,
@@ -38,12 +38,335 @@ import {
 } from "lucide-react";
 
 // ============================================================================
-// PROFILE MASTER COMPONENT (PAGE 10 — CENTRAL DATA HUB)
+// DEFENSIVE NORMALIZATION HELPERS (BRIDGES WIZARD DATA & PROFILE HUB)
+// ============================================================================
+
+function normalizeAboutMe(raw) {
+  const fallback = {
+    fullName: "Bhoomika Vaishya",
+    education: "Engineering (B.Tech / Agritech Focus)",
+    currentSituation: "Planning to start a business",
+    goals: ["Start my first business", "Use my existing resources", "Find a new business idea"],
+  };
+
+  if (!raw || typeof raw !== "object") return fallback;
+
+  return {
+    fullName: raw.fullName || fallback.fullName,
+    education: raw.education || fallback.education,
+    currentSituation: raw.currentSituation || fallback.currentSituation,
+    goals: Array.isArray(raw.goals) ? raw.goals : fallback.goals,
+  };
+}
+
+function normalizeSkills(raw) {
+  const fallbackSkills = [
+    { id: "s1", name: "Farming & Orchard Management", level: "Intermediate", years: "2 Years", icon: "🌱" },
+    { id: "s2", name: "Digital Marketing & D2C Branding", level: "Beginner", years: "1 Year", icon: "📱" },
+    { id: "s3", name: "Programming & Technology Systems", level: "Intermediate", years: "2 Years", icon: "💻" },
+  ];
+
+  if (!raw) return { skills: fallbackSkills, channels: ["Education", "Training", "Family business"], willingToLearn: "Yes" };
+
+  if (Array.isArray(raw)) {
+    const list = raw.map((item, idx) => ({
+      id: item.skillId || item.id || `s_${idx}`,
+      name: item.name || item.label || "Agro Skill",
+      level: item.proficiency || item.level || "Intermediate",
+      years: item.yearsExperience || item.years || "1 Year",
+      icon: item.icon || "🌱",
+    }));
+    return {
+      skills: list.length > 0 ? list : fallbackSkills,
+      channels: ["Education", "Training", "Family business"],
+      willingToLearn: "Yes",
+    };
+  }
+
+  if (typeof raw === "object" && Array.isArray(raw.skills)) {
+    return {
+      skills: raw.skills,
+      channels: Array.isArray(raw.channels) ? raw.channels : ["Education", "Training"],
+      willingToLearn: raw.willingToLearn || "Yes",
+    };
+  }
+
+  return { skills: fallbackSkills, channels: ["Education", "Training"], willingToLearn: "Yes" };
+}
+
+function normalizeDocuments(raw) {
+  const fallbackDocs = [
+    {
+      id: "doc_1",
+      name: "Agricultural Training Certificate",
+      type: "Certificate",
+      relatedSkill: "Farming",
+      issuedBy: "Regional Agri College",
+      status: "Added",
+      year: "2026",
+    },
+    {
+      id: "doc_2",
+      name: "Food Processing Certificate",
+      type: "Certificate",
+      relatedSkill: "Food Processing",
+      issuedBy: "Food Tech Academy",
+      status: "Added",
+      year: "2025",
+    },
+    {
+      id: "doc_3",
+      name: "Land Document (7/12 Extract)",
+      type: "Land Document",
+      relatedSkill: "Property Title",
+      issuedBy: "Maharashtra Revenue Dept",
+      status: "Added",
+      year: "2026",
+    },
+    {
+      id: "doc_4",
+      name: "Business Registration (Udyam MSME)",
+      type: "Official Registration",
+      relatedSkill: "Business Setup",
+      issuedBy: "Ministry of MSME",
+      status: "Needs Attention",
+      year: "Pending Filing",
+    },
+  ];
+
+  if (!raw) return fallbackDocs;
+
+  if (Array.isArray(raw)) {
+    return raw.map((d, idx) => ({
+      id: d.id || `doc_${idx}`,
+      name: d.name || "Official Document",
+      type: d.type || "Document",
+      relatedSkill: d.relatedSkill || d.skill || "Business Setup",
+      issuedBy: d.issuedBy || d.org || "Govt Authority",
+      status: d.status === "added" || d.status === "Added" ? "Added" : "Needs Attention",
+      year: d.year || "2026",
+    }));
+  }
+
+  if (typeof raw === "object") {
+    const list = [];
+    if (Array.isArray(raw.certificates)) {
+      raw.certificates.forEach((c, idx) => {
+        list.push({
+          id: c.id || `cert_${idx}`,
+          name: c.name || "Training Certificate",
+          type: "Certificate",
+          relatedSkill: c.skill || "Horticulture",
+          issuedBy: c.org || "Accredited Institute",
+          status: c.status === "added" ? "Added" : "Needs Attention",
+          year: c.year || "2025",
+        });
+      });
+    }
+    if (Array.isArray(raw.experience)) {
+      raw.experience.forEach((e, idx) => {
+        list.push({
+          id: e.id || `exp_${idx}`,
+          name: `${e.duration || "2 Years"} Experience — ${e.org || "Agro Venture"}`,
+          type: "Experience",
+          relatedSkill: e.role || "Operations",
+          issuedBy: e.org || "Employer",
+          status: "Added",
+          year: e.duration || "2 Years",
+        });
+      });
+    }
+    if (Array.isArray(raw.licenses)) {
+      raw.licenses.forEach((l, idx) => {
+        list.push({
+          id: l.id || `lic_${idx}`,
+          name: l.name || "Business License",
+          type: "Official Registration",
+          relatedSkill: "Regulatory",
+          issuedBy: l.authority || "State Govt",
+          status: l.status === "added" ? "Added" : "Needs Attention",
+          year: "Active",
+        });
+      });
+    }
+    if (list.length > 0) return list;
+  }
+
+  return fallbackDocs;
+}
+
+function normalizeResources(raw) {
+  const fallback = {
+    resources: [
+      { id: "r1", name: "Farm Land", status: "✓ I own it", icon: "🌱", available: true },
+      { id: "r2", name: "Water Source", status: "✓ Available", icon: "💧", available: true },
+      { id: "r3", name: "Work Shed", status: "✓ I have access", icon: "🏠", available: true },
+      { id: "r4", name: "Transport Vehicle", status: "○ Not available", icon: "🚚", available: false },
+      { id: "r5", name: "Cold Storage", status: "○ Not available", icon: "📦", available: false },
+    ],
+    existingSetup: {
+      hasExistingBusiness: "No",
+      machineryAvailable: "Farm equipment & pump",
+      currentActivity: "Agriculture",
+    },
+  };
+
+  if (!raw || typeof raw !== "object") return fallback;
+
+  if (Array.isArray(raw.resources)) {
+    return {
+      resources: raw.resources,
+      existingSetup: raw.existingSetup || fallback.existingSetup,
+    };
+  }
+
+  // Handle rich ResourcesStep schema
+  const resourcesList = [
+    {
+      id: "r1",
+      name: raw.hasLand ? `Farm Land (${raw.landAcres || 2.5} Acres)` : "Farm Land",
+      status: raw.hasLand ? `✓ I own it (${raw.landOwnership || "Owned"})` : "○ Not available",
+      icon: "🌱",
+      available: Boolean(raw.hasLand),
+    },
+    {
+      id: "r2",
+      name: "Water Source (Borewell / Drip)",
+      status: Array.isArray(raw.waterSources) && raw.waterSources.length > 0 ? "✓ Available" : "○ Not available",
+      icon: "💧",
+      available: Boolean(Array.isArray(raw.waterSources) && raw.waterSources.length > 0),
+    },
+    {
+      id: "r3",
+      name: raw.hasWorkspace ? `Work Shed (${raw.workspaceAreaSqFt || 1500} sq.ft)` : "Work Shed",
+      status: raw.hasWorkspace ? "✓ I have access" : "○ Not available",
+      icon: "🏠",
+      available: Boolean(raw.hasWorkspace),
+    },
+    {
+      id: "r4",
+      name: "Transport Vehicle (Tractor / Mini-Truck)",
+      status: Array.isArray(raw.transportModes) && raw.transportModes.length > 0 ? "✓ Available" : "○ Not available",
+      icon: "🚚",
+      available: Boolean(Array.isArray(raw.transportModes) && raw.transportModes.length > 0),
+    },
+    {
+      id: "r5",
+      name: "Cold Storage & Pre-Cooling",
+      status: Array.isArray(raw.equipmentList) && raw.equipmentList.some((e) => e.id === "cold_storage") ? "✓ Available / Nearby" : "○ Not available",
+      icon: "📦",
+      available: Boolean(Array.isArray(raw.equipmentList) && raw.equipmentList.some((e) => e.id === "cold_storage")),
+    },
+  ];
+
+  return {
+    resources: resourcesList,
+    existingSetup: {
+      hasExistingBusiness: raw.existingSetupStatus === "active_business" ? "Yes (Active Enterprise)" : "No",
+      machineryAvailable: (raw.equipmentList || []).map((e) => e.name).join(", ") || "Farm equipment & pump",
+      currentActivity: raw.existingBusinessDesc || "Citrus Agriculture",
+    },
+  };
+}
+
+function normalizeFinances(raw) {
+  const fallback = {
+    personalSavings: 250000,
+    rangeLabel: "₹1–5 Lakh",
+    fundingSources: ["Personal savings", "Government assistance", "Bank finance"],
+    borrowingPreference: "Open to loans",
+    investmentHorizon: "Within 6 months",
+  };
+
+  if (!raw || typeof raw !== "object") return fallback;
+
+  let savingsNum = 250000;
+  if (typeof raw.personalSavings === "number") savingsNum = raw.personalSavings;
+  else if (typeof raw.personalSavings === "string") {
+    const parsed = parseFloat(raw.personalSavings.replace(/[^0-9.]/g, ""));
+    if (!isNaN(parsed)) savingsNum = parsed;
+  } else if (raw.budget_inr) {
+    savingsNum = Number(raw.budget_inr);
+  }
+
+  let label = raw.rangeLabel || "₹1–5 Lakh";
+  if (savingsNum > 500000 && savingsNum <= 1000000) label = "₹5–10 Lakh";
+  else if (savingsNum > 1000000) label = "₹10–25 Lakh";
+
+  return {
+    personalSavings: savingsNum,
+    rangeLabel: label,
+    fundingSources: Array.isArray(raw.fundingSources) ? raw.fundingSources : fallback.fundingSources,
+    borrowingPreference: raw.borrowingPreference || fallback.borrowingPreference,
+    investmentHorizon: raw.investmentHorizon || fallback.investmentHorizon,
+  };
+}
+
+function normalizeLocation(raw) {
+  const fallback = {
+    currentLocation: "Nagpur District",
+    preferredBusinessLocation: "Katol",
+    operatingPreference: "Within Nagpur District",
+    willingToRelocate: "Yes, within Vidarbha",
+  };
+
+  if (!raw || typeof raw !== "object") return fallback;
+
+  return {
+    currentLocation: raw.currentLocation || raw.district || fallback.currentLocation,
+    preferredBusinessLocation: raw.preferredBusinessLocation || raw.preferredLocation || raw.location || fallback.preferredBusinessLocation,
+    operatingPreference: raw.operatingPreference || fallback.operatingPreference,
+    willingToRelocate: raw.willingToRelocate || fallback.willingToRelocate,
+  };
+}
+
+function normalizePreferences(raw) {
+  const fallback = {
+    interestedSectors: ["Agriculture", "Food Processing", "Agritech"],
+    preferredScale: "Small / Micro",
+    timeCommitment: "Full-time",
+    corePriorities: [
+      "Use existing resources",
+      "Local market opportunity",
+      "Steady income",
+    ],
+  };
+
+  if (!raw || typeof raw !== "object") return fallback;
+
+  return {
+    interestedSectors: Array.isArray(raw.interestedSectors) ? raw.interestedSectors : Array.isArray(raw.sectors) ? raw.sectors : fallback.interestedSectors,
+    preferredScale: raw.preferredScale || raw.scale || fallback.preferredScale,
+    timeCommitment: raw.timeCommitment || raw.commitment || fallback.timeCommitment,
+    corePriorities: Array.isArray(raw.corePriorities) ? raw.corePriorities : Array.isArray(raw.priorities) ? raw.priorities : fallback.corePriorities,
+  };
+}
+
+function normalizePrivacy(raw) {
+  const fallback = {
+    profileVisibility: "Relevant EntreVision users",
+    collabVisibility: "Only relevant matches",
+    showSkills: "Yes",
+    showResources: "Only for collaboration matches",
+    financialVisibility: "Private",
+  };
+
+  if (!raw || typeof raw !== "object") return fallback;
+
+  return {
+    profileVisibility: raw.profileVisibility || fallback.profileVisibility,
+    collabVisibility: raw.collabVisibility || fallback.collabVisibility,
+    showSkills: raw.showSkills || fallback.showSkills,
+    showResources: raw.showResources || fallback.showResources,
+    financialVisibility: "Private",
+  };
+}
+
+// ============================================================================
+// MAIN PROFILE COMPONENT
 // ============================================================================
 export default function Profile() {
-  const navigate = useNavigate();
-
-  // Active view: "overview" | "about" | "skills" | "documents" | "resources" | "finances" | "locations" | "interests" | "privacy"
+  // Active view tab: "overview" | "about" | "skills" | "documents" | "resources" | "finances" | "locations" | "interests" | "privacy"
   const [activeSection, setActiveSection] = useState("overview");
 
   // Save feedback notification
@@ -52,184 +375,72 @@ export default function Profile() {
   // Profile Completion Modal (10.10)
   const [showCompletionModal, setShowCompletionModal] = useState(false);
 
-  // --------------------------------------------------------------------------
-  // 1. SECTION 10.2: ABOUT ME STATE
-  // --------------------------------------------------------------------------
+  // States with robust safe fallbacks
   const [aboutMe, setAboutMe] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_about_me");
-      if (saved) return JSON.parse(saved);
+      if (saved) return normalizeAboutMe(JSON.parse(saved));
     } catch (e) {}
-    return {
-      fullName: "Bhoomika Vaishya",
-      education: "Engineering (B.Tech / Agritech Focus)",
-      currentSituation: "Planning to start a business",
-      goals: ["Start my first business", "Use my existing resources", "Find a new business idea"],
-    };
+    return normalizeAboutMe(null);
   });
 
-  // --------------------------------------------------------------------------
-  // 2. SECTION 10.3: SKILLS & EXPERIENCE STATE
-  // --------------------------------------------------------------------------
   const [skillsData, setSkillsData] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_skills_data");
-      if (saved) return JSON.parse(saved);
+      if (saved) return normalizeSkills(JSON.parse(saved));
     } catch (e) {}
-    return {
-      skills: [
-        { id: "s1", name: "Farming & Orchard Management", level: "Intermediate", years: "2 Years", icon: "🌱" },
-        { id: "s2", name: "Digital Marketing & D2C Branding", level: "Beginner", years: "1 Year", icon: "📱" },
-        { id: "s3", name: "Programming & Technology Systems", level: "Intermediate", years: "2 Years", icon: "💻" },
-      ],
-      channels: ["Education", "Training", "Family business"],
-      willingToLearn: "Yes",
-    };
+    return normalizeSkills(null);
   });
 
-  // --------------------------------------------------------------------------
-  // 3. SECTION 10.4: CERTIFICATES & DOCUMENTS REPOSITORY
-  // --------------------------------------------------------------------------
   const [documentsData, setDocumentsData] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_user_documents");
-      if (saved) return JSON.parse(saved);
+      if (saved) return normalizeDocuments(JSON.parse(saved));
     } catch (e) {}
-    return [
-      {
-        id: "doc_1",
-        name: "Agricultural Training Certificate",
-        type: "Certificate",
-        relatedSkill: "Farming",
-        issuedBy: "Regional Agri College",
-        status: "Added",
-        year: "2026",
-      },
-      {
-        id: "doc_2",
-        name: "Food Processing Certificate",
-        type: "Certificate",
-        relatedSkill: "Food Processing",
-        issuedBy: "Food Tech Academy",
-        status: "Added",
-        year: "2025",
-      },
-      {
-        id: "doc_3",
-        name: "Land Document (7/12 Extract)",
-        type: "Land Document",
-        relatedSkill: "Property Title",
-        issuedBy: "Maharashtra Revenue Dept",
-        status: "Added",
-        year: "2026",
-      },
-      {
-        id: "doc_4",
-        name: "Business Registration (Udyam MSME)",
-        type: "Official Registration",
-        relatedSkill: "Business Setup",
-        issuedBy: "Ministry of MSME",
-        status: "Needs Attention",
-        year: "Pending Filing",
-      },
-    ];
+    return normalizeDocuments(null);
   });
 
-  // --------------------------------------------------------------------------
-  // 4. SECTION 10.5: RESOURCES & EXISTING SETUP
-  // --------------------------------------------------------------------------
   const [resourcesData, setResourcesData] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_user_resources");
-      if (saved) return JSON.parse(saved);
+      if (saved) return normalizeResources(JSON.parse(saved));
     } catch (e) {}
-    return {
-      resources: [
-        { id: "r1", name: "Farm Land", status: "✓ I own it", icon: "🌱", available: true },
-        { id: "r2", name: "Water Source", status: "✓ Available", icon: "💧", available: true },
-        { id: "r3", name: "Work Shed", status: "✓ I have access", icon: "🏠", available: true },
-        { id: "r4", name: "Transport Vehicle", status: "○ Not available", icon: "🚚", available: false },
-        { id: "r5", name: "Cold Storage", status: "○ Not available", icon: "📦", available: false },
-      ],
-      existingSetup: {
-        hasExistingBusiness: "No",
-        machineryAvailable: "Farm equipment & pump",
-        currentActivity: "Agriculture",
-      },
-    };
+    return normalizeResources(null);
   });
 
-  // --------------------------------------------------------------------------
-  // 5. SECTION 10.6: FINANCIAL CAPACITY
-  // --------------------------------------------------------------------------
   const [financesData, setFinancesData] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_user_finances");
-      if (saved) return JSON.parse(saved);
+      if (saved) return normalizeFinances(JSON.parse(saved));
     } catch (e) {}
-    return {
-      personalSavings: 250000,
-      rangeLabel: "₹1–5 Lakh",
-      fundingSources: ["Personal savings", "Government assistance", "Bank finance"],
-      borrowingPreference: "Open to loans",
-      investmentHorizon: "Within 6 months",
-    };
+    return normalizeFinances(null);
   });
 
-  // --------------------------------------------------------------------------
-  // 6. SECTION 10.7: MY LOCATIONS
-  // --------------------------------------------------------------------------
   const [locationData, setLocationData] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_user_location");
-      if (saved) return JSON.parse(saved);
+      if (saved) return normalizeLocation(JSON.parse(saved));
     } catch (e) {}
-    return {
-      currentLocation: "Nagpur District",
-      preferredBusinessLocation: "Katol",
-      operatingPreference: "Within Nagpur District",
-      willingToRelocate: "Yes, within Vidarbha",
-    };
+    return normalizeLocation(null);
   });
 
-  // --------------------------------------------------------------------------
-  // 7. SECTION 10.8: BUSINESS INTERESTS
-  // --------------------------------------------------------------------------
   const [preferencesData, setPreferencesData] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_user_preferences");
-      if (saved) return JSON.parse(saved);
+      if (saved) return normalizePreferences(JSON.parse(saved));
     } catch (e) {}
-    return {
-      interestedSectors: ["Agriculture", "Food Processing", "Agritech"],
-      preferredScale: "Small / Micro",
-      timeCommitment: "Full-time",
-      corePriorities: [
-        "Use existing resources",
-        "Local market opportunity",
-        "Steady income",
-      ],
-    };
+    return normalizePreferences(null);
   });
 
-  // --------------------------------------------------------------------------
-  // 8. SECTION 10.11: PRIVACY & TRUST SETTINGS
-  // --------------------------------------------------------------------------
   const [privacyData, setPrivacyData] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_user_privacy");
-      if (saved) return JSON.parse(saved);
+      if (saved) return normalizePrivacy(JSON.parse(saved));
     } catch (e) {}
-    return {
-      profileVisibility: "Relevant EntreVision users",
-      collabVisibility: "Only relevant matches",
-      showSkills: "Yes",
-      showResources: "Only for collaboration matches",
-      financialVisibility: "Private",
-    };
+    return normalizePrivacy(null);
   });
 
-  // New Skill inline input state
+  // Inline input states for Skill adding
   const [newSkillName, setNewSkillName] = useState("");
   const [newSkillLevel, setNewSkillLevel] = useState("Intermediate");
 
@@ -264,7 +475,7 @@ export default function Profile() {
     };
     setSkillsData((prev) => ({
       ...prev,
-      skills: [...prev.skills, newSkill],
+      skills: [...(prev.skills || []), newSkill],
     }));
     setNewSkillName("");
   };
@@ -273,11 +484,11 @@ export default function Profile() {
   const handleRemoveSkill = (id) => {
     setSkillsData((prev) => ({
       ...prev,
-      skills: prev.skills.filter((s) => s.id !== id),
+      skills: (prev.skills || []).filter((s) => s.id !== id),
     }));
   };
 
-  // Add new Document prompt
+  // Add Document prompt
   const handleAddDocumentPrompt = () => {
     const docName = prompt("Enter document title (e.g. 'FSSAI License' or 'Soil Test Report'):");
     if (!docName) return;
@@ -291,19 +502,27 @@ export default function Profile() {
       status: "Added",
       year: new Date().getFullYear().toString(),
     };
-    setDocumentsData((prev) => [...prev, newDoc]);
+    setDocumentsData((prev) => [...(Array.isArray(prev) ? prev : []), newDoc]);
   };
 
-  // Compute Profile Completion Breakdown (Page 10.10)
+  // Profile completion calculation
   const completionStats = useMemo(() => {
+    const hasAbout = Boolean(aboutMe?.fullName && aboutMe?.education);
+    const hasSkills = Array.isArray(skillsData?.skills) && skillsData.skills.length >= 2;
+    const hasResources = Array.isArray(resourcesData?.resources) && resourcesData.resources.some((r) => r.available);
+    const hasLocation = Boolean(locationData?.preferredBusinessLocation);
+    const hasPreferences = Array.isArray(preferencesData?.interestedSectors) && preferencesData.interestedSectors.length >= 1;
+    const hasDocs = Array.isArray(documentsData) && documentsData.filter((d) => d.status === "Added").length >= 2;
+    const hasSetup = Boolean(resourcesData?.existingSetup?.currentActivity);
+
     const sections = [
-      { name: "About Me", complete: Boolean(aboutMe.fullName && aboutMe.education), weight: 15, key: "about" },
-      { name: "Skills", complete: skillsData.skills.length >= 2, weight: 15, key: "skills" },
-      { name: "Resources", complete: resourcesData.resources.some((r) => r.available), weight: 15, key: "resources" },
-      { name: "Location", complete: Boolean(locationData.preferredBusinessLocation), weight: 15, key: "locations" },
-      { name: "Business Preferences", complete: preferencesData.interestedSectors.length >= 1, weight: 15, key: "interests" },
-      { name: "Certificates", complete: documentsData.filter((d) => d.status === "Added").length >= 3, weight: 15, key: "documents" },
-      { name: "Existing Setup", complete: Boolean(resourcesData.existingSetup.currentActivity), weight: 10, key: "resources" },
+      { name: "About Me", complete: hasAbout, weight: 15, key: "about" },
+      { name: "Skills", complete: hasSkills, weight: 15, key: "skills" },
+      { name: "Resources", complete: hasResources, weight: 15, key: "resources" },
+      { name: "Location", complete: hasLocation, weight: 15, key: "locations" },
+      { name: "Business Preferences", complete: hasPreferences, weight: 15, key: "interests" },
+      { name: "Certificates", complete: hasDocs, weight: 15, key: "documents" },
+      { name: "Existing Setup", complete: hasSetup, weight: 10, key: "resources" },
     ];
 
     const completedWeight = sections.filter((s) => s.complete).reduce((acc, s) => acc + s.weight, 0);
@@ -315,6 +534,10 @@ export default function Profile() {
       missingSections,
     };
   }, [aboutMe, skillsData, documentsData, resourcesData, locationData, preferencesData]);
+
+  const skillsList = Array.isArray(skillsData?.skills) ? skillsData.skills : [];
+  const docsList = Array.isArray(documentsData) ? documentsData : [];
+  const resList = Array.isArray(resourcesData?.resources) ? resourcesData.resources : [];
 
   return (
     <div style={{ maxWidth: 1180, margin: "0 auto", paddingBottom: 60 }}>
@@ -344,16 +567,16 @@ export default function Profile() {
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
                 <h1 style={{ margin: 0, fontSize: "1.75rem", fontWeight: 800, color: "var(--text-heading)" }}>
-                  {aboutMe.fullName}
+                  {aboutMe?.fullName || "Bhoomika Vaishya"}
                 </h1>
                 <span className="badge-verified" style={{ fontSize: "0.72rem" }}>
                   Entrepreneur Profile
                 </span>
               </div>
               <div style={{ display: "flex", gap: 12, marginTop: 4, fontSize: "0.82rem", color: "var(--muted)", flexWrap: "wrap" }}>
-                <span>🎓 {aboutMe.education}</span>
-                <span>📍 {locationData.preferredBusinessLocation} / {locationData.currentLocation}</span>
-                <span>💼 {aboutMe.currentSituation}</span>
+                <span>🎓 {aboutMe?.education}</span>
+                <span>📍 {locationData?.preferredBusinessLocation} / {locationData?.currentLocation}</span>
+                <span>💼 {aboutMe?.currentSituation}</span>
               </div>
             </div>
           </div>
@@ -485,19 +708,19 @@ export default function Profile() {
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Name:</span>
-                  <strong>{aboutMe.fullName}</strong>
+                  <strong>{aboutMe?.fullName || "Bhoomika"}</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Education:</span>
-                  <strong>{aboutMe.education}</strong>
+                  <strong>{aboutMe?.education || "Engineering"}</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Location:</span>
-                  <strong>{locationData.currentLocation}</strong>
+                  <strong>{locationData?.currentLocation || "Nagpur / Vidarbha"}</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span className="muted">Status:</span>
-                  <strong style={{ color: "var(--cyan)" }}>{aboutMe.currentSituation}</strong>
+                  <strong style={{ color: "var(--cyan)" }}>{aboutMe?.currentSituation || "Planning a business"}</strong>
                 </div>
               </div>
             </div>
@@ -521,7 +744,7 @@ export default function Profile() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
-                {skillsData.skills.map((s) => (
+                {skillsList.map((s) => (
                   <div key={s.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <span>{s.icon} {s.name}</span>
                     <span className="tag" style={{ fontSize: "0.7rem" }}>{s.level}</span>
@@ -550,10 +773,10 @@ export default function Profile() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
                 <div style={{ color: "var(--ok)", fontWeight: 700 }}>
-                  ✓ {documentsData.filter((d) => d.status === "Added").length} certificates added
+                  ✓ {docsList.filter((d) => d.status === "Added").length} certificates added
                 </div>
                 <div style={{ color: "#f59e0b", fontWeight: 700 }}>
-                  ⚠ {documentsData.filter((d) => d.status === "Needs Attention").length} document needs attention
+                  ⚠ {docsList.filter((d) => d.status === "Needs Attention").length} document needs attention
                 </div>
               </div>
             </div>
@@ -577,7 +800,7 @@ export default function Profile() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
-                {resourcesData.resources.slice(0, 3).map((r) => (
+                {resList.slice(0, 3).map((r) => (
                   <div key={r.id} style={{ display: "flex", justifyContent: "space-between" }}>
                     <span>{r.icon} {r.name}</span>
                     <strong style={{ color: "var(--ok)" }}>{r.status}</strong>
@@ -607,11 +830,11 @@ export default function Profile() {
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Available Initial Capital:</span>
-                  <strong>{financesData.rangeLabel} (₹{financesData.personalSavings.toLocaleString("en-IN")})</strong>
+                  <strong>{financesData?.rangeLabel || "₹1–5 Lakh"} (₹{(financesData?.personalSavings || 250000).toLocaleString("en-IN")})</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span className="muted">Borrowing Preference:</span>
-                  <strong>{financesData.borrowingPreference}</strong>
+                  <strong>{financesData?.borrowingPreference || "Open to loans"}</strong>
                 </div>
               </div>
             </div>
@@ -637,11 +860,11 @@ export default function Profile() {
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Current Location:</span>
-                  <strong>{locationData.currentLocation}</strong>
+                  <strong>{locationData?.currentLocation || "Nagpur District"}</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span className="muted">Preferred Business Location:</span>
-                  <strong style={{ color: "var(--cyan)" }}>{locationData.preferredBusinessLocation}</strong>
+                  <strong style={{ color: "var(--cyan)" }}>{locationData?.preferredBusinessLocation || "Katol"}</strong>
                 </div>
               </div>
             </div>
@@ -669,7 +892,7 @@ export default function Profile() {
               </label>
               <input
                 type="text"
-                value={aboutMe.fullName}
+                value={aboutMe?.fullName || ""}
                 onChange={(e) => setAboutMe((prev) => ({ ...prev, fullName: e.target.value }))}
                 style={{
                   width: "100%",
@@ -691,7 +914,7 @@ export default function Profile() {
               </label>
               <input
                 type="text"
-                value={aboutMe.education}
+                value={aboutMe?.education || ""}
                 onChange={(e) => setAboutMe((prev) => ({ ...prev, education: e.target.value }))}
                 style={{
                   width: "100%",
@@ -713,7 +936,7 @@ export default function Profile() {
               </label>
               <input
                 type="text"
-                value={aboutMe.currentSituation}
+                value={aboutMe?.currentSituation || ""}
                 onChange={(e) => setAboutMe((prev) => ({ ...prev, currentSituation: e.target.value }))}
                 style={{
                   width: "100%",
@@ -741,15 +964,16 @@ export default function Profile() {
                 "Find a new business idea",
                 "Use my existing resources",
               ].map((goal) => {
-                const isSelected = aboutMe.goals.includes(goal);
+                const isSelected = Array.isArray(aboutMe?.goals) && aboutMe.goals.includes(goal);
                 return (
                   <button
                     key={goal}
                     type="button"
                     onClick={() => {
+                      const currentGoals = Array.isArray(aboutMe?.goals) ? aboutMe.goals : [];
                       setAboutMe((prev) => ({
                         ...prev,
-                        goals: isSelected ? prev.goals.filter((g) => g !== goal) : [...prev.goals, goal],
+                        goals: isSelected ? currentGoals.filter((g) => g !== goal) : [...currentGoals, goal],
                       }));
                     }}
                     className={`pill-option-btn ${isSelected ? "active" : ""}`}
@@ -790,7 +1014,7 @@ export default function Profile() {
           </h2>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12 }}>
-            {skillsData.skills.map((skill) => (
+            {skillsList.map((skill) => (
               <div
                 key={skill.id}
                 style={{
@@ -935,7 +1159,7 @@ export default function Profile() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {documentsData.filter((d) => d.type === "Certificate").map((doc) => (
+                {docsList.filter((d) => d.type === "Certificate").map((doc) => (
                   <div
                     key={doc.id}
                     style={{
@@ -988,7 +1212,7 @@ export default function Profile() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {documentsData.filter((d) => d.type !== "Certificate").map((doc) => (
+                {docsList.filter((d) => d.type !== "Certificate").map((doc) => (
                   <div
                     key={doc.id}
                     style={{
@@ -1052,7 +1276,7 @@ export default function Profile() {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column" }}>
-              {resourcesData.resources.map((res) => (
+              {resList.map((res) => (
                 <div
                   key={res.id}
                   style={{
@@ -1091,15 +1315,15 @@ export default function Profile() {
             <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.85rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <span className="muted">Existing Business:</span>
-                <strong>{resourcesData.existingSetup.hasExistingBusiness}</strong>
+                <strong>{resourcesData?.existingSetup?.hasExistingBusiness || "No"}</strong>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <span className="muted">Equipment:</span>
-                <strong>{resourcesData.existingSetup.machineryAvailable}</strong>
+                <strong>{resourcesData?.existingSetup?.machineryAvailable || "Farm equipment"}</strong>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <span className="muted">Current Activity:</span>
-                <strong>{resourcesData.existingSetup.currentActivity}</strong>
+                <strong>{resourcesData?.existingSetup?.currentActivity || "Agriculture"}</strong>
               </div>
             </div>
           </div>
@@ -1125,7 +1349,7 @@ export default function Profile() {
                 Available Initial Capital
               </span>
               <div style={{ fontSize: "1.3rem", fontWeight: 900, color: "var(--cyan)", marginTop: 2 }}>
-                {financesData.rangeLabel} (₹{financesData.personalSavings.toLocaleString("en-IN")})
+                {financesData?.rangeLabel || "₹1–5 Lakh"} (₹{(financesData?.personalSavings || 250000).toLocaleString("en-IN")})
               </div>
             </div>
 
@@ -1134,7 +1358,7 @@ export default function Profile() {
                 Funding Sources
               </span>
               <div style={{ display: "flex", gap: 14, marginTop: 6, flexWrap: "wrap", fontSize: "0.85rem" }}>
-                {financesData.fundingSources.map((f) => (
+                {(financesData?.fundingSources || []).map((f) => (
                   <span key={f} style={{ color: "var(--ok)", fontWeight: 700 }}>✓ {f}</span>
                 ))}
               </div>
@@ -1145,7 +1369,7 @@ export default function Profile() {
                 Borrowing Preference
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {financesData.borrowingPreference}
+                {financesData?.borrowingPreference || "Open to loans"}
               </div>
             </div>
 
@@ -1154,7 +1378,7 @@ export default function Profile() {
                 Investment Horizon
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {financesData.investmentHorizon}
+                {financesData?.investmentHorizon || "Within 6 months"}
               </div>
             </div>
 
@@ -1186,7 +1410,7 @@ export default function Profile() {
                 Current Location
               </span>
               <div style={{ fontSize: "1rem", fontWeight: 800, color: "var(--text-heading)", marginTop: 2 }}>
-                {locationData.currentLocation}
+                {locationData?.currentLocation || "Nagpur District"}
               </div>
             </div>
 
@@ -1195,7 +1419,7 @@ export default function Profile() {
                 Preferred Business Location
               </span>
               <div style={{ fontSize: "1rem", fontWeight: 800, color: "var(--cyan)", marginTop: 2 }}>
-                {locationData.preferredBusinessLocation}
+                {locationData?.preferredBusinessLocation || "Katol"}
               </div>
             </div>
 
@@ -1204,7 +1428,7 @@ export default function Profile() {
                 Operating Preference
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {locationData.operatingPreference}
+                {locationData?.operatingPreference || "Within Nagpur District"}
               </div>
             </div>
 
@@ -1213,7 +1437,7 @@ export default function Profile() {
                 Willing to Relocate?
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--ok)", marginTop: 2 }}>
-                {locationData.willingToRelocate}
+                {locationData?.willingToRelocate || "Yes, within Vidarbha"}
               </div>
             </div>
 
@@ -1245,7 +1469,7 @@ export default function Profile() {
                 Interested In
               </span>
               <div style={{ display: "flex", gap: 12, marginTop: 6, flexWrap: "wrap", fontSize: "0.85rem" }}>
-                {preferencesData.interestedSectors.map((s) => (
+                {(preferencesData?.interestedSectors || []).map((s) => (
                   <span key={s} style={{ color: "var(--ok)", fontWeight: 700 }}>✓ {s}</span>
                 ))}
               </div>
@@ -1256,7 +1480,7 @@ export default function Profile() {
                 Preferred Scale
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {preferencesData.preferredScale}
+                {preferencesData?.preferredScale || "Small / Micro"}
               </div>
             </div>
 
@@ -1265,7 +1489,7 @@ export default function Profile() {
                 Time Commitment
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {preferencesData.timeCommitment}
+                {preferencesData?.timeCommitment || "Full-time"}
               </div>
             </div>
 
@@ -1274,7 +1498,7 @@ export default function Profile() {
                 Priorities
               </span>
               <div style={{ display: "flex", flexDirection: "column", gap: 4, marginTop: 6, fontSize: "0.85rem" }}>
-                {preferencesData.corePriorities.map((p) => (
+                {(preferencesData?.corePriorities || []).map((p) => (
                   <span key={p} style={{ color: "var(--cyan)", fontWeight: 700 }}>✓ {p}</span>
                 ))}
               </div>
@@ -1310,22 +1534,22 @@ export default function Profile() {
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <div style={{ background: "var(--panel-subtle)", padding: 14, borderRadius: 10, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span className="muted">Profile visibility</span>
-              <strong>● {privacyData.profileVisibility}</strong>
+              <strong>● {privacyData?.profileVisibility || "Relevant EntreVision users"}</strong>
             </div>
 
             <div style={{ background: "var(--panel-subtle)", padding: 14, borderRadius: 10, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span className="muted">Collaboration visibility</span>
-              <strong>● {privacyData.collabVisibility}</strong>
+              <strong>● {privacyData?.collabVisibility || "Only relevant matches"}</strong>
             </div>
 
             <div style={{ background: "var(--panel-subtle)", padding: 14, borderRadius: 10, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span className="muted">Show my skills</span>
-              <strong style={{ color: "var(--ok)" }}>✓ {privacyData.showSkills}</strong>
+              <strong style={{ color: "var(--ok)" }}>✓ {privacyData?.showSkills || "Yes"}</strong>
             </div>
 
             <div style={{ background: "var(--panel-subtle)", padding: 14, borderRadius: 10, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span className="muted">Show my resources</span>
-              <strong style={{ color: "var(--ok)" }}>✓ {privacyData.showResources}</strong>
+              <strong style={{ color: "var(--ok)" }}>✓ {privacyData?.showResources || "Only for collaboration matches"}</strong>
             </div>
 
             <div style={{ background: "var(--panel-subtle)", padding: 14, borderRadius: 10, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
