@@ -695,7 +695,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: var(--text-heading);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -971,7 +971,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: var(--text-heading);
   max-width: 22ch;
   line-height: 1.2;
   position: relative;
@@ -979,7 +979,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 .cta-banner-desc {
-  color: #94a3b8;
+  color: var(--muted);
   font-size: 1.05rem;
   max-width: 48ch;
   line-height: 1.6;
@@ -1502,7 +1502,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .skill-chip-btn.selected {
   border-color: var(--electric-blue);
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.18) 0%, rgba(6, 182, 212, 0.12) 100%);
-  color: #fff;
+  color: var(--text-heading);
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
 }
 
@@ -1641,7 +1641,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .acquisition-btn.active {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%);
   border-color: var(--cyan);
-  color: #fff;
+  color: var(--text-heading);
   font-weight: 700;
 }
 
