@@ -108,7 +108,11 @@ export default function VentureKhoj() {
   const [selectedSkillsData, setSelectedSkillsData] = useState(() => {
     try {
       const saved = localStorage.getItem("ev_skills_data");
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) return parsed;
+        if (parsed && typeof parsed === "object" && Array.isArray(parsed.skills)) return parsed.skills;
+      }
     } catch {}
     return [
       {

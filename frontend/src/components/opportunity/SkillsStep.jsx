@@ -78,6 +78,15 @@ export default function SkillsStep({
 }) {
   const [searchTerm, setSearchTerm] = useState("");
 
+  // Safely normalize incoming selectedSkillsData to always be an array
+  const safeSkills = useMemo(() => {
+    if (Array.isArray(selectedSkillsData)) return selectedSkillsData;
+    if (selectedSkillsData && typeof selectedSkillsData === "object" && Array.isArray(selectedSkillsData.skills)) {
+      return selectedSkillsData.skills;
+    }
+    return [];
+  }, [selectedSkillsData]);
+
   // Merge backend skills with default popular list
   const availableSkills = useMemo(() => {
     if (skillsList && skillsList.length > 0) {
@@ -106,7 +115,7 @@ export default function SkillsStep({
 
   // Add skill to selected list
   const handleAddSkill = (skill) => {
-    const exists = selectedSkillsData.some((s) => s.skillId === skill.id);
+    const exists = safeSkills.some((s) => (s.skillId === skill.id || s.id === skill.id));
     if (exists) return;
 
     const newSkillEntry = {
@@ -127,21 +136,21 @@ export default function SkillsStep({
       notes: "",
     };
 
-    onChange({ selectedSkillsData: [...selectedSkillsData, newSkillEntry] });
+    onChange({ selectedSkillsData: [...safeSkills, newSkillEntry] });
   };
 
   // Remove skill
   const handleRemoveSkill = (skillId) => {
     onChange({
-      selectedSkillsData: selectedSkillsData.filter((s) => s.skillId !== skillId),
+      selectedSkillsData: safeSkills.filter((s) => s.skillId !== skillId && s.id !== skillId),
     });
   };
 
   // Update specific skill attribute
   const handleUpdateSkill = (skillId, updates) => {
     onChange({
-      selectedSkillsData: selectedSkillsData.map((s) =>
-        s.skillId === skillId ? { ...s, ...updates } : s
+      selectedSkillsData: safeSkills.map((s) =>
+        (s.skillId === skillId || s.id === skillId) ? { ...s, ...updates } : s
       ),
     });
   };
@@ -202,7 +211,7 @@ export default function SkillsStep({
 
           <div className="skills-pill-cloud">
             {filteredSkills.map((sk) => {
-              const isSelected = selectedSkillsData.some((s) => s.skillId === sk.id);
+              const isSelected = safeSkills.some((s) => s.skillId === sk.id || s.id === sk.id);
               return (
                 <button
                   type="button"
@@ -226,14 +235,14 @@ export default function SkillsStep({
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
             <label className="wizard-field-label" style={{ margin: 0 }}>
               <Layers size={16} color="var(--electric-blue)" />
-              <span>SELECTED SKILLS ({selectedSkillsData.length})</span>
+              <span>SELECTED SKILLS ({safeSkills.length})</span>
             </label>
             <span style={{ fontSize: "0.75rem", color: "var(--muted)", fontWeight: 600 }}>
               Detailed Profiling
             </span>
           </div>
 
-          {selectedSkillsData.length === 0 ? (
+          {safeSkills.length === 0 ? (
             <div
               style={{
                 padding: "32px 20px",
@@ -249,7 +258,7 @@ export default function SkillsStep({
             </div>
           ) : (
             <div className="selected-skills-stack">
-              {selectedSkillsData.map((item) => (
+              {safeSkills.map((item) => (
                 <div key={item.skillId} className="skill-detail-card">
                   {/* Skill Card Header */}
                   <div className="skill-card-topbar">
