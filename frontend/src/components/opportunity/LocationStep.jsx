@@ -472,141 +472,200 @@ export default function LocationStep({
             })}
           </div>
 
-          {/* Glassmorphic Interactive Map Representation */}
+          {/* Glassmorphic Interactive Tehsil Choropleth & Cluster Map */}
           <div
             className="interactive-map-frame"
             style={{
               position: "relative",
-              height: 230,
-              borderRadius: 16,
-              background: "linear-gradient(145deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%)",
-              border: "1px solid var(--line-glass)",
+              height: 380,
+              borderRadius: 20,
+              background: "linear-gradient(145deg, #070d1a 0%, #0d1627 100%)",
+              border: "1px solid var(--line-glow)",
               overflow: "hidden",
               padding: 16,
-              boxShadow: "inset 0 0 30px rgba(0, 0, 0, 0.4)",
+              boxShadow: "inset 0 0 40px rgba(0, 0, 0, 0.6)",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
-            {/* Map Grid and Contour Background */}
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                backgroundImage:
-                  "radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 60%), linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)",
-                backgroundSize: "100% 100%, 28px 28px, 28px 28px",
-                pointerEvents: "none",
-              }}
-            />
-
-            {/* Map Header Overlay */}
-            <div style={{ position: "relative", zIndex: 3, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                <span style={{ display: "inline-block", width: 8, height: 8, borderRadius: "50%", background: "var(--ok)", boxShadow: "0 0 8px var(--ok)" }} />
-                <span style={{ fontSize: "0.74rem", fontWeight: 700, color: "var(--muted)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-                  VIDARBHA CITRUS ECOSYSTEM MAP • ACTIVE NODE: <span style={{ color: "var(--cyan)" }}>{data.selectedCluster}</span>
+            {/* Map Header & Filter Controls */}
+            <div style={{ position: "relative", zIndex: 5, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, marginBottom: 8 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ display: "inline-block", width: 8, height: 8, borderRadius: "50%", background: "var(--citrus-orange)", boxShadow: "0 0 10px var(--citrus-orange)" }} />
+                <span style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--text-heading)", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                  NAGPUR TEHSIL CHOROPLETH & CLUSTER MAP • ACTIVE: <span style={{ color: "var(--citrus-orange)" }}>{data.selectedCluster}</span>
                 </span>
               </div>
-              <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontFamily: "monospace" }}>
-                {currentEco.coordinates}
-              </span>
+              <div style={{ display: "flex", gap: 6, fontSize: "0.72rem" }}>
+                <span style={{ padding: "3px 8px", borderRadius: 6, background: "rgba(249, 115, 22, 0.15)", color: "var(--citrus-orange)", border: "1px solid rgba(249, 115, 22, 0.3)" }}>
+                  🍊 High Citrus Density
+                </span>
+                <span style={{ padding: "3px 8px", borderRadius: 6, background: "rgba(56, 189, 248, 0.15)", color: "var(--cyan)", border: "1px solid rgba(56, 189, 248, 0.3)" }}>
+                  🏭 MIDC / Cargo
+                </span>
+                <span style={{ padding: "3px 8px", borderRadius: 6, background: "rgba(52, 211, 153, 0.15)", color: "var(--ok)", border: "1px solid rgba(52, 211, 153, 0.3)" }}>
+                  ❄️ Cold Chain
+                </span>
+              </div>
             </div>
 
-            {/* Interactive Pins on Map */}
-            {Object.keys(CLUSTER_INTELLIGENCE).map((clusterKey) => {
-              const c = CLUSTER_INTELLIGENCE[clusterKey];
-              const isSelected = data.selectedCluster === clusterKey;
-              const isHovered = mapHoveredCluster === clusterKey;
+            {/* Interactive SVG Tehsil Map */}
+            <div style={{ flex: 1, position: "relative", width: "100%", height: "100%" }}>
+              <svg width="100%" height="100%" viewBox="0 0 700 320" style={{ overflow: "visible" }}>
+                {/* Background Grid */}
+                <defs>
+                  <pattern id="tehsilGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(255, 255, 255, 0.03)" strokeWidth="0.8" />
+                  </pattern>
+                  <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="var(--citrus-orange)" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="var(--citrus-orange)" stopOpacity="0" />
+                  </radialGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#tehsilGrid)" />
 
-              return (
-                <div
-                  key={clusterKey}
-                  onClick={() => handleClusterSelect(clusterKey)}
-                  onMouseEnter={() => setMapHoveredCluster(clusterKey)}
-                  onMouseLeave={() => setMapHoveredCluster(null)}
-                  style={{
-                    position: "absolute",
-                    left: c.mapX,
-                    top: c.mapY,
-                    transform: "translate(-50%, -50%)",
-                    zIndex: isSelected ? 10 : 5,
-                    cursor: "pointer",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
-                  }}
-                >
-                  {/* Pin Dot with Glow */}
-                  <div
-                    className={isSelected ? "map-active-pin-glow" : ""}
-                    style={{
-                      width: isSelected ? 18 : 12,
-                      height: isSelected ? 18 : 12,
-                      borderRadius: "50%",
-                      background: isSelected
-                        ? "linear-gradient(135deg, var(--cyan), var(--electric-blue))"
-                        : isHovered
-                        ? "var(--violet)"
-                        : "rgba(255, 255, 255, 0.4)",
-                      boxShadow: isSelected
-                        ? "0 0 16px var(--cyan), 0 0 0 4px rgba(6, 182, 212, 0.25)"
-                        : isHovered
-                        ? "0 0 10px var(--violet)"
-                        : "none",
-                      border: "2px solid #fff",
-                      transition: "all 0.2s ease",
-                    }}
-                  />
+                {/* 14 Nagpur Tehsil Polygons (Simplified Geographical Contours) */}
+                {/* 1. Narkhed (North-West Citrus Belt) */}
+                <polygon
+                  points="40,30 110,20 130,80 60,95 30,60"
+                  fill={data.selectedCluster === "Narkhed" ? "rgba(249, 115, 22, 0.35)" : "rgba(249, 115, 22, 0.12)"}
+                  stroke={data.selectedCluster === "Narkhed" ? "var(--citrus-orange)" : "rgba(249, 115, 22, 0.4)"}
+                  strokeWidth={data.selectedCluster === "Narkhed" ? 2.5 : 1}
+                  style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                  onClick={() => handleClusterSelect("Narkhed")}
+                />
+                <text x="80" y="60" fill="var(--text)" fontSize="10" fontWeight="700" textAnchor="middle" pointerEvents="none">Narkhed</text>
 
-                  {/* Pin Label */}
-                  <span
-                    style={{
-                      marginTop: 4,
-                      fontSize: isSelected ? "0.75rem" : "0.68rem",
-                      fontWeight: isSelected ? 800 : 600,
-                      color: isSelected ? "var(--cyan)" : isHovered ? "#fff" : "rgba(255, 255, 255, 0.65)",
-                      background: isSelected
-                        ? "rgba(15, 23, 42, 0.88)"
-                        : "rgba(15, 23, 42, 0.65)",
-                      padding: "2px 6px",
-                      borderRadius: 6,
-                      border: `1px solid ${isSelected ? "var(--cyan)" : "rgba(255,255,255,0.1)"}`,
-                      whiteSpace: "nowrap",
-                      backdropFilter: "blur(4px)",
-                    }}
-                  >
-                    {clusterKey}
-                  </span>
-                </div>
-              );
-            })}
+                {/* 2. Katol (Citrus Capital) */}
+                <polygon
+                  points="60,95 130,80 160,150 90,165 45,125"
+                  fill={data.selectedCluster === "Katol" ? "rgba(249, 115, 22, 0.45)" : "rgba(249, 115, 22, 0.18)"}
+                  stroke={data.selectedCluster === "Katol" ? "var(--citrus-orange)" : "rgba(249, 115, 22, 0.5)"}
+                  strokeWidth={data.selectedCluster === "Katol" ? 3 : 1.2}
+                  style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                  onClick={() => handleClusterSelect("Katol")}
+                />
+                <text x="105" y="130" fill="#fff" fontSize="11" fontWeight="800" textAnchor="middle" pointerEvents="none">Katol 🍊</text>
+
+                {/* 3. Savner / Saoner */}
+                <polygon
+                  points="130,20 220,15 240,75 165,85 130,80"
+                  fill={data.selectedCluster === "Saoner" ? "rgba(56, 189, 248, 0.35)" : "rgba(56, 189, 248, 0.1)"}
+                  stroke={data.selectedCluster === "Saoner" ? "var(--cyan)" : "rgba(56, 189, 248, 0.3)"}
+                  strokeWidth={1}
+                  style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                />
+                <text x="185" y="50" fill="var(--muted)" fontSize="10" fontWeight="600" textAnchor="middle" pointerEvents="none">Saoner</text>
+
+                {/* 4. Kalmeshwar (Agro-Industrial Node) */}
+                <polygon
+                  points="165,85 240,75 250,150 170,155 160,150"
+                  fill={data.selectedCluster === "Kalmeshwar" ? "rgba(56, 189, 248, 0.4)" : "rgba(56, 189, 248, 0.14)"}
+                  stroke={data.selectedCluster === "Kalmeshwar" ? "var(--cyan)" : "rgba(56, 189, 248, 0.4)"}
+                  strokeWidth={data.selectedCluster === "Kalmeshwar" ? 2.5 : 1}
+                  style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                  onClick={() => handleClusterSelect("Kalmeshwar")}
+                />
+                <text x="205" y="120" fill="var(--text)" fontSize="10" fontWeight="700" textAnchor="middle" pointerEvents="none">Kalmeshwar</text>
+
+                {/* 5. Ramtek (Horticulture & Pilgrim Belt) */}
+                <polygon
+                  points="240,15 350,10 380,80 290,95 240,75"
+                  fill={data.selectedCluster === "Ramtek" ? "rgba(99, 102, 241, 0.4)" : "rgba(99, 102, 241, 0.12)"}
+                  stroke={data.selectedCluster === "Ramtek" ? "var(--electric-blue)" : "rgba(99, 102, 241, 0.35)"}
+                  strokeWidth={data.selectedCluster === "Ramtek" ? 2.5 : 1}
+                  style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                  onClick={() => handleClusterSelect("Ramtek")}
+                />
+                <text x="305" y="55" fill="var(--text)" fontSize="10" fontWeight="700" textAnchor="middle" pointerEvents="none">Ramtek 🌿</text>
+
+                {/* 6. Parseoni & Mouda (East Agro-Water Corridor) */}
+                <polygon
+                  points="350,10 460,25 450,105 380,80"
+                  fill="rgba(52, 211, 153, 0.08)"
+                  stroke="rgba(52, 211, 153, 0.25)"
+                  strokeWidth={1}
+                />
+                <text x="410" y="60" fill="var(--muted)" fontSize="9" fontWeight="600" textAnchor="middle" pointerEvents="none">Parseoni</text>
+
+                {/* 7. Kamptee & Kalamna Mandi */}
+                <polygon
+                  points="250,95 380,95 370,165 260,165"
+                  fill={data.selectedCluster === "Kalamna APMC" ? "rgba(249, 115, 22, 0.4)" : "rgba(249, 115, 22, 0.12)"}
+                  stroke={data.selectedCluster === "Kalamna APMC" ? "var(--citrus-orange)" : "rgba(249, 115, 22, 0.35)"}
+                  strokeWidth={data.selectedCluster === "Kalamna APMC" ? 2.5 : 1}
+                  style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                  onClick={() => handleClusterSelect("Kalamna APMC")}
+                />
+                <text x="315" y="135" fill="var(--text)" fontSize="10" fontWeight="700" textAnchor="middle" pointerEvents="none">Kalamna APMC 🏛️</text>
+
+                {/* 8. Nagpur Urban Central */}
+                <polygon
+                  points="250,150 320,150 330,205 240,205"
+                  fill="rgba(255, 255, 255, 0.08)"
+                  stroke="rgba(255, 255, 255, 0.25)"
+                  strokeWidth={1.5}
+                />
+                <text x="285" y="180" fill="#fff" fontSize="10" fontWeight="800" textAnchor="middle" pointerEvents="none">Nagpur City</text>
+
+                {/* 9. Hingna MIDC (FMCG & MSME Belt) */}
+                <polygon
+                  points="160,150 240,150 240,240 150,230"
+                  fill={data.selectedCluster === "Hingna MIDC" ? "rgba(168, 85, 247, 0.4)" : "rgba(168, 85, 247, 0.12)"}
+                  stroke={data.selectedCluster === "Hingna MIDC" ? "var(--violet)" : "rgba(168, 85, 247, 0.35)"}
+                  strokeWidth={data.selectedCluster === "Hingna MIDC" ? 2.5 : 1}
+                  style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                  onClick={() => handleClusterSelect("Hingna MIDC")}
+                />
+                <text x="195" y="195" fill="var(--text)" fontSize="10" fontWeight="700" textAnchor="middle" pointerEvents="none">Hingna MIDC 🏭</text>
+
+                {/* 10. Butibori & MIHAN Cargo Terminal */}
+                <polygon
+                  points="240,205 340,205 350,285 230,280"
+                  fill={data.selectedCluster === "MIHAN" || data.selectedCluster === "Butibori MIDC" ? "rgba(56, 189, 248, 0.45)" : "rgba(56, 189, 248, 0.14)"}
+                  stroke={data.selectedCluster === "MIHAN" ? "var(--cyan)" : "rgba(56, 189, 248, 0.4)"}
+                  strokeWidth={data.selectedCluster === "MIHAN" ? 3 : 1.2}
+                  style={{ cursor: "pointer", transition: "all 0.3s ease" }}
+                  onClick={() => handleClusterSelect("MIHAN")}
+                />
+                <text x="290" y="245" fill="var(--text)" fontSize="10" fontWeight="800" textAnchor="middle" pointerEvents="none">MIHAN / Butibori ✈️</text>
+
+                {/* 11. Umred & Kuhi (South-East Node) */}
+                <polygon
+                  points="340,205 470,180 480,290 350,285"
+                  fill="rgba(52, 211, 153, 0.08)"
+                  stroke="rgba(52, 211, 153, 0.25)"
+                  strokeWidth={1}
+                />
+                <text x="410" y="240" fill="var(--muted)" fontSize="10" fontWeight="600" textAnchor="middle" pointerEvents="none">Umred</text>
+
+                {/* Corridor Highway lines (NH-353J & NH-7) */}
+                <line x1="105" y1="130" x2="285" y2="180" stroke="rgba(249, 115, 22, 0.6)" strokeWidth="2" strokeDasharray="4 3" />
+                <line x1="305" y1="55" x2="285" y2="180" stroke="rgba(99, 102, 241, 0.5)" strokeWidth="2" strokeDasharray="4 3" />
+                <line x1="285" y1="180" x2="290" y2="245" stroke="rgba(56, 189, 248, 0.7)" strokeWidth="2.5" />
+              </svg>
+            </div>
 
             {/* Bottom Quick Metric strip */}
             <div
               style={{
-                position: "absolute",
-                bottom: 12,
-                left: 16,
-                right: 16,
-                zIndex: 3,
+                position: "relative",
+                zIndex: 4,
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                background: "rgba(15, 23, 42, 0.75)",
+                background: "rgba(15, 23, 42, 0.85)",
                 backdropFilter: "blur(8px)",
-                padding: "6px 14px",
+                padding: "8px 14px",
                 borderRadius: 10,
                 border: "1px solid var(--line-glass)",
-                fontSize: "0.75rem",
+                fontSize: "0.8rem",
               }}
             >
               <span style={{ color: "var(--muted)" }}>
                 📍 <strong style={{ color: "var(--text-heading)" }}>{currentEco.clusterName}</strong>
               </span>
-              <span style={{ color: "var(--cyan)", fontWeight: 600 }}>{currentEco.distanceText}</span>
+              <span style={{ color: "var(--citrus-orange)", fontWeight: 700 }}>{currentEco.distanceText}</span>
             </div>
           </div>
         </div>

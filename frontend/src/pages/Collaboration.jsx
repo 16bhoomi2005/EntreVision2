@@ -680,27 +680,43 @@ export default function Collaboration() {
                     </div>
                   </div>
 
-                  {/* Compatibility Score */}
-                  <div
-                    style={{
-                      background: "rgba(16, 185, 129, 0.08)",
-                      border: "1px solid var(--ok-border)",
-                      padding: "6px 14px",
-                      borderRadius: 12,
-                      textAlign: "right",
-                    }}
-                  >
-                    <span style={{ fontSize: "0.68rem", color: "var(--muted)", textTransform: "uppercase", fontWeight: 800 }}>
-                      Match Score
-                    </span>
-                    <div style={{ fontSize: "1.2rem", fontWeight: 900, color: "var(--ok)" }}>
-                      {profile.suitabilityScore}%
+                  {/* Compatibility Score Ring */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <div style={{ position: "relative", width: 54, height: 54, display: "grid", placeItems: "center" }}>
+                      <svg width="54" height="54" viewBox="0 0 54 54" style={{ transform: "rotate(-90deg)" }}>
+                        <circle cx="27" cy="27" r="21" fill="none" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="4" />
+                        <circle
+                          cx="27"
+                          cy="27"
+                          r="21"
+                          fill="none"
+                          stroke={profile.suitabilityScore >= 85 ? "var(--ok)" : "var(--cyan)"}
+                          strokeWidth="4"
+                          strokeDasharray={131.95}
+                          strokeDashoffset={131.95 * (1 - (profile.suitabilityScore || 85) / 100)}
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                      <div style={{ position: "absolute", textAlign: "center" }}>
+                        <span style={{ fontSize: "0.85rem", fontWeight: 900, color: "var(--text-heading)" }}>
+                          {profile.suitabilityScore}%
+                        </span>
+                      </div>
+                    </div>
+                    <div style={{ textAlign: "left" }}>
+                      <span style={{ fontSize: "0.68rem", color: "var(--muted)", textTransform: "uppercase", fontWeight: 800, display: "block" }}>
+                        Compatibility
+                      </span>
+                      <span style={{ fontSize: "0.74rem", color: "var(--ok)", fontWeight: 700 }}>
+                        High Synergy
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                {/* What They Offer vs What They Need Side-by-Side */}
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 12 }}>
+                {/* Two-Way "Offers ↔ Looking For" Visual Connector */}
+                <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 10, alignItems: "center" }}>
+                  {/* What They Offer */}
                   <div style={{ background: "var(--panel-subtle)", padding: 12, borderRadius: 12, border: "1px solid var(--line)" }}>
                     <span style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--ok)", textTransform: "uppercase", display: "flex", alignItems: "center", gap: 4 }}>
                       <CheckCircle2 size={12} /> What They Offer:
@@ -714,6 +730,27 @@ export default function Collaboration() {
                     </ul>
                   </div>
 
+                  {/* Two-Way Connector Badge */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      padding: "8px",
+                      borderRadius: "50%",
+                      background: "rgba(249, 115, 22, 0.12)",
+                      border: "1px solid rgba(249, 115, 22, 0.35)",
+                      color: "var(--citrus-orange)",
+                      fontSize: "0.9rem",
+                      fontWeight: 900,
+                    }}
+                    title="Two-Way Mutual Complement"
+                  >
+                    ⇄
+                  </div>
+
+                  {/* Looking For */}
                   <div style={{ background: "var(--panel-subtle)", padding: 12, borderRadius: 12, border: "1px solid var(--line)" }}>
                     <span style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--cyan)", textTransform: "uppercase", display: "flex", alignItems: "center", gap: 4 }}>
                       <Search size={12} /> Looking For:

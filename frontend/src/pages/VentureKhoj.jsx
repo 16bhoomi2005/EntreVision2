@@ -391,77 +391,161 @@ export default function VentureKhoj() {
         <AnalysisScreen onComplete={handleAnalysisComplete} />
       )}
 
-      {/* STEP 1: PAGE 2.1 — ABOUT ME */}
-      {!isAnalyzing && step === 1 && (
-        <AboutMeStep
-          data={aboutMe}
-          onChange={handleAboutMeChange}
-          onNext={() => setStep(2)}
-        />
-      )}
+      {/* Split Layout: Step Content on Left + Sticky Live Preview on Right */}
+      {!isAnalyzing && (
+        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) 280px", gap: 24, alignItems: "start" }}>
+          <div style={{ minWidth: 0 }}>
+            {/* STEP 1: PAGE 2.1 — ABOUT ME */}
+            {step === 1 && (
+              <AboutMeStep
+                data={aboutMe}
+                onChange={handleAboutMeChange}
+                onNext={() => setStep(2)}
+              />
+            )}
 
-      {/* STEP 2: PAGE 2.2 — SKILLS & EXPERIENCE */}
-      {!isAnalyzing && step === 2 && (
-        <SkillsStep
-          skillsList={skillsList}
-          selectedSkillsData={selectedSkillsData}
-          willingnessToLearn={willingnessToLearn}
-          onChange={handleSkillsStepChange}
-          onNext={() => setStep(3)}
-          onBack={() => setStep(1)}
-        />
-      )}
+            {/* STEP 2: PAGE 2.2 — SKILLS & EXPERIENCE */}
+            {step === 2 && (
+              <SkillsStep
+                skillsList={skillsList}
+                selectedSkillsData={selectedSkillsData}
+                willingnessToLearn={willingnessToLearn}
+                onChange={handleSkillsStepChange}
+                onNext={() => setStep(3)}
+                onBack={() => setStep(1)}
+              />
+            )}
 
-      {/* STEP 3: PAGE 2.3 — CERTIFICATES & DOCUMENTS */}
-      {!isAnalyzing && step === 3 && (
-        <DocumentsStep
-          documents={documents}
-          onChange={handleDocumentsStepChange}
-          onNext={() => setStep(4)}
-          onBack={() => setStep(2)}
-        />
-      )}
+            {/* STEP 3: PAGE 2.3 — CERTIFICATES & DOCUMENTS */}
+            {step === 3 && (
+              <DocumentsStep
+                documents={documents}
+                onChange={handleDocumentsStepChange}
+                onNext={() => setStep(4)}
+                onBack={() => setStep(2)}
+              />
+            )}
 
-      {/* STEP 4: PAGE 2.4 — RESOURCES & EXISTING SETUP */}
-      {!isAnalyzing && step === 4 && (
-        <ResourcesStep
-          resourcesData={resourcesData}
-          onChange={handleResourcesStepChange}
-          onNext={() => setStep(5)}
-          onBack={() => setStep(3)}
-        />
-      )}
+            {/* STEP 4: PAGE 2.4 — RESOURCES & EXISTING SETUP */}
+            {step === 4 && (
+              <ResourcesStep
+                resourcesData={resourcesData}
+                onChange={handleResourcesStepChange}
+                onNext={() => setStep(5)}
+                onBack={() => setStep(3)}
+              />
+            )}
 
-      {/* STEP 5: PAGE 2.5 — LOCATION & LOCAL ECOSYSTEM */}
-      {!isAnalyzing && step === 5 && (
-        <LocationStep
-          locationData={locationData}
-          locationsList={locationsList}
-          onChange={handleLocationStepChange}
-          onNext={() => setStep(6)}
-          onBack={() => setStep(4)}
-        />
-      )}
+            {/* STEP 5: PAGE 2.5 — LOCATION & LOCAL ECOSYSTEM */}
+            {step === 5 && (
+              <LocationStep
+                locationData={locationData}
+                locationsList={locationsList}
+                onChange={handleLocationStepChange}
+                onNext={() => setStep(6)}
+                onBack={() => setStep(4)}
+              />
+            )}
 
-      {/* STEP 6: PAGE 2.6 — FINANCIAL CAPACITY */}
-      {!isAnalyzing && step === 6 && (
-        <FinanceStep
-          financeData={financeData}
-          onChange={handleFinanceStepChange}
-          onNext={() => setStep(7)}
-          onBack={() => setStep(5)}
-        />
-      )}
+            {/* STEP 6: PAGE 2.6 — FINANCIAL CAPACITY */}
+            {step === 6 && (
+              <FinanceStep
+                financeData={financeData}
+                onChange={handleFinanceStepChange}
+                onNext={() => setStep(7)}
+                onBack={() => setStep(5)}
+              />
+            )}
 
-      {/* STEP 7: PAGE 2.7 — BUSINESS PREFERENCES */}
-      {!isAnalyzing && step === 7 && (
-        <BusinessPreferencesStep
-          preferencesData={preferencesData}
-          onChange={handlePreferencesStepChange}
-          onSubmit={handleSubmit}
-          onBack={() => setStep(6)}
-          loading={loading}
-        />
+            {/* STEP 7: PAGE 2.7 — BUSINESS PREFERENCES */}
+            {step === 7 && (
+              <BusinessPreferencesStep
+                preferencesData={preferencesData}
+                onChange={handlePreferencesStepChange}
+                onSubmit={handleSubmit}
+                onBack={() => setStep(6)}
+                loading={loading}
+              />
+            )}
+          </div>
+
+          {/* Sticky Live Wizard Intelligence Summary Panel */}
+          <aside
+            style={{
+              position: "sticky",
+              top: 24,
+              display: "flex",
+              flexDirection: "column",
+              gap: 16,
+            }}
+          >
+            <div
+              className="card"
+              style={{
+                padding: "20px",
+                borderRadius: 20,
+                background: "linear-gradient(145deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.75) 100%)",
+                border: "1px solid var(--line-glow)",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+                <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "var(--citrus-orange)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+                  ⚡ LIVE ENGINE PREVIEW
+                </span>
+                <span className="skill-status-tag claimed" style={{ fontSize: "0.68rem" }}>
+                  Step {step}/7
+                </span>
+              </div>
+
+              {/* Matches Identified */}
+              <div style={{ background: "var(--panel-solid)", padding: 12, borderRadius: 12, border: "1px solid var(--line)", marginBottom: 10 }}>
+                <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 700, display: "block" }}>
+                  IDENTIFIED OPPORTUNITIES
+                </span>
+                <div style={{ fontSize: "1.25rem", fontWeight: 900, color: "var(--text-heading)", marginTop: 2 }}>
+                  5 Verified Models
+                </div>
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 6 }}>
+                  <span style={{ fontSize: "0.68rem", padding: "2px 6px", borderRadius: 4, background: "rgba(249, 115, 22, 0.15)", color: "var(--citrus-orange)" }}>
+                    Juice & Pulping
+                  </span>
+                  <span style={{ fontSize: "0.68rem", padding: "2px 6px", borderRadius: 4, background: "rgba(52, 211, 153, 0.15)", color: "var(--ok)" }}>
+                    Nursery
+                  </span>
+                </div>
+              </div>
+
+              {/* Active Hub */}
+              <div style={{ background: "var(--panel-solid)", padding: 12, borderRadius: 12, border: "1px solid var(--line)", marginBottom: 10 }}>
+                <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 700, display: "block" }}>
+                  SELECTED OPERATING CLUSTER
+                </span>
+                <div style={{ fontSize: "0.95rem", fontWeight: 800, color: "var(--cyan)", marginTop: 2 }}>
+                  📍 {locationData.selectedCluster || "Katol Citrus Belt"}
+                </div>
+                <span style={{ fontSize: "0.72rem", color: "var(--muted)" }}>
+                  NH-353J Corridor • High Orange Density
+                </span>
+              </div>
+
+              {/* Capital Meter */}
+              <div style={{ background: "var(--panel-solid)", padding: 12, borderRadius: 12, border: "1px solid var(--line)", marginBottom: 10 }}>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 700 }}>LIQUID EQUITY</span>
+                  <span style={{ fontSize: "0.72rem", color: "var(--ok)", fontWeight: 700 }}>PMFME Eligible</span>
+                </div>
+                <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--text-heading)", marginTop: 2 }}>
+                  ₹{(financeData.availableCapitalINR || 300000).toLocaleString("en-IN")}
+                </div>
+              </div>
+
+              {/* Auto-save reassurance */}
+              <div style={{ padding: "8px 10px", borderRadius: 8, background: "rgba(52, 211, 153, 0.08)", border: "1px solid rgba(52, 211, 153, 0.2)", fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.4 }}>
+                💾 <strong>Auto-Saved:</strong> Changes update your central profile for instant use in Financial Assistant & Schemes.
+              </div>
+            </div>
+          </aside>
+        </div>
       )}
     </div>
   );

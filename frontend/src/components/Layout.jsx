@@ -124,6 +124,29 @@ export default function Layout() {
           </div>
 
           <div className="top-actions">
+            <NavLink
+              to="/business-plan"
+              className="glass-btn active-venture-pill"
+              style={{
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "rgba(249, 115, 22, 0.12)",
+                borderColor: "rgba(249, 115, 22, 0.35)",
+                color: "var(--text-heading)",
+                fontSize: "0.82rem",
+                padding: "6px 12px",
+              }}
+              title="Current Active Business Model & Location"
+            >
+              <span style={{ fontSize: "1rem" }}>🍊</span>
+              <div>
+                <span style={{ color: "var(--citrus-orange)", fontWeight: 800, marginRight: 4 }}>Active Venture:</span>
+                <span style={{ fontWeight: 600 }}>Citrus Nursery • Katol</span>
+              </div>
+            </NavLink>
+
             <div className="tag-badge">
               <span className="glowing-dot" style={{ width: 6, height: 6 }} />
               <span>Vidarbha Focus</span>

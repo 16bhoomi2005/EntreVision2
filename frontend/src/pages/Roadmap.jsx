@@ -497,24 +497,63 @@ export default function Roadmap() {
           </div>
 
           {/* Progress Bar */}
-          <div
-            style={{
-              marginTop: 14,
-              height: 12,
-              borderRadius: 6,
-              background: "var(--panel-subtle)",
-              overflow: "hidden",
-              border: "1px solid var(--line)",
-            }}
-          >
-            <div
-              style={{
-                width: `${progressMetrics.percentage}%`,
-                height: "100%",
-                background: "linear-gradient(90deg, var(--electric-blue), var(--cyan))",
-                transition: "width 0.4s ease",
-              }}
-            />
+          {/* Visual Horizontal Phase Gantt Timeline Track */}
+          <div style={{ marginTop: 18, background: "var(--panel-solid)", padding: "16px 18px", borderRadius: 16, border: "1px solid var(--line)" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <span style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--text-heading)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                📅 16-Week Commercial Execution Timeline (Gantt Phase Flow)
+              </span>
+              <span style={{ fontSize: "0.75rem", color: "var(--citrus-orange)", fontWeight: 700 }}>
+                {progressMetrics.completedTasks} of {progressMetrics.totalTasks} Tasks Done ({progressMetrics.percentage}%)
+              </span>
+            </div>
+
+            {/* 6-Phase Timeline Track Bar */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 6 }}>
+              {DEFAULT_ROADMAP_PHASES.map((ph, idx) => {
+                const completedInPh = ph.tasks.filter((t) => completedTaskIds.includes(t.id)).length;
+                const isAllDone = completedInPh === ph.tasks.length;
+                const isCurrent = progressMetrics.activePhase.id === ph.id;
+
+                return (
+                  <div
+                    key={ph.id}
+                    onClick={() => setActivePhaseFilter(ph.id)}
+                    style={{
+                      cursor: "pointer",
+                      padding: "8px 10px",
+                      borderRadius: 10,
+                      background: isAllDone
+                        ? "rgba(52, 211, 153, 0.12)"
+                        : isCurrent
+                        ? "rgba(249, 115, 22, 0.18)"
+                        : "var(--panel-subtle)",
+                      border: `1px solid ${
+                        isAllDone
+                          ? "var(--ok)"
+                          : isCurrent
+                          ? "var(--citrus-orange)"
+                          : "var(--line)"
+                      }`,
+                      transition: "all 0.2s ease",
+                    }}
+                  >
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.72rem" }}>
+                      <span style={{ fontWeight: 800, color: isAllDone ? "var(--ok)" : isCurrent ? "var(--citrus-orange)" : "var(--muted)" }}>
+                        Phase {ph.phaseNumber}
+                      </span>
+                      <span style={{ fontSize: "0.68rem" }}>{isAllDone ? "✓" : isCurrent ? "⚡" : "⏳"}</span>
+                    </div>
+                    <div style={{ fontSize: "0.76rem", fontWeight: 700, color: "var(--text-heading)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginTop: 2 }}>
+                      {ph.title.split(". ")[1]}
+                    </div>
+                    <div style={{ fontSize: "0.68rem", color: "var(--muted)", marginTop: 2 }}>
+                      {ph.timeframe}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
 

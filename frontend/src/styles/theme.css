@@ -4,106 +4,89 @@
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 
   /* Theme Tokens - Light Mode */
-  --bg: #f5f7fc;
-  --bg-mesh: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-             radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.10) 0px, transparent 50%),
-             radial-gradient(at 50% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 60%),
-             #f5f7fc;
+  --bg: #f8fafc;
+  --bg-mesh: radial-gradient(at 0% 0%, rgba(249, 115, 22, 0.08) 0px, transparent 40%),
+             radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 40%),
+             radial-gradient(at 50% 100%, rgba(99, 102, 241, 0.06) 0px, transparent 60%),
+             #f8fafc;
   
-  --panel: rgba(255, 255, 255, 0.82);
+  --panel: rgba(255, 255, 255, 0.88);
   --panel-solid: #ffffff;
-  --panel-subtle: rgba(241, 245, 249, 0.8);
-  --panel-glass: rgba(255, 255, 255, 0.65);
+  --panel-subtle: rgba(241, 245, 249, 0.9);
+  --panel-glass: rgba(255, 255, 255, 0.75);
   
-  --line: rgba(226, 232, 240, 0.9);
-  --line-glass: rgba(255, 255, 255, 0.8);
-  --line-glow: rgba(99, 102, 241, 0.35);
+  --line: rgba(226, 232, 240, 0.95);
+  --line-glass: rgba(255, 255, 255, 0.9);
+  --line-glow: rgba(249, 115, 22, 0.35);
   
   --text: #0f172a;
   --text-heading: #090d16;
-  --muted: #64748b;
+  --muted: #475569;
+  
+  /* Brand: Nagpur Citrus & Botanical Identity */
+  --citrus-orange: #ea580c;
+  --citrus-amber: #f59e0b;
+  --citrus-leaf: #059669;
+  --citrus-gold: #d97706;
   
   --electric-blue: #4f46e5;
-  --cyan: #06b6d4;
-  --violet: #8b5cf6;
-  --accent-glow-color: rgba(79, 70, 229, 0.4);
+  --cyan: #0284c7;
+  --violet: #7c3aed;
+  --accent-glow-color: rgba(234, 88, 12, 0.3);
   
-  --ok: #10b981;
-  --ok-bg: rgba(16, 185, 129, 0.12);
-  --ok-border: rgba(16, 185, 129, 0.3);
+  --ok: #059669;
+  --ok-bg: rgba(5, 150, 105, 0.12);
+  --ok-border: rgba(5, 150, 105, 0.3);
   
   --glass-blur: blur(20px) saturate(180%);
   --shadow-card: 0 16px 36px -8px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
-  --shadow-glow: 0 12px 32px -4px rgba(79, 70, 229, 0.35), 0 6px 14px -2px rgba(6, 182, 212, 0.25);
+  --shadow-glow: 0 12px 32px -4px rgba(234, 88, 12, 0.25), 0 6px 14px -2px rgba(5, 150, 105, 0.2);
   --shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.06);
   --shadow-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.12);
 }
 
 :root[data-theme="dark"], :root {
-  /* Default / Dark Theme: Deep Navy & High-Gloss Cyber-Aero Aesthetic */
-  --bg: #070b14;
-  --bg-mesh: radial-gradient(at 5% 5%, rgba(99, 102, 241, 0.22) 0px, transparent 45%),
-             radial-gradient(at 95% 10%, rgba(6, 182, 212, 0.18) 0px, transparent 45%),
-             radial-gradient(at 50% 85%, rgba(139, 92, 246, 0.14) 0px, transparent 55%),
-             #070b14;
+  /* Default / Dark Theme: Deep Navy, Saffron Warmth & Citrus Leaf Accents */
+  --bg: #070c18;
+  --bg-mesh: radial-gradient(at 5% 5%, rgba(249, 115, 22, 0.16) 0px, transparent 40%),
+             radial-gradient(at 95% 10%, rgba(16, 185, 129, 0.14) 0px, transparent 40%),
+             radial-gradient(at 50% 85%, rgba(99, 102, 241, 0.12) 0px, transparent 55%),
+             #070c18;
   
-  --panel: rgba(15, 23, 42, 0.72);
+  --panel: rgba(15, 23, 42, 0.78);
   --panel-solid: #0f172a;
-  --panel-subtle: rgba(30, 41, 59, 0.55);
-  --panel-glass: rgba(15, 23, 42, 0.6);
+  --panel-subtle: rgba(30, 41, 59, 0.65);
+  --panel-glass: rgba(15, 23, 42, 0.65);
   
-  --line: rgba(255, 255, 255, 0.08);
-  --line-glass: rgba(255, 255, 255, 0.14);
-  --line-glow: rgba(99, 102, 241, 0.45);
+  --line: rgba(255, 255, 255, 0.09);
+  --line-glass: rgba(255, 255, 255, 0.15);
+  --line-glow: rgba(249, 115, 22, 0.4);
   
-  --text: #e2e8f0;
-  --text-heading: #f8fafc;
+  /* High-contrast readable typography */
+  --text: #f1f5f9;
+  --text-heading: #ffffff;
   --muted: #94a3b8;
   
+  /* Brand: Nagpur Citrus & Botanical Identity */
+  --citrus-orange: #f97316;
+  --citrus-amber: #fbbf24;
+  --citrus-leaf: #10b981;
+  --citrus-gold: #f59e0b;
+  
   --electric-blue: #6366f1;
-  --cyan: #22d3ee;
+  --cyan: #38bdf8;
   --violet: #a855f7;
-  --accent-glow-color: rgba(99, 102, 241, 0.55);
+  --accent-glow-color: rgba(249, 115, 22, 0.4);
   
   --ok: #34d399;
-  --ok-bg: rgba(52, 211, 153, 0.12);
-  --ok-border: rgba(52, 211, 153, 0.3);
+  --ok-bg: rgba(52, 211, 153, 0.14);
+  --ok-border: rgba(52, 211, 153, 0.35);
   
   --glass-blur: blur(24px) saturate(190%);
-  --shadow-card: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 24px -6px rgba(99, 102, 241, 0.12), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-  --shadow-glow: 0 14px 34px -4px rgba(99, 102, 241, 0.5), 0 6px 16px -2px rgba(34, 211, 238, 0.35);
+  --shadow-card: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 24px -6px rgba(249, 115, 22, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --shadow-glow: 0 14px 34px -4px rgba(249, 115, 22, 0.35), 0 6px 16px -2px rgba(16, 185, 129, 0.25);
   --shadow-sm: 0 4px 12px -2px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 28px 56px -12px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
-}
-
-/* Light mode override only when explicitly data-theme="light" */
-:root[data-theme="light"] {
-  --bg: #f5f7fc;
-  --bg-mesh: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-             radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.10) 0px, transparent 50%),
-             radial-gradient(at 50% 100%, rgba(139, 92, 246, 0.08) 0px, transparent 60%),
-             #f5f7fc;
-  --panel: rgba(255, 255, 255, 0.85);
-  --panel-solid: #ffffff;
-  --panel-subtle: rgba(241, 245, 249, 0.85);
-  --panel-glass: rgba(255, 255, 255, 0.7);
-  --line: rgba(226, 232, 240, 0.9);
-  --line-glass: rgba(255, 255, 255, 0.9);
-  --line-glow: rgba(99, 102, 241, 0.35);
-  --text: #0f172a;
-  --text-heading: #090d16;
-  --muted: #64748b;
-  --electric-blue: #4f46e5;
-  --cyan: #06b6d4;
-  --violet: #8b5cf6;
-  --accent-glow-color: rgba(79, 70, 229, 0.35);
-  --ok: #10b981;
-  --ok-bg: rgba(16, 185, 129, 0.12);
-  --ok-border: rgba(16, 185, 129, 0.3);
-  --shadow-card: 0 16px 36px -8px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
-  --shadow-glow: 0 12px 32px -4px rgba(79, 70, 229, 0.35), 0 6px 14px -2px rgba(6, 182, 212, 0.25);
-  --shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.06);
-  --shadow-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.12);
 }
 
 * {

@@ -567,48 +567,125 @@ export default function FinanceStep({
             If a high-margin citrus processing business requires <strong>₹15 Lakh</strong> and your available capital is <strong>₹{ownEquity.toLocaleString("en-IN")}</strong>, EntreVision will <strong>NOT</strong> reject it. Instead, our Decision Support System will calculate the <strong>Financial Gap</strong> and suggest actionable pathways (PMFME 35% Capital Subsidy, MUDRA loans, or phased machinery modular setups).
           </p>
 
-          {/* Dynamic Financial Leverage Preview Grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10 }}>
-            <div style={{ background: "var(--panel-solid)", padding: 12, borderRadius: 12, border: "1px solid var(--line)" }}>
-              <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 700, textTransform: "uppercase" }}>
-                1. Your Own Capital
-              </span>
-              <div style={{ fontSize: "1.2rem", fontWeight: 800, color: "var(--cyan)", marginTop: 2 }}>
-                ₹{ownEquity.toLocaleString("en-IN")}
+          {/* ====================================================================
+              FUNDING WATERFALL & CAPITAL STACK VISUALIZER
+             ==================================================================== */}
+          <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 16 }}>
+            {/* Visual Stacked Capital Bar */}
+            <div style={{ background: "var(--panel-solid)", padding: 18, borderRadius: 16, border: "1px solid var(--line)" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
+                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--text-heading)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  📊 Project Capital Stack Allocation (Example ₹15 Lakh Agro Unit)
+                </span>
+                <span style={{ fontSize: "0.82rem", color: "var(--citrus-orange)", fontWeight: 700 }}>
+                  Total Capacity: ₹{Math.max(1500000, totalAccessibleProject).toLocaleString("en-IN")}
+                </span>
               </div>
-              <span style={{ fontSize: "0.74rem", color: "var(--ok)", fontWeight: 600 }}>100% Liquid Equity</span>
-            </div>
 
-            <div style={{ background: "var(--panel-solid)", padding: 12, borderRadius: 12, border: "1px solid var(--line)" }}>
-              <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 700, textTransform: "uppercase" }}>
-                2. PMFME 35% Govt Subsidy
-              </span>
-              <div style={{ fontSize: "1.2rem", fontWeight: 800, color: "var(--ok)", marginTop: 2 }}>
-                + ₹{estimatedMaxSubsidy.toLocaleString("en-IN")}
+              {/* Progress Stack Bar */}
+              <div style={{ display: "flex", height: 28, borderRadius: 10, overflow: "hidden", border: "1px solid var(--line-glass)", marginBottom: 12 }}>
+                <div
+                  style={{
+                    width: `${Math.round((ownEquity / Math.max(1500000, totalAccessibleProject)) * 100)}%`,
+                    minWidth: 40,
+                    background: "linear-gradient(135deg, var(--citrus-orange), var(--citrus-amber))",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "0.74rem",
+                    fontWeight: 800,
+                    color: "#fff",
+                    transition: "width 0.4s ease",
+                  }}
+                  title="Promoter Equity (Your Own Funds)"
+                >
+                  Own Equity ({Math.round((ownEquity / Math.max(1500000, totalAccessibleProject)) * 100)}%)
+                </div>
+                <div
+                  style={{
+                    width: `${Math.round((estimatedBankLoan / Math.max(1500000, totalAccessibleProject)) * 100)}%`,
+                    minWidth: 40,
+                    background: "linear-gradient(135deg, #6366f1, #3b82f6)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "0.74rem",
+                    fontWeight: 800,
+                    color: "#fff",
+                    transition: "width 0.4s ease",
+                  }}
+                  title="Bank Term Loan"
+                >
+                  Bank Loan ({Math.round((estimatedBankLoan / Math.max(1500000, totalAccessibleProject)) * 100)}%)
+                </div>
+                <div
+                  style={{
+                    width: `${Math.round((estimatedMaxSubsidy / Math.max(1500000, totalAccessibleProject)) * 100)}%`,
+                    minWidth: 40,
+                    background: "linear-gradient(135deg, #10b981, #059669)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "0.74rem",
+                    fontWeight: 800,
+                    color: "#fff",
+                    transition: "width 0.4s ease",
+                  }}
+                  title="PMFME 35% Capital Subsidy"
+                >
+                  35% Subsidy ({Math.round((estimatedMaxSubsidy / Math.max(1500000, totalAccessibleProject)) * 100)}%)
+                </div>
               </div>
-              <span style={{ fontSize: "0.74rem", color: "var(--muted)" }}>Credit-Linked Grant</span>
-            </div>
 
-            <div style={{ background: "var(--panel-solid)", padding: 12, borderRadius: 12, border: "1px solid var(--line)" }}>
-              <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 700, textTransform: "uppercase" }}>
-                3. Bank Loan Leverage
-              </span>
-              <div style={{ fontSize: "1.2rem", fontWeight: 800, color: "var(--electric-blue)", marginTop: 2 }}>
-                + ₹{estimatedBankLoan.toLocaleString("en-IN")}
-              </div>
-              <span style={{ fontSize: "0.74rem", color: "var(--muted)" }}>
-                {data.borrowingComfort === "no_loan" ? "Self-funded only" : "Term Loan / CGTMSE"}
-              </span>
-            </div>
+              {/* Waterfall Steps Explanation Cards */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
+                <div style={{ background: "var(--panel-subtle)", padding: 12, borderRadius: 12, borderLeft: "3px solid var(--citrus-orange)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <span style={{ fontSize: "0.76rem", color: "var(--muted)", fontWeight: 700 }}>1. Promoter Margin</span>
+                    <span style={{ fontSize: "0.72rem", color: "var(--ok)", fontWeight: 700 }}>Liquid Equity</span>
+                  </div>
+                  <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "var(--text-heading)", marginTop: 4 }}>
+                    ₹{ownEquity.toLocaleString("en-IN")}
+                  </div>
+                  <p style={{ fontSize: "0.76rem", color: "var(--muted)", margin: "4px 0 0 0" }}>
+                    Your upfront investment directly deposited for initial machine advance.
+                  </p>
+                </div>
 
-            <div style={{ background: "linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(6, 182, 212, 0.15))", padding: 12, borderRadius: 12, border: "1px solid var(--line-glow)" }}>
-              <span style={{ fontSize: "0.72rem", color: "var(--text-heading)", fontWeight: 700, textTransform: "uppercase" }}>
-                🎯 Total Project Capacity
-              </span>
-              <div style={{ fontSize: "1.25rem", fontWeight: 800, color: "var(--text-heading)", marginTop: 2 }}>
-                ₹{totalAccessibleProject.toLocaleString("en-IN")}
+                <div style={{ background: "var(--panel-subtle)", padding: 12, borderRadius: 12, borderLeft: "3px solid #6366f1" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <span style={{ fontSize: "0.76rem", color: "var(--muted)", fontWeight: 700 }}>2. Bank Term Loan</span>
+                    <span style={{ fontSize: "0.72rem", color: "#38bdf8", fontWeight: 700 }}>MUDRA / CGTMSE</span>
+                  </div>
+                  <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "var(--text-heading)", marginTop: 4 }}>
+                    ₹{estimatedBankLoan.toLocaleString("en-IN")}
+                  </div>
+                  <p style={{ fontSize: "0.76rem", color: "var(--muted)", margin: "4px 0 0 0" }}>
+                    Sanctioned by commercial bank with collateral-free CGTMSE credit guarantee.
+                  </p>
+                </div>
+
+                <div style={{ background: "var(--panel-subtle)", padding: 12, borderRadius: 12, borderLeft: "3px solid #10b981" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <span style={{ fontSize: "0.76rem", color: "var(--muted)", fontWeight: 700 }}>3. Credit-Linked Subsidy</span>
+                    <span style={{ fontSize: "0.72rem", color: "var(--ok)", fontWeight: 700 }}>PMFME ODOP 35%</span>
+                  </div>
+                  <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "var(--ok)", marginTop: 4 }}>
+                    ₹{estimatedMaxSubsidy.toLocaleString("en-IN")}
+                  </div>
+                  <p style={{ fontSize: "0.76rem", color: "var(--muted)", margin: "4px 0 0 0" }}>
+                    Paid by MOFPI post-setup to bank reserve account, reducing your active loan principal!
+                  </p>
+                </div>
               </div>
-              <span style={{ fontSize: "0.74rem", color: "var(--cyan)", fontWeight: 700 }}>Accessible Scale</span>
+
+              {/* Clarification banner on credit-linked subsidy timing */}
+              <div style={{ marginTop: 12, padding: "8px 12px", borderRadius: 8, background: "rgba(249, 115, 22, 0.08)", border: "1px solid rgba(249, 115, 22, 0.25)", display: "flex", alignItems: "center", gap: 8, fontSize: "0.78rem" }}>
+                <Info size={16} color="var(--citrus-orange)" style={{ flexShrink: 0 }} />
+                <span style={{ color: "var(--text)" }}>
+                  <strong>How the PMFME subsidy works:</strong> The bank sanctions your project upfront. After plant machinery is installed and inspected, the 35% subsidy is credited directly to reduce your loan EMI.
+                </span>
+              </div>
             </div>
           </div>
         </div>

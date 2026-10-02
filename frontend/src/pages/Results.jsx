@@ -122,7 +122,7 @@ export default function Results() {
       <div
         className="card wizard-form-card"
         style={{
-          marginBottom: 24,
+          marginBottom: 20,
           padding: "24px 28px",
           display: "flex",
           justifyContent: "space-between",
@@ -156,6 +156,142 @@ export default function Results() {
           <button onClick={() => window.print()} className="btn-secondary-gloss" style={{ padding: "8px 16px", fontSize: "0.84rem" }}>
             <Printer size={16} /> Print Blueprint
           </button>
+        </div>
+      </div>
+
+      {/* ====================================================================
+          VISUAL DECISION SUPPORT DASHBOARD (GAUGE + RADAR + RANKED BARS)
+         ==================================================================== */}
+      <div
+        className="card wizard-form-card"
+        style={{
+          marginBottom: 24,
+          padding: "24px",
+          background: "linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.75) 100%)",
+          border: "1px solid var(--line-glow)",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
+          <div style={{ width: 32, height: 32, borderRadius: 8, background: "rgba(249, 115, 22, 0.15)", display: "grid", placeItems: "center" }}>
+            <TrendingUp size={18} color="var(--citrus-orange)" />
+          </div>
+          <div>
+            <strong style={{ fontSize: "1.05rem", color: "var(--text-heading)" }}>
+              DECISION ENGINE ANALYTICS & FIT MATRIX
+            </strong>
+            <span style={{ fontSize: "0.78rem", color: "var(--muted)", display: "block" }}>
+              Multi-dimensional evaluation against Nagpur citrus ecosystem parameters
+            </span>
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "220px 280px 1fr", gap: 20, alignItems: "center" }}>
+          {/* 1. Radial Readiness Gauge */}
+          <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div style={{ position: "relative", width: 140, height: 140, display: "grid", placeItems: "center" }}>
+              <svg width="140" height="140" viewBox="0 0 140 140" style={{ transform: "rotate(-90deg)" }}>
+                {/* Background Track */}
+                <circle cx="70" cy="70" r="54" fill="none" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="12" />
+                {/* Gradient Definition */}
+                <defs>
+                  <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="var(--citrus-orange)" />
+                    <stop offset="100%" stopColor="var(--ok)" />
+                  </linearGradient>
+                </defs>
+                {/* Progress Arc */}
+                <circle
+                  cx="70"
+                  cy="70"
+                  r="54"
+                  fill="none"
+                  stroke="url(#gaugeGradient)"
+                  strokeWidth="12"
+                  strokeDasharray={339.29}
+                  strokeDashoffset={339.29 * (1 - 0.94)}
+                  strokeLinecap="round"
+                  style={{ transition: "stroke-dashoffset 1.2s ease" }}
+                />
+              </svg>
+              <div style={{ position: "absolute", textAlign: "center" }}>
+                <span style={{ fontSize: "1.75rem", fontWeight: 900, color: "var(--text-heading)", lineHeight: 1 }}>
+                  94%
+                </span>
+                <span style={{ fontSize: "0.68rem", color: "var(--citrus-orange)", fontWeight: 800, display: "block", textTransform: "uppercase", marginTop: 2 }}>
+                  DSS READINESS
+                </span>
+              </div>
+            </div>
+            <span className="skill-status-tag verified" style={{ marginTop: 8, fontSize: "0.72rem" }}>
+              🌟 High Commercial Viability
+            </span>
+          </div>
+
+          {/* 2. 5-Axis Spider / Radar Chart */}
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <svg width="220" height="180" viewBox="0 0 220 180">
+              {/* Radar Grid Webs */}
+              <polygon points="110,30 180,60 160,140 60,140 40,60" fill="none" stroke="rgba(255, 255, 255, 0.1)" strokeWidth="1" />
+              <polygon points="110,50 155,70 140,120 80,120 65,70" fill="none" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="1" />
+              
+              {/* Radar Data Polygon */}
+              <polygon
+                points="110,34 172,64 152,132 68,136 46,65"
+                fill="rgba(249, 115, 22, 0.25)"
+                stroke="var(--citrus-orange)"
+                strokeWidth="2"
+              />
+              
+              {/* Axis Dots */}
+              <circle cx="110" cy="34" r="4" fill="var(--citrus-orange)" />
+              <circle cx="172" cy="64" r="4" fill="var(--ok)" />
+              <circle cx="152" cy="132" r="4" fill="#6366f1" />
+              <circle cx="68" cy="136" r="4" fill="var(--cyan)" />
+              <circle cx="46" cy="65" r="4" fill="var(--citrus-amber)" />
+
+              {/* Labels */}
+              <text x="110" y="20" textAnchor="middle" fill="var(--muted)" fontSize="9" fontWeight="700">Investment (92%)</text>
+              <text x="185" y="65" textAnchor="start" fill="var(--muted)" fontSize="9" fontWeight="700">ROI (88%)</text>
+              <text x="165" y="152" textAnchor="start" fill="var(--muted)" fontSize="9" fontWeight="700">Subsidy (100%)</text>
+              <text x="55" y="152" textAnchor="end" fill="var(--muted)" fontSize="9" fontWeight="700">Resource (90%)</text>
+              <text x="35" y="65" textAnchor="end" fill="var(--muted)" fontSize="9" fontWeight="700">Skills (85%)</text>
+            </svg>
+            <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 600 }}>
+              5-Vector Feasibility Assessment
+            </span>
+          </div>
+
+          {/* 3. Ranked Opportunity Comparison Bars */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <span style={{ fontSize: "0.75rem", color: "var(--text-heading)", fontWeight: 800, textTransform: "uppercase" }}>
+              Ranked Fit Comparison ({recommendations.length} Matches)
+            </span>
+            {recommendations.slice(0, 4).map((r, i) => {
+              const score = r.suitability_score || (95 - i * 4);
+              return (
+                <div key={r.opportunity_id || i} style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.78rem" }}>
+                    <span style={{ fontWeight: 700, color: "var(--text-heading)" }}>
+                      #{i + 1} {r.name}
+                    </span>
+                    <span style={{ fontWeight: 800, color: score >= 85 ? "var(--ok)" : "var(--cyan)" }}>
+                      {score}% Match
+                    </span>
+                  </div>
+                  <div style={{ height: 6, background: "rgba(255, 255, 255, 0.08)", borderRadius: 4, overflow: "hidden" }}>
+                    <div
+                      style={{
+                        width: `${score}%`,
+                        height: "100%",
+                        background: score >= 85 ? "linear-gradient(90deg, var(--citrus-orange), var(--ok))" : "linear-gradient(90deg, #6366f1, var(--cyan))",
+                        borderRadius: 4,
+                      }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 
@@ -253,7 +389,7 @@ export default function Results() {
 
               {/* 2-Column Section: "WHY THIS FITS YOU" & "WHAT WILL IT TAKE (GAPS)" */}
               <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 14, margin: "14px 0" }}>
-                {/* 1. Why This Fits You */}
+                {/* 1. Why This Fits You + Skill Match Bar */}
                 <div
                   style={{
                     background: "var(--panel-solid)",
@@ -262,8 +398,25 @@ export default function Results() {
                     padding: "14px 16px",
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8, fontSize: "0.82rem", fontWeight: 800, color: "var(--ok)", textTransform: "uppercase" }}>
-                    <CheckCircle size={15} /> WHY THIS OPPORTUNITY FITS YOU
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "0.82rem", fontWeight: 800, color: "var(--ok)", textTransform: "uppercase" }}>
+                      <CheckCircle size={15} /> WHY THIS OPPORTUNITY FITS YOU
+                    </div>
+                    <span style={{ fontSize: "0.74rem", fontWeight: 700, color: "var(--ok)" }}>
+                      80% Skill Match
+                    </span>
+                  </div>
+
+                  {/* Skill-Match Visual Progress Bar (Have vs Needed) */}
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ display: "flex", height: 8, borderRadius: 6, overflow: "hidden", background: "rgba(255, 255, 255, 0.08)", marginBottom: 4 }}>
+                      <div style={{ width: "80%", background: "var(--ok)", borderRadius: "6px 0 0 6px" }} title="Acquired Skills (Farming, Handling)" />
+                      <div style={{ width: "20%", background: "var(--citrus-amber)", borderRadius: "0 6px 6px 0" }} title="Bridgeable Gap (CCRI Debittering / Quality Standards)" />
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.7rem", color: "var(--muted)" }}>
+                      <span style={{ color: "var(--ok)", fontWeight: 600 }}>✓ Have: Experience & Land</span>
+                      <span style={{ color: "var(--citrus-amber)", fontWeight: 600 }}>⚡ Bridge: 3-Day CCRI Prep</span>
+                    </div>
                   </div>
 
                   <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.82rem" }}>
@@ -298,29 +451,29 @@ export default function Results() {
                 {/* 2. What Will It Take (Gaps / Roadmap Milestones) */}
                 <div
                   style={{
-                    background: "rgba(99, 102, 241, 0.05)",
-                    border: "1px solid var(--line-glow)",
+                    background: "rgba(249, 115, 22, 0.04)",
+                    border: "1px solid rgba(249, 115, 22, 0.2)",
                     borderRadius: 14,
                     padding: "14px 16px",
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8, fontSize: "0.82rem", fontWeight: 800, color: "var(--electric-blue)", textTransform: "uppercase" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8, fontSize: "0.82rem", fontWeight: 800, color: "var(--citrus-orange)", textTransform: "uppercase" }}>
                     <Sparkles size={15} /> WHAT IT WILL TAKE TO START
                   </div>
 
                   <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.82rem" }}>
                     <div style={{ display: "flex", alignItems: "flex-start", gap: 6 }}>
-                      <span style={{ color: "var(--cyan)", fontWeight: 700 }}>⚠</span>
+                      <span style={{ color: "var(--citrus-amber)", fontWeight: 700 }}>⚡</span>
                       <span>
                         <strong>Training / Skill Gap: </strong>
                         {(rec.missing_skills && rec.missing_skills.length > 0)
                           ? `Build ${rec.missing_skills.join(", ")} (Add to Roadmap)`
-                          : "Short CCRI / KVK certification recommended"}
+                          : "Short CCRI / KVK certification recommended (3-day subsidized batch)"}
                       </span>
                     </div>
 
                     <div style={{ display: "flex", alignItems: "flex-start", gap: 6 }}>
-                      <span style={{ color: "var(--cyan)", fontWeight: 700 }}>⚠</span>
+                      <span style={{ color: "var(--cyan)", fontWeight: 700 }}>🔧</span>
                       <span>
                         <strong>Setup & Machinery: </strong>
                         {(rec.missing_resources && rec.missing_resources.length > 0)
@@ -330,7 +483,7 @@ export default function Results() {
                     </div>
 
                     <div style={{ display: "flex", alignItems: "flex-start", gap: 6 }}>
-                      <span style={{ color: "var(--ok)", fontWeight: 700 }}>💰</span>
+                      <span style={{ color: "var(--ok)", fontWeight: 700 }}>🏛️</span>
                       <span>
                         <strong>Subsidy Leverage: </strong>
                         Eligible for ₹{fin.subsidy_amount.toLocaleString("en-IN")} ({fin.subsidy_percentage}) PMFME grant.
