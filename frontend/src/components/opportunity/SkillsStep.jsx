@@ -78,13 +78,20 @@ export default function SkillsStep({
 }) {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Safely normalize incoming selectedSkillsData to always be an array
+  // Safely normalize incoming selectedSkillsData to always be an array of properly shaped items
   const safeSkills = useMemo(() => {
-    if (Array.isArray(selectedSkillsData)) return selectedSkillsData;
-    if (selectedSkillsData && typeof selectedSkillsData === "object" && Array.isArray(selectedSkillsData.skills)) {
-      return selectedSkillsData.skills;
+    let rawList = [];
+    if (Array.isArray(selectedSkillsData)) {
+      rawList = selectedSkillsData;
+    } else if (selectedSkillsData && typeof selectedSkillsData === "object" && Array.isArray(selectedSkillsData.skills)) {
+      rawList = selectedSkillsData.skills;
     }
-    return [];
+    return rawList.map((item, idx) => ({
+      ...item,
+      skillId: item.skillId || item.id || `skl_${idx}`,
+      name: item.name || item.label || "Skill",
+      icon: item.icon || "🌱",
+    }));
   }, [selectedSkillsData]);
 
   // Merge backend skills with default popular list
@@ -258,8 +265,8 @@ export default function SkillsStep({
             </div>
           ) : (
             <div className="selected-skills-stack">
-              {safeSkills.map((item) => (
-                <div key={item.skillId} className="skill-detail-card">
+              {safeSkills.map((item, idx) => (
+                <div key={item.skillId || `skill_item_${idx}`} className="skill-detail-card">
                   {/* Skill Card Header */}
                   <div className="skill-card-topbar">
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
