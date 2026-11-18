@@ -32,6 +32,9 @@ import {
   Share2
 } from "lucide-react";
 
+import { useAuth } from "../context/AuthContext";
+import BankGradeDPRModal from "../components/BankGradeDPRModal";
+
 // ============================================================================
 // 1. COMPREHENSIVE BUSINESS MODEL FINANCIAL DATABASE (NAGPUR CITRUS DSS)
 // ============================================================================
@@ -640,7 +643,938 @@ const BUSINESS_MODELS = [
       },
     },
   },
+  {
+    id: "marmalade_candied",
+    name: "Citrus Marmalade, Jam & Peel Candy Processing",
+    icon: "🍯",
+    category: "Food Processing & Beverages",
+    tagline: "Artisan fruit preserves, citrus marmalade, and candied peel confectionery",
+    defaultLocation: "Saoner / Katol Processing Node",
+    baseProjectCost: 520000,
+    subsidyScheme: "PMFME 35% Credit-Linked Capital Subsidy",
+    subsidyRate: 0.35,
+    maxSubsidyLimit: 1000000,
+    costCategories: {
+      land_site: {
+        title: "Workspace & Food Cleanroom Prep",
+        icon: "🌱",
+        description: "Hygiene flooring, stainless wash basins, and insect netting.",
+        items: [
+          { name: "Existing Commercial Shed / Kitchen Setup", unitRate: "Owned by Founder / Leased", cost: 0, defaultAvailable: true, editable: true },
+          { name: "Food-Grade Washable Wall & Floor Epoxy Work", unitRate: "500 sq.ft processing floor", cost: 25000, defaultAvailable: false, editable: true },
+          { name: "Sanitary Drainage, Exhaust & Air Curtain", unitRate: "Dual industrial exhaust", cost: 20000, defaultAvailable: false, editable: true },
+        ],
+      },
+      infrastructure: {
+        title: "Civil & Utility Structures",
+        icon: "🏗️",
+        description: "LPG manifold, commercial water RO, and packaging racks.",
+        items: [
+          { name: "Commercial 250 LPH RO Drinking Water Filtration", unitRate: "Multi-stage with UV/TDS control", cost: 45000, defaultAvailable: false, editable: true },
+          { name: "Industrial LPG 4-Burner Manifold Line", unitRate: "High-pressure commercial pipes", cost: 28000, defaultAvailable: false, editable: true },
+          { name: "Stainless Steel 304 Storage Racks & Clean Curing Tables", unitRate: "4 Heavy-duty tables & racks", cost: 38000, defaultAvailable: false, editable: true },
+        ],
+      },
+      equipment: {
+        title: "Processing & Packaging Equipment",
+        icon: "⚙️",
+        description: "Steam cooking kettles, candy slicers, and vacuum sealers.",
+        items: [
+          { name: "SS-304 Steam-Jacketed Tilting Cooking Kettle (50L)", unitRate: "LPG/Electric heating with agitator", cost: 110000, defaultAvailable: false, editable: true },
+          { name: "Motorized Fruit Pulper & Peel Dicing Machine (2 HP)", unitRate: "Food-grade stainless rotary cutter", cost: 65000, defaultAvailable: false, editable: true },
+          { name: "Digital Brix Refractometer & Food Testing Kit", unitRate: "0-90% Brix range & pH sensor", cost: 18000, defaultAvailable: false, editable: true },
+          { name: "Semi-Automatic Glass Jar Lug-Capper & Induction Sealer", unitRate: "Benchtop bottle sealer", cost: 35000, defaultAvailable: false, editable: true },
+        ],
+      },
+      raw_materials: {
+        title: "Raw Materials & Packaging Inventory",
+        icon: "📦",
+        description: "Fresh oranges, fruit pectin, sugar, and branded jars.",
+        items: [
+          { name: "Direct Mandi Citrus Fruit Stock (3 Tonnes)", unitRate: "₹22/kg orchard procurement", cost: 66000, defaultAvailable: false, editable: true },
+          { name: "Food-Grade Pectin, Citric Acid & Refined Cane Sugar", unitRate: "First 60-day batch additives", cost: 30000, defaultAvailable: false, editable: true },
+          { name: "Hexagonal Glass Jars (250g) with Gold Metal Lids (3,000 units)", unitRate: "₹9.50 / jar with seal", cost: 28500, defaultAvailable: false, editable: true },
+        ],
+      },
+      compliance: {
+        title: "Licenses & Brand Identity",
+        icon: "📋",
+        description: "FSSAI state license, nutrition laboratory test, and Udyam.",
+        items: [
+          { name: "FSSAI State Manufacturing License & Water Test", unitRate: "Statutory filing fee", cost: 12000, defaultAvailable: false, editable: true },
+          { name: "NABL-Accredited Nutritional Testing & Shelf-Life Assay", unitRate: "Full 14-parameter assay", cost: 15000, defaultAvailable: false, editable: true },
+          { name: "Udyam MSME, GST Registration & Barcode Allotment", unitRate: "GS1 India barcode 100 GTINs", cost: 14000, defaultAvailable: false, editable: true },
+        ],
+      },
+      working_capital: {
+        title: "Working Capital Reserve (3 Months)",
+        icon: "👷",
+        description: "Master food technologist, packaging labor, and utility bills.",
+        items: [
+          { name: "1 Master Food Processor & 2 Packing Assistants (3 Mos)", unitRate: "Monthly combined wages", cost: 72000, defaultAvailable: false, editable: true },
+          { name: "LPG Commercial Cylinders & Electricity Bills", unitRate: "₹8,000/month", cost: 24000, defaultAvailable: false, editable: true },
+        ],
+      },
+    },
+    scenarios: {
+      minimum: {
+        name: "Artisan Kitchen Setup (50 kg/day)",
+        tag: "Low Capital Pilot",
+        investment: 350000,
+        ownEquity: 105000,
+        subsidy: 122500,
+        equipment: "Manual Dicer + 30L Cooking Kettle",
+        capacity: "50 kg/day",
+        workspace: "300 sq.ft Home/Unit",
+        workers: "2 Workers",
+        monthlyOpex: 24000,
+        monthlyRevenue: 85000,
+        netMargin: "45%",
+        breakevenMonths: 6,
+        description: "Focuses on premium D2C artisanal citrus marmalades and gift packs.",
+      },
+      standard: {
+        name: "Semi-Automated Unit (200 kg/day)",
+        tag: "Commercial Sweet Spot",
+        investment: 520000,
+        ownEquity: 156000,
+        subsidy: 182000,
+        equipment: "50L Steam Kettle + Lug Capper + Dicer",
+        capacity: "200 kg/day",
+        workspace: "600 sq.ft Unit",
+        workers: "3 Staff",
+        monthlyOpex: 48000,
+        monthlyRevenue: 195000,
+        netMargin: "50%",
+        breakevenMonths: 8,
+        description: "Distributes through retail bakeries, supermarkets, and national e-commerce.",
+      },
+      expanded: {
+        name: "Industrial Preserve Line (1 MT/day)",
+        tag: "Cluster Processing Plant",
+        investment: 1450000,
+        ownEquity: 435000,
+        subsidy: 507500,
+        equipment: "Continuous Vacuum Cooker + Automatic Jar Line",
+        capacity: "1,000 kg/day",
+        workspace: "2,000 sq.ft Shed",
+        workers: "6 Staff",
+        monthlyOpex: 120000,
+        monthlyRevenue: 520000,
+        netMargin: "54%",
+        breakevenMonths: 10,
+        description: "Institutional contract manufacturing for airline catering and FMCG brands.",
+      },
+    },
+  },
+  {
+    id: "cattle_feed_pellet",
+    name: "Citrus Waste Cattle Feed & Silage Pelleting",
+    icon: "🐄",
+    category: "By-Products & Bio-Value",
+    tagline: "Valorization of citrus bagasse and wet peels into nutrient-dense dairy cattle feed pellets",
+    defaultLocation: "Kalmeshwar / Hingna MIDC",
+    baseProjectCost: 680000,
+    subsidyScheme: "PMFME 35% Credit-Linked Capital Subsidy",
+    subsidyRate: 0.35,
+    maxSubsidyLimit: 1000000,
+    costCategories: {
+      land_site: {
+        title: "Site Footprint & Raw Waste Yard",
+        icon: "🌱",
+        description: "Covered unloading yard and concrete pad for bagasse aeration.",
+        items: [
+          { name: "Agri Land / Rural Shed Compound (0.5 Acre)", unitRate: "Owned / Long Lease", cost: 0, defaultAvailable: true, editable: true },
+          { name: "Concrete Apron for Wet Pulp Unloading", unitRate: "Heavy civil floor", cost: 35000, defaultAvailable: false, editable: true },
+          { name: "Perimeter Drainage & Effluent Collection Pit", unitRate: "Environmental compliance", cost: 25000, defaultAvailable: false, editable: true },
+        ],
+      },
+      infrastructure: {
+        title: "Shed & Power Substation",
+        icon: "🏗️",
+        description: "Semi-open industrial shed with 3-phase 15 HP industrial wiring.",
+        items: [
+          { name: "Galvanized Tin Roof Shed (1,200 sq.ft)", unitRate: "Pre-engineered structure", cost: 160000, defaultAvailable: false, editable: true },
+          { name: "Industrial 3-Phase 15 HP Electric Connection & Switchgear", unitRate: "MSEDCL industrial meter", cost: 65000, defaultAvailable: false, editable: true },
+        ],
+      },
+      equipment: {
+        title: "Milling, Drying & Pelleting Machinery",
+        icon: "⚙️",
+        description: "Heavy-duty wet hammer mill, flat-die pelletizer, and bagger.",
+        items: [
+          { name: "Heavy-Duty Citrus Bagasse Shredder & Hammer Mill (5 HP)", unitRate: "High-torque stainless blades", cost: 85000, defaultAvailable: false, editable: true },
+          { name: "Rotary Drum Biomass Pellet Press (7.5 HP)", unitRate: "200 kg/hr ring-die pellet mill", cost: 180000, defaultAvailable: false, editable: true },
+          { name: "Hot-Air Counterflow Pellet Cooler & Vibrating Screener", unitRate: "Rapid moisture removal", cost: 45000, defaultAvailable: false, editable: true },
+          { name: "Digital Bag Stitcher & Electronic Platform Scale", unitRate: "50kg sack packaging line", cost: 22000, defaultAvailable: false, editable: true },
+        ],
+      },
+      raw_materials: {
+        title: "Raw Material & Binder Inventory",
+        icon: "📦",
+        description: "Wet peel waste, sugarcane molasses, mineral premix, and sacks.",
+        items: [
+          { name: "Wet Citrus Peel Procurement (50 MT from juice units)", unitRate: "Nominal collection transport fee", cost: 35000, defaultAvailable: false, editable: true },
+          { name: "Cattle Mineral Mixture & Sugarcane Molasses Binder", unitRate: "Nutritional feed additive", cost: 25000, defaultAvailable: false, editable: true },
+          { name: "Heavy-Duty HDPE Woven Sacks 50kg (2,000 sacks)", unitRate: "₹18/sack branded", cost: 36000, defaultAvailable: false, editable: true },
+        ],
+      },
+      compliance: {
+        title: "Statutory Approvals & Feed Analysis",
+        icon: "📋",
+        description: "Pollution Control Board consent, BIS feed testing, and Udyam.",
+        items: [
+          { name: "State Pollution Control Board (MPCB) Green Category Consent", unitRate: "Consent to Establish & Operate", cost: 15000, defaultAvailable: false, editable: true },
+          { name: "BIS Nutritional Analysis (Crude Protein, Fiber, TDN Assay)", unitRate: "Veterinary college laboratory assay", cost: 12000, defaultAvailable: false, editable: true },
+          { name: "Udyam MSME, GST & Local Gram Panchayat Trade NOC", unitRate: "Statutory paperwork", cost: 8000, defaultAvailable: false, editable: true },
+        ],
+      },
+      working_capital: {
+        title: "Working Capital Reserve (3 Months)",
+        icon: "👷",
+        description: "Mill operators, truck diesel, and power bill reserve.",
+        items: [
+          { name: "2 Machine Operators (3 Months Payroll)", unitRate: "₹14,000/mo per operator", cost: 84000, defaultAvailable: false, editable: true },
+          { name: "Industrial Electricity & Raw Waste Transport Fuel", unitRate: "₹15,000/month", cost: 45000, defaultAvailable: false, editable: true },
+        ],
+      },
+    },
+    scenarios: {
+      minimum: {
+        name: "Micro Silage & Pellet Unit (500 kg/day)",
+        tag: "Low CapEx Entry",
+        investment: 420000,
+        ownEquity: 126000,
+        subsidy: 147000,
+        equipment: "Small Hammer Mill + 3 HP Pelletizer",
+        capacity: "500 kg/day",
+        workspace: "600 sq.ft Shed",
+        workers: "2 Workers",
+        monthlyOpex: 32000,
+        monthlyRevenue: 110000,
+        netMargin: "42%",
+        breakevenMonths: 7,
+        description: "Supplies local dairy cooperatives and buffalo farms in the Katol tehsil.",
+      },
+      standard: {
+        name: "Commercial Agro-Pellet Plant (2 MT/day)",
+        tag: "Sweet Spot",
+        investment: 680000,
+        ownEquity: 204000,
+        subsidy: 238000,
+        equipment: "Hammer Mill + 7.5 HP Pellet Mill + Cooler",
+        capacity: "2 Metric Tonnes / day",
+        workspace: "1,200 sq.ft Shed",
+        workers: "3 Staff",
+        monthlyOpex: 65000,
+        monthlyRevenue: 240000,
+        netMargin: "48%",
+        breakevenMonths: 8,
+        description: "High recurring B2B demand with annual supply contracts to dairy clusters.",
+      },
+      expanded: {
+        name: "Industrial Feed Complex (8 MT/day)",
+        tag: "Commercial Plant",
+        investment: 1850000,
+        ownEquity: 555000,
+        subsidy: 647500,
+        equipment: "Full Automated Pelleting Line with Silo",
+        capacity: "8 Metric Tonnes / day",
+        workspace: "4,000 sq.ft Compound",
+        workers: "6 Staff",
+        monthlyOpex: 160000,
+        monthlyRevenue: 680000,
+        netMargin: "52%",
+        breakevenMonths: 11,
+        description: "Aggregates waste from 50 juice vendors and supplies regional cattle feed distributors.",
+      },
+    },
+  },
+  {
+    id: "diagnostic_clinic",
+    name: "Mobile Soil & Plant Health Diagnostic Clinic",
+    icon: "🔬",
+    category: "Agritech & Testing Services",
+    tagline: "Doorstep rapid soil nutrient assay, leaf tissue analysis, and citrus disease diagnostic van",
+    defaultLocation: "Katol / Narkhed Rural Belt",
+    baseProjectCost: 740000,
+    subsidyScheme: "Agriculture Infrastructure Fund (AIF) / PMFME",
+    subsidyRate: 0.35,
+    maxSubsidyLimit: 1000000,
+    costCategories: {
+      land_site: {
+        title: "Base Office & Parking Station",
+        icon: "🌱",
+        description: "Home base parking and reagent storage desk.",
+        items: [
+          { name: "Existing Home Office / Village Workspace", unitRate: "Founder owned", cost: 0, defaultAvailable: true, editable: true },
+          { name: "Secure Chemical Reagent Storage Cabinet & Workstation", unitRate: "Fire-rated lab cabinet", cost: 18000, defaultAvailable: false, editable: true },
+        ],
+      },
+      infrastructure: {
+        title: "Vehicle Outfitting & Solar Inverter",
+        icon: "🏗️",
+        description: "Utility van modification with vibration-damped test benches and solar power.",
+        items: [
+          { name: "Utility Vehicle Custom Shelving & Damped Shock Mounts", unitRate: "Anti-vibration aluminum racks", cost: 65000, defaultAvailable: false, editable: true },
+          { name: "1.5 kVA Pure Sine Wave Solar Inverter + Lithium Battery", unitRate: "Continuous mobile power", cost: 75000, defaultAvailable: false, editable: true },
+        ],
+      },
+      equipment: {
+        title: "Diagnostic Equipment & Precision Sensors",
+        icon: "⚙️",
+        description: "Soil spectrophotometer, EC/pH meters, and leaf tissue analyzers.",
+        items: [
+          { name: "Digital Soil Testing Spectrophotometer (14 Parameters)", unitRate: "Measures N, P, K, Zn, Fe, B, pH, EC, OC", cost: 165000, defaultAvailable: false, editable: true },
+          { name: "Digital Micro-Centrifuge, Vortex Mixer & Precision Balance", unitRate: "Benchtop analytical equipment", cost: 55000, defaultAvailable: false, editable: true },
+          { name: "Leaf Chlorophyll Meter & Digital Plant Microscope", unitRate: "Field pest & disease inspection", cost: 42000, defaultAvailable: false, editable: true },
+          { name: "GPS Tablet & Bluetooth Field Thermal Report Printer", unitRate: "Instant printed prescription card", cost: 35000, defaultAvailable: false, editable: true },
+        ],
+      },
+      raw_materials: {
+        title: "Testing Reagents & Consumables (1,000 Tests)",
+        icon: "📦",
+        description: "Analytical grade chemical reagents, test tubes, and sample bags.",
+        items: [
+          { name: "Analytical Soil Testing Reagent Kits (1,000 Samples)", unitRate: "₹65 / complete soil profile", cost: 65000, defaultAvailable: false, editable: true },
+          { name: "Filter Papers, Pipettes, Micro-Tubes & Chemical Vials", unitRate: "Lab consumables stock", cost: 25000, defaultAvailable: false, editable: true },
+          { name: "Branded Farmer Soil Health Card Stationery (2,000 cards)", unitRate: "Professional printed booklets", cost: 20000, defaultAvailable: false, editable: true },
+        ],
+      },
+      compliance: {
+        title: "Accreditation & Quality Calibration",
+        icon: "📋",
+        description: "ICAR-CCRI calibration accreditation, GST, and Udyam.",
+        items: [
+          { name: "ICAR-CCRI Diagnostic Protocol Calibration & Technical Training", unitRate: "Official training certificate", cost: 25000, defaultAvailable: false, editable: true },
+          { name: "Udyam MSME, GST Registration & Commercial Vehicle Permit", unitRate: "Filing and permits", cost: 15000, defaultAvailable: false, editable: true },
+        ],
+      },
+      working_capital: {
+        title: "Working Capital Reserve (3 Months)",
+        icon: "👷",
+        description: "Agri-graduate technician stipend, vehicle fuel, and maintenance buffer.",
+        items: [
+          { name: "1 Agri-Graduate Technician Stipend (3 Months)", unitRate: "₹18,000/mo salary", cost: 54000, defaultAvailable: false, editable: true },
+          { name: "Vehicle Diesel & Village Travel Fuel (3 Months)", unitRate: "₹15,000/month", cost: 45000, defaultAvailable: false, editable: true },
+        ],
+      },
+    },
+    scenarios: {
+      minimum: {
+        name: "Backpack Diagnostic Kit (10 tests/day)",
+        tag: "Low Capital Entry",
+        investment: 280000,
+        ownEquity: 84000,
+        subsidy: 98000,
+        equipment: "Portable Colorimeter + pH/EC Pens",
+        capacity: "10 Soil Tests / day",
+        workspace: "Home Base + Two-Wheeler",
+        workers: "1 Entrepreneur",
+        monthlyOpex: 18000,
+        monthlyRevenue: 75000,
+        netMargin: "58%",
+        breakevenMonths: 5,
+        description: "Low-overhead diagnostic service for village clusters on a motorbike.",
+      },
+      standard: {
+        name: "Dedicated Mobile Diagnostic Van (30 tests/day)",
+        tag: "Recommended Model",
+        investment: 740000,
+        ownEquity: 222000,
+        subsidy: 259000,
+        equipment: "Automated Spectrophotometer + Solar Van Unit",
+        capacity: "30 Soil & Leaf Tests / day",
+        workspace: "Outfitted Utility Van",
+        workers: "2 Technical Staff",
+        monthlyOpex: 48000,
+        monthlyRevenue: 195000,
+        netMargin: "62%",
+        breakevenMonths: 7,
+        description: "High margin business providing door-to-door soil cards and fertigation prescriptions.",
+      },
+      expanded: {
+        name: "Regional Agri-Diagnostics Hub (100 tests/day)",
+        tag: "Commercial Lab",
+        investment: 1650000,
+        ownEquity: 495000,
+        subsidy: 577500,
+        equipment: "AAS (Atomic Absorption) + PCR Diagnostic Setup",
+        capacity: "100 Tests / day",
+        workspace: "1,000 sq.ft Lab Center",
+        workers: "4 Lab Technicians",
+        monthlyOpex: 110000,
+        monthlyRevenue: 450000,
+        netMargin: "65%",
+        breakevenMonths: 9,
+        description: "Accredited testing partner for regional FPOs and corporate pesticide distributors.",
+      },
+    },
+  },
+  {
+    id: "solar_dried_chips",
+    name: "Solar Dehydrated Citrus Slices & Confectionery",
+    icon: "☀️",
+    category: "Food Processing & Beverages",
+    tagline: "High-margin dehydrated mandarin slices for bakeries, tea infusions, and confectionery",
+    defaultLocation: "Ramtek / Katol Agro Zone",
+    baseProjectCost: 390000,
+    subsidyScheme: "PMFME 35% Capital Subsidy / MEDA Solar",
+    subsidyRate: 0.35,
+    maxSubsidyLimit: 1000000,
+    costCategories: {
+      land_site: {
+        title: "Clean Yard / Rooftop Preparation",
+        icon: "🌱",
+        description: "Dust-free open space with unshaded sunlight access.",
+        items: [
+          { name: "Existing Open Rooftop / Rural Compound", unitRate: "Founder owned", cost: 0, defaultAvailable: true, editable: true },
+          { name: "Insect-Proof Boundary & Anti-Dust Windbreak Netting", unitRate: "Clean perimeter", cost: 18000, defaultAvailable: false, editable: true },
+        ],
+      },
+      infrastructure: {
+        title: "Cleanroom Packaging Cubicle",
+        icon: "🏗️",
+        description: "Hygienic dehumidified packing room and solar stands.",
+        items: [
+          { name: "Aluminium Composite Panel Cleanroom (200 sq.ft)", unitRate: "Airlock packing station", cost: 65000, defaultAvailable: false, editable: true },
+          { name: "Room Dehumidifier & UV Sterilization Lamps", unitRate: "Maintains <40% relative humidity", cost: 35000, defaultAvailable: false, editable: true },
+        ],
+      },
+      equipment: {
+        title: "Drying & Slicing Machinery",
+        icon: "⚙️",
+        description: "Polycarbonate solar tunnel dryer, precision slicer, and vacuum packager.",
+        items: [
+          { name: "Polycarbonate Multi-Shelf Solar Tunnel Dryer (50 kg/batch)", unitRate: "Forced convection solar fans", cost: 95000, defaultAvailable: false, editable: true },
+          { name: "Commercial Precision Rotary Fruit Slicer Machine", unitRate: "Uniform 3mm cross-cut stainless blades", cost: 42000, defaultAvailable: false, editable: true },
+          { name: "Impulse Nitrogen Gas-Flushed Vacuum Sealer", unitRate: "Preserves crispness & vitamin C", cost: 32000, defaultAvailable: false, editable: true },
+        ],
+      },
+      raw_materials: {
+        title: "Fruit & Barrier Packaging Inventory",
+        icon: "📦",
+        description: "Firm fresh mandarins, organic citric wash, and foil pouches.",
+        items: [
+          { name: "Grade-A Firm Mandarin Oranges (2,000 kg)", unitRate: "₹24/kg selected fruit", cost: 48000, defaultAvailable: false, editable: true },
+          { name: "Food-Grade Citric Acid Dip & Potassium Sorbate", unitRate: "Prevents browning", cost: 12000, defaultAvailable: false, editable: true },
+          { name: "Multi-Layer Matte Finish Barrier Standup Pouches (5,000 units)", unitRate: "₹6.50/pouch with zipper", cost: 32500, defaultAvailable: false, editable: true },
+        ],
+      },
+      compliance: {
+        title: "Licenses & Brand Registration",
+        icon: "📋",
+        description: "FSSAI basic/state license, barcode, and GST.",
+        items: [
+          { name: "FSSAI Food License & Water Chemistry Certificate", unitRate: "Registration fee", cost: 10000, defaultAvailable: false, editable: true },
+          { name: "Udyam MSME, GST Registration & Barcode Assignment", unitRate: "GS1 barcodes", cost: 12000, defaultAvailable: false, editable: true },
+        ],
+      },
+      working_capital: {
+        title: "Working Capital Reserve (3 Months)",
+        icon: "👷",
+        description: "Slicing and packaging labor, utility power, and local courier buffer.",
+        items: [
+          { name: "2 Packaging & Slicing Assistants (3 Months)", unitRate: "₹10,000/mo per worker", cost: 60000, defaultAvailable: false, editable: true },
+          { name: "Power Bill & Logistics Courier Reserve", unitRate: "Operational buffer", cost: 18000, defaultAvailable: false, editable: true },
+        ],
+      },
+    },
+    scenarios: {
+      minimum: {
+        name: "Micro Solar Dryer (20 kg/batch)",
+        tag: "Low Capital Entry",
+        investment: 240000,
+        ownEquity: 72000,
+        subsidy: 84000,
+        equipment: "Small Solar Cabinet + Hand Slicer",
+        capacity: "20 kg / batch",
+        workspace: "150 sq.ft Rooftop",
+        workers: "1 Operator",
+        monthlyOpex: 16000,
+        monthlyRevenue: 65000,
+        netMargin: "52%",
+        breakevenMonths: 5,
+        description: "Niche production of gourmet dried orange cocktail garnishes and baker supply.",
+      },
+      standard: {
+        name: "Commercial Solar Tunnel Unit (100 kg/batch)",
+        tag: "Sweet Spot",
+        investment: 390000,
+        ownEquity: 117000,
+        subsidy: 136500,
+        equipment: "50 kg Tunnel Dryer + Electric Slicer + Nitrogen Sealer",
+        capacity: "100 kg / batch",
+        workspace: "400 sq.ft Area",
+        workers: "2 Workers",
+        monthlyOpex: 38000,
+        monthlyRevenue: 155000,
+        netMargin: "58%",
+        breakevenMonths: 7,
+        description: "Direct sales to herbal tea blending companies, craft breweries, and e-commerce.",
+      },
+      expanded: {
+        name: "Hybrid Solar-Electric Dehydration Plant (500 kg/day)",
+        tag: "Commercial Plant",
+        investment: 1150000,
+        ownEquity: 345000,
+        subsidy: 402500,
+        equipment: "Continuous Hybrid Heat-Pump Dehydrator",
+        capacity: "500 kg / day",
+        workspace: "1,500 sq.ft Unit",
+        workers: "5 Staff",
+        monthlyOpex: 95000,
+        monthlyRevenue: 410000,
+        netMargin: "62%",
+        breakevenMonths: 9,
+        description: "Year-round dehydration facility processing diverse seasonal Vidarbha fruits.",
+      },
+    },
+  },
+  {
+    id: "optical_packhouse",
+    name: "Mechanized Optical Sorting & CFB Packaging Line",
+    icon: "🏭",
+    category: "Post-Harvest & Packaging",
+    tagline: "Commercial optical camera grading, washing, fungicide waxing, and CFB packaging line",
+    defaultLocation: "Warud / Kalmeshwar APMC Mandi Node",
+    baseProjectCost: 1950000,
+    subsidyScheme: "MIDH / NHB 35% Capital Grant & PMFME",
+    subsidyRate: 0.35,
+    maxSubsidyLimit: 1000000,
+    costCategories: {
+      land_site: {
+        title: "Industrial Yard & Dock Prep",
+        icon: "🌱",
+        description: "Truck turnaround area, loading docks, and weighbridge pad.",
+        items: [
+          { name: "Industrial / APMC Yard Space (0.5 Acre)", unitRate: "Lease / Owned footprint", cost: 0, defaultAvailable: true, editable: true },
+          { name: "Heavy Vehicle Concrete Pavement & Unloading Ramp", unitRate: "10-wheel truck dock", cost: 60000, defaultAvailable: false, editable: true },
+        ],
+      },
+      infrastructure: {
+        title: "Packhouse Civil Structure & 3-Phase Grid",
+        icon: "🏗️",
+        description: "Pre-engineered steel shed, epoxy flooring, and 25 HP power line.",
+        items: [
+          { name: "Industrial Insulated Packhouse Shed (2,500 sq.ft)", unitRate: "Food-grade PEB structure", cost: 380000, defaultAvailable: false, editable: true },
+          { name: "3-Phase 25 HP Power Transformer & Switchgear Panel", unitRate: "Dedicated industrial line", cost: 140000, defaultAvailable: false, editable: true },
+          { name: "Clean Borewell Water Reservoir & Chlorination Plant", unitRate: "High-volume washing supply", cost: 85000, defaultAvailable: false, editable: true },
+        ],
+      },
+      equipment: {
+        title: "Optical Grading & Waxing Machinery",
+        icon: "⚙️",
+        description: "4 MT/hour roller conveyor, fruit washer, dryer, and optical sorter.",
+        items: [
+          { name: "Mechanized Roller Conveyor Fruit Washer & High-Pressure Sprayer", unitRate: "Soft-bristle rotary washer", cost: 280000, defaultAvailable: false, editable: true },
+          { name: "Hot-Air Forced Drying & Antifungal Waxing Tunnel", unitRate: "Food-grade wax mist applicator", cost: 320000, defaultAvailable: false, editable: true },
+          { name: "Optical Camera Weight & Color Grading Unit (3-Tier Sort)", unitRate: "High-speed camera sensor with 6 drop gates", cost: 480000, defaultAvailable: false, editable: true },
+          { name: "Automated Roller Packing Tables & Carton Strapping Machines (2 units)", unitRate: "Semi-automatic carton sealer", cost: 75000, defaultAvailable: false, editable: true },
+        ],
+      },
+      raw_materials: {
+        title: "Wax & Corrugated Packaging Stock",
+        icon: "📦",
+        description: "Citrus stayfresh wax, 5-ply CFB boxes, and corner boards.",
+        items: [
+          { name: "Food-Grade Carnauba / Polyethylene Citrus Wax (1,000 Litres)", unitRate: "₹180/Litre import grade", cost: 180000, defaultAvailable: false, editable: true },
+          { name: "5-Ply Corrugated CFB Master Boxes (10kg capacity, 10,000 boxes)", unitRate: "₹38/box printed", cost: 380000, defaultAvailable: false, editable: true },
+          { name: "Carton Strapping Rolls, Foam Net Sleeves & Pallet Wrap", unitRate: "Packing accessories stock", cost: 45000, defaultAvailable: false, editable: true },
+        ],
+      },
+      compliance: {
+        title: "Accreditation & Approvals",
+        icon: "📋",
+        description: "NHB packhouse audit, APMC license, and APEDA export registration.",
+        items: [
+          { name: "NHB / APEDA Packhouse Technical Accreditation Fee", unitRate: "Official inspection audit", cost: 40000, defaultAvailable: false, editable: true },
+          { name: "APMC Mandi Commission Agent / Aggregator Trade License", unitRate: "District market committee license", cost: 25000, defaultAvailable: false, editable: true },
+          { name: "Fire Safety NOC, Factory Inspector Approval & GST", unitRate: "Statutory clearances", cost: 25000, defaultAvailable: false, editable: true },
+        ],
+      },
+      working_capital: {
+        title: "Working Capital Reserve (3 Months)",
+        icon: "👷",
+        description: "Packhouse supervisor, 6 sorting operators, and high-voltage power bill.",
+        items: [
+          { name: "1 Supervisor & 6 Sorting Laborers (3 Months Payroll)", unitRate: "Combined packhouse wages", cost: 216000, defaultAvailable: false, editable: true },
+          { name: "Electricity Utility Bill Buffer & Machine Maintenance", unitRate: "₹25,000/month", cost: 75000, defaultAvailable: false, editable: true },
+        ],
+      },
+    },
+    scenarios: {
+      minimum: {
+        name: "Farm-Gate Mechanical Grader (1 MT/hr)",
+        tag: "Low CapEx Pilot",
+        investment: 950000,
+        ownEquity: 285000,
+        subsidy: 332500,
+        equipment: "Mechanical Sizing Drums + Manual Waxing",
+        capacity: "1 Metric Tonne / hour",
+        workspace: "1,000 sq.ft Shed",
+        workers: "4 Staff",
+        monthlyOpex: 55000,
+        monthlyRevenue: 185000,
+        netMargin: "45%",
+        breakevenMonths: 7,
+        description: "Local farm-gate grading unit eliminating middleman price cuts.",
+      },
+      standard: {
+        name: "Optical Sizing & Waxing Packhouse (4 MT/hr)",
+        tag: "Sweet Spot",
+        investment: 1950000,
+        ownEquity: 585000,
+        subsidy: 682500,
+        equipment: "Optical Camera Sorter + Automated Wax Tunnel",
+        capacity: "4 Metric Tonnes / hour",
+        workspace: "2,500 sq.ft Hub",
+        workers: "7 Staff",
+        monthlyOpex: 110000,
+        monthlyRevenue: 420000,
+        netMargin: "55%",
+        breakevenMonths: 9,
+        description: "Caters to commercial supermarket contracts and long-distance Delhi/Bengaluru dispatches.",
+      },
+      expanded: {
+        name: "Integrated Cold Chain Packhouse (10 MT/hr)",
+        tag: "Export Hub",
+        investment: 4500000,
+        ownEquity: 1350000,
+        subsidy: 1575000,
+        equipment: "Dual Optical Lines + Hydro-Cooler + Pre-Cooling Rooms",
+        capacity: "10 Metric Tonnes / hour",
+        workspace: "6,000 sq.ft Node",
+        workers: "14 Staff",
+        monthlyOpex: 280000,
+        monthlyRevenue: 1150000,
+        netMargin: "60%",
+        breakevenMonths: 11,
+        description: "Flagship export packaging terminal certified for Bangladesh and Gulf container shipments.",
+      },
+    },
+  },
 ];
+
+// ============================================================================
+// DYNAMIC ACTIVE RECOMMENDATION MODEL FACTORY
+// Guarantees 100% financial consistency between Business Plan and Financial Assistant
+// ============================================================================
+function buildCustomModelFromOpportunity(opportunity, ownCapital = 200000) {
+  if (!opportunity) return null;
+
+  const name = opportunity.name || "Citrus Agro-Enterprise";
+  const nLower = name.toLowerCase();
+  const baseCost = Number(
+    opportunity.financial_breakdown?.total_project_cost ||
+    opportunity.total_project_cost ||
+    opportunity.total_cost ||
+    opportunity.capex_inr ||
+    opportunity.capex ||
+    180000
+  );
+
+  const subsidyRate = 0.35;
+  const subsidyAmount = opportunity.financial_breakdown?.subsidy_amount || Math.round(baseCost * subsidyRate);
+  const subsidyScheme =
+    opportunity.financial_breakdown?.eligible_scheme ||
+    (nLower.includes("diagnostic") || nLower.includes("clinic")
+      ? "PMEGP / SMAM Agritech Scheme (MoA&FW)"
+      : nLower.includes("nursery")
+      ? "MIDH / NHM Commercial Horticulture Grant"
+      : "PMFME ODOP 35% Credit-Linked Grant (MoFPI)");
+
+  let icon = "🍊";
+  let catTitle = opportunity.category || "Agro-Processing & Value Addition";
+  let itemsBreakdown = null;
+
+  if (
+    nLower.includes("peel") ||
+    nLower.includes("candied") ||
+    nLower.includes("candy") ||
+    nLower.includes("waste") ||
+    nLower.includes("enzyme") ||
+    nLower.includes("byproduct")
+  ) {
+    icon = "🍬";
+    itemsBreakdown = {
+      land_site: [
+        { name: "Existing Covered Space / Shed Setup", unitRate: "Owned by Founder / Leased", cost: 0, defaultAvailable: true, editable: true },
+        { name: "Food-Grade Washable Epoxy Floor & Prep Work", unitRate: "FSSAI hygienic sanitary flooring", cost: Math.round(baseCost * 0.05), defaultAvailable: false, editable: true },
+      ],
+      infrastructure: [
+        { name: "Solar Dehydrator Cabinet & Stainless Curing Racks", unitRate: "50 kg batch dehydrator setup", cost: Math.round(baseCost * 0.20), defaultAvailable: false, editable: true },
+      ],
+      equipment: [
+        { name: "SS-316 Steam Blanching & Sugar Syruping Kettles", unitRate: "Double-jacketed cooking kettle", cost: Math.round(baseCost * 0.25), defaultAvailable: false, editable: true },
+        { name: "Citrus Peel Shredder, Dicer & Vacuum Packaging Unit", unitRate: "High-speed precision dicer", cost: Math.round(baseCost * 0.18), defaultAvailable: false, editable: true },
+      ],
+      raw_materials: [
+        { name: "Initial Mandi Peel Procurement & Organic Sucrose Buffer", unitRate: "Seasonal raw material stock", cost: Math.round(baseCost * 0.14), defaultAvailable: false, editable: true },
+        { name: "Food-Grade Barrier Pouches & Packaging Consumables", unitRate: "5,000 retail pouches", cost: Math.round(baseCost * 0.05), defaultAvailable: false, editable: true },
+      ],
+      compliance: [
+        { name: "FSSAI Cottage/State License, GST & Lab Testing", unitRate: "Statutory filings & quality assay", cost: Math.round(baseCost * 0.04), defaultAvailable: false, editable: true },
+      ],
+      working_capital: [
+        { name: "3 Months Operating Electricity, Utility & Emergency Buffer", unitRate: "3-month operational runway", cost: 0, defaultAvailable: false, editable: true },
+      ],
+    };
+  } else if (
+    nLower.includes("diagnostic") ||
+    nLower.includes("clinic") ||
+    nLower.includes("leaf") ||
+    nLower.includes("testing") ||
+    nLower.includes("soil")
+  ) {
+    icon = "🔬";
+    itemsBreakdown = {
+      land_site: [
+        { name: "Zero Land Footprint (Mobile Field Kit)", unitRate: "Operates directly in orchards", cost: 0, defaultAvailable: true, editable: true },
+      ],
+      infrastructure: [
+        { name: "Shockproof Field Kit Casing & Portable Battery Bank", unitRate: "Rugged all-weather transit case", cost: Math.round(baseCost * 0.08), defaultAvailable: false, editable: true },
+      ],
+      equipment: [
+        { name: "Portable Spectrophotometer & Digital pH/EC/NPK Probes", unitRate: "Calibrated optical assay unit", cost: Math.round(baseCost * 0.35), defaultAvailable: false, editable: true },
+        { name: "Digital Handheld Microscope & Diagnostic Tablet", unitRate: "400x digital field scope", cost: Math.round(baseCost * 0.18), defaultAvailable: false, editable: true },
+      ],
+      raw_materials: [
+        { name: "Rapid Phytophthora & HLB Diagnostic Test Strips", unitRate: "500 lateral flow test kits", cost: Math.round(baseCost * 0.20), defaultAvailable: false, editable: true },
+      ],
+      compliance: [
+        { name: "ICAR-CCRI Technical Quality Accreditation & GST", unitRate: "Institutional testing accreditation", cost: Math.round(baseCost * 0.06), defaultAvailable: false, editable: true },
+      ],
+      working_capital: [
+        { name: "3 Months Mobility, Vehicle Fuel & Buffer", unitRate: "Field transit & operating runway", cost: 0, defaultAvailable: false, editable: true },
+      ],
+    };
+  } else if (
+    nLower.includes("juice") ||
+    nLower.includes("shake") ||
+    nLower.includes("kiosk")
+  ) {
+    icon = "🧃";
+    itemsBreakdown = {
+      land_site: [
+        { name: "Zero Land Footprint (Mobile Cart / Kiosk)", unitRate: "High-footfall urban placement", cost: 0, defaultAvailable: true, editable: true },
+      ],
+      infrastructure: [
+        { name: "Insulated Stainless Steel Mobile Kiosk Cart", unitRate: "Custom all-weather food cart", cost: Math.round(baseCost * 0.30), defaultAvailable: false, editable: true },
+      ],
+      equipment: [
+        { name: "Commercial SS-304 Cold-Press Citrus Extractor", unitRate: "Automatic fruit feeder press", cost: Math.round(baseCost * 0.28), defaultAvailable: false, editable: true },
+        { name: "Under-Counter Deep Chiller & Blending Station", unitRate: "Commercial refrigeration unit", cost: Math.round(baseCost * 0.14), defaultAvailable: false, editable: true },
+      ],
+      raw_materials: [
+        { name: "Initial Mandi Fruit Crates & Biodegradable Cups", unitRate: "1-month procurement stock", cost: Math.round(baseCost * 0.12), defaultAvailable: false, editable: true },
+      ],
+      compliance: [
+        { name: "FSSAI Basic Food Business Registration & QR Branding", unitRate: "Municipal vendor fee & signage", cost: Math.round(baseCost * 0.05), defaultAvailable: false, editable: true },
+      ],
+      working_capital: [
+        { name: "3 Months Operating Electricity & Working Capital", unitRate: "Runway & emergency buffer", cost: 0, defaultAvailable: false, editable: true },
+      ],
+    };
+  } else if (
+    nLower.includes("marmalade") ||
+    nLower.includes("jam") ||
+    nLower.includes("jelly") ||
+    nLower.includes("preserve")
+  ) {
+    icon = "🍯";
+    itemsBreakdown = {
+      land_site: [
+        { name: "Existing Kitchen / Food Cleanroom Space", unitRate: "Owned / Leased commercial room", cost: 0, defaultAvailable: true, editable: true },
+        { name: "Food-Grade Epoxy Washdown Floor Preparation", unitRate: "Sanitary cleanroom surfaces", cost: Math.round(baseCost * 0.05), defaultAvailable: false, editable: true },
+      ],
+      infrastructure: [
+        { name: "Stainless Steel Prep Tables & Utility Manifold", unitRate: "SS-304 food-grade wash basins", cost: Math.round(baseCost * 0.15), defaultAvailable: false, editable: true },
+      ],
+      equipment: [
+        { name: "Steam-Jacketed SS Cooking Kettle & Fruit Pulper", unitRate: "Tilting steam kettle 50L", cost: Math.round(baseCost * 0.35), defaultAvailable: false, editable: true },
+        { name: "Semi-Automatic Jar Capper & Induction Foil Sealer", unitRate: "Hermetic sealing machine", cost: Math.round(baseCost * 0.15), defaultAvailable: false, editable: true },
+      ],
+      raw_materials: [
+        { name: "Nagpur Mandarin Pulp, Pectin, Sugar & Glass Jars", unitRate: "2,000 jar initial inventory", cost: Math.round(baseCost * 0.15), defaultAvailable: false, editable: true },
+      ],
+      compliance: [
+        { name: "FSSAI Manufacturing License & Agmark Quality Testing", unitRate: "Shelf-life & nutritional assays", cost: Math.round(baseCost * 0.05), defaultAvailable: false, editable: true },
+      ],
+      working_capital: [
+        { name: "3 Months Operating Electricity, Utility & Buffer", unitRate: "3-month working runway", cost: 0, defaultAvailable: false, editable: true },
+      ],
+    };
+  } else if (
+    nLower.includes("nursery") ||
+    nLower.includes("budding") ||
+    nLower.includes("rootstock")
+  ) {
+    icon = "🌱";
+    itemsBreakdown = {
+      land_site: [
+        { name: "Existing Agri Land (0.5 – 1.0 Acre)", unitRate: "Owned by Founder / Leased", cost: 0, defaultAvailable: true, editable: true },
+        { name: "Site Levelling, Pathway & Drainage Grading", unitRate: "Civil earthwork", cost: Math.round(baseCost * 0.05), defaultAvailable: false, editable: true },
+      ],
+      infrastructure: [
+        { name: "UV-Stabilized 50% Shade-Net Polyhouse (1,000 sq. m)", unitRate: "GI pipe frame structure", cost: Math.round(baseCost * 0.38), defaultAvailable: false, editable: true },
+        { name: "Micro-Sprinklers & Automated Drip Fertigation Unit", unitRate: "High-density nursery grid", cost: Math.round(baseCost * 0.14), defaultAvailable: false, editable: true },
+      ],
+      equipment: [
+        { name: "Budding Knives, Grafting Shears & Media Mixer", unitRate: "Professional propagation kits", cost: Math.round(baseCost * 0.10), defaultAvailable: false, editable: true },
+      ],
+      raw_materials: [
+        { name: "Rangpur Lime Rootstocks & CCRI Certified Budwood", unitRate: "Disease-free scion budwood", cost: Math.round(baseCost * 0.16), defaultAvailable: false, editable: true },
+      ],
+      compliance: [
+        { name: "State Nursery License & CCRI Quality Audit", unitRate: "Horticulture accreditation", cost: Math.round(baseCost * 0.04), defaultAvailable: false, editable: true },
+      ],
+      working_capital: [
+        { name: "3 Months Nursery Labor & Operating Buffer", unitRate: "Operational runway", cost: 0, defaultAvailable: false, editable: true },
+      ],
+    };
+  } else {
+    itemsBreakdown = {
+      land_site: [
+        { name: "Existing Facility / Land Footprint", unitRate: "Owned by Founder / Leased", cost: 0, defaultAvailable: true, editable: true },
+        { name: "Site Prep & Safety Layout Preparation", unitRate: "Civil preparation", cost: Math.round(baseCost * 0.05), defaultAvailable: false, editable: true },
+      ],
+      infrastructure: [
+        { name: "Facility Workstations & Power/Water Utilities", unitRate: "Dedicated work zone", cost: Math.round(baseCost * 0.20), defaultAvailable: false, editable: true },
+      ],
+      equipment: [
+        { name: "Core Technical Machinery & Processing Tools", unitRate: "Primary operational hardware", cost: Math.round(baseCost * 0.40), defaultAvailable: false, editable: true },
+      ],
+      raw_materials: [
+        { name: "Initial Raw Materials & Packaging Supplies Buffer", unitRate: "Batch procurement stock", cost: Math.round(baseCost * 0.18), defaultAvailable: false, editable: true },
+      ],
+      compliance: [
+        { name: "Statutory Licenses, GST, MSME & Quality Assays", unitRate: "Certifications & registrations", cost: Math.round(baseCost * 0.05), defaultAvailable: false, editable: true },
+      ],
+      working_capital: [
+        { name: "3 Months Operating Expenses & Reserve Buffer", unitRate: "3-month operational runway", cost: 0, defaultAvailable: false, editable: true },
+      ],
+    };
+  }
+
+  // Ensure working capital closes the gap EXACTLY to equal baseCost without any rounding discrepancy
+  let allocatedSoFar = 0;
+  ["land_site", "infrastructure", "equipment", "raw_materials", "compliance"].forEach((catKey) => {
+    itemsBreakdown[catKey]?.forEach((item) => {
+      allocatedSoFar += item.cost;
+    });
+  });
+  const remainingForWorkingCapital = Math.max(0, baseCost - allocatedSoFar);
+  if (itemsBreakdown.working_capital && itemsBreakdown.working_capital[0]) {
+    itemsBreakdown.working_capital[0].cost = remainingForWorkingCapital;
+  }
+
+  const costCategories = {
+    land_site: {
+      title: "Land & Site Preparation",
+      icon: "🌱",
+      description: "Premises preparation, hygienic washdown surfaces, and drainage.",
+      items: itemsBreakdown.land_site,
+    },
+    infrastructure: {
+      title: "Infrastructure & Civil Structures",
+      icon: "🏗️",
+      description: "Structures, dehydrator cabinets, utilities, and shelving.",
+      items: itemsBreakdown.infrastructure,
+    },
+    equipment: {
+      title: "Core Machinery & Equipment",
+      icon: "⚙️",
+      description: "Specialized processing hardware, tooling, and containment units.",
+      items: itemsBreakdown.equipment,
+    },
+    raw_materials: {
+      title: "Raw Materials & Initial Stock",
+      icon: "📦",
+      description: "Farm-gate citrus procurement, ingredients, and packaging buffer.",
+      items: itemsBreakdown.raw_materials,
+    },
+    compliance: {
+      title: "Licenses, Testing & Compliance",
+      icon: "📋",
+      description: "FSSAI, MSME Udyam, laboratory certification, and GST setup.",
+      items: itemsBreakdown.compliance,
+    },
+    working_capital: {
+      title: "Working Capital Reserve (3 Months)",
+      icon: "👷",
+      description: "Operating runway for labor, electricity, utilities, and emergency buffer.",
+      items: itemsBreakdown.working_capital,
+    },
+  };
+
+  const minInvest = Math.round(baseCost * 0.55);
+  const expInvest = Math.round(baseCost * 2.2);
+
+  return {
+    id: "active_recommendation",
+    name: name,
+    icon: icon,
+    category: catTitle,
+    tagline: opportunity.tagline || opportunity.description || "Custom AI-Recommended Citrus Venture",
+    defaultLocation: opportunity.location_relevance || "Katol / Nagpur District",
+    baseProjectCost: baseCost,
+    subsidyScheme: subsidyScheme,
+    subsidyRate: subsidyRate,
+    maxSubsidyLimit: 1000000,
+    costCategories: costCategories,
+    scenarios: {
+      minimum: {
+        name: "Minimum Setup (Pilot / Micro)",
+        tag: "Low Capital Entry",
+        investment: minInvest,
+        ownEquity: Math.round(minInvest * 0.4),
+        subsidy: Math.round(minInvest * subsidyRate),
+        equipment: "Essential Core Setup Kit",
+        capacity: "Micro / Pilot Capacity",
+        workspace: "Semi-Covered Workspace / Farm Corner",
+        workers: "1 Operator + Founder",
+        monthlyOpex: Math.round(minInvest * 0.08),
+        monthlyRevenue: Math.round(minInvest * 0.22),
+        netMargin: "38%",
+        breakevenMonths: 6,
+        description: "Ideal for bootstrap entry with minimal financial exposure and zero debt stress.",
+      },
+      standard: {
+        name: "Standard Setup (Recommended Sweet Spot)",
+        tag: "Recommended Sweet Spot",
+        investment: baseCost,
+        ownEquity: Math.min(baseCost, ownCapital),
+        subsidy: subsidyAmount,
+        equipment: "Full Commercial Processing Line",
+        capacity: "Standard Commercial Batch",
+        workspace: "Dedicated Processing Facility",
+        workers: "2 Staff + Founder",
+        monthlyOpex: Math.round(baseCost * 0.12),
+        monthlyRevenue: Math.round(baseCost * 0.35),
+        netMargin: "45%",
+        breakevenMonths: 8,
+        description: `Fully pre-qualified for ${subsidyScheme} with strong market off-take potential.`,
+      },
+      expanded: {
+        name: "Expanded Setup (High-Capacity)",
+        tag: "Maximum Scale & Reach",
+        investment: expInvest,
+        ownEquity: Math.round(expInvest * 0.35),
+        subsidy: Math.min(1000000, Math.round(expInvest * subsidyRate)),
+        equipment: "High-Throughput Continuous Line",
+        capacity: "High-Capacity Regional Output",
+        workspace: "Industrial MIDC Hub",
+        workers: "5+ Technical Staff",
+        monthlyOpex: Math.round(expInvest * 0.12),
+        monthlyRevenue: Math.round(expInvest * 0.30),
+        netMargin: "50%",
+        breakevenMonths: 11,
+        description: "Institutional scale supplying regional commercial distributors and corporate buyers.",
+      },
+    },
+  };
+}
 
 // ============================================================================
 // 2. MAIN FINANCIAL ASSISTANT COMPONENT
@@ -648,64 +1582,93 @@ const BUSINESS_MODELS = [
 export default function FinancialAssistant() {
   const locationState = useLocation();
   const navigate = useNavigate();
+  const { user, activeVenture } = useAuth();
 
   // Active inner tab: "cost_breakdown" (6.1) | "funding_gap" (6.2 & 6.3) | "scenario_planner" (6.4)
   const [activeTab, setActiveTab] = useState("cost_breakdown");
 
+  // Active recommended venture from context or storage
+  const activeRecommendation = useMemo(() => {
+    if (locationState.state?.opportunity) return locationState.state.opportunity;
+    if (activeVenture?.name) return activeVenture;
+    try {
+      const savedPlan = localStorage.getItem("ev_active_business_plan");
+      if (savedPlan) {
+        const parsed = JSON.parse(savedPlan);
+        if (parsed.opportunity) return parsed.opportunity;
+      }
+    } catch (e) {}
+    return null;
+  }, [locationState.state, activeVenture]);
+
+  // User's own available capital from active venture, user profile, or localStorage
+  const [ownCapital, setOwnCapital] = useState(() => {
+    if (activeVenture?.own_equity) return Number(activeVenture.own_equity);
+    try {
+      const uId = user?.id;
+      const fKey = uId ? `ev_${uId}_user_finances` : "ev_user_finances";
+      const savedFin = localStorage.getItem(fKey) || localStorage.getItem("ev_user_finances");
+      if (savedFin) {
+        const parsed = JSON.parse(savedFin);
+        if (parsed.personalSavings) return Number(parsed.personalSavings);
+        if (parsed.availableCapitalINR) return Number(parsed.availableCapitalINR);
+      }
+      const savedPlan = localStorage.getItem("ev_active_business_plan");
+      if (savedPlan) {
+        const parsed = JSON.parse(savedPlan);
+        if (parsed.opportunity?.financial_breakdown?.user_budget) {
+          return Number(parsed.opportunity.financial_breakdown.user_budget);
+        }
+        if (parsed.userInput?.budget_inr) return Number(parsed.userInput.budget_inr);
+      }
+    } catch (e) {}
+    return 200000; // Baseline ₹2.0 Lakhs
+  });
+
+  // Dynamic custom model built from active recommendation to guarantee zero discrepancy
+  const activeRecommendationModel = useMemo(() => {
+    if (!activeRecommendation?.name) return null;
+    return buildCustomModelFromOpportunity(activeRecommendation, ownCapital);
+  }, [activeRecommendation, ownCapital]);
+
   // Selected Business Model state
   const [selectedModelId, setSelectedModelId] = useState(() => {
-    // Check if passed via route state or URL params or localStorage
+    // 0. Check URL param
     const params = new URLSearchParams(window.location.search);
     const modelParam = params.get("model");
     if (modelParam && BUSINESS_MODELS.some((m) => m.id === modelParam)) return modelParam;
 
-    if (locationState.state?.opportunity?.id) {
-      const match = BUSINESS_MODELS.find(
-        (m) => m.id === locationState.state.opportunity.id || locationState.state.opportunity.name?.toLowerCase().includes(m.name.toLowerCase().split(" ")[0])
-      );
-      if (match) return match.id;
+    // 1. If active recommendation exists, default to active_recommendation
+    if (locationState.state?.opportunity || activeVenture?.name || localStorage.getItem("ev_active_business_plan")) {
+      return "active_recommendation";
     }
-
-    try {
-      const savedPlan = localStorage.getItem("ev_active_business_plan");
-      if (savedPlan) {
-        const parsed = JSON.parse(savedPlan);
-        const match = BUSINESS_MODELS.find((m) =>
-          parsed.opportunity?.name?.toLowerCase().includes(m.name.toLowerCase().split(" ")[0])
-        );
-        if (match) return match.id;
-      }
-    } catch (e) {}
 
     return "citrus_nursery";
   });
 
+  // Keep selectedModelId synced if activeRecommendationModel becomes available
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const modelParam = params.get("model");
+    if (!modelParam && activeRecommendationModel && selectedModelId !== "active_recommendation") {
+      setSelectedModelId("active_recommendation");
+    }
+  }, [activeRecommendationModel]);
+
   // Current active model object
   const currentModel = useMemo(() => {
-    return BUSINESS_MODELS.find((m) => m.id === selectedModelId) || BUSINESS_MODELS[0];
-  }, [selectedModelId]);
+    if (selectedModelId === "active_recommendation" && activeRecommendationModel) {
+      return activeRecommendationModel;
+    }
+    return BUSINESS_MODELS.find((m) => m.id === selectedModelId) || activeRecommendationModel || BUSINESS_MODELS[0];
+  }, [selectedModelId, activeRecommendationModel]);
 
   // Context awareness metadata
   const hasPlanContext = Boolean(
-    locationState.state?.opportunity || localStorage.getItem("ev_active_business_plan")
+    activeRecommendationModel || activeVenture || locationState.state?.opportunity || localStorage.getItem("ev_active_business_plan")
   );
 
-  // User's own available capital from localStorage or user input
-  const [ownCapital, setOwnCapital] = useState(() => {
-    try {
-      const savedFin = localStorage.getItem("ev_user_finances");
-      if (savedFin) {
-        const parsed = JSON.parse(savedFin);
-        if (parsed.personalSavings) return Number(parsed.personalSavings);
-      }
-      const savedPlan = localStorage.getItem("ev_active_business_plan");
-      if (savedPlan) {
-        const parsed = JSON.parse(savedPlan);
-        if (parsed.userInput?.budget_inr) return Number(parsed.userInput.budget_inr);
-      }
-    } catch (e) {}
-    return 150000; // Default ₹1.5 Lakhs
-  });
+  const [isDPRModalOpen, setIsDPRModalOpen] = useState(false);
 
   // Interactive Assumption Modifiers for 6.1 Drill-Down
   const [scaleMultiplier, setScaleMultiplier] = useState(1.0); // 0.5x to 2.0x
@@ -899,10 +1862,10 @@ export default function FinancialAssistant() {
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                 <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "var(--cyan)", textTransform: "uppercase" }}>
-                  Active Business Context
+                  {selectedModelId === "active_recommendation" ? "⭐ Active Recommended Venture" : "Exploring Alternative Model"}
                 </span>
                 <span className="badge-verified" style={{ fontSize: "0.72rem" }}>
-                  ✓ Plan Loaded
+                  {selectedModelId === "active_recommendation" ? "✓ Plan Loaded" : "Catalog Blueprint"}
                 </span>
               </div>
               <h3 style={{ margin: "2px 0 0", fontSize: "1.1rem", fontWeight: 800, color: "var(--text-heading)" }}>
@@ -990,11 +1953,52 @@ export default function FinancialAssistant() {
                   appearance: "none",
                 }}
               >
-                {BUSINESS_MODELS.map((m) => (
-                  <option key={m.id} value={m.id}>
-                    {m.icon} {m.name}
-                  </option>
-                ))}
+                {activeRecommendationModel && (
+                  <optgroup label="⭐ Your Active Recommendation">
+                    <option value="active_recommendation">
+                      ⭐ {activeRecommendationModel.name} (Plan Benchmark: ₹{activeRecommendationModel.baseProjectCost.toLocaleString("en-IN")})
+                    </option>
+                  </optgroup>
+                )}
+                <optgroup label="🧃 Food Processing & Value-Addition">
+                  {BUSINESS_MODELS.filter((m) => m.category.includes("Food") || m.category.includes("Beverages")).map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.icon} {m.name}
+                    </option>
+                  ))}
+                </optgroup>
+
+                <optgroup label="🌱 Nursery & Propagation Infrastructure">
+                  {BUSINESS_MODELS.filter((m) => m.category.includes("Nursery") || m.category.includes("Propagation")).map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.icon} {m.name}
+                    </option>
+                  ))}
+                </optgroup>
+
+                <optgroup label="🧪 By-Products & Circular Bio-Economy">
+                  {BUSINESS_MODELS.filter((m) => m.category.includes("By-Products") || m.category.includes("Bio")).map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.icon} {m.name}
+                    </option>
+                  ))}
+                </optgroup>
+
+                <optgroup label="📦 Post-Harvest, Packaging & Testing Services">
+                  {BUSINESS_MODELS.filter((m) => m.category.includes("Post-Harvest") || m.category.includes("Packaging") || m.category.includes("Agritech")).map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.icon} {m.name}
+                    </option>
+                  ))}
+                </optgroup>
+
+                <optgroup label="❄️ Cold Chain & Climate-Controlled Storage">
+                  {BUSINESS_MODELS.filter((m) => m.category.includes("Cold") || m.category.includes("Storage")).map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.icon} {m.name}
+                    </option>
+                  ))}
+                </optgroup>
               </select>
               <ChevronDown
                 size={18}
@@ -1742,11 +2746,11 @@ export default function FinancialAssistant() {
                 <div style={{ display: "flex", gap: 8 }}>
                   <button
                     type="button"
-                    onClick={() => alert(`DPR Loan Package ready for ${currentModel.name} (Amount: ₹${calculatedCostSummary.fundingGap.toLocaleString("en-IN")}). Exporting checklist...`)}
-                    className="btn-secondary-gloss"
-                    style={{ flex: 1, fontSize: "0.78rem", padding: "8px" }}
+                    onClick={() => setIsDPRModalOpen(true)}
+                    className="btn-primary-gloss"
+                    style={{ flex: 1, fontSize: "0.82rem", padding: "10px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, background: "linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)" }}
                   >
-                    📄 Bank DPR Checklist
+                    🏛️ Generate Official Bank DPR (PDF)
                   </button>
                 </div>
               </div>
@@ -2343,6 +3347,26 @@ export default function FinancialAssistant() {
           </div>
         </div>
       )}
+      {/* Bank-Grade Detailed Project Report Modal */}
+      <BankGradeDPRModal
+        isOpen={isDPRModalOpen}
+        onClose={() => setIsDPRModalOpen(false)}
+        opportunity={currentModel}
+        userProfile={{ name: user?.full_name || "Bhoomika Vaishya" }}
+        capexBreakdown={[
+          { name: "Core Production Machinery & Processing Tools", cost: calculatedCostSummary.equipmentSum },
+          { name: "Facility Structures & Utility Installations", cost: calculatedCostSummary.infrastructureSum },
+          { name: "Initial Raw Materials & Packaging Consumables Buffer", cost: calculatedCostSummary.rawMaterialsSum },
+          { name: "Site Preparation & Hygienic Washdown Setup", cost: calculatedCostSummary.landSiteSum },
+          { name: "Statutory Food Licenses, Testing Assays & MSME Udyam", cost: calculatedCostSummary.complianceSum },
+          { name: "3-Month Operating Reserve & Working Capital", cost: calculatedCostSummary.workingCapitalSum },
+        ].filter(i => i.cost > 0)}
+        activeLocation={currentModel.defaultLocation}
+        ownEquity={ownCapital}
+        totalCost={calculatedCostSummary.totalProjectCost}
+        subsidyAmount={calculatedCostSummary.potentialSubsidy}
+        bankLoan={calculatedCostSummary.fundingGap}
+      />
     </div>
   );
 }

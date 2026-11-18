@@ -23,18 +23,13 @@ import {
 } from "lucide-react";
 
 export const DEFAULT_PREFERENCES_STATE = {
-  businessTypes: ["food_processing", "trading_selling"],
-  businessScale: "small_enterprise",
-  timeCommitment: "full_time",
+  businessTypes: [],
+  businessScale: "",
+  timeCommitment: "",
   startTimeline: "within_3_months",
   riskTolerance: "moderate",
-  startingApproach: "on_my_own",
-  corePriorities: [
-    "existing_resources",
-    "existing_skills",
-    "steady_income",
-    "local_market",
-  ],
+  startingApproach: "",
+  corePriorities: [],
   willingnessToLearn: "practical_affordable",
 };
 

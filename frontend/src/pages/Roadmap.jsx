@@ -33,6 +33,8 @@ import {
   Upload
 } from "lucide-react";
 
+import { useAuth } from "../context/AuthContext";
+
 // ============================================================================
 // 1. MASTER 6-PHASE ROADMAP TEMPLATE (NAGPUR CITRUS VENTURES)
 // ============================================================================
@@ -269,6 +271,7 @@ const DEFAULT_ROADMAP_PHASES = [
 // ============================================================================
 export default function Roadmap() {
   const navigate = useNavigate();
+  const { user, activeVenture } = useAuth();
 
   // Active view toggle: "checklist" | "timeline"
   const [viewMode, setViewMode] = useState("checklist");
@@ -280,12 +283,12 @@ export default function Roadmap() {
   const [selectedTask, setSelectedTask] = useState(null);
 
   // Business and Location context
-  const [businessContext, setBusinessContext] = useState(() => {
-    let name = "Disease-Free Certified Citrus Nursery";
-    let location = "Katol, Nagpur District";
+  const businessContext = useMemo(() => {
+    let name = activeVenture?.name || "Disease-Free Certified Citrus Nursery";
+    let location = activeVenture?.location || (user?.tehsil ? `${user.tehsil}, Nagpur District` : "Katol, Nagpur District");
     try {
       const savedPlan = localStorage.getItem("ev_active_business_plan");
-      if (savedPlan) {
+      if (!activeVenture && savedPlan) {
         const parsed = JSON.parse(savedPlan);
         if (parsed.opportunity?.name) name = parsed.opportunity.name;
         if (parsed.userInput?.location || parsed.userSummary?.location) {
@@ -293,8 +296,76 @@ export default function Roadmap() {
         }
       }
     } catch (e) {}
-    return { name, location };
-  });
+    return { name, location, category: activeVenture?.category || "" };
+  }, [user, activeVenture]);
+
+  // Dynamically tailor milestones according to active venture archetype
+  const roadmapPhases = useMemo(() => {
+    const vName = (businessContext.name || "").toLowerCase();
+    const vCat = (businessContext.category || "").toLowerCase();
+
+    const isFood = vCat.includes("food") || vCat.includes("processing") || vCat.includes("beverage") || vName.includes("juice") || vName.includes("jelly") || vName.includes("spread");
+    const isBio = vCat.includes("bio") || vCat.includes("waste") || vCat.includes("by-product") || vName.includes("oil") || vName.includes("enzyme") || vName.includes("cleaning");
+    const isCold = vCat.includes("cold") || vCat.includes("storage") || vCat.includes("logistics") || vName.includes("cold");
+
+    return DEFAULT_ROADMAP_PHASES.map((phase) => {
+      if (phase.id === "phase_3") {
+        return {
+          ...phase,
+          tasks: phase.tasks.map((t) => {
+            if (t.id === "T3_2" && isFood) {
+              return { ...t, title: "Complete ICAR-CCRI Food Processing, Debittering & Pasteurization Workshop", whyRequired: "Technical foundation for debittered RTS juice, pectin jelly, and food safety protocols." };
+            }
+            if (t.id === "T3_2" && isBio) {
+              return { ...t, title: "Complete Hydro-Steam Distillation & Bio-Enzyme Formulation Workshop", whyRequired: "Specialized training on terpene cold extraction, steam condensing, and microbial fermentation." };
+            }
+            if (t.id === "T3_3" && isFood) {
+              return { ...t, title: "Obtain FSSAI State Manufacturing License & NABL Water Test NOC", whyRequired: "Statutory mandatory clearance required prior to commercial beverage bottling and sales." };
+            }
+            if (t.id === "T3_3" && isBio) {
+              return { ...t, title: "Obtain State Pollution Control Green Category Consent & MSME Udyam", whyRequired: "Zero-discharge environmental compliance for essential oil and bio-enzyme units." };
+            }
+            return t;
+          })
+        };
+      }
+      if (phase.id === "phase_5") {
+        return {
+          ...phase,
+          tasks: phase.tasks.map((t) => {
+            if (t.id === "T5_1" && isFood) {
+              return { ...t, title: "Set Up Stainless Steel (SS-304) Processing Line & Debittering Tank", whyRequired: "Hygiene-grade food extraction equipment complying with FSSAI manufacturing schedule." };
+            }
+            if (t.id === "T5_1" && isBio) {
+              return { ...t, title: "Commission Hydro-Steam Distillation Still & Essential Oil Centrifuge", whyRequired: "Core extraction plant for citrus d-limonene, peel essential oil, and enzymatic fermentation." };
+            }
+            if (t.id === "T5_2" && isFood) {
+              return { ...t, title: "Establish Farm-Gate Fruit Off-Take Ties with Katol/Warud Citrus Growers", whyRequired: "Secures reliable Grade-B/C oranges directly at benchmark prices of ₹14–₹18/kg." };
+            }
+            if (t.id === "T5_2" && isBio) {
+              return { ...t, title: "Set Up Peel Feedstock Aggregation Contracts with Regional Juice Hubs", whyRequired: "Daily collection of fresh citrus rinds from 10+ wholesale juice outlets in Nagpur." };
+            }
+            return t;
+          })
+        };
+      }
+      if (phase.id === "phase_6") {
+        return {
+          ...phase,
+          tasks: phase.tasks.map((t) => {
+            if (t.id === "T6_2" && isFood) {
+              return { ...t, title: "Execute Distribution Agreements with Nagpur Retailers & Quick Commerce", whyRequired: "Places bottled beverages and spreads across regional grocery networks and Blinkit/Zepto." };
+            }
+            if (t.id === "T6_2" && isBio) {
+              return { ...t, title: "Finalize B2B Off-Take Agreements with FMCG & Aroma Cosmetic Brands", whyRequired: "Supplies pure d-limonene aroma oil at ₹1,200–₹1,800/liter to commercial buyers." };
+            }
+            return t;
+          })
+        };
+      }
+      return phase;
+    });
+  }, [businessContext, activeVenture]);
 
   // Completed Tasks state (localStorage backed)
   const [completedTaskIds, setCompletedTaskIds] = useState(() => {
@@ -359,7 +430,7 @@ export default function Roadmap() {
     let totalTasks = 0;
     let completedCount = 0;
 
-    DEFAULT_ROADMAP_PHASES.forEach((phase) => {
+    roadmapPhases.forEach((phase) => {
       phase.tasks.forEach((t) => {
         totalTasks += 1;
         if (completedTaskIds.includes(t.id)) completedCount += 1;
@@ -369,8 +440,8 @@ export default function Roadmap() {
     const percentage = totalTasks > 0 ? Math.round((completedCount / totalTasks) * 100) : 0;
 
     // Find current active phase (first phase with incomplete tasks)
-    let activePhase = DEFAULT_ROADMAP_PHASES[0];
-    for (const phase of DEFAULT_ROADMAP_PHASES) {
+    let activePhase = roadmapPhases[0];
+    for (const phase of roadmapPhases) {
       const phaseCompleted = phase.tasks.every((t) => completedTaskIds.includes(t.id));
       if (!phaseCompleted) {
         activePhase = phase;
@@ -510,7 +581,7 @@ export default function Roadmap() {
 
             {/* 6-Phase Timeline Track Bar */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 6 }}>
-              {DEFAULT_ROADMAP_PHASES.map((ph, idx) => {
+              {roadmapPhases.map((ph, idx) => {
                 const completedInPh = ph.tasks.filter((t) => completedTaskIds.includes(t.id)).length;
                 const isAllDone = completedInPh === ph.tasks.length;
                 const isCurrent = progressMetrics.activePhase.id === ph.id;
@@ -611,7 +682,7 @@ export default function Roadmap() {
             >
               All Phases (6)
             </button>
-            {DEFAULT_ROADMAP_PHASES.map((p) => {
+            {roadmapPhases.map((p) => {
               const isCompleted = p.tasks.every((t) => completedTaskIds.includes(t.id));
               return (
                 <button
@@ -630,7 +701,7 @@ export default function Roadmap() {
 
           {/* Phases List */}
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-            {DEFAULT_ROADMAP_PHASES.filter(
+            {roadmapPhases.filter(
               (p) => activePhaseFilter === "all" || activePhaseFilter === p.id
             ).map((phase) => {
               const phaseTasks = phase.tasks;
@@ -877,7 +948,7 @@ export default function Roadmap() {
                 }}
               />
 
-              {DEFAULT_ROADMAP_PHASES.map((phase, idx) => {
+              {roadmapPhases.map((phase, idx) => {
                 const isCompleted = phase.tasks.every((t) => completedTaskIds.includes(t.id));
                 const isCurrent = progressMetrics.activePhase.id === phase.id;
 

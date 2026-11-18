@@ -15,11 +15,11 @@ export default function Assessment() {
 
   // User responses state
   const [location, setLocation] = useState("Katol");
-  const [hasLand, setHasLand] = useState(true);
-  const [landAcres, setLandAcres] = useState(2.0);
-  const [selectedSkills, setSelectedSkills] = useState(["SKL01"]);
-  const [selectedResources, setSelectedResources] = useState(["RES01", "RES02"]);
-  const [budget, setBudget] = useState(300000);
+  const [hasLand, setHasLand] = useState(false);
+  const [landAcres, setLandAcres] = useState(0.0);
+  const [selectedSkills, setSelectedSkills] = useState([]);
+  const [selectedResources, setSelectedResources] = useState([]);
+  const [budget, setBudget] = useState(200000);
 
   useEffect(() => {
     async function loadInitialData() {

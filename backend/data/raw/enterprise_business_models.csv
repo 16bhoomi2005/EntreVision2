@@ -1,0 +1,31 @@
+model_id,category,model_name,description,est_capex_inr,est_opex_monthly_inr,margin_pct,risk_level,scale
+BM01,Primary Processing,High-Capacity Juice Concentrate Plant,Crushing second-grade oranges into B2B concentrate for beverage brands.,50000000,2000000,15,High,Large
+BM02,Primary Processing,Artisanal Orange Squash & Syrups,Small-batch sweetened orange syrups for local cafes and retail.,1500000,200000,35,Medium,Small
+BM03,Primary Processing,Canned Orange Segments,Peeling and canning whole mandarin segments in sugar syrup for bakeries.,8000000,500000,25,Medium,Medium
+BM04,Primary Processing,Orange Marmalade & Jams,Cooking pulp and peels into traditional spreads.,1000000,150000,30,Low,Micro
+BM05,Waste Extraction,Cold-Pressed Orange Essential Oil,Extracting volatile oil from flavedo for perfumes and aromatherapy.,12000000,400000,60,High,Medium
+BM06,Waste Extraction,D-Limonene Extraction,Chemical extraction of Limonene for eco-friendly industrial degreasers.,25000000,800000,50,High,Large
+BM07,Waste Extraction,Citrus Pectin Manufacturing,Extracting natural gelling agent from albedo for pharma and food.,35000000,1000000,45,High,Large
+BM08,Waste Extraction,Orange Peel Powder (Cosmetic),Sun-drying and grinding peels for Ayurvedic face scrubs.,500000,50000,70,Low,Micro
+BM09,Waste Extraction,Cattle Feed (Citrus Pomace),Drying leftover pulp for high-fiber dairy farm feed.,2000000,100000,20,Low,Small
+BM10,Waste Extraction,Bio-Plastics from Citrus Peels,Advanced material science startup converting pectin into biodegradable packaging.,50000000,1500000,40,Very High,Large
+BM11,Waste Extraction,Citrus Bio-Enzymes,Fermenting peels with jaggery to create natural household cleaners.,300000,30000,80,Low,Micro
+BM12,Logistics & Storage,Refrigerated Transport (Reefer Fleet),Operating a fleet of cold-chain trucks to JNPT port.,15000000,800000,15,Medium,Medium
+BM13,Logistics & Storage,Pre-Cooling & Cold Storage Facility,Humidity-controlled cold rooms to extend shelf life during summer.,20000000,300000,25,Medium,Large
+BM14,Logistics & Storage,Automated Waxing & Grading Packhouse,Washing and wax-coating oranges to increase shelf life to 45 days.,10000000,400000,30,Medium,Medium
+BM15,Agri-Inputs,Certified Citrus Nursery,Growing disease-free saplings on rough lemon rootstock.,1000000,80000,45,Low,Small
+BM16,Agri-Inputs,Organic Neem & Citrus Bio-Pesticides,Manufacturing organic sprays for the Citrus Psylla pest.,2500000,150000,50,Medium,Small
+BM17,Agri-Inputs,Precision Drip Irrigation Supply,Supplying and installing water-efficient systems for orchards.,5000000,300000,20,Low,Medium
+BM18,Agri-Inputs,Soil Testing & Agronomy Lab,Private lab offering chemical analysis and fertilizer recommendations.,3000000,100000,60,Low,Small
+BM19,Confectionery,Orange Barfi Manufacturing,Mass producing traditional Nagpur orange milk sweets.,4000000,600000,35,Medium,Medium
+BM20,Confectionery,Orange Candy & Hard Boiled Sweets,Citrus-infused hard candies for mass market retail.,6000000,500000,25,Medium,Medium
+BM21,Confectionery,Artisanal Orange Chocolates,Premium dark chocolates infused with Nagpur orange zest.,800000,100000,55,Low,Micro
+BM22,Beverages,Sparkling Orange Wine (Cider),Fermenting mandarins into alcoholic beverages.,18000000,600000,40,High,Medium
+BM23,Beverages,Packaged Craft Orange Kombucha,Fermented probiotic health drinks using local orange juice.,1500000,150000,50,Medium,Small
+BM24,Beverages,Orange Liqueur Distillery,Distilling high-proof spirits infused with bitter orange peels (Triple Sec style).,30000000,1200000,65,Very High,Large
+BM25,Packaging,Corrugated Box Manufacturing,Making the specific ventilated cardboard boxes used for orange transport.,12000000,1000000,18,Medium,Medium
+BM26,Packaging,Food-Grade Plastic Crates,Injection molding reusable crates for APMC mandis.,20000000,1500000,15,Medium,Large
+BM27,Machinery,Citrus Equipment Fabrication,Manufacturing localized pulpers and grading conveyors in MIDC.,8000000,500000,30,Medium,Medium
+BM28,Cosmetics,Orange Peel Face Sheet Masks,Contract manufacturing sheet masks infused with Vitamin C.,5000000,300000,65,Medium,Small
+BM29,Cosmetics,Citrus Bath Bombs & Salts,Handcrafted bath products using local orange essential oils.,200000,20000,75,Low,Micro
+BM30,Retail & Export,Citrus Export Agency,Asset-light B2B trading house exporting to Bangladesh and UAE.,500000,100000,10,Low,Micro

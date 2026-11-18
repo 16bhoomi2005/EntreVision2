@@ -1,0 +1,8 @@
+Arrival_Date,State,District,Market,Commodity,Variety,Grade,Min_Price,Max_Price,Modal_Price
+2024-10-07,Maharashtra,Nagpur,Nagpur APMC,Orange,Nagpur Santra,A,1500,2000,1800
+2024-10-07,Maharashtra,Nagpur,Nagpur APMC,Orange,Nagpur Santra,B,1200,1600,1400
+2024-10-07,Maharashtra,Amravati,Amravati Mandi,Orange,Nagpur Santra,A,1450,1950,1750
+2024-10-07,Maharashtra,Amravati,Amravati Mandi,Mousambi(Sweet Lime),Mousambi,A,1000,1400,1200
+2024-10-07,Maharashtra,Nagpur,Nagpur APMC,Mousambi(Sweet Lime),Mousambi,A,1100,1500,1300
+2024-10-07,Maharashtra,Jalgaon,Jalgaon Mandi,Lemon,Lemon,A,800,1200,1000
+2024-10-07,Maharashtra,Nagpur,Nagpur APMC,Lemon,Lemon,B,700,1000,850

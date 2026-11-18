@@ -35,6 +35,11 @@ venv/
 .venv/
 ENV/
 
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
 # Environment Variables
 .env
 .env.local

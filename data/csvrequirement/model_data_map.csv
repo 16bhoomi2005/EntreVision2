@@ -1,0 +1,39 @@
+﻿ID,Dataset,M1 Opportunity ranker,M2 Price forecast,M3 Financial engine,M4 Eligibility rules,M5 RAG advisor,Map / UI layers
+D01,"Agmarknet daily mandi prices (orange, mosambi, lemon)",,R,R,,,
+D02,Historical mandi prices (up to 10 years),,R,,,,
+D03,APEDA citrus export data,,O,,,,
+D04,"Processed-product price benchmarks (juice, squash, peel oil, bio-products)",,,R,,,
+D05,"Tehsil-wise citrus area, production and yield",R,O,,,,R
+D06,Orchard tree count and age profile,,,,,,
+D07,Bahar season calendar and harvest windows,,R,O,,O,
+D08,Post-harvest loss and processing recovery rates,,,R,,O,
+D09,Soil type and land use,,,,,,
+D10,Rainfall and temperature,O,R,,,,R
+D11,Groundwater depth and stage of extraction,O,,,,,R
+D12,Drought and heat vulnerability index (derived),,,,,,O
+D13,"Administrative boundaries (district, 14 Nagpur tehsils)",R,,,,,R
+D14,MIDC industrial areas and food parks,O,,,,,R
+D15,APMC yards and mandis (location and facilities),R,,,,,R
+D16,"Cold storages, pack-houses, grading and waxing units",R,,,,,R
+D17,Existing processing units and competitors,O,,,,,O
+D18,"Road network and travel distances/time (to mandi, MIDC, airport, rail)",R,,,,,O
+D19,Power tariff and availability (industrial/agri),,,R,,,
+D20,"KVKs, CCRI and training institutions",O,,,,,R
+D21,"PMFME guidelines, unit cost norms and subsidy caps",,,O,R,O,
+D22,MIDH / NHB cost norms and subsidy patterns,,,O,R,O,
+D23,NABARD / AIF / CGTMSE / Mudra loan terms,,,R,R,,
+D24,"Maharashtra state schemes (CMEGP, PoCRA, etc.)",,,,R,,
+D25,Benchmark interest rates,,,R,,,
+D26,"Equipment and machinery costs (grader, extractor, pasteuriser, cold room, packing)",R,,R,,,
+D27,"Licences, registrations and regulatory fees",,,,R,R,
+D28,Reference DPR / bankable project templates,R,,R,,,
+D29,Labour wage rates,,,R,,,
+D30,Census / PLFS demographics and employment (tehsil/district),,,,,,
+D31,Processed citrus market size and competition,,,,,,
+D32,Synthetic entrepreneur personas (for testing and demos),R,,,,,
+D33,Expert-ranked opportunity benchmark (ground truth),R,,,,,
+D34,Collaboration marketplace seed profiles,,,,,,
+D35,RAG knowledge base documents,,,,,R,
+,Required datasets (R),9,4,9,5,2,8
+,Optional datasets (O),5,2,3,0,4,3
+,R = required   O = optional   (blank = not used). Note: M3 and M4 are rule/formula engines; M1 starts as a weighted score + cosine similarity; M2 starts with Prophet/SARIMA.,,,,,,

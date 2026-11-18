@@ -1,5 +1,7 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAuth, persistUserAssessmentToStorage } from "../context/AuthContext";
+import { fetchUserProfile, saveUserProfile } from "../services/api";
 import {
   User,
   MapPin,
@@ -41,32 +43,30 @@ import {
 // DEFENSIVE NORMALIZATION HELPERS (BRIDGES WIZARD DATA & PROFILE HUB)
 // ============================================================================
 
-function normalizeAboutMe(raw) {
-  const fallback = {
-    fullName: "Bhoomika Vaishya",
-    education: "Engineering (B.Tech / Agritech Focus)",
-    currentSituation: "Planning to start a business",
-    goals: ["Start my first business", "Use my existing resources", "Find a new business idea"],
-  };
+// ============================================================================
+// DEFENSIVE NORMALIZATION HELPERS (BRIDGES WIZARD DATA & PROFILE HUB)
+// ============================================================================
 
-  if (!raw || typeof raw !== "object") return fallback;
+function normalizeAboutMe(raw, user) {
+  if (!raw || typeof raw !== "object") {
+    return {
+      fullName: user?.full_name || "",
+      education: user?.education || "",
+      currentSituation: user?.current_situation || "",
+      goals: [],
+    };
+  }
 
   return {
-    fullName: raw.fullName || fallback.fullName,
-    education: raw.education || fallback.education,
-    currentSituation: raw.currentSituation || fallback.currentSituation,
-    goals: Array.isArray(raw.goals) ? raw.goals : fallback.goals,
+    fullName: raw.fullName || user?.full_name || "",
+    education: raw.education || user?.education || "",
+    currentSituation: raw.currentSituation || user?.current_situation || "",
+    goals: Array.isArray(raw.goals) ? raw.goals : [],
   };
 }
 
 function normalizeSkills(raw) {
-  const fallbackSkills = [
-    { id: "s1", name: "Farming & Orchard Management", level: "Intermediate", years: "2 Years", icon: "🌱" },
-    { id: "s2", name: "Digital Marketing & D2C Branding", level: "Beginner", years: "1 Year", icon: "📱" },
-    { id: "s3", name: "Programming & Technology Systems", level: "Intermediate", years: "2 Years", icon: "💻" },
-  ];
-
-  if (!raw) return { skills: fallbackSkills, channels: ["Education", "Training", "Family business"], willingToLearn: "Yes" };
+  if (!raw) return { skills: [], channels: [], willingToLearn: "" };
 
   if (Array.isArray(raw)) {
     const list = raw.map((item, idx) => ({
@@ -77,64 +77,25 @@ function normalizeSkills(raw) {
       icon: item.icon || "🌱",
     }));
     return {
-      skills: list.length > 0 ? list : fallbackSkills,
-      channels: ["Education", "Training", "Family business"],
-      willingToLearn: "Yes",
+      skills: list,
+      channels: [],
+      willingToLearn: "",
     };
   }
 
   if (typeof raw === "object" && Array.isArray(raw.skills)) {
     return {
       skills: raw.skills,
-      channels: Array.isArray(raw.channels) ? raw.channels : ["Education", "Training"],
-      willingToLearn: raw.willingToLearn || "Yes",
+      channels: Array.isArray(raw.channels) ? raw.channels : [],
+      willingToLearn: raw.willingToLearn || "",
     };
   }
 
-  return { skills: fallbackSkills, channels: ["Education", "Training"], willingToLearn: "Yes" };
+  return { skills: [], channels: [], willingToLearn: "" };
 }
 
 function normalizeDocuments(raw) {
-  const fallbackDocs = [
-    {
-      id: "doc_1",
-      name: "Agricultural Training Certificate",
-      type: "Certificate",
-      relatedSkill: "Farming",
-      issuedBy: "Regional Agri College",
-      status: "Added",
-      year: "2026",
-    },
-    {
-      id: "doc_2",
-      name: "Food Processing Certificate",
-      type: "Certificate",
-      relatedSkill: "Food Processing",
-      issuedBy: "Food Tech Academy",
-      status: "Added",
-      year: "2025",
-    },
-    {
-      id: "doc_3",
-      name: "Land Document (7/12 Extract)",
-      type: "Land Document",
-      relatedSkill: "Property Title",
-      issuedBy: "Maharashtra Revenue Dept",
-      status: "Added",
-      year: "2026",
-    },
-    {
-      id: "doc_4",
-      name: "Business Registration (Udyam MSME)",
-      type: "Official Registration",
-      relatedSkill: "Business Setup",
-      issuedBy: "Ministry of MSME",
-      status: "Needs Attention",
-      year: "Pending Filing",
-    },
-  ];
-
-  if (!raw) return fallbackDocs;
+  if (!raw) return [];
 
   if (Array.isArray(raw)) {
     return raw.map((d, idx) => ({
@@ -167,12 +128,12 @@ function normalizeDocuments(raw) {
       raw.experience.forEach((e, idx) => {
         list.push({
           id: e.id || `exp_${idx}`,
-          name: `${e.duration || "2 Years"} Experience — ${e.org || "Agro Venture"}`,
+          name: `${e.duration || "Experience"} — ${e.org || "Agro Venture"}`,
           type: "Experience",
           relatedSkill: e.role || "Operations",
           issuedBy: e.org || "Employer",
           status: "Added",
-          year: e.duration || "2 Years",
+          year: e.duration || "1 Year",
         });
       });
     }
@@ -189,34 +150,51 @@ function normalizeDocuments(raw) {
         });
       });
     }
-    if (list.length > 0) return list;
+    if (Array.isArray(raw.otherDocs)) {
+      raw.otherDocs.forEach((o, idx) => {
+        list.push({
+          id: o.id || `oth_${idx}`,
+          name: o.title || o.name || "Supporting Document",
+          type: "Document",
+          relatedSkill: "General",
+          issuedBy: "Authority",
+          status: o.status === "added" ? "Added" : "Needs Attention",
+          year: "2026",
+        });
+      });
+    }
+    return list;
   }
 
-  return fallbackDocs;
+  return [];
 }
 
 function normalizeResources(raw) {
-  const fallback = {
-    resources: [
-      { id: "r1", name: "Farm Land", status: "✓ I own it", icon: "🌱", available: true },
-      { id: "r2", name: "Water Source", status: "✓ Available", icon: "💧", available: true },
-      { id: "r3", name: "Work Shed", status: "✓ I have access", icon: "🏠", available: true },
-      { id: "r4", name: "Transport Vehicle", status: "○ Not available", icon: "🚚", available: false },
-      { id: "r5", name: "Cold Storage", status: "○ Not available", icon: "📦", available: false },
-    ],
-    existingSetup: {
-      hasExistingBusiness: "No",
-      machineryAvailable: "Farm equipment & pump",
-      currentActivity: "Agriculture",
-    },
+  const defaultResources = [
+    { id: "r1", name: "Farm Land", status: "○ Not available", icon: "🌱", available: false },
+    { id: "r2", name: "Water Source", status: "○ Not available", icon: "💧", available: false },
+    { id: "r3", name: "Work Shed", status: "○ Not available", icon: "🏠", available: false },
+    { id: "r4", name: "Transport Vehicle", status: "○ Not available", icon: "🚚", available: false },
+    { id: "r5", name: "Cold Storage", status: "○ Not available", icon: "📦", available: false },
+  ];
+
+  const defaultSetup = {
+    hasExistingBusiness: "No",
+    machineryAvailable: "None",
+    currentActivity: "None",
   };
 
-  if (!raw || typeof raw !== "object") return fallback;
+  if (!raw || typeof raw !== "object") {
+    return {
+      resources: defaultResources,
+      existingSetup: defaultSetup,
+    };
+  }
 
   if (Array.isArray(raw.resources)) {
     return {
       resources: raw.resources,
-      existingSetup: raw.existingSetup || fallback.existingSetup,
+      existingSetup: raw.existingSetup || defaultSetup,
     };
   }
 
@@ -224,8 +202,8 @@ function normalizeResources(raw) {
   const resourcesList = [
     {
       id: "r1",
-      name: raw.hasLand ? `Farm Land (${raw.landAcres || 2.5} Acres)` : "Farm Land",
-      status: raw.hasLand ? `✓ I own it (${raw.landOwnership || "Owned"})` : "○ Not available",
+      name: raw.hasLand ? `Farm Land (${raw.landAcres || 0} Acres)` : "Farm Land",
+      status: raw.hasLand ? `✓ Available (${raw.landOwnership || "Owned"})` : "○ Not available",
       icon: "🌱",
       available: Boolean(raw.hasLand),
     },
@@ -238,14 +216,14 @@ function normalizeResources(raw) {
     },
     {
       id: "r3",
-      name: raw.hasWorkspace ? `Work Shed (${raw.workspaceAreaSqFt || 1500} sq.ft)` : "Work Shed",
-      status: raw.hasWorkspace ? "✓ I have access" : "○ Not available",
+      name: raw.hasWorkspace ? `Work Shed (${raw.workspaceAreaSqFt || 0} sq.ft)` : "Work Shed",
+      status: raw.hasWorkspace ? "✓ Available" : "○ Not available",
       icon: "🏠",
       available: Boolean(raw.hasWorkspace),
     },
     {
       id: "r4",
-      name: "Transport Vehicle (Tractor / Mini-Truck)",
+      name: "Transport Vehicle",
       status: Array.isArray(raw.transportModes) && raw.transportModes.length > 0 ? "✓ Available" : "○ Not available",
       icon: "🚚",
       available: Boolean(Array.isArray(raw.transportModes) && raw.transportModes.length > 0),
@@ -262,88 +240,151 @@ function normalizeResources(raw) {
   return {
     resources: resourcesList,
     existingSetup: {
-      hasExistingBusiness: raw.existingSetupStatus === "active_business" ? "Yes (Active Enterprise)" : "No",
-      machineryAvailable: (raw.equipmentList || []).map((e) => e.name).join(", ") || "Farm equipment & pump",
-      currentActivity: raw.existingBusinessDesc || "Citrus Agriculture",
+      hasExistingBusiness: raw.existingSetupStatus === "active_business" ? "Yes (Active Enterprise)" : raw.existingSetupStatus === "idle_assets" ? "Idle Assets / Machinery" : "No",
+      machineryAvailable: (raw.equipmentList || []).map((e) => e.name).join(", ") || "None",
+      currentActivity: raw.existingBusinessDesc || (raw.existingSetupStatus === "none" ? "None" : ""),
     },
   };
 }
 
-function normalizeFinances(raw) {
-  const fallback = {
-    personalSavings: 250000,
-    rangeLabel: "₹1–5 Lakh",
-    fundingSources: ["Personal savings", "Government assistance", "Bank finance"],
-    borrowingPreference: "Open to loans",
-    investmentHorizon: "Within 6 months",
+export function formatBorrowingPreference(pref) {
+  if (!pref || pref === "Not set") return "Not set";
+  const map = {
+    no_loan: "No loan (100% Self-funded)",
+    small_loan: "Small loan (20–30% of project)",
+    open_to_loans: "Open to loans with subsidy (PMFME 35%)",
+    significant_financing: "Significant project financing",
+    moderate_loan: "Moderate bank loan",
   };
+  return map[pref] || pref;
+}
 
-  if (!raw || typeof raw !== "object") return fallback;
+export function formatInvestmentHorizon(horizon) {
+  if (!horizon || horizon === "Not set") return "Not set";
+  const map = {
+    immediately: "⚡ Immediately (Capital ready)",
+    within_3_months: "🌱 Within 3 months",
+    within_6_months: "📅 Within 6 months",
+    within_1_year: "⏳ Within 1 year",
+    exploring: "🔍 Exploring feasibility",
+  };
+  return map[horizon] || horizon;
+}
 
-  let savingsNum = 250000;
+function normalizeFinances(raw) {
+  if (!raw || typeof raw !== "object") {
+    return {
+      personalSavings: 0,
+      availableCapitalINR: 0,
+      rangeLabel: "Not set",
+      fundingSources: [],
+      borrowingPreference: "Not set",
+      borrowingComfort: "Not set",
+      investmentHorizon: "Not set",
+    };
+  }
+
+  let savingsNum = 0;
   if (typeof raw.personalSavings === "number") savingsNum = raw.personalSavings;
   else if (typeof raw.personalSavings === "string") {
     const parsed = parseFloat(raw.personalSavings.replace(/[^0-9.]/g, ""));
     if (!isNaN(parsed)) savingsNum = parsed;
+  } else if (raw.availableCapitalINR) {
+    savingsNum = Number(raw.availableCapitalINR);
   } else if (raw.budget_inr) {
     savingsNum = Number(raw.budget_inr);
   }
 
-  let label = raw.rangeLabel || "₹1–5 Lakh";
-  if (savingsNum > 500000 && savingsNum <= 1000000) label = "₹5–10 Lakh";
-  else if (savingsNum > 1000000) label = "₹10–25 Lakh";
+  let label = raw.rangeLabel;
+  if (!label || label === "Not set") {
+    if (savingsNum > 0) {
+      if (savingsNum < 100000) label = "Below ₹1 Lakh";
+      else if (savingsNum <= 500000) label = "₹1–5 Lakh";
+      else if (savingsNum <= 1000000) label = "₹5–10 Lakh";
+      else if (savingsNum <= 2500000) label = "₹10–25 Lakh";
+      else label = "₹25 Lakh+";
+    } else {
+      label = "Not set";
+    }
+  }
+
+  const borrowing = raw.borrowingPreference || raw.borrowingComfort || "Not set";
+  const horizon = raw.investmentHorizon || "Not set";
+  const sources = Array.isArray(raw.fundingSources) && raw.fundingSources.length > 0
+    ? raw.fundingSources
+    : Array.isArray(raw.capitalSources) && raw.capitalSources.length > 0
+    ? raw.capitalSources
+    : [];
 
   return {
     personalSavings: savingsNum,
+    availableCapitalINR: savingsNum,
     rangeLabel: label,
-    fundingSources: Array.isArray(raw.fundingSources) ? raw.fundingSources : fallback.fundingSources,
-    borrowingPreference: raw.borrowingPreference || fallback.borrowingPreference,
-    investmentHorizon: raw.investmentHorizon || fallback.investmentHorizon,
+    fundingSources: sources,
+    borrowingPreference: borrowing,
+    borrowingComfort: borrowing,
+    investmentHorizon: horizon,
   };
 }
 
-function normalizeLocation(raw) {
-  const fallback = {
-    currentLocation: "Nagpur District",
-    preferredBusinessLocation: "Katol",
-    operatingPreference: "Within Nagpur District",
-    willingToRelocate: "Yes, within Vidarbha",
-  };
+function normalizeLocation(raw, user) {
+  const defaultDistrict = user?.district || "Nagpur";
+  const defaultTehsil = user?.tehsil || "Katol";
+  const defaultCurrent = `${defaultDistrict} District`;
 
-  if (!raw || typeof raw !== "object") return fallback;
+  if (!raw || typeof raw !== "object") {
+    return {
+      currentLocation: defaultCurrent,
+      preferredBusinessLocation: defaultTehsil,
+      operatingPreference: "Within native taluka / tehsil",
+      willingToRelocate: "No, stay in home cluster",
+    };
+  }
 
   return {
-    currentLocation: raw.currentLocation || raw.district || fallback.currentLocation,
-    preferredBusinessLocation: raw.preferredBusinessLocation || raw.preferredLocation || raw.location || fallback.preferredBusinessLocation,
-    operatingPreference: raw.operatingPreference || fallback.operatingPreference,
-    willingToRelocate: raw.willingToRelocate || fallback.willingToRelocate,
+    currentLocation: raw.currentLocation || raw.operatingArea || (raw.district ? `${raw.district} District` : defaultCurrent),
+    preferredBusinessLocation: raw.preferredBusinessLocation || raw.selectedCluster || raw.preferredLocation || raw.tehsil || defaultTehsil,
+    operatingPreference: raw.operatingPreference || "Within native taluka / tehsil",
+    willingToRelocate: raw.willingToRelocate || "No, stay in home cluster",
   };
 }
 
 function normalizePreferences(raw) {
-  const fallback = {
-    interestedSectors: ["Agriculture", "Food Processing", "Agritech"],
-    preferredScale: "Small / Micro",
-    timeCommitment: "Full-time",
-    corePriorities: [
-      "Use existing resources",
-      "Local market opportunity",
-      "Steady income",
-    ],
-  };
+  if (!raw || typeof raw !== "object") {
+    return {
+      interestedSectors: [],
+      preferredScale: "Not set",
+      timeCommitment: "Not set",
+      corePriorities: [],
+    };
+  }
 
-  if (!raw || typeof raw !== "object") return fallback;
+  const sectors = Array.isArray(raw.interestedSectors)
+    ? raw.interestedSectors
+    : Array.isArray(raw.businessTypes)
+    ? raw.businessTypes
+    : Array.isArray(raw.sectors)
+    ? raw.sectors
+    : [];
+
+  const scale = raw.preferredScale || raw.businessScale || raw.scale || "Not set";
+  const commitment = raw.timeCommitment || raw.commitment || "Not set";
+  const priorities = Array.isArray(raw.corePriorities)
+    ? raw.corePriorities
+    : Array.isArray(raw.priorities)
+    ? raw.priorities
+    : [];
 
   return {
-    interestedSectors: Array.isArray(raw.interestedSectors) ? raw.interestedSectors : Array.isArray(raw.sectors) ? raw.sectors : fallback.interestedSectors,
-    preferredScale: raw.preferredScale || raw.scale || fallback.preferredScale,
-    timeCommitment: raw.timeCommitment || raw.commitment || fallback.timeCommitment,
-    corePriorities: Array.isArray(raw.corePriorities) ? raw.corePriorities : Array.isArray(raw.priorities) ? raw.priorities : fallback.corePriorities,
+    interestedSectors: sectors,
+    preferredScale: scale,
+    timeCommitment: commitment,
+    corePriorities: priorities,
   };
 }
 
 function normalizePrivacy(raw) {
-  const fallback = {
+  const defaultPrivacy = {
     profileVisibility: "Relevant EntreVision users",
     collabVisibility: "Only relevant matches",
     showSkills: "Yes",
@@ -351,13 +392,13 @@ function normalizePrivacy(raw) {
     financialVisibility: "Private",
   };
 
-  if (!raw || typeof raw !== "object") return fallback;
+  if (!raw || typeof raw !== "object") return defaultPrivacy;
 
   return {
-    profileVisibility: raw.profileVisibility || fallback.profileVisibility,
-    collabVisibility: raw.collabVisibility || fallback.collabVisibility,
-    showSkills: raw.showSkills || fallback.showSkills,
-    showResources: raw.showResources || fallback.showResources,
+    profileVisibility: raw.profileVisibility || defaultPrivacy.profileVisibility,
+    collabVisibility: raw.collabVisibility || defaultPrivacy.collabVisibility,
+    showSkills: raw.showSkills || defaultPrivacy.showSkills,
+    showResources: raw.showResources || defaultPrivacy.showResources,
     financialVisibility: "Private",
   };
 }
@@ -366,100 +407,212 @@ function normalizePrivacy(raw) {
 // MAIN PROFILE COMPONENT
 // ============================================================================
 export default function Profile() {
+  const { user } = useAuth();
+  const getUserKey = (key) => (user?.id ? `ev_${user.id}_${key}` : `ev_guest_${key}`);
+
   // Active view tab: "overview" | "about" | "skills" | "documents" | "resources" | "finances" | "locations" | "interests" | "privacy"
   const [activeSection, setActiveSection] = useState("overview");
 
   // Save feedback notification
   const [saveNotice, setSaveNotice] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [loadingProfile, setLoadingProfile] = useState(true);
 
   // Profile Completion Modal (10.10)
   const [showCompletionModal, setShowCompletionModal] = useState(false);
 
-  // States with robust safe fallbacks
+  // File input ref for genuine document uploads
+  const fileInputRef = React.useRef(null);
+  const [uploadCategory, setUploadCategory] = useState("Certificate");
+
+  // States initialized strictly from user-scoped storage without leaking other users' data
   const [aboutMe, setAboutMe] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_about_me");
-      if (saved) return normalizeAboutMe(JSON.parse(saved));
+      if (user?.id) {
+        const saved = localStorage.getItem(`ev_${user.id}_about_me`);
+        if (saved) return normalizeAboutMe(JSON.parse(saved), user);
+      }
     } catch (e) {}
-    return normalizeAboutMe(null);
+    return normalizeAboutMe(null, user);
   });
 
   const [skillsData, setSkillsData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_skills_data");
-      if (saved) return normalizeSkills(JSON.parse(saved));
+      if (user?.id) {
+        const saved = localStorage.getItem(`ev_${user.id}_skills_data`);
+        if (saved) return normalizeSkills(JSON.parse(saved));
+      }
     } catch (e) {}
     return normalizeSkills(null);
   });
 
   const [documentsData, setDocumentsData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_documents");
-      if (saved) return normalizeDocuments(JSON.parse(saved));
+      if (user?.id) {
+        const saved = localStorage.getItem(`ev_${user.id}_user_documents`);
+        if (saved) return normalizeDocuments(JSON.parse(saved));
+      }
     } catch (e) {}
     return normalizeDocuments(null);
   });
 
   const [resourcesData, setResourcesData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_resources");
-      if (saved) return normalizeResources(JSON.parse(saved));
+      if (user?.id) {
+        const saved = localStorage.getItem(`ev_${user.id}_user_resources`);
+        if (saved) return normalizeResources(JSON.parse(saved));
+      }
     } catch (e) {}
     return normalizeResources(null);
   });
 
   const [financesData, setFinancesData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_finances");
-      if (saved) return normalizeFinances(JSON.parse(saved));
+      if (user?.id) {
+        const saved = localStorage.getItem(`ev_${user.id}_user_finances`);
+        if (saved) return normalizeFinances(JSON.parse(saved));
+      }
     } catch (e) {}
     return normalizeFinances(null);
   });
 
   const [locationData, setLocationData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_location");
-      if (saved) return normalizeLocation(JSON.parse(saved));
+      if (user?.id) {
+        const saved = localStorage.getItem(`ev_${user.id}_user_location`);
+        if (saved) return normalizeLocation(JSON.parse(saved), user);
+      }
     } catch (e) {}
-    return normalizeLocation(null);
+    return normalizeLocation(null, user);
   });
 
   const [preferencesData, setPreferencesData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_preferences");
-      if (saved) return normalizePreferences(JSON.parse(saved));
+      if (user?.id) {
+        const saved = localStorage.getItem(`ev_${user.id}_user_preferences`);
+        if (saved) return normalizePreferences(JSON.parse(saved));
+      }
     } catch (e) {}
     return normalizePreferences(null);
   });
 
   const [privacyData, setPrivacyData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_privacy");
-      if (saved) return normalizePrivacy(JSON.parse(saved));
+      if (user?.id) {
+        const saved = localStorage.getItem(`ev_${user.id}_user_privacy`);
+        if (saved) return normalizePrivacy(JSON.parse(saved));
+      }
     } catch (e) {}
     return normalizePrivacy(null);
   });
+
+  // Sync with user's persistent database profile
+  useEffect(() => {
+    if (!user?.id) {
+      setLoadingProfile(false);
+      return;
+    }
+    setLoadingProfile(true);
+    fetchUserProfile(user.id)
+      .then((data) => {
+        if (data?.assessment_data) {
+          const ad = data.assessment_data;
+          if (ad.about_me) setAboutMe(normalizeAboutMe(ad.about_me, user));
+          if (ad.skills_detailed || ad.skills) setSkillsData(normalizeSkills(ad.skills_detailed || ad.skills));
+          if (ad.documents) setDocumentsData(normalizeDocuments(ad.documents));
+          if (ad.resources_detailed) setResourcesData(normalizeResources(ad.resources_detailed));
+          if (ad.finance_detailed) setFinancesData(normalizeFinances(ad.finance_detailed));
+          if (ad.location_detailed) setLocationData(normalizeLocation(ad.location_detailed, user));
+          if (ad.business_preferences) setPreferencesData(normalizePreferences(ad.business_preferences));
+          persistUserAssessmentToStorage(user.id, ad, data.active_venture);
+        } else {
+          // If no stored assessment data, initialize fresh with this specific user's attributes
+          const savedAbout = localStorage.getItem(`ev_${user.id}_about_me`);
+          if (savedAbout) setAboutMe(normalizeAboutMe(JSON.parse(savedAbout), user));
+          else setAboutMe(normalizeAboutMe(null, user));
+
+          const savedSkills = localStorage.getItem(`ev_${user.id}_skills_data`);
+          if (savedSkills) setSkillsData(normalizeSkills(JSON.parse(savedSkills)));
+          else setSkillsData(normalizeSkills(null));
+
+          const savedDocs = localStorage.getItem(`ev_${user.id}_user_documents`);
+          if (savedDocs) setDocumentsData(normalizeDocuments(JSON.parse(savedDocs)));
+          else setDocumentsData(normalizeDocuments(null));
+
+          const savedRes = localStorage.getItem(`ev_${user.id}_user_resources`);
+          if (savedRes) setResourcesData(normalizeResources(JSON.parse(savedRes)));
+          else setResourcesData(normalizeResources(null));
+
+          const savedFin = localStorage.getItem(`ev_${user.id}_user_finances`);
+          if (savedFin) setFinancesData(normalizeFinances(JSON.parse(savedFin)));
+          else setFinancesData(normalizeFinances(null));
+
+          const savedLoc = localStorage.getItem(`ev_${user.id}_user_location`);
+          if (savedLoc) setLocationData(normalizeLocation(JSON.parse(savedLoc), user));
+          else setLocationData(normalizeLocation(null, user));
+
+          const savedPref = localStorage.getItem(`ev_${user.id}_user_preferences`);
+          if (savedPref) setPreferencesData(normalizePreferences(JSON.parse(savedPref)));
+          else setPreferencesData(normalizePreferences(null));
+        }
+      })
+      .catch((err) => {
+        console.warn("Could not sync user profile from server:", err);
+      })
+      .finally(() => {
+        setLoadingProfile(false);
+      });
+  }, [user?.id]);
 
   // Inline input states for Skill adding
   const [newSkillName, setNewSkillName] = useState("");
   const [newSkillLevel, setNewSkillLevel] = useState("Intermediate");
 
-  // Save all profile state to localStorage
-  const handleSaveProfile = () => {
+  // Save all profile state to user-scoped storage & backend database
+  const handleSaveProfile = async () => {
+    setIsSaving(true);
     try {
-      localStorage.setItem("ev_about_me", JSON.stringify(aboutMe));
-      localStorage.setItem("ev_skills_data", JSON.stringify(skillsData));
-      localStorage.setItem("ev_user_documents", JSON.stringify(documentsData));
-      localStorage.setItem("ev_user_resources", JSON.stringify(resourcesData));
-      localStorage.setItem("ev_user_finances", JSON.stringify(financesData));
-      localStorage.setItem("ev_user_location", JSON.stringify(locationData));
-      localStorage.setItem("ev_user_preferences", JSON.stringify(preferencesData));
-      localStorage.setItem("ev_user_privacy", JSON.stringify(privacyData));
+      localStorage.setItem(getUserKey("about_me"), JSON.stringify(aboutMe));
+      localStorage.setItem(getUserKey("skills_data"), JSON.stringify(skillsData));
+      localStorage.setItem(getUserKey("user_documents"), JSON.stringify(documentsData));
+      localStorage.setItem(getUserKey("user_resources"), JSON.stringify(resourcesData));
+      localStorage.setItem(getUserKey("user_finances"), JSON.stringify(financesData));
+      localStorage.setItem(getUserKey("user_location"), JSON.stringify(locationData));
+      localStorage.setItem(getUserKey("user_preferences"), JSON.stringify(preferencesData));
+      localStorage.setItem(getUserKey("user_privacy"), JSON.stringify(privacyData));
+
+      // Also persist to backend database
+      if (user?.id) {
+        const assessmentPayload = {
+          about_me: aboutMe,
+          skills_detailed: skillsData.skills,
+          documents: documentsData,
+          resources_detailed: resourcesData,
+          finance_detailed: financesData,
+          location_detailed: locationData,
+          business_preferences: preferencesData,
+        };
+        await saveUserProfile({
+          user_id: user.id,
+          profile: {
+            full_name: aboutMe.fullName,
+            education: aboutMe.education,
+            current_situation: aboutMe.currentSituation,
+            district: locationData.currentLocation,
+            tehsil: locationData.preferredBusinessLocation,
+          },
+          assessment_data: assessmentPayload,
+        });
+        persistUserAssessmentToStorage(user.id, assessmentPayload, null);
+      }
 
       setSaveNotice(true);
-      setTimeout(() => setSaveNotice(false), 2000);
+      setTimeout(() => setSaveNotice(false), 2500);
     } catch (e) {
       console.error("Error saving profile:", e);
+      alert("Failed to save profile changes to database. Please check your connection.");
+    } finally {
+      setIsSaving(false);
     }
   };
 
@@ -488,6 +641,50 @@ export default function Profile() {
     }));
   };
 
+  // Financial capacity update handlers
+  const handleUpdateFinanceAmount = (amount) => {
+    const num = Math.max(0, Number(amount) || 0);
+    let label = "Not set";
+    if (num > 0) {
+      if (num < 100000) label = "Below ₹1 Lakh";
+      else if (num <= 500000) label = "₹1–5 Lakh";
+      else if (num <= 1000000) label = "₹5–10 Lakh";
+      else if (num <= 2500000) label = "₹10–25 Lakh";
+      else label = "₹25 Lakh+";
+    }
+    setFinancesData((prev) => ({
+      ...prev,
+      personalSavings: num,
+      availableCapitalINR: num,
+      rangeLabel: label,
+    }));
+  };
+
+  const handleToggleFundingSource = (source) => {
+    setFinancesData((prev) => {
+      const current = Array.isArray(prev.fundingSources) ? prev.fundingSources : [];
+      const next = current.includes(source)
+        ? current.filter((s) => s !== source)
+        : [...current, source];
+      return { ...prev, fundingSources: next };
+    });
+  };
+
+  const handleUpdateBorrowing = (pref) => {
+    setFinancesData((prev) => ({
+      ...prev,
+      borrowingPreference: pref,
+      borrowingComfort: pref,
+    }));
+  };
+
+  const handleUpdateHorizon = (horizon) => {
+    setFinancesData((prev) => ({
+      ...prev,
+      investmentHorizon: horizon,
+    }));
+  };
+
   // Add Document prompt
   const handleAddDocumentPrompt = () => {
     const docName = prompt("Enter document title (e.g. 'FSSAI License' or 'Soil Test Report'):");
@@ -507,13 +704,13 @@ export default function Profile() {
 
   // Profile completion calculation
   const completionStats = useMemo(() => {
-    const hasAbout = Boolean(aboutMe?.fullName && aboutMe?.education);
-    const hasSkills = Array.isArray(skillsData?.skills) && skillsData.skills.length >= 2;
+    const hasAbout = Boolean(aboutMe?.fullName && aboutMe?.education && aboutMe.education !== "Not specified");
+    const hasSkills = Array.isArray(skillsData?.skills) && skillsData.skills.length >= 1;
     const hasResources = Array.isArray(resourcesData?.resources) && resourcesData.resources.some((r) => r.available);
-    const hasLocation = Boolean(locationData?.preferredBusinessLocation);
+    const hasLocation = Boolean(locationData?.preferredBusinessLocation && locationData.preferredBusinessLocation !== "Not specified");
     const hasPreferences = Array.isArray(preferencesData?.interestedSectors) && preferencesData.interestedSectors.length >= 1;
-    const hasDocs = Array.isArray(documentsData) && documentsData.filter((d) => d.status === "Added").length >= 2;
-    const hasSetup = Boolean(resourcesData?.existingSetup?.currentActivity);
+    const hasDocs = Array.isArray(documentsData) && documentsData.filter((d) => d.status === "Added").length >= 1;
+    const hasSetup = Boolean(resourcesData?.existingSetup?.currentActivity && resourcesData.existingSetup.currentActivity !== "None" && resourcesData.existingSetup.currentActivity !== "");
 
     const sections = [
       { name: "About Me", complete: hasAbout, weight: 15, key: "about" },
@@ -535,12 +732,46 @@ export default function Profile() {
     };
   }, [aboutMe, skillsData, documentsData, resourcesData, locationData, preferencesData]);
 
+  // File upload handler for actual documents / certificates
+  const handleFileUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const newDoc = {
+      id: `doc_${Date.now()}`,
+      name: file.name.replace(/\.[^/.]+$/, ""),
+      type: uploadCategory,
+      relatedSkill: "Verified Credential",
+      issuedBy: "Uploaded File",
+      status: "Added",
+      year: new Date().getFullYear().toString(),
+    };
+    setDocumentsData((prev) => [...(Array.isArray(prev) ? prev : []), newDoc]);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
+
+  const triggerUpload = (category = "Certificate") => {
+    setUploadCategory(category);
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
+
   const skillsList = Array.isArray(skillsData?.skills) ? skillsData.skills : [];
   const docsList = Array.isArray(documentsData) ? documentsData : [];
   const resList = Array.isArray(resourcesData?.resources) ? resourcesData.resources : [];
 
   return (
     <div style={{ maxWidth: 1180, margin: "0 auto", paddingBottom: 60 }}>
+      {/* Hidden file input for genuine document / certificate uploads */}
+      <input
+        type="file"
+        ref={fileInputRef}
+        onChange={handleFileUpload}
+        accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"
+        style={{ display: "none" }}
+      />
+
       {/* ====================================================================
           PAGE HEADER & GLOBAL SAVE BAR
          ==================================================================== */}
@@ -567,16 +798,16 @@ export default function Profile() {
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
                 <h1 style={{ margin: 0, fontSize: "1.75rem", fontWeight: 800, color: "var(--text-heading)" }}>
-                  {aboutMe?.fullName || "Bhoomika Vaishya"}
+                  {aboutMe?.fullName || user?.full_name || "New Entrepreneur"}
                 </h1>
                 <span className="badge-verified" style={{ fontSize: "0.72rem" }}>
                   Entrepreneur Profile
                 </span>
               </div>
               <div style={{ display: "flex", gap: 12, marginTop: 4, fontSize: "0.82rem", color: "var(--muted)", flexWrap: "wrap" }}>
-                <span>🎓 {aboutMe?.education}</span>
-                <span>📍 {locationData?.preferredBusinessLocation} / {locationData?.currentLocation}</span>
-                <span>💼 {aboutMe?.currentSituation}</span>
+                <span>🎓 {aboutMe?.education || "Education not specified"}</span>
+                <span>📍 {locationData?.preferredBusinessLocation || user?.tehsil || "Location not set"}</span>
+                <span>💼 {aboutMe?.currentSituation || "Status not specified"}</span>
               </div>
             </div>
           </div>
@@ -584,7 +815,7 @@ export default function Profile() {
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
             {saveNotice && (
               <span style={{ fontSize: "0.82rem", color: "var(--ok)", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: 4 }}>
-                <Check size={16} /> Saved Everywhere!
+                <Check size={16} /> Saved to Database!
               </span>
             )}
 
@@ -620,7 +851,9 @@ export default function Profile() {
                   {completionStats.percentage}%
                 </strong>
                 <span style={{ fontSize: "0.82rem", color: "var(--muted)" }}>
-                  Complete your profile to improve opportunity recommendations.
+                  {completionStats.percentage < 50
+                    ? "Complete your profile to unlock precision AI recommendations and DPRs."
+                    : "Your profile is well developed for business matching and scheme funding."}
                 </span>
               </div>
             </div>
@@ -708,19 +941,19 @@ export default function Profile() {
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Name:</span>
-                  <strong>{aboutMe?.fullName || "Bhoomika"}</strong>
+                  <strong>{aboutMe?.fullName || user?.full_name || "Not specified"}</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Education:</span>
-                  <strong>{aboutMe?.education || "Engineering"}</strong>
+                  <strong>{aboutMe?.education || "Not specified"}</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Location:</span>
-                  <strong>{locationData?.currentLocation || "Nagpur / Vidarbha"}</strong>
+                  <strong>{locationData?.currentLocation || "Not specified"}</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span className="muted">Status:</span>
-                  <strong style={{ color: "var(--cyan)" }}>{aboutMe?.currentSituation || "Planning a business"}</strong>
+                  <strong style={{ color: "var(--cyan)" }}>{aboutMe?.currentSituation || "Not specified"}</strong>
                 </div>
               </div>
             </div>
@@ -744,12 +977,18 @@ export default function Profile() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
-                {skillsList.map((s) => (
-                  <div key={s.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <span>{s.icon} {s.name}</span>
-                    <span className="tag" style={{ fontSize: "0.7rem" }}>{s.level}</span>
+                {skillsList.length === 0 ? (
+                  <div style={{ color: "var(--muted)", fontStyle: "italic", padding: "8px 0" }}>
+                    No skills added yet. Click Manage Skills to add your capabilities.
                   </div>
-                ))}
+                ) : (
+                  skillsList.map((s) => (
+                    <div key={s.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <span>{s.icon} {s.name}</span>
+                      <span className="tag" style={{ fontSize: "0.7rem" }}>{s.level}</span>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
           </div>
@@ -772,12 +1011,22 @@ export default function Profile() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
-                <div style={{ color: "var(--ok)", fontWeight: 700 }}>
-                  ✓ {docsList.filter((d) => d.status === "Added").length} certificates added
-                </div>
-                <div style={{ color: "#f59e0b", fontWeight: 700 }}>
-                  ⚠ {docsList.filter((d) => d.status === "Needs Attention").length} document needs attention
-                </div>
+                {docsList.length === 0 ? (
+                  <div style={{ color: "var(--muted)", fontStyle: "italic", padding: "8px 0" }}>
+                    No documents or certificates uploaded yet.
+                  </div>
+                ) : (
+                  <>
+                    <div style={{ color: "var(--ok)", fontWeight: 700 }}>
+                      ✓ {docsList.filter((d) => d.status === "Added").length} certificates / documents added
+                    </div>
+                    {docsList.some((d) => d.status === "Needs Attention") && (
+                      <div style={{ color: "#f59e0b", fontWeight: 700 }}>
+                        ⚠ {docsList.filter((d) => d.status === "Needs Attention").length} document needs attention
+                      </div>
+                    )}
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -800,12 +1049,18 @@ export default function Profile() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
-                {resList.slice(0, 3).map((r) => (
-                  <div key={r.id} style={{ display: "flex", justifyContent: "space-between" }}>
-                    <span>{r.icon} {r.name}</span>
-                    <strong style={{ color: "var(--ok)" }}>{r.status}</strong>
+                {resList.filter((r) => r.available).length === 0 ? (
+                  <div style={{ color: "var(--muted)", fontStyle: "italic", padding: "8px 0" }}>
+                    No resources configured yet. Click Edit Setup to add land, water, or machinery.
                   </div>
-                ))}
+                ) : (
+                  resList.slice(0, 3).map((r) => (
+                    <div key={r.id} style={{ display: "flex", justifyContent: "space-between" }}>
+                      <span>{r.icon} {r.name}</span>
+                      <strong style={{ color: r.available ? "var(--ok)" : "var(--muted)" }}>{r.status}</strong>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
           </div>
@@ -830,11 +1085,15 @@ export default function Profile() {
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Available Initial Capital:</span>
-                  <strong>{financesData?.rangeLabel || "₹1–5 Lakh"} (₹{(financesData?.personalSavings || 250000).toLocaleString("en-IN")})</strong>
+                  <strong>
+                    {financesData?.personalSavings > 0
+                      ? `${financesData.rangeLabel} (₹${financesData.personalSavings.toLocaleString("en-IN")})`
+                      : "Not set"}
+                  </strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span className="muted">Borrowing Preference:</span>
-                  <strong>{financesData?.borrowingPreference || "Open to loans"}</strong>
+                  <strong>{formatBorrowingPreference(financesData?.borrowingPreference)}</strong>
                 </div>
               </div>
             </div>
@@ -860,11 +1119,11 @@ export default function Profile() {
               <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.84rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed var(--line)", paddingBottom: 4 }}>
                   <span className="muted">Current Location:</span>
-                  <strong>{locationData?.currentLocation || "Nagpur District"}</strong>
+                  <strong>{locationData?.currentLocation || "Not specified"}</strong>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <span className="muted">Preferred Business Location:</span>
-                  <strong style={{ color: "var(--cyan)" }}>{locationData?.preferredBusinessLocation || "Katol"}</strong>
+                  <strong style={{ color: "var(--cyan)" }}>{locationData?.preferredBusinessLocation || "Not specified"}</strong>
                 </div>
               </div>
             </div>
@@ -1014,41 +1273,57 @@ export default function Profile() {
           </h2>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12 }}>
-            {skillsList.map((skill) => (
+            {skillsList.length === 0 ? (
               <div
-                key={skill.id}
                 style={{
+                  gridColumn: "1 / -1",
                   background: "var(--panel-subtle)",
-                  padding: "14px 16px",
+                  padding: "24px 20px",
                   borderRadius: 12,
-                  border: "1px solid var(--line)",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
+                  border: "1px dashed var(--line)",
+                  textAlign: "center",
+                  color: "var(--muted)",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ fontSize: "1.3rem" }}>{skill.icon}</span>
-                  <div>
-                    <strong style={{ fontSize: "0.92rem", color: "var(--text-heading)" }}>{skill.name}</strong>
-                    <div style={{ fontSize: "0.76rem", color: "var(--muted)", marginTop: 2 }}>
-                      {skill.years}
+                No skills added yet. Add your agricultural, processing, or business skills below to get tailored matches.
+              </div>
+            ) : (
+              skillsList.map((skill) => (
+                <div
+                  key={skill.id}
+                  style={{
+                    background: "var(--panel-subtle)",
+                    padding: "14px 16px",
+                    borderRadius: 12,
+                    border: "1px solid var(--line)",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <span style={{ fontSize: "1.3rem" }}>{skill.icon}</span>
+                    <div>
+                      <strong style={{ fontSize: "0.92rem", color: "var(--text-heading)" }}>{skill.name}</strong>
+                      <div style={{ fontSize: "0.76rem", color: "var(--muted)", marginTop: 2 }}>
+                        {skill.years}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span className="tag" style={{ fontSize: "0.74rem" }}>{skill.level}</span>
-                  <button
-                    type="button"
-                    onClick={() => handleRemoveSkill(skill.id)}
-                    style={{ background: "transparent", border: "none", color: "var(--muted)", cursor: "pointer", padding: 4 }}
-                  >
-                    <Trash2 size={16} />
-                  </button>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <span className="tag" style={{ fontSize: "0.74rem" }}>{skill.level}</span>
+                    <button
+                      type="button"
+                      onClick={() => handleRemoveSkill(skill.id)}
+                      style={{ background: "transparent", border: "none", color: "var(--muted)", cursor: "pointer", padding: 4 }}
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
 
           {/* Add Skill Form */}
@@ -1102,14 +1377,20 @@ export default function Profile() {
               How did you acquire your skills?
             </span>
             <div style={{ display: "flex", gap: 12, marginTop: 8, flexWrap: "wrap", fontSize: "0.84rem" }}>
-              {["Education", "Training", "Work experience", "Family business"].map((c) => (
-                <span key={c} style={{ color: "var(--ok)", fontWeight: 700 }}>✓ {c}</span>
-              ))}
+              {skillsData?.channels && skillsData.channels.length > 0 ? (
+                skillsData.channels.map((c) => (
+                  <span key={c} style={{ color: "var(--ok)", fontWeight: 700 }}>✓ {c}</span>
+                ))
+              ) : (
+                <span style={{ color: "var(--muted)", fontStyle: "italic" }}>No acquisition channels recorded</span>
+              )}
             </div>
 
             <div style={{ marginTop: 14, fontSize: "0.84rem" }}>
               <span className="muted">Willing to learn new skills?</span>
-              <strong style={{ marginLeft: 8, color: "var(--text-heading)" }}>● Yes</strong>
+              <strong style={{ marginLeft: 8, color: "var(--text-heading)" }}>
+                ● {skillsData?.willingToLearn || "Not specified"}
+              </strong>
             </div>
           </div>
         </div>
@@ -1133,11 +1414,12 @@ export default function Profile() {
 
             <button
               type="button"
-              onClick={handleAddDocumentPrompt}
+              onClick={() => triggerUpload("Document")}
               className="btn-primary-gloss"
-              style={{ fontSize: "0.82rem", padding: "8px 14px" }}
+              style={{ fontSize: "0.82rem", padding: "8px 14px", display: "inline-flex", alignItems: "center", gap: 6 }}
             >
-              [+ Add Document]
+              <Upload size={14} />
+              <span>[+ Upload Document]</span>
             </button>
           </div>
 
@@ -1150,33 +1432,40 @@ export default function Profile() {
                 </span>
                 <button
                   type="button"
-                  onClick={handleAddDocumentPrompt}
+                  onClick={() => triggerUpload("Certificate")}
                   className="pill-option-btn"
-                  style={{ fontSize: "0.74rem", padding: "4px 8px" }}
+                  style={{ fontSize: "0.74rem", padding: "4px 8px", display: "inline-flex", alignItems: "center", gap: 4 }}
                 >
-                  [+ Add Certificate]
+                  <Upload size={12} />
+                  <span>[+ Upload Certificate]</span>
                 </button>
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {docsList.filter((d) => d.type === "Certificate").map((doc) => (
-                  <div
-                    key={doc.id}
-                    style={{
-                      background: "var(--panel-subtle)",
-                      padding: "12px 16px",
-                      borderRadius: 10,
-                      border: "1px solid var(--line)",
-                    }}
-                  >
-                    <strong style={{ fontSize: "0.9rem", color: "var(--text-heading)" }}>
-                      ✓ {doc.name}
-                    </strong>
-                    <div style={{ fontSize: "0.76rem", color: "var(--muted)", marginTop: 2 }}>
-                      Related skill: {doc.relatedSkill} • Added: {doc.year}
-                    </div>
+                {docsList.filter((d) => d.type === "Certificate").length === 0 ? (
+                  <div style={{ background: "var(--panel-subtle)", padding: "14px 16px", borderRadius: 10, border: "1px dashed var(--line)", color: "var(--muted)", fontStyle: "italic", fontSize: "0.85rem" }}>
+                    No certificates uploaded. Upload your course completion, vocational, or CCRI training certificates.
                   </div>
-                ))}
+                ) : (
+                  docsList.filter((d) => d.type === "Certificate").map((doc) => (
+                    <div
+                      key={doc.id}
+                      style={{
+                        background: "var(--panel-subtle)",
+                        padding: "12px 16px",
+                        borderRadius: 10,
+                        border: "1px solid var(--line)",
+                      }}
+                    >
+                      <strong style={{ fontSize: "0.9rem", color: "var(--text-heading)" }}>
+                        ✓ {doc.name}
+                      </strong>
+                      <div style={{ fontSize: "0.76rem", color: "var(--muted)", marginTop: 2 }}>
+                        Related skill: {doc.relatedSkill} • Added: {doc.year}
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
 
@@ -1188,7 +1477,23 @@ export default function Profile() {
                 </span>
                 <button
                   type="button"
-                  onClick={() => alert("Added experience record.")}
+                  onClick={() => {
+                    const org = prompt("Enter experience details (e.g. '2 years - Orchard Management'):");
+                    if (org) {
+                      setDocumentsData((prev) => [
+                        ...(Array.isArray(prev) ? prev : []),
+                        {
+                          id: `exp_${Date.now()}`,
+                          name: org,
+                          type: "Experience",
+                          relatedSkill: "Operations",
+                          issuedBy: "Self / Family / Employer",
+                          status: "Added",
+                          year: new Date().getFullYear().toString(),
+                        },
+                      ]);
+                    }
+                  }}
                   className="pill-option-btn"
                   style={{ fontSize: "0.74rem", padding: "4px 8px" }}
                 >
@@ -1196,10 +1501,20 @@ export default function Profile() {
                 </button>
               </div>
 
-              <div style={{ background: "var(--panel-subtle)", padding: "12px 16px", borderRadius: 10, border: "1px solid var(--line)" }}>
-                <strong style={{ fontSize: "0.9rem", color: "var(--text-heading)" }}>
-                  ✓ 2 years — Family Agricultural Business
-                </strong>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {docsList.filter((d) => d.type === "Experience").length === 0 ? (
+                  <div style={{ background: "var(--panel-subtle)", padding: "14px 16px", borderRadius: 10, border: "1px dashed var(--line)", color: "var(--muted)", fontStyle: "italic", fontSize: "0.85rem" }}>
+                    No experience records added yet.
+                  </div>
+                ) : (
+                  docsList.filter((d) => d.type === "Experience").map((exp) => (
+                    <div key={exp.id} style={{ background: "var(--panel-subtle)", padding: "12px 16px", borderRadius: 10, border: "1px solid var(--line)" }}>
+                      <strong style={{ fontSize: "0.9rem", color: "var(--text-heading)" }}>
+                        ✓ {exp.name}
+                      </strong>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
 
@@ -1207,36 +1522,42 @@ export default function Profile() {
             <div>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
                 <span style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--violet)", textTransform: "uppercase" }}>
-                  OTHER DOCUMENTS
+                  OTHER DOCUMENTS & LICENSES
                 </span>
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {docsList.filter((d) => d.type !== "Certificate").map((doc) => (
-                  <div
-                    key={doc.id}
-                    style={{
-                      background: "var(--panel-subtle)",
-                      padding: "12px 16px",
-                      borderRadius: 10,
-                      border: "1px solid var(--line)",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <span style={{ fontSize: "0.88rem", fontWeight: 600 }}>{doc.name}</span>
-                    <span
+                {docsList.filter((d) => d.type !== "Certificate" && d.type !== "Experience").length === 0 ? (
+                  <div style={{ background: "var(--panel-subtle)", padding: "14px 16px", borderRadius: 10, border: "1px dashed var(--line)", color: "var(--muted)", fontStyle: "italic", fontSize: "0.85rem" }}>
+                    No other documents or licenses added.
+                  </div>
+                ) : (
+                  docsList.filter((d) => d.type !== "Certificate" && d.type !== "Experience").map((doc) => (
+                    <div
+                      key={doc.id}
                       style={{
-                        fontSize: "0.76rem",
-                        fontWeight: 700,
-                        color: doc.status === "Added" ? "var(--ok)" : "#f59e0b",
+                        background: "var(--panel-subtle)",
+                        padding: "12px 16px",
+                        borderRadius: 10,
+                        border: "1px solid var(--line)",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
                       }}
                     >
-                      {doc.status === "Added" ? "✓ Added" : "— Needs Attention"}
-                    </span>
-                  </div>
-                ))}
+                      <span style={{ fontSize: "0.88rem", fontWeight: 600 }}>{doc.name}</span>
+                      <span
+                        style={{
+                          fontSize: "0.76rem",
+                          fontWeight: 700,
+                          color: doc.status === "Added" ? "var(--ok)" : "#f59e0b",
+                        }}
+                      >
+                        {doc.status === "Added" ? "✓ Added" : "— Needs Attention"}
+                      </span>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
           </div>
@@ -1258,15 +1579,6 @@ export default function Profile() {
                 🏗️ MY RESOURCES
               </h2>
             </div>
-
-            <button
-              type="button"
-              onClick={() => alert("Added new resource field.")}
-              className="btn-primary-gloss"
-              style={{ fontSize: "0.82rem", padding: "8px 14px" }}
-            >
-              [+ Add Resource]
-            </button>
           </div>
 
           <div style={{ background: "var(--panel-subtle)", borderRadius: 12, overflow: "hidden", border: "1px solid var(--line)", marginBottom: 20 }}>
@@ -1302,14 +1614,6 @@ export default function Profile() {
               <span style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--muted)", textTransform: "uppercase" }}>
                 EXISTING SETUP
               </span>
-              <button
-                type="button"
-                onClick={() => alert("Edit setup parameters")}
-                className="btn-secondary-gloss"
-                style={{ fontSize: "0.74rem", padding: "4px 8px" }}
-              >
-                [Edit Setup]
-              </button>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: "0.85rem" }}>
@@ -1319,11 +1623,11 @@ export default function Profile() {
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <span className="muted">Equipment:</span>
-                <strong>{resourcesData?.existingSetup?.machineryAvailable || "Farm equipment"}</strong>
+                <strong>{resourcesData?.existingSetup?.machineryAvailable || "None"}</strong>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <span className="muted">Current Activity:</span>
-                <strong>{resourcesData?.existingSetup?.currentActivity || "Agriculture"}</strong>
+                <strong>{resourcesData?.existingSetup?.currentActivity || "None"}</strong>
               </div>
             </div>
           </div>
@@ -1339,53 +1643,207 @@ export default function Profile() {
             <span className="pill">Capital</span>
             <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>PAGE 10.6</span>
           </div>
-          <h2 style={{ fontSize: "1.45rem", fontWeight: 800, color: "var(--text-heading)", margin: "0 0 16px" }}>
+          <h2 style={{ fontSize: "1.45rem", fontWeight: 800, color: "var(--text-heading)", margin: "0 0 6px" }}>
             💰 FINANCIAL CAPACITY
           </h2>
+          <p className="muted" style={{ fontSize: "0.85rem", margin: "0 0 20px" }}>
+            Configure your initial liquid capital, borrowing comfort, and funding sources to personalize venture recommendations and subsidy matches.
+          </p>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            <div style={{ background: "var(--panel-subtle)", padding: 16, borderRadius: 12, border: "1px solid var(--line)" }}>
-              <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "var(--muted)", textTransform: "uppercase" }}>
-                Available Initial Capital
-              </span>
-              <div style={{ fontSize: "1.3rem", fontWeight: 900, color: "var(--cyan)", marginTop: 2 }}>
-                {financesData?.rangeLabel || "₹1–5 Lakh"} (₹{(financesData?.personalSavings || 250000).toLocaleString("en-IN")})
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            {/* 1. AVAILABLE INITIAL CAPITAL */}
+            <div style={{ background: "var(--panel-subtle)", padding: 18, borderRadius: 12, border: "1px solid var(--line)" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+                <label style={{ fontSize: "0.82rem", fontWeight: 800, color: "var(--text-heading)", textTransform: "uppercase" }}>
+                  Available Initial Capital (₹)
+                </label>
+                <span className="pill" style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--cyan)" }}>
+                  Bracket: {financesData?.rangeLabel || "Not set"}
+                </span>
+              </div>
+
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <span style={{ fontSize: "1.2rem", fontWeight: 800, color: "var(--muted)" }}>₹</span>
+                <input
+                  type="number"
+                  min="0"
+                  step="10000"
+                  placeholder="e.g. 250000"
+                  value={financesData?.personalSavings || ""}
+                  onChange={(e) => handleUpdateFinanceAmount(e.target.value)}
+                  className="input-gloss"
+                  style={{
+                    flex: 1,
+                    fontSize: "1.1rem",
+                    fontWeight: 700,
+                    padding: "10px 14px",
+                    color: "var(--text-heading)",
+                  }}
+                />
+              </div>
+
+              {/* Quick Preset Buttons */}
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }}>
+                <span style={{ fontSize: "0.74rem", color: "var(--muted)", fontWeight: 600 }}>Quick Presets:</span>
+                {[
+                  { label: "₹50,000 (Below 1L)", amount: 50000 },
+                  { label: "₹2.5 Lakh (1–5L)", amount: 250000 },
+                  { label: "₹7.5 Lakh (5–10L)", amount: 750000 },
+                  { label: "₹15 Lakh (10–25L)", amount: 1500000 },
+                  { label: "₹30 Lakh (25L+)", amount: 3000000 },
+                ].map((preset) => {
+                  const isCurrent = financesData?.personalSavings === preset.amount;
+                  return (
+                    <button
+                      key={preset.amount}
+                      type="button"
+                      onClick={() => handleUpdateFinanceAmount(preset.amount)}
+                      className={`pill-option-btn ${isCurrent ? "active" : ""}`}
+                      style={{ fontSize: "0.76rem", padding: "4px 10px" }}
+                    >
+                      {preset.label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            <div style={{ background: "var(--panel-subtle)", padding: 16, borderRadius: 12, border: "1px solid var(--line)" }}>
-              <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "var(--muted)", textTransform: "uppercase" }}>
-                Funding Sources
-              </span>
-              <div style={{ display: "flex", gap: 14, marginTop: 6, flexWrap: "wrap", fontSize: "0.85rem" }}>
-                {(financesData?.fundingSources || []).map((f) => (
-                  <span key={f} style={{ color: "var(--ok)", fontWeight: 700 }}>✓ {f}</span>
-                ))}
+            {/* 2. BORROWING PREFERENCE */}
+            <div style={{ background: "var(--panel-subtle)", padding: 18, borderRadius: 12, border: "1px solid var(--line)" }}>
+              <label style={{ fontSize: "0.82rem", fontWeight: 800, color: "var(--text-heading)", textTransform: "uppercase", display: "block", marginBottom: 10 }}>
+                Borrowing & Loan Preference
+              </label>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10 }}>
+                {[
+                  {
+                    id: "no_loan",
+                    title: "No loan (100% Self-funded)",
+                    desc: "Prefer zero debt, investing solely from own savings",
+                  },
+                  {
+                    id: "small_loan",
+                    title: "Small loan (20–30% of project)",
+                    desc: "Open to minor working capital or Mudra micro-loans",
+                  },
+                  {
+                    id: "open_to_loans",
+                    title: "Open to loans with subsidy (PMFME 35%)",
+                    desc: "Interested in bank term loans backed by government subsidies",
+                  },
+                  {
+                    id: "significant_financing",
+                    title: "Significant project financing (up to 75%)",
+                    desc: "Willing to leverage major bank finance for high-scale capex",
+                  },
+                ].map((item) => {
+                  const isSelected = financesData?.borrowingPreference === item.id;
+                  return (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => handleUpdateBorrowing(item.id)}
+                      className={`pill-option-btn ${isSelected ? "active" : ""}`}
+                      style={{
+                        padding: 12,
+                        textAlign: "left",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 4,
+                        alignItems: "flex-start",
+                        borderRadius: 10,
+                        border: isSelected ? "1.5px solid var(--cyan)" : "1px solid var(--line)",
+                      }}
+                    >
+                      <div style={{ display: "flex", alignItems: "center", gap: 6, fontWeight: 700, fontSize: "0.86rem", color: isSelected ? "var(--cyan)" : "var(--text-heading)" }}>
+                        <span>{isSelected ? "●" : "○"}</span>
+                        <span>{item.title}</span>
+                      </div>
+                      <span style={{ fontSize: "0.74rem", color: "var(--muted)", lineHeight: 1.3 }}>{item.desc}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            <div style={{ background: "var(--panel-subtle)", padding: 16, borderRadius: 12, border: "1px solid var(--line)" }}>
-              <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "var(--muted)", textTransform: "uppercase" }}>
-                Borrowing Preference
-              </span>
-              <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {financesData?.borrowingPreference || "Open to loans"}
+            {/* 3. FUNDING SOURCES */}
+            <div style={{ background: "var(--panel-subtle)", padding: 18, borderRadius: 12, border: "1px solid var(--line)" }}>
+              <label style={{ fontSize: "0.82rem", fontWeight: 800, color: "var(--text-heading)", textTransform: "uppercase", display: "block", marginBottom: 10 }}>
+                Eligible / Intended Funding Sources
+              </label>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {[
+                  "Personal Savings (Liquid funds)",
+                  "Family / Partner Contribution",
+                  "Government Subsidy (PMFME 35% / MIDH)",
+                  "Bank Term Loan",
+                  "Mudra / Micro-Enterprise Credit",
+                  "Kisan Credit Card (KCC)",
+                ].map((src) => {
+                  const isSelected = Array.isArray(financesData?.fundingSources) && financesData.fundingSources.includes(src);
+                  return (
+                    <button
+                      key={src}
+                      type="button"
+                      onClick={() => handleToggleFundingSource(src)}
+                      className={`pill-option-btn ${isSelected ? "active" : ""}`}
+                      style={{ fontSize: "0.82rem", padding: "6px 12px" }}
+                    >
+                      <span>{isSelected ? "☑" : "☐"}</span>
+                      <span>{src}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            <div style={{ background: "var(--panel-subtle)", padding: 16, borderRadius: 12, border: "1px solid var(--line)" }}>
-              <span style={{ fontSize: "0.74rem", fontWeight: 800, color: "var(--muted)", textTransform: "uppercase" }}>
+            {/* 4. INVESTMENT HORIZON */}
+            <div style={{ background: "var(--panel-subtle)", padding: 18, borderRadius: 12, border: "1px solid var(--line)" }}>
+              <label style={{ fontSize: "0.82rem", fontWeight: 800, color: "var(--text-heading)", textTransform: "uppercase", display: "block", marginBottom: 10 }}>
                 Investment Horizon
-              </span>
-              <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {financesData?.investmentHorizon || "Within 6 months"}
+              </label>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {[
+                  { id: "immediately", label: "⚡ Immediately (Capital ready)" },
+                  { id: "within_3_months", label: "🌱 Within 3 months" },
+                  { id: "within_6_months", label: "📅 Within 6 months" },
+                  { id: "within_1_year", label: "⏳ Within 1 year" },
+                  { id: "exploring", label: "🔍 Exploring feasibility" },
+                ].map((h) => {
+                  const isSelected = financesData?.investmentHorizon === h.id;
+                  return (
+                    <button
+                      key={h.id}
+                      type="button"
+                      onClick={() => handleUpdateHorizon(h.id)}
+                      className={`pill-option-btn ${isSelected ? "active" : ""}`}
+                      style={{ fontSize: "0.82rem", padding: "6px 12px" }}
+                    >
+                      <span>{isSelected ? "●" : "○"}</span>
+                      <span>{h.label}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            <div style={{ display: "flex", justifyContent: "flex-end" }}>
-              <Link to="/financial-assistant" className="btn-primary-gloss" style={{ fontSize: "0.85rem", padding: "8px 18px", textDecoration: "none" }}>
-                [Edit Financial Information]
+            {/* BOTTOM SAVE CONTROLS & LINK */}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 10, flexWrap: "wrap", gap: 10 }}>
+              <Link
+                to="/financial-assistant"
+                className="btn-secondary-gloss"
+                style={{ fontSize: "0.82rem", padding: "8px 14px", textDecoration: "none" }}
+              >
+                Detailed CapEx & Subsidy Calculator →
               </Link>
+              <button
+                type="button"
+                onClick={handleSaveProfile}
+                disabled={isSaving}
+                className="btn-primary-gloss"
+                style={{ fontSize: "0.88rem", padding: "8px 22px" }}
+              >
+                {isSaving ? "Saving..." : "Save Financial Capacity"}
+              </button>
             </div>
           </div>
         </div>
@@ -1410,7 +1868,7 @@ export default function Profile() {
                 Current Location
               </span>
               <div style={{ fontSize: "1rem", fontWeight: 800, color: "var(--text-heading)", marginTop: 2 }}>
-                {locationData?.currentLocation || "Nagpur District"}
+                {locationData?.currentLocation || "Not specified"}
               </div>
             </div>
 
@@ -1419,7 +1877,7 @@ export default function Profile() {
                 Preferred Business Location
               </span>
               <div style={{ fontSize: "1rem", fontWeight: 800, color: "var(--cyan)", marginTop: 2 }}>
-                {locationData?.preferredBusinessLocation || "Katol"}
+                {locationData?.preferredBusinessLocation || "Not specified"}
               </div>
             </div>
 
@@ -1428,7 +1886,7 @@ export default function Profile() {
                 Operating Preference
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {locationData?.operatingPreference || "Within Nagpur District"}
+                {locationData?.operatingPreference || "Not specified"}
               </div>
             </div>
 
@@ -1437,7 +1895,7 @@ export default function Profile() {
                 Willing to Relocate?
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--ok)", marginTop: 2 }}>
-                {locationData?.willingToRelocate || "Yes, within Vidarbha"}
+                {locationData?.willingToRelocate || "Not specified"}
               </div>
             </div>
 
@@ -1469,9 +1927,13 @@ export default function Profile() {
                 Interested In
               </span>
               <div style={{ display: "flex", gap: 12, marginTop: 6, flexWrap: "wrap", fontSize: "0.85rem" }}>
-                {(preferencesData?.interestedSectors || []).map((s) => (
-                  <span key={s} style={{ color: "var(--ok)", fontWeight: 700 }}>✓ {s}</span>
-                ))}
+                {preferencesData?.interestedSectors && preferencesData.interestedSectors.length > 0 ? (
+                  preferencesData.interestedSectors.map((s) => (
+                    <span key={s} style={{ color: "var(--ok)", fontWeight: 700 }}>✓ {s}</span>
+                  ))
+                ) : (
+                  <span style={{ color: "var(--muted)", fontStyle: "italic" }}>None specified</span>
+                )}
               </div>
             </div>
 
@@ -1480,7 +1942,7 @@ export default function Profile() {
                 Preferred Scale
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {preferencesData?.preferredScale || "Small / Micro"}
+                {preferencesData?.preferredScale || "Not set"}
               </div>
             </div>
 
@@ -1489,7 +1951,7 @@ export default function Profile() {
                 Time Commitment
               </span>
               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-heading)", marginTop: 2 }}>
-                {preferencesData?.timeCommitment || "Full-time"}
+                {preferencesData?.timeCommitment || "Not set"}
               </div>
             </div>
 
@@ -1498,9 +1960,13 @@ export default function Profile() {
                 Priorities
               </span>
               <div style={{ display: "flex", flexDirection: "column", gap: 4, marginTop: 6, fontSize: "0.85rem" }}>
-                {(preferencesData?.corePriorities || []).map((p) => (
-                  <span key={p} style={{ color: "var(--cyan)", fontWeight: 700 }}>✓ {p}</span>
-                ))}
+                {preferencesData?.corePriorities && preferencesData.corePriorities.length > 0 ? (
+                  preferencesData.corePriorities.map((p) => (
+                    <span key={p} style={{ color: "var(--cyan)", fontWeight: 700 }}>✓ {p}</span>
+                  ))
+                ) : (
+                  <span style={{ color: "var(--muted)", fontStyle: "italic" }}>None specified</span>
+                )}
               </div>
             </div>
 

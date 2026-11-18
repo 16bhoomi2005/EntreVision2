@@ -1,0 +1,1747 @@
+
+--- Page 94 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 94 of 123 Annexure II: Category -wise Tariff for HT & LT Categories for 5th Control Period  
+Revised category -wise Tariffs for FY 2025 -26 
+Summary of LT Tariff for FY 2025 -26, effective from 1 Ju ly, 2025  
+Category  Units for 
+Fixed/ 
+Demand 
+Charge  Existing FY 2024 -25 Approved in this Order for FY 2025 -26 
+Fixed / 
+Demand 
+Charge  Total 
+Variable 
+Charge  Fixed / 
+Demand 
+Charge  Energy 
+Charge^  Wheeling 
+Charge^  Total 
+Variable 
+Charge   
+LT Residential                 
+LT I(A): LT - Residential -BPL  Rs/conn/mth  34 1.74 34 1.48 - 1.48  
+LT I(B): LT - Residential           
+1-100 units  Rs/conn/mth  128 6.32 130 4.28 1.47 5.74  
+101-300 units  Rs/conn/mth  128 12.23  130 11.10  1.47 12.57   
+301-500 units  Rs/conn/mth  128 16.77  130 15.38  1.47 16.85   
+Above 500 units  Rs/conn/mth  128 18.93  130 17.68  1.47 19.15   
+Three Phase Charges  Rs/conn/mth  - - 430 - - -  
+LT II: LT - Non-Residential           
+(A) 0 – 20 kW  Rs/conn/mth  517 10.46  520 8.90 1.47 10.37   
+(B): >20 kW and ≤ 50 kW  Rs/kVA/mth  517 15.38  525 12.83  1.39 14.22   
+(C): >50 kW  Rs/kVA/mth  517 16.55  525 15.22  1.39 16.61   
+LT III: LT - Public Water 
+Works (PWW)           
+(A): 0 -20 kW  Rs/kVA/mth  129 5.59 140 4.10 1.47 5.57  
+(B): >20 kW and ≤ 40 kW  Rs/kVA/mth  156 7.98 175 6.09 1.39 7.49  
+(C): >40 kW  Rs/kVA/mth  194 10.16  200 8.17 1.39 9.57  
+LT IV: LT - Agriculture           
+LT IV(A): LT - AG Un -
+metered – Pumpsets           
+Category 1 Zones           
+(a) 0-5 HP  Rs/HP/mth  563 175 521 - 147 147  
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  607 215 573 - 147 147  
+(c) Above 7.5 HP  Rs/HP/mth  683 222 642 - 147 147  
+Category 2 Zones    - - - - - -  
+(a) 0-5 HP  Rs/HP/mth  435 130 417 - 147 147  
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  476 150 458 - 147 147  
+(c) Above 7.5 HP  Rs/HP/mth  551 150 532 - 147 147  
+LT IV(B): LT - Agriculture 
+Metered Tariff - Pumpsets  Rs/HP/mth  52 4.86 60 3.32 1.47 4.78  
+LT IV(C): LT - Agriculture 
+Metered – Others  Rs/HP/mth  142 7.42 150 5.84 1.47 7.31  
+LT V: LT - Industry *           
+(i): 0 -20 kW  Rs/conn/mth  583 7.85 600 6.39 1.47 7.86  
+(ii): Above 20 kW  Rs/kVA/mth  388 9.14 400 7.76 1.39 9.15  
+LT VI: LT - Street Light           
+(A): Grampanchayat; A B & C 
+Class Municipal Council  Rs/kW/mth  142 8.57 150 7.04 1.47 8.51  
+(B): Municipal corporation Area  Rs/kW/mth  142 10.17  150 8.61 1.47 10.08   
+LT VII (A) - Public Services 
+Govt.           
+(i): ≤ 20 kW  Rs/conn/mth  427 6.03 450 3.26 1.47 4.72  
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  427 8.12 450 6.46 1.39 7.85  
+iii): >50 kW  Rs/kVA/mth  427 8.92 450 7.26 1.39 8.65  
+LT VII (B) - Public Services 
+Others           
+(i): ≤ 20 kW  Rs/conn/mth  464 7.89 500 5.88 1.47 7.35  
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  464 11.77  500 9.72 1.39 11.12   
+iii): >50 kW  Rs/kVA/mth  464 12.02  500 9.99 1.39 11.38   
+LT VIII – Electric Vehicle 
+Charging Station  Rs/kVA/mth  80 8.47 - 7.62 1.39 9.01  
+^Energy Charges & Wheeling Charges for consumer categories with load 20kW and above are in Rs./kVAh , 
+and for load below 20 kW are in Rs/kWh. Whereas for LT VIII – EV Charging Station, these charges are in 
+Rs/kVAh for all loads.  
+--- Page 95 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 95 of 123 Revised category -wise Tariffs for FY 2026 -27 
+Summary of LT Tariff for FY 2026 -27, effective from 1 April, 2026  
+Category    Approved in this Order for FY 2026 -27 
+Units  Fixed / 
+Demand 
+Charge  Energy 
+Charge^  Wheeling 
+Charge^  Total 
+Variable 
+Charge    
+LT Residential            
+LT I(A): LT - Residential -BPL  Rs/conn/mth  35 1.48 - 1.48 
+LT I(B): LT - Residential        
+1-100 units  Rs/conn/mth  130 3.96 1.60 5.56 
+101-300 units  Rs/conn/mth  130 10.80  1.60 12.40  
+301-500 units  Rs/conn/mth  130 15.03  1.60 16.64  
+Above 500 units  Rs/conn/mth  130 17.53  1.60 19.13  
+Three Phase Charges  Rs/conn/mth  435 - - - 
+LT II: LT - Non-Residential        
+(A) 0 – 20 kW  Rs/conn/mth  540 8.51 1.60 10.11 
+(B): >20 kW and ≤ 50 kW  Rs/kVA/mth  550 12.40 1.52 13.92 
+(C): >50 kW  Rs/kVA/mth  550 14.89 1.52 16.42 
+LT III: LT - Public Water Works (PWW)        
+(A): 0 -20 kW  Rs/kVA/mth  170 3.89 1.60 5.50 
+(B): >20 kW and ≤ 40 kW  Rs/kVA/mth  210 5.84 1.52 7.36 
+(C): >40 kW  Rs/kVA/mth  250 7.79 1.52 9.32 
+LT IV: LT - Agriculture        
+LT IV(A): LT - AG Un -metered - Pumpsets        
+Category 1 Zones        
+(a) 0-5 HP  Rs/HP/mth  416 - 161 161 
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  457 - 161 161 
+(c) Above 7.5 HP  Rs/HP/mth  512 - 161 161 
+Category 2 Zones    - - - - 
+(a) 0-5 HP  Rs/HP/mth  333 - 161 161 
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  366 - 161 161 
+(c) Above 7.5 HP  Rs/HP/mth  424 - 161 161 
+LT IV(B): LT - Agriculture Metered Tariff - 
+Pumpsets  Rs/HP/mth  70 2.42 1.60 4.02 
+LT IV(C): LT - Agriculture Metered – Others  Rs/HP/mth  157 5.61 1.60 7.21 
+LT V: LT - Industry *        
+(i): 0 -20 kW  Rs/conn/mth  650 6.26 1.60 7.86 
+(ii): Above 20 kW  Rs/kVA/mth  420 7.66 1.52 9.19 
+LT VI: LT - Street Light    - - - - 
+(A): Grampanchayat; A B & C Class Municipal Council  Rs/kW/mth  160 6.82 1.60 8.42 
+(B): Municipal corporation Area  Rs/kW/mth  160 8.39 1.60 9.99 
+LT VII (A) - Public Services Govt.        
+(i): ≤ 20 kW  Rs/conn/mth  455 2.73 1.60 4.33 
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  455 5.95 1.52 7.48 
+iii): >50 kW  Rs/kVA/mth  455 6.76 1.52 8.28 
+LT VII (B) - Public Services Others        
+(i): ≤ 20 kW  Rs/conn/mth  525 5.51 1.60 7.11 
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  525 9.37 1.52 10.89  
+iii): >50 kW  Rs/kVA/mth  525 9.63 1.52 11.16  
+LT VIII – Electric Vehicle Charging Station  Rs/kVA/mth  - 7.73 1.52 9.26 
+^Energy Charges & Wheeling Charges for consumer categories with load 20kW and above are in Rs./kVAh , and 
+for load below 20 kW are in Rs/kWh. Whereas for LT VIII – EV Charging Station, these charges are in Rs/kVAh 
+for all loads.  
+ 
+ 
+ 
+ 
+--- Page 96 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 96 of 123 Revised category -wise Tariffs for FY 2027 -28 
+Summary of LT Tariff for FY 2027 -28, effective from 1 April, 2027  
+Category    Approved in this Order for FY 2027 -28 
+Units  Fixed / 
+Demand 
+Charge  Energy 
+Charge^  Wheeling 
+Charge^  Total 
+Variable 
+Charge    
+LT Residential            
+LT I(A): LT - Residential -BPL  Rs/conn/mth  35 1.48 - 1.48 
+LT I(B): LT - Residential        
+1-100 units  Rs/conn/mth  135 3.80 1.63 5.43 
+101-300 units  Rs/conn/mth  135 10.65  1.63 12.28  
+301-500 units  Rs/conn/mth  135 14.81  1.63 16.44  
+Above 500 units  Rs/conn/mth  135 17.38  1.63 19.01  
+Three Phase Charges  Rs/conn/mth  440 - - - 
+LT II: LT - Non-Residential        
+(A) 0 – 20 kW  Rs/conn/mth  560 8.31 1.63 9.94 
+(B): >20 kW and ≤ 50 kW  Rs/kVA/mth  575 12.29 1.55 13.83 
+(C): >50 kW  Rs/kVA/mth  575 14.78 1.55 16.33 
+LT III: LT - Public Water Works (PWW)        
+(A): 0 -20 kW  Rs/kVA/mth  200 3.78 1.63 5.41 
+(B): >20 kW and ≤ 40 kW  Rs/kVA/mth  245 5.68 1.55 7.22 
+(C): >40 kW  Rs/kVA/mth  300 7.49 1.55 9.04 
+LT IV: LT - Agriculture        
+LT IV(A): LT - AG Un -metered - Pumpsets        
+Category 1 Zones        
+(a) 0-5 HP  Rs/HP/mth  363 - 164 164 
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  400 - 164 164 
+(c) Above 7.5 HP  Rs/HP/mth  448 - 164 164 
+Category 2 Zones        
+(a) 0-5 HP  Rs/HP/mth  291 - 164 164 
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  320 - 164 164 
+(c) Above 7.5 HP  Rs/HP/mth  371 - 164 164 
+LT IV(B): LT - Agriculture Metered Tariff - 
+Pumpsets  Rs/HP/mth  80 2.01 1.63 3.64 
+LT IV(C): LT - Agriculture Metered – Others  Rs/HP/mth  160 5.50 1.63 7.13 
+LT V: LT - Industry *        
+(i): 0 -20 kW  Rs/conn/mth  700 6.09 1.63 7.72 
+(ii): Above 20 kW  Rs/kVA/mth  440 7.50 1.55 9.05 
+LT VI: LT - Street Light        
+(A): Grampanchayat; A B & C Class Municipal 
+Council  Rs/kW/mth  170 6.72 1.63 8.35 
+(B): Municipal corporation Area  Rs/kW/mth  170 8.29 1.63 9.92 
+LT VII (A) - Public Services Govt.        
+(i): ≤ 20 kW  Rs/conn/mth  460 2.26 1.63 3.89 
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  460 5.51 1.55 7.06 
+iii): >50 kW  Rs/kVA/mth  460 6.31 1.55 7.86 
+LT VII (B) - Public Services Others        
+(i): ≤ 20 kW  Rs/conn/mth  550 5.24 1.63 6.87 
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  550 9.11 1.55 10.66  
+iii): >50 kW  Rs/kVA/mth  550 9.38 1.55 10.93  
+LT VIII – Electric Vehicle Charging Station  Rs/kVA/mth  - 7.71 1.55 9.25 
+^Energy Charges & Wheeling Charges for consumer categories with load 20kW and above are in Rs./kVAh , 
+and for load below 20 kW are in Rs/kWh. Whereas for LT VIII – EV Charging Station, these charges are in 
+Rs/kVAh for all loads.  
+ 
+ 
+ 
+--- Page 97 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 97 of 123  
+Revised category -wise Tariffs for FY 2028 -29 
+Summary of LT Tariff for FY 2028 -29, effective from 1 April, 2028  
+Category    Approved in this Order for FY 2027 -28 
+Units  Fixed / 
+Demand 
+Charge  Energy 
+Charge^  Wheeling 
+Charge^  Total 
+Variable 
+Charge    
+LT Residential            
+LT I(A): LT - Residential -BPL  Rs/conn/mth  35 1.48 - 1.48 
+LT I(B): LT - Residential        
+1-100 units  Rs/conn/mth  140 2.97 1.62 4.59 
+101-300 units  Rs/conn/mth  140 10.51  1.62 12.13  
+301-500 units  Rs/conn/mth  140 13.67  1.62 15.29  
+Above 500 units  Rs/conn/mth  140 16.75  1.62 18.37  
+Three Phase Charges  Rs/conn/mth  445 - - - 
+LT II: LT - Non-Residential        
+(A) 0 – 20 kW  Rs/conn/mth  580 8.01 1.62 9.63 
+(B): >20 kW and ≤ 50 kW  Rs/kVA/mth  600 11.98  1.54 13.52  
+(C): >50 kW  Rs/kVA/mth  600 14.37  1.54 15.91  
+LT III: LT - Public Water Works (PWW)        
+(A): 0 -20 kW  Rs/kVA/mth  230 3.71 1.62 5.33 
+(B): >20 kW and ≤ 40 kW  Rs/kVA/mth  280 5.54 1.54 7.08 
+(C): >40 kW  Rs/kVA/mth  350 7.21 1.54 8.75 
+LT IV: LT - Agriculture        
+LT IV(A): LT - AG Un -metered - Pumpsets        
+Category 1 Zones        
+(a) 0-5 HP  Rs/HP/mth  323 - 162 162 
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  355 - 162 162 
+(c) Above 7.5 HP  Rs/HP/mth  398 - 162 162 
+Category 2 Zones    - - - - 
+(a) 0-5 HP  Rs/HP/mth  259 - 162 162 
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  284 - 162 162 
+(c) Above 7.5 HP  Rs/HP/mth  330 - 162 162 
+LT IV(B): LT - Agriculture Metered Tariff - 
+Pumpsets  Rs/HP/mth  64 1.78 1.62 3.40 
+LT IV(C): LT - Agriculture Metered – Others  Rs/HP/mth  165 5.42 1.62 7.04 
+LT V: LT - Industry *        
+(i): 0 -20 kW  Rs/conn/mth  750 6.07 1.62 7.69 
+(ii): Above 20 kW  Rs/kVA/mth  460 7.48 1.54 9.02 
+LT VI: LT - Street Light        
+(A): Grampanchayat; A B & C Class Municipal 
+Council  Rs/kW/mth  180 6.65 1.62 8.27 
+(B): Municipal corporation Area  Rs/kW/mth  180 8.22 1.62 9.84 
+LT VII (A) - Public Services Govt.        
+(i): ≤ 20 kW  Rs/conn/mth  465 1.79 1.62 3.41 
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  465 5.06 1.54 6.60 
+iii): >50 kW  Rs/kVA/mth  465 5.86 1.54 7.40 
+LT VII (B) - Public Services Others        
+(i): ≤ 20 kW  Rs/conn/mth  575 4.95 1.62 6.57 
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  575 8.84 1.54 10.38  
+iii): >50 kW  Rs/kVA/mth  575 9.10 1.54 10.64  
+LT VIII – Electric Vehicle Charging Station  Rs/kVA/mth  - 7.72 1.54 9.25 
+^Energy Charges & Wheeling Charges for consumer categories with load 20kW and above are in Rs./kVAh , 
+and for load below 20 kW are in Rs/kWh. Whereas for LT VIII – EV Charging Station, these charges are in 
+Rs/kVAh for all loads.  
+  
+--- Page 98 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 98 of 123  
+Revised category -wise Tariffs for FY 2029 -30 
+Summary of LT Tariff for FY 2029 -30, effective from 1 April, 2029  
+Category    Approved in this Order for FY 2027 -28 
+Units  Fixed / 
+Demand 
+Charge  Energy 
+Charge^  Wheeling 
+Charge^  Total 
+Variable 
+Charge    
+LT Residential            
+LT I(A): LT - Residential -BPL  Rs/conn/mth  35 1.48 - 1.48 
+LT I(B): LT - Residential    - - - - 
+1-100 units  Rs/conn/mth  145 2.75 1.59 4.34 
+101-300 units  Rs/conn/mth  145 10.56  1.59 12.15  
+301-500 units  Rs/conn/mth  145 13.01  1.59 14.61  
+Above 500 units  Rs/conn/mth  145 16.60  1.59 18.20  
+Three Phase Charges  Rs/conn/mth  450 - - - 
+LT II: LT - Non-Residential    - - - - 
+(A) 0 – 20 kW  Rs/conn/mth  600 7.96 1.59 9.55 
+(B): >20 kW and ≤ 50 kW  Rs/kVA/mth  625 11.93  1.51 13.45  
+(C): >50 kW  Rs/kVA/mth  625 14.32  1.51 15.84  
+LT III: LT - Public Water Works (PWW)    - - - - 
+(A): 0 -20 kW  Rs/kVA/mth  270 3.63 1.59 5.23 
+(B): >20 kW and ≤ 40 kW  Rs/kVA/mth  310 5.44 1.51 6.95 
+(C): >40 kW  Rs/kVA/mth  385 6.98 1.51 8.49 
+LT IV: LT - Agriculture    - - - - 
+LT IV(A): LT - AG Un -metered - Pumpsets    - - - - 
+Category 1 Zones    - - - - 
+(a) 0-5 HP  Rs/HP/mth  323 - 159 159 
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  355 - 159 159 
+(c) Above 7.5 HP  Rs/HP/mth  398 - 159 159 
+Category 2 Zones    - - - - 
+(a) 0-5 HP  Rs/HP/mth  259 - 159 159 
+(b) Above 5 HP - 7.5 HP  Rs/HP/mth  284 - 159 159 
+(c) Above 7.5 HP  Rs/HP/mth  330 - 159 159 
+LT IV(B): LT - Agriculture Metered Tariff - 
+Pumpsets  Rs/HP/mth  64 1.76 1.59 3.35 
+LT IV(C): LT - Agriculture Metered – Others  Rs/HP/mth  169 5.35 1.59 6.94 
+LT V: LT - Industry *    - - - - 
+(i): 0 -20 kW  Rs/conn/mth  780 6.10 1.59 7.70 
+(ii): Above 20 kW  Rs/kVA/mth  480 7.51 1.51 9.03 
+LT VI: LT - Street Light    - - - - 
+(A): Grampanchayat; A B & C Class Municipal 
+Council  Rs/kW/mth  190 6.58 1.59 8.17 
+(B): Municipal corporation Area  Rs/kW/mth  190 8.15 1.59 9.75 
+LT VII (A) - Public Services Govt.    - - - - 
+(i): ≤ 20 kW  Rs/conn/mth  470 1.29 1.59 2.88 
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  470 4.59 1.51 6.10 
+iii): >50 kW  Rs/kVA/mth  470 5.39 1.51 6.90 
+LT VII (B) - Public Services Others  .       
+(i): ≤ 20 kW  Rs/conn/mth  600 4.68 1.59 6.27 
+(ii): >20 - ≤ 50 kW  Rs/kVA/mth  600 8.58 1.51 10.10  
+iii): >50 kW  Rs/kVA/mth  600 8.85 1.51 10.36  
+LT VIII – Electric Vehicle Charging Station  Rs/kVA/mth  - 8.14 1.51 9.66 
+^Energy Charges & Wheeling Charges for consumer categories with load 20kW and above are in Rs./kVAh , 
+and for load below 20 kW are in Rs/kWh. Whereas for LT VIII – EV Charging Station, these charges are in 
+Rs/kVAh for all loads.  
+ 
+ 
+--- Page 99 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 99 of 123  
+ 
+Summary of HT Tariff for FY 2025 -26, effective from 1 July, 2025  
+Category  Units for 
+Fixed/ 
+Demand 
+Charge  Existing (FY 2024 -25) Approved in this Order for FY 2025 -26 
+Fixed/ 
+Demand 
+Charge  Total 
+Variable 
+Charge  Fixed/ 
+Demand 
+Charge  Energy 
+Charge  Wheeling 
+Charge  Total 
+Variable 
+Charge  
+EHV      (Rs./kVAh)    (Rs./kVAh)  (Rs./kVAh)  (Rs./kVAh)  
+HT I (A) HT - Industry  Rs/kVA/mth  549 8.98 600 8.68 - 8.68 
+HT I (B): HT - Industry 
+(Seasonal)  Rs/kVA/mth  549 9.30 600 8.68 - 8.68 
+HT II: HT – Commercial  Rs/kVA/mth  549 14.08  600 14.03  - 14.03  
+HT III : HT - 
+Railways/Metro/Monorail 
+Traction  Rs/kVA/mth  549 7.94 600 7.59 - 7.59 
+HT IV: HT - Public Water 
+Works  Rs/kVA/mth  549 8.31 600 8.16 - 8.16 
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  97 6.12 115 5.97 - 5.97 
+HT V(B): HT - Agriculture 
+- Others  Rs/kVA/mth  97 7.99 115 8.32 - 8.32 
+HT VI: HT - Group 
+Housing Societies 
+(Residential)  Rs/kVA/mth  438 7.74 440 7.34 - 7.34 
+HT VIII (A): HT - Public 
+Services Govt.  Rs/kVA/mth  549 10.03  600 10.62  - 10.62  
+HT VIII(B): HT - Public 
+Services -Others  Rs/kVA/mth  549 10.93  600 11.56  - 11.56  
+HT IX: HT – Electric 
+Vehicle Charging Station  Rs/kVA/mth  80 7.60 - 8.51 - 8.51 
+          
+HT         
+HT I (A) HT - Industry 
+Sub-total Rs/kVA/mth  549 9.59 600 8.68 0.74 9.42 
+HT I (B): HT - Industry 
+(Seasonal)  Rs/kVA/mth  549 10.04  600 8.68 0.74 9.42 
+HT II: HT – Commercial  Rs/kVA/mth  549 14.77  600 14.03  0.74 14.77  
+HT III : HT - 
+Railways/Metro/Monorail 
+Traction  Rs/kVA/mth  549 8.76 600 7.59 0.74 8.33 
+HT IV: HT - Public Water 
+Works  Rs/kVA/mth  549 8.92 600 8.16 0.74 8.90 
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  97 6.76 115 5.97 0.74 6.71 
+HT V(B): HT - Agriculture 
+- Others  Rs/kVA/mth  97 9.12 115 8.32 0.74 9.06 
+HT VI: HT - Group 
+Housing Societies 
+(Residential)  Rs/kVA/mth  438 8.32 440 7.34 0.74 8.08 
+HT VIII: HT - Public 
+Services  - Govt  Rs/kVA/mth  549 11.35  600 10.62  0.74 11.36  
+HT VIII(B): HT - Public 
+Services -Others  Rs/kVA/mth  549 12.35  600 11.56  0.74 12.30  
+HT IX: HT – Electric 
+Vehicle Charging Station  Rs/kVA/mth  80 8.53 - 8.51 0.74 9.25 
+ 
+ 
+ 
+--- Page 100 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 100 of 123  
+Summary of HT Tariff for FY 2026 -27, effective from 1 April, 2026  
+Category  Units  Approved in this  Order for FY 2026 -27 
+Fixed/ 
+Demand 
+Charge  Energy 
+Charge  Wheeling 
+Charge  Total 
+Variable 
+Charge  
+EHV      (Rs./kVAh)  (Rs./kVAh)  (Rs./kVAh)  
+HT I (A) HT - Industry  Rs/kVA/mth  650  8.44  -    8.44  
+HT I (B): HT - Industry (Seasonal)  Rs/kVA/mth  650  8.47  -    8.47  
+HT II: HT – Commercial  Rs/kVA/mth  650  13.72  -    13.72  
+HT III : HT - 
+Railways/Metro/Monorail Traction  Rs/kVA/mth  650  7.29  -    7.29  
+HT IV: HT - Public Water Works  Rs/kVA/mth  650  7.98  -    7.98  
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  145  5.80  -    5.80  
+HT V(B): HT - Agriculture - Others  Rs/kVA/mth  145  8.24  -    8.24  
+HT VI: HT - Group Housing 
+Societies (Residential)  Rs/kVA/mth  445  7.28  -    7.28  
+HT VIII: HT - Public Services -Govt  Rs/kVA/mth  650  10.35  -    10.35  
+HT VIII(B): HT - Public Services -
+Others  Rs/kVA/mth  650  11.21  -    11.21  
+HT IX: HT – Electric Vehicle 
+Charging Station  Rs/kVA/mth  -    8.92  -    8.92  
+        
+HT       
+HT I (A) HT - Industry Sub -total Rs/kVA/mth  650  8.44  0.81  9.25  
+HT I (B): HT - Industry (Seasonal)  Rs/kVA/mth  650  8.47  0.81  9.28  
+HT II: HT – Commercial  Rs/kVA/mth  650  13.72  0.81  14.53  
+HT III : HT - 
+Railways/Metro/Monorail Traction  Rs/kVA/mth  650  7.29  0.81  8.10  
+HT IV: HT - Public Water Works  Rs/kVA/mth  650  7.98  0.81  8.79  
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  145  5.80  0.81  6.61  
+HT V(B): HT - Agriculture - Others  Rs/kVA/mth  145  8.24  0.81  9.05  
+HT VI: HT - Group Housing 
+Societies (Residential)  Rs/kVA/mth  445  7.28  0.81  8.09  
+HT VIII: HT - Public Services  – 
+Govt Rs/kVA/mth  650  10.35  0.81  11.16  
+HT VIII(B): HT - Public Services -
+Others  Rs/kVA/mth  650  11.21  0.81  12.02  
+HT IX: HT – Electric Vehicle 
+Charging Station  Rs/kVA/mth  -    8.92  0.81  9.73  
+ 
+ 
+  
+--- Page 101 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 101 of 123 Summary of HT Tariff for FY 2027 -28, effective from 1 April, 2027  
+Category  Units  Approved in this  Order for FY 2027 -28 
+Fixed/ 
+Demand 
+Charge  Energy 
+Charge  Wheeling 
+Charge  Total 
+Variable 
+Charge  
+EHV      (Rs./ 
+kVAh)  (Rs./kVAh)  (Rs./kVAh)  
+HT I (A) HT - Industry  Rs/kVA/mth  700  8.23  -    8.23  
+HT I (B): HT - Industry (Seasonal)  Rs/kVA/mth  700  8.22  -    8.22  
+HT II: HT – Commercial  Rs/kVA/mth  700  13.29  -    13.29  
+HT III : HT - 
+Railways/Metro/Monorail Traction  Rs/kVA/mth  700  7.03  -    7.03  
+HT IV: HT - Public Water Works  Rs/kVA/mth  700  7.83  -    7.83  
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  180  5.62  -    5.62  
+HT V(B): HT - Agriculture - Others  Rs/kVA/mth  180  8.23  -    8.23  
+HT VI: HT - Group Housing 
+Societies (Residential)  Rs/kVA/mth  450  7.26  -    7.26  
+HT VIII: HT - Public Services  Rs/kVA/mth  700  10.01  -    10.01  
+HT VIII(B): HT - Public Services -
+Others  Rs/kVA/mth  700  10.89  -    10.89  
+HT IX: HT – Electric Vehicle 
+Charging Station  Rs/kVA/mth  -    8.91  -    8.91  
+        
+HT       
+HT I (A) HT - Industry Sub -total Rs/kVA/mth  700  8.23  0.82  9.05  
+HT I (B): HT - Industry (Seasonal)  Rs/kVA/mth  700  8.22  0.82  9.04  
+HT II: HT – Commercial  Rs/kVA/mth  700  13.29  0.82  14.11  
+HT III : HT - 
+Railways/Metro/Monorail Traction  Rs/kVA/mth  700  7.03  0.82  7.86  
+HT IV: HT - Public Water Works  Rs/kVA/mth  700  7.83  0.82  8.65  
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  180  5.62  0.82  6.45  
+HT V(B): HT - Agriculture - Others  Rs/kVA/mth  180  8.23  0.82  9.05  
+HT VI: HT - Group Housing 
+Societies (Residential)  Rs/kVA/mth  450  7.26  0.82  8.09  
+HT VIII: HT - Public Services -Govt Rs/kVA/mth  700  10.01  0.82  10.83  
+HT VIII(B): HT - Public Services -
+Others  Rs/kVA/mth  700  10.89  0.82  11.71  
+HT IX: HT – Electric Vehicle 
+Charging Station  Rs/kVA/mth  -    8.91  0.82  9.73  
+ 
+ 
+ 
+--- Page 102 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 102 of 123 Summary of HT Tariff for FY 2028 -29, effective from 1 April, 2028  
+Category  Units  Approved in this  Order for FY 2028 -29 
+Fixed/ 
+Demand 
+Charge  Energy 
+Charge  Wheeling 
+Charge  Total 
+Variable 
+Charge  
+EHV      (Rs./kVAh)  (Rs./kVAh)  (Rs./kVAh)  
+HT I (A) HT - Industry  Rs/kVA/mth  730  7.52  -    7.52  
+HT I (B): HT - Industry (Seasonal)  Rs/kVA/mth  730  7.52  -    7.52  
+HT II: HT – Commercial  Rs/kVA/mth  730  12.47  -    12.47  
+HT III : HT - 
+Railways/Metro/Monorail Traction  Rs/kVA/mth  730  6.83  -    6.83  
+HT IV: HT - Public Water Works  Rs/kVA/mth  730  7.81  -    7.81  
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  215  4.75  -    4.75  
+HT V(B): HT - Agriculture - Others  Rs/kVA/mth  215  8.23  -    8.23  
+HT VI: HT - Group Housing 
+Societies (Residential)  Rs/kVA/mth  455  7.26  -    7.26  
+HT VIII(A): HT - Public Services -
+Gov.  Rs/kVA/mth  730  9.18  -    9.18  
+HT VIII(B): HT - Public Services -
+Others  Rs/kVA/mth  730  10.04  -    10.04  
+HT IX: HT – Electric Vehicle 
+Charging Station  Rs/kVA/mth  -    8.92  -    8.92  
+        
+HT       
+HT I (A) HT - Industry Sub -total Rs/kVA/mth  730  7.52  0.81  8.33  
+HT I (B): HT - Industry (Seasonal)  Rs/kVA/mth  730  7.52  0.81  8.33  
+HT II: HT – Commercial  Rs/kVA/mth  730  12.47  0.81  13.28  
+HT III : HT - 
+Railways/Metro/Monorail Traction  Rs/kVA/mth  730  6.83  0.81  7.64  
+HT IV: HT - Public Water Works  Rs/kVA/mth  730  7.81  0.81  8.62  
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  215  4.75  0.81  5.56  
+HT V(B): HT - Agriculture - Others  Rs/kVA/mth  215  8.23  0.81  9.05  
+HT VI: HT - Group Housing 
+Societies (Residential)  Rs/kVA/mth  455  7.26  0.81  8.08  
+HT VIII(A): HT - Public Services -
+Gov.  Rs/kVA/mth  730  9.18  0.81  9.99  
+HT VIII(B): HT - Public Services -
+Others  Rs/kVA/mth  730  10.04  0.81  10.85  
+HT IX: HT – Electric Vehicle 
+Charging Station  Rs/kVA/mth  -    8.92  0.81  9.73  
+ 
+ 
+--- Page 103 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 103 of 123 Summary of HT Tariff for FY 2029 -30, effective from 1 April, 2029  
+Category  Units  Approved in this  Order for FY 2029 -30 
+Fixed/ 
+Demand 
+Charge  Energy 
+Charge  Wheeling 
+Charge  Total 
+Variable 
+Charge  
+EHV      (Rs./kVAh)  (Rs./kVAh)  (Rs./kVAh)  
+HT I (A) HT - Industry  Rs/kVA/mth  750  7.45  -    7.45  
+HT I (B): HT - Industry (Seasonal)  Rs/kVA/mth  750  7.47  -    7.47  
+HT II: HT – Commercial  Rs/kVA/mth  750  12.23  -    12.23  
+HT III : HT - 
+Railways/Metro/Monorail 
+Traction  Rs/kVA/mth  750  6.68  -    6.68  
+HT IV: HT - Public Water Works  Rs/kVA/mth  750  7.77  -    7.77  
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  230  4.71  -    4.71  
+HT V(B): HT - Agriculture - 
+Others  Rs/kVA/mth  230  8.18  -    8.18  
+HT VI: HT - Group Housing 
+Societies (Residential)  Rs/kVA/mth  460  7.26  -    7.26  
+HT VIII(A): HT - Public Services -
+Gov.  Rs/kVA/mth  750  9.13  -    9.13  
+HT VIII(B): HT - Public Services -
+Others  Rs/kVA/mth  750  9.73  -    9.73  
+HT IX: HT – Electric Vehicle 
+Charging Station  Rs/kVA/mth  -    8.92  -    8.92  
+        
+HT       
+HT I (A) HT - Industry Sub -total Rs/kVA/mth  750  7.45  0.80  8.24  
+HT I (B): HT - Industry (Seasonal)  Rs/kVA/mth  750  7.47  0.80  8.26  
+HT II: HT – Commercial  Rs/kVA/mth  750  12.23  0.80  13.03  
+HT III : HT - 
+Railways/Metro/Monorail 
+Traction  Rs/kVA/mth  750  6.68  0.80  7.48  
+HT IV: HT - Public Water Works  Rs/kVA/mth  750  7.77  0.80  8.57  
+HT V(A): HT - Agriculture 
+Pumpsets  Rs/kVA/mth  230  4.71  0.80  5.51  
+HT V(B): HT - Agriculture - 
+Others  Rs/kVA/mth  230  8.18  0.80  8.98  
+HT VI: HT - Group Housing 
+Societies (Residential)  Rs/kVA/mth  460  7.26  0.80  8.05  
+HT VIII(A): HT - Public Services -
+Gov.  Rs/kVA/mth  750  9.13  0.80  9.93  
+HT VIII(B): HT - Public Services -
+Others  Rs/kVA/mth  750  9.73  0.80  10.53  
+HT IX: HT – Electric Vehicle 
+Charging Station  Rs/kVA/mth  -    8.92  0.80  9.72  
+--- Page 104 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 104 of 123 Annexure III: Cross Subsidy Surcharge for 5th Control Period  
+Cross Subsidy Surcharge approved by Commission for FY 2025 -26 
+Cross Subsidy Surcharge for FY 2025 -26 – HT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+HT Category - EHV (66kV and Above)            
+HT I (A) (i): HT - Industry  10.35  5.21 0.00%  3.28%  3.28%  0.88 4.08 2.12 2.12 2.08 
+HT I (B): HT - Industry (Seasonal)  10.91  5.21 0.00%  3.28%  3.28%  0.88 4.63 2.12 2.12 2.08 
+HT II (A): HT - Commercial  17.94  5.21 0.00%  3.28%  3.28%  0.88 11.66  2.12 2.12 2.08 
+HT III (A): HT - Railways/Metro/Monorail 
+Traction  9.98 5.21 0.00%  3.28%  3.28%  0.88 3.70 2.12 2.12 2.08 
+HT IV: HT - Public Water Works (PWW)  8.75 5.21 0.00%  3.28%  3.28%  0.88 2.47 2.12 2.12 2.08 
+HT V(B): HT - Agriculture Others  - 5.21 - 3.28%  3.28%  0.88 - 2.12 - - 
+HT VI: HT - Group Housing Societies 
+(Residential)  - 5.21 0.00%  3.28%  3.28%  0.88 - 2.12 - - 
+HT IX: HT - Public Services  - 5.21 0.00%  3.28%  3.28%  0.88 - 2.12 - - 
+HT Category - HT (33kV, 22kV and 11 kV)            
+HT I (A) (i): HT - Industry  10.95  5.21 7.50%  3.28%  10.53%  1.63 3.49 2.12 2.12 2.08 
+HT I (B): HT - Industry (Seasonal)  12.83  5.21 7.50%  3.28%  10.53%  1.63 5.38 2.12 2.12 2.08 
+HT II (A): HT - Commercial  16.80  5.21 7.50%  3.28%  10.53%  1.63 9.35 2.12 2.12 2.08 
+HT III (A): HT - Railways/Metro/Monorail 
+Traction  10.36  5.21 7.50%  3.28%  10.53%  1.63 2.90 2.12 2.12 2.08 
+HT IV: HT - Public Water Works (PWW)  10.04  5.21 7.50%  3.28%  10.53%  1.63 2.59 2.12 2.12 2.08 
+HT V(A): HT - Agriculture Pumpsets  7.20 5.21 7.50%  3.28%  10.53%  1.63 - 2.12 - - 
+HT V(B): HT - Agriculture Others  9.49 5.21 7.50%  3.28%  10.53%  1.63 2.04 2.12 2.04 2.00 
+HT VI: HT - Group Housing Societies 
+(Residential)  9.37 5.21 7.50%  3.28%  10.53%  1.63 1.91 2.12 1.91 1.87 
+HT IX (A): HT - Public Services Government  12.79  5.21 7.50%  3.28%  10.53%  1.63 5.33 2.12 2.12 2.08 
+HT IX (B): HT - Public Services Others  13.79  5.21 7.50%  3.28%  10.53%  1.63 6.33 2.12 2.12 2.08 
+HT X: HT – Electric Vehicle Charging Station  9.03 5.21 7.50%  3.28%  10.53%  1.63 1.58 2.12 1.58 1.54 
+ 
+  
+--- Page 105 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 105 of 123  
+Cross Subsidy Surcharge for FY 2025 -26 – LT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+ LT Residential                      
+ LT I(A): LT - Residential -BPL  3.09 5.21 12.00%  3.28%  14.89%  2.35 -  NA NA 
+ LT I(B): LT - Residential            
+ 1-100 units  7.31 5.21 12.00%  3.28%  14.89%  2.35 -  NA NA 
+ 101-300 units  13.17  5.21 12.00%  3.28%  14.89%  2.35 4.69 2.12 2.12 2.02 
+ 301-500 units  17.56  5.21 12.00%  3.28%  14.89%  2.35 9.08 2.12 2.12 2.02 
+ Above 500 units  19.15  5.21 12.00%  3.28%  14.89%  2.35 10.67  2.12 2.12 2.02 
+ Three Phase Charges            
+LT I: LT - Residential Total            
+ LT II: LT - Non-Residential            
+ (A) (i): 0 – 20 kW   13.09  5.21 12.00%  3.28%  14.89%  2.35 4.61 2.12 NA NA 
+ (B): >20 kW and ≤ 50 kW  16.78  5.21 12.00%  3.28%  14.89%  2.35 8.30 2.12 NA NA 
+ (C): >50 KW  19.04  5.21 12.00%  3.28%  14.89%  2.35 10.56  2.12 2.12 2.02 
+LT II: LT - Non-Residential Total            
+ LT III: LT - Public Water Works (PWW)            
+ (A): 0 -20 KW  5.87 5.21 12.00%  3.28%  14.89%  2.35 - 2.12 NA NA 
+ (B): > 20 kW and ≤ 40 kW  8.47 5.21 12.00%  3.28%  14.89%  2.35 - 2.12 NA NA 
+ (C): > 40 kW  11.03  5.21 12.00%  3.28%  14.89%  2.35 2.55 2.12 2.12 2.02 
+LT III: LT - Public Water Works (PWW) Total            
+LT V(B): LT - Industry - General            
+(i): 0 -20 kW  8.64 5.21 12.00%  3.28%  14.89%  2.35 0.16 2.12 NA NA 
+(ii): Above 20 kW  10.17  5.21 12.00%  3.28%  14.89%  2.35 1.70 2.12 1.70 1.61 
+LT V(B): LT - Industry Total          - - 
+ LT VI: LT - Street Light          - - 
+ (A): Grampanchayat; A B & C Class Municipal 
+Council  9.19 5.21 12.00%  3.28%  14.89%  2.35 0.72 2.12 NA NA 
+ (B): Municipal corporation Area  11.24  5.21 12.00%  3.28%  14.89%  2.35 2.76 2.12 NA NA 
+LT VI: LT - Street Light Total          - - 
+LT X (A) - Public Services - Government           - 
+ (i): ≤ 20 kW   10.91  5.21  12.00%  3.28%  14.89%  2.35  2.43  2.12  NA NA 
+ (ii): >20 - ≤ 50 kW  10.16  5.21  12.00%  3.28%  14.89%  2.35  1.68  2.12  1.68  1.60  
+ iii): >50 kW  11.06  5.21  12.00%  3.28%  14.89%  2.35  2.59  2.12  2.12  2.02  
+LT X (A) - Public Services – Others            
+ (i): ≤ 20 kW   9.13 5.21 12.00%  3.28%  14.89%  2.35 0.65 2.12 NA NA 
+ (ii): >20 - ≤ 50 kW  13.73  5.21 12.00%  3.28%  14.89%  2.35 5.26 2.12 2.12 2.02 
+ iii): >50 kW  13.52  5.21 12.00%  3.28%  14.89%  2.35 5.04 2.12 2.12 2.02 
+ LT XI – Electric Vehicle Charging Station  9.25 5.21 12.00%  3.28%  14.89%  2.35 0.77 2.12 0.77 0.73 
+  
+--- Page 106 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 106 of 123 Cross Subsidy Surcharge approved by Commission for FY 2026 -27 
+Cross Subsidy Surcharge for FY 2026 -27 – HT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+HT Category - EHV (66kV and Above)            
+HT I (A) (i): HT - Industry  10.28  5.60 0.00%  3.26%  3.26%  0.85 3.65 2.11 2.11 2.07 
+HT I (B): HT - Industry (Seasonal)  10.83  5.60 0.00%  3.26%  3.26%  0.85 4.20 2.11 2.11 2.07 
+HT II (A): HT - Commercial  18.05  5.60 0.00%  3.26%  3.26%  0.85 11.42  2.11 2.11 2.07 
+HT III (A): HT - Railways/Metro/Monorail 
+Traction  9.93 5.60 0.00%  3.26%  3.26%  0.85 3.30 2.11 2.11 2.07 
+HT IV: HT - Public Water Works (PWW)  8.58 5.60 0.00%  3.26%  3.26%  0.85 1.95 2.11 1.95 1.91 
+HT V(B): HT - Agriculture Others  - 5.60 - 3.26%  3.26%  0.85 - 2.11 - - 
+HT VI: HT - Group Housing Societies 
+(Residential)  - 5.60 0.00%  3.26%  3.26%  0.85 - 2.11 - - 
+HT IX: HT - Public Services  - 5.60 0.00%  3.26%  3.26%  0.85 - 2.11 - - 
+HT Category - HT (33kV, 22kV and 11 kV)            
+HT I (A) (i): HT - Industry  10.88  5.60 7.50%  3.26%  10.52%  1.66 2.97 2.11 2.11 2.07 
+HT I (B): HT - Industry (Seasonal)  12.89  5.60 7.50%  3.26%  10.52%  1.66 4.98 2.11 2.11 2.07 
+HT II (A): HT - Commercial  16.74  5.60 7.50%  3.26%  10.52%  1.66 8.83 2.11 2.11 2.07 
+HT III (A): HT - Railways/Metro/Monorail 
+Traction  10.34  5.60 7.50%  3.26%  10.52%  1.66 2.43 2.11 2.11 2.07 
+HT IV: HT - Public Water Works (PWW)  10.06  5.60 7.50%  3.26%  10.52%  1.66 2.15 2.11 2.11 2.07 
+HT V(A): HT - Agriculture Pumpsets  7.20 5.60 7.50%  3.26%  10.52%  1.66 - 2.11 - - 
+HT V(B): HT - Agriculture Others  9.59 5.60 7.50%  3.26%  10.52%  1.66 1.68 2.11 1.68 1.65 
+HT VI: HT - Group Housing Societies 
+(Residential)  9.36 5.60 7.50%  3.26%  10.52%  1.66 1.45 2.11 1.45 1.42 
+           
+HT IX: HT - Public Services  – Govt.  12.79  5.60 7.50%  3.26%  10.52%  1.66 4.88 2.11 2.11 2.07 
+HT IX(B): HT - Public Services -Others  13.78  5.60 7.50%  3.26%  10.52%  1.66 5.87 2.11 2.11 2.07 
+HT X: HT – Electric Vehicle Charging Station  9.50 5.60 7.50%  3.26%  10.52%  1.66 1.59 2.11 1.59 1.56 
+ 
+  
+--- Page 107 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 107 of 123  
+Cross Subsidy Surcharge for FY 2026 -27 – LT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+ LT Residential                      
+ LT I(A): LT - Residential -BPL           2.99    5.60  12.00%  3.26%  14.87%           2.45                  -      NA NA 
+ LT I(B): LT - Residential                    
+ 1-100 units           7.10    5.60  12.00%  3.26%  14.87%           2.45                  -          2.11  NA NA 
+ 101-300 units         12.94    5.60  12.00%  3.26%  14.87%           2.45               3.92        2.11              2.11                2.01  
+ 301-500 units         17.35    5.60  12.00%  3.26%  14.87%           2.45               8.33        2.11              2.11                2.01  
+ Above 500 units         19.14    5.60  12.00%  3.26%  14.87%           2.45             10.12        2.11              2.11                2.01  
+ Three Phase Charges                    
+ LT II: LT - Non-Residential                    
+ (A) (i): 0 – 20 kW          13.03    5.60  12.00%  3.26%  14.87%           2.45               4.01        2.11  NA NA 
+ (B): >20 kW and ≤ 50 kW  16.45       5.60  12.00%  3.26%  14.87%           2.45  7.43          2.11  NA NA 
+ (C): >50 KW         18.91    5.60  12.00%  3.26%  14.87%           2.45  9.89       2.11              2.11                2.01  
+ LT III: LT - Public Water Works (PWW)                    
+ (A): 0 -20 KW           5.87    5.60  12.00%  3.26%  14.87%           2.45                  -          2.11  NA NA 
+ (B): > 20 kW and ≤ 40 kW           8.47    5.60  12.00%  3.26%  14.87%           2.45                  -          2.11  NA NA 
+ (C): > 40 kW         11.03    5.60  12.00%  3.26%  14.87%           2.45               2.01        2.11              2.01                1.91  
+LT V(B): LT - Industry - General                  - - 
+ (i): 0 -20 kW           8.48    5.60  12.00%  3.26%  14.87%           2.45                  -          2.11  NA NA 
+ (ii): Above 20 kW         11.05    5.60  12.00%  3.26%  14.87%           2.45               2.03        2.11              2.03                1.93  
+ LT VI: LT - Street Light                    
+ (A): Grampanchayat;  A B & C Class Municipal 
+Council           9.17    5.60  12.00%  3.26%  14.87%           2.45               0.15        2.11  NA NA 
+ (B): Municipal corporation Area         11.24    5.60  12.00%  3.26%  14.87%           2.45               2.22        2.11  NA NA 
+ LT X (A) - Public Services Government                                       -    
+ (i): ≤ 20 kW          11.04    5.60  12.00%  3.26%  14.87%           2.45               2.02        2.11  NA NA 
+ (ii): >20 - ≤ 50 kW           9.91    5.60  12.00%  3.26%  14.87%           2.45               0.89        2.11              0.89                0.85  
+ iii): >50 kW         10.82    5.60  12.00%  3.26%  14.87%           2.45               1.80        2.11              1.80                1.71  
+ LT X (B) - Public Services Government                       
+ (i): ≤ 20 kW            9.13    5.60  12.00%  3.26%  14.87%           2.45               0.11        2.11  NA NA 
+ (ii): >20 - ≤ 50 kW         13.73    5.60  12.00%  3.26%  14.87%           2.45               4.71        2.11              2.11                2.01  
+ iii): >50 kW         13.49    5.60  12.00%  3.26%  14.87%           2.45               4.47        2.11              2.11                2.01  
+ LT XI – Electric Vehicle Charging Station           9.50    5.60  12.00%  3.26%  14.87%           2.45               0.48        2.11              0.48                0.46  
+ 
+  
+--- Page 108 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 108 of 123 Cross Subsidy Surcharge approved by Commission for FY 2027 -28 
+Cross Subsidy Surcharge for FY 2027 -28 – HT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+HT Category - EHV (66kV and Above)            
+HT I (A) (i): HT - Industry  10.24  5.68 0.00%  3.24%  3.24%  0.86 3.51 2.09 2.09 2.05 
+HT I (B): HT - Industry (Seasonal)  10.72  5.68 0.00%  3.24%  3.24%  0.86 3.99 2.09 2.09 2.05 
+HT II (A): HT - Commercial  18.14  5.68 0.00%  3.24%  3.24%  0.86 11.41  2.09 2.09 2.05 
+HT III (A): HT - Railways/Metro/Monorail 
+Traction  9.94 5.68 0.00%  3.24%  3.24%  0.86 3.21 2.09 2.09 2.05 
+HT IV: HT - Public Water Works (PWW)  8.44 5.68 0.00%  3.24%  3.24%  0.86 1.71 2.09 1.71 1.68 
+HT V(B): HT - Agriculture Others  - 5.68 - 3.24%  3.24%  0.86 - 2.09 - - 
+HT VI: HT - Group Housing Societies 
+(Residential)  - 5.68 0.00%  3.24%  3.24%  0.86 - 2.09 - - 
+HT IX: HT - Public Services  - 5.68 0.00%  3.24%  3.24%  0.86 - 2.09 - - 
+HT Category - HT (33kV, 22kV and 11 kV)            
+HT I (A) (i): HT - Industry  10.78  5.68 7.50%  3.24%  10.50%  1.68 2.75 2.09 2.09 2.05 
+HT I (B): HT - Industry (Seasonal)  12.85  5.68 7.50%  3.24%  10.50%  1.68 4.83 2.09 2.09 2.05 
+HT II (A): HT - Commercial  16.54  5.68 7.50%  3.24%  10.50%  1.68 8.52 2.09 2.09 2.05 
+HT III (A): HT - Railways/Metro/Monorail 
+Traction  10.32  5.68 7.50%  3.24%  10.50%  1.68 2.29 2.09 2.09 2.05 
+HT IV: HT - Public Water Works (PWW)  10.07  5.68 7.50%  3.24%  10.50%  1.68 2.04 2.09 2.04 2.00 
+HT V(A): HT - Agriculture Pumpsets  7.14 4.67 7.50%  3.24%  10.50%  1.50 0.42 2.09 0.42 0.41 
+HT V(B): HT - Agriculture Others  9.72 5.68 7.50%  3.24%  10.50%  1.68 1.69 2.09 1.69 1.66 
+HT VI: HT - Group Housing Societies 
+(Residential)  9.34 5.68 7.50%  3.24%  10.50%  1.68 1.31 2.09 1.31 1.28 
+HT IX (B): HT - Public Services Government  12.66  5.68 7.50%  3.24%  10.50%  1.68 4.64 2.09 2.09 2.05 
+HT IX (B): HT - Public Services Others  13.71  5.68 7.50%  3.24%  10.50%  1.68 5.68 2.09 2.09 2.05 
+HT X: HT – Electric Vehicle Charging Station  9.50 5.68 7.50%  3.24%  10.50%  1.68 1.47 2.09 1.47 1.44 
+ 
+  
+--- Page 109 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 109 of 123  
+Cross Subsidy Surcharge for FY 2027 -28 – LT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+ LT Residential                      
+ LT I(A): LT - Residential -BPL  2.83 5.60 12.00%  3.24%  14.85%  2.49 -  NA NA 
+ LT I(B): LT - Residential            
+ 1-100 units  7.00 5.60 12.00%  3.24%  14.85%  2.49 - 2.09 NA NA 
+ 101-300 units  12.79  5.60 12.00%  3.24%  14.85%  2.49 3.72 2.09 2.09 1.99 
+ 301-500 units  17.27  5.60 12.00%  3.24%  14.85%  2.49 8.21 2.09 2.09 1.99 
+ Above 500 units  19.04  5.60 12.00%  3.24%  14.85%  2.49 9.98 2.09 2.09 1.99 
+ Three Phase Charges            
+ LT II: LT - Non-Residential            
+ (A) (i): 0 – 20 kW   12.96  5.60 12.00%  3.24%  14.85%  2.49 3.88 2.09 NA NA 
+ (B): >20 kW and ≤ 50 kW  16.45  5.60 12.00%  3.24%  14.85%  2.49 7.39 2.09 NA NA 
+ (C): >50 KW  18.92 5.60 12.00%  3.24%  14.85%  2.49 9.86 2.09 2.09 1.99 
+ LT III: LT - Public Water Works (PWW)            
+ (A): 0 -20 KW            
+ (B): > 20 kW and ≤ 40 kW  5.87 5.60 12.00%  3.24%  14.85%  2.49 - 2.09 NA NA 
+ (C): > 40 kW  8.47 5.60 12.00%  3.24%  14.85%  2.49 - 2.09 NA NA 
+LT V(B): LT - Industry - General                  - - 
+ (i): 0 -20 kW           8.33 5.60 12.00%  3.24%  14.85%  2.49 - 2.09 NA NA 
+ (ii): Above 20 kW  10.87  5.60 12.00%  3.24%  14.85%  2.49 1.81 2.09 1.81 1.72 
+ LT VI: LT - Street Light          - - 
+ (A): Grampanchayat;  A B & C Class Municipal 
+Council  9.16 5.60 12.00%  3.24%  14.85%  2.49 0.10 2.09 0.10 0.10 
+ (B): Municipal corporation Area  11.25  5.60 12.00%  3.24%  14.85%  2.49 2.19 2.09 2.09 1.99 
+ LT X (A) - Public Services Government             
+ (i): ≤ 20 kW   11.19  5.60 12.00%  3.24%  14.85%  2.49 2.13 2.09 NA NA 
+ (ii): >20 - ≤ 50 kW  9.62 5.60 12.00%  3.24%  14.85%  2.49 0.56 2.09 NA NA 
+ iii): >50 kW  10.54  5.60 12.00%  3.24%  14.85%  2.49 1.48 2.09 1.48 1.40 
+ LT X (B) - Public Services Government             
+ (i): ≤ 20 kW   9.14 5.60 12.00%  3.24%  14.85%  2.49 0.08 2.09 NA NA 
+ (ii): >20 - ≤ 50 kW  13.72  5.60 12.00%  3.24%  14.85%  2.49 4.66 2.09 NA NA 
+ iii): >50 kW  13.44  5.60 12.00%  3.24%  14.85%  2.49 4.38 2.09 2.09 1.99 
+ LT XI – Electric Vehicle Charging Station  9.50 5.60 12.00%  3.24%  14.85%  2.49 0.44 2.09 0.44 0.41 
+ 
+  
+--- Page 110 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 110 of 123 Cross Subsidy Surcharge approved by Commission for FY 2028 -29 
+Cross Subsidy Surcharge for FY 2028 -29 – HT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+HT Category - EHV (66kV and Above)            
+HT I (A) (i): HT - Industry  9.64 5.86 0.00%  3.22%  3.22%  0.85 2.73 2.00 2.00 1.96 
+HT I (B): HT - Industry (Seasonal)  10.10  5.86 0.00%  3.22%  3.22%  0.85 3.19 2.00 2.00 1.96 
+HT II (A): HT - Commercial  17.75  5.86 0.00%  3.22%  3.22%  0.85 10.84  2.00 2.00 1.96 
+HT III (A): HT - Railways/Metro/Monorail 
+Traction  9.93 5.86 0.00%  3.22%  3.22%  0.85 3.02 2.00 2.00 1.96 
+HT IV: HT - Public Water Works (PWW)  8.40 5.86 0.00%  3.22%  3.22%  0.85 1.49 2.00 1.49 1.46 
+HT V(B): HT - Agriculture Others  - 5.86 - 3.22%  3.22%  0.85 - 2.00 - - 
+HT VI: HT - Group Housing Societies 
+(Residential)  - 5.86 0.00%  3.22%  3.22%  0.85 - 2.00 - - 
+HT IX: HT - Public Services  - 5.86 0.00%  3.22%  3.22%  0.85 - 2.00 - - 
+HT Category - HT (33kV, 22kV and 11 kV)            
+HT I (A) (i): HT - Industry  10.13  5.86 7.50%  3.22%  10.48%  1.66 1.91 2.00 1.91 1.87 
+HT I (B): HT - Industry (Seasonal)  12.26  5.86 7.50%  3.22%  10.48%  1.66 4.04 2.00 2.00 1.96 
+HT II (A): HT - Commercial  15.89  5.86 7.50%  3.22%  10.48%  1.66 7.67 2.00 2.00 1.96 
+HT III (A): HT - Railways/Metro/Monorail 
+Traction  10.27  5.86 7.50%  3.22%  10.48%  1.66 2.06 2.00 2.00 1.96 
+HT IV: HT - Public Water Works (PWW)  10.09  5.86 7.50%  3.22%  10.48%  1.66 1.87 2.00 1.87 1.83 
+HT V(A): HT - Agriculture Pumpsets  6.36 5.86 7.50%  3.22%  10.48%  1.66 - 2.00 - - 
+HT V(B): HT - Agriculture Others  9.85 5.86 7.50%  3.22%  10.48%  1.66 1.64 2.00 1.64 1.60 
+HT VI: HT - Group Housing Societies 
+(Residential)  9.32 5.86 7.50%  3.22%  10.48%  1.66 1.11 2.00 1.11 1.08 
+HT IX (B): HT - Public Services Government  12.05  5.86 7.50%  3.22%  10.48%  1.66 3.83 2.00 2.00 1.96 
+HT IX (B): HT - Public Services Others  13.08  5.86 7.50%  3.22%  10.48%  1.66 4.87 2.00 2.00 1.96 
+HT X: HT – Electric Vehicle Charging Station  9.50 5.86 7.50%  3.22%  10.48%  1.66 1.29 2.00 1.29 1.26 
+ 
+  
+--- Page 111 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 111 of 123  
+Cross Subsidy Surcharge for FY 2028 -29 – LT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+ LT Residential                      
+ LT I(A): LT - Residential -BPL           2.72    5.86  12.00%  3.22%  14.83%            2.47                  -      NA NA 
+ LT I(B): LT - Residential                    
+ 1-100 units           6.20    5.86  12.00%  3.22%  14.83%            2.49                  -          2.00  NA NA 
+ 101-300 units         12.62    5.86  12.00%  3.22%  14.83%            2.49               3.24        2.00             2.00            1.90  
+ 301-500 units         16.38    5.86  12.00%  3.22%  14.83%            2.49               7.00        2.00             2.00            1.90  
+ Above 500 units         18.47    5.86  12.00%  3.22%  14.83%            2.49               9.09        2.00             2.00            1.90  
+ Three Phase Charges                    
+ LT II: LT - Non-Residential                    
+ (A) (i): 0 – 20 kW          12.73    5.86  12.00%  3.22%  14.83%            2.49               3.35        2.00  NA NA 
+ (B): >20 kW and ≤ 50 kW  16.28    5.86  12.00%  3.22%  14.83%            2.49  6.90       2.00  NA NA 
+ (C): >50 KW  18.63    5.86  12.00%  3.22%  14.83%            2.49  9.26       2.00             2.00            1.90  
+ LT III: LT - Public Water Works (PWW)                    
+ (A): 0 -20 KW           5.87    5.86  12.00%  3.22%  14.83%            2.49                  -          2.00  NA NA 
+ (B): > 20 kW and ≤ 40 kW           8.47    5.86  12.00%  3.22%  14.83%            2.49                  -          2.00  NA NA 
+ (C): > 40 kW         11.02    5.86  12.00%  3.22%  14.83%            2.49               1.65        2.00             1.65            1.56  
+LT V(B): LT - Industry - General                    
+ (i): 0 -20 kW  8.31 5.86 12.00%  3.22%  14.83%  2.49 - 2.00 - - 
+ (ii): Above 20 kW  10.82  5.86 12.00%  3.22%  14.83%  2.49 1.44 2.00 1.44 1.37 
+ LT VI: LT - Street Light            
+ (A): Grampanchayat;  A B & C Class Municipal 
+Council  9.15 5.86 12.00%  3.22%  14.83%  2.49 - 2.00 NA NA 
+ (B): Municipal corporation Area  11.26  5.86 12.00%  3.22%  14.83%  2.49 1.88 2.00 1.88 1.79 
+ LT X (A) - Public Services Government             
+ (i): ≤ 20 kW   11.35  5.86 12.00%  3.22%  14.83%  2.49 1.97 2.00 NA NA 
+ (ii): >20 - ≤ 50 kW  9.29 5.86 12.00%  3.22%  14.83%  2.49 - 2.00 NA NA 
+ iii): >50 kW  10.22  5.86 12.00%  3.22%  14.83%  2.49 0.84 2.00 0.84 0.80 
+ LT X (B) - Public Services Government             
+ (i): ≤ 20 kW            9.13    5.86  12.00%  3.22%  14.83%            2.49                  -          2.00  NA NA 
+ (ii): >20 - ≤ 50 kW         13.67    5.86  12.00%  3.22%  14.83%            2.49               4.30        2.00  NA NA 
+ iii): >50 kW         13.35    5.86  12.00%  3.22%  14.83%            2.49               3.98        2.00             2.00            1.90  
+ LT XI – Electric Vehicle Charging Station  9.50 5.86 12.00%  3.22%  14.83%  2.49 0.12 2.00 0.12 0.12 
+ 
+  
+--- Page 112 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 112 of 123  
+Cross Subsidy Surcharge approved by Commission for FY 2029 -30 
+Cross Subsidy Surcharge for FY 2029 -30 – HT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+HT Category - EHV (66kV and Above)            
+HT I (A) (i): HT - Industry   9.64   5.90  0.00%  3.20%  3.20%   0.83   2.71   1.98   1.98   1.94  
+HT I (B): HT - Industry (Seasonal)   10.09   5.90  0.00%  3.20%  3.20%   0.83   3.16   1.98   1.98   1.94  
+HT II (A): HT - Commercial   17.93   5.90  0.00%  3.20%  3.20%   0.83   11.00   1.98   1.98   1.94  
+HT III (A): HT - Railways/Metro/Monorail 
+Traction   9.93   5.90  0.00%  3.20%  3.20%   0.83   3.00   1.98   1.98   1.94  
+HT IV: HT - Public Water Works (PWW)   8.34   5.90  0.00%  3.20%  3.20%   0.83   1.41   1.98   1.41   1.38  
+HT V(B): HT - Agriculture Others   -     5.90   -    3.20%  3.20%   0.83   -     1.98   -     -    
+HT VI: HT - Group Housing Societies 
+(Residential)   -     5.90  0.00%  3.20%  3.20%   0.83   -     1.98   -     -    
+HT IX: HT - Public Services   -     5.90  0.00%  3.20%  3.20%   0.83   -     1.98   -     -    
+HT Category - HT (33kV, 22kV and 11 kV)            
+HT I (A) (i): HT - Industry   10.09   5.90  7.50%  3.20%  10.46%   1.63   1.87   1.98   1.87   1.83  
+HT I (B): HT - Industry (Seasonal)   12.25   5.90  7.50%  3.20%  10.46%   1.63   4.03   1.98   1.98   1.94  
+HT II (A): HT - Commercial   15.82   5.90  7.50%  3.20%  10.46%   1.63   7.59   1.98   1.98   1.94  
+HT III (A): HT - Railways/Metro/Monorail 
+Traction   10.24   5.90  7.50%  3.20%  10.46%   1.63   2.01   1.98   1.98   1.94  
+HT IV: HT - Public Water Works (PWW)   10.08   5.90  7.50%  3.20%  10.46%   1.63   1.86   1.98   1.86   1.82  
+HT V(A): HT - Agriculture Pumpsets   6.33   5.90  7.50%  3.20%  10.46%   1.63   -     1.98   -     -    
+HT V(B): HT - Agriculture Others   9.83   5.90  7.50%  3.20%  10.46%   1.63   1.61   1.98   1.61   1.58  
+HT VI: HT - Group Housing Societies 
+(Residential)   9.30   5.90  7.50%  3.20%  10.46%   1.63   1.07   1.98   1.07   1.05  
+HT IX (B): HT - Public Services Government   12.05   5.90  7.50%  3.20%  10.46%   1.63   3.83   1.98   1.98   1.94  
+HT IX (B): HT - Public Services Others   13.34   5.90  7.50%  3.20%  10.46%   1.63   5.12   1.98   1.98   1.94  
+HT X: HT – Electric Vehicle Charging Station   9.48   5.90  7.50%  3.20%  10.46%   1.63   1.26   1.98  1.26 1.24 
+ 
+  
+--- Page 113 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 113 of 123  
+Cross Subsidy Surcharge for FY 2029 -30 – LT Category  
+Consumer Category  T 
+(ABR)  C WL TL L D = WL + 
+Tx CSS 
+Computed  20% of 
+ACoS  Approved 
+CSS Approved 
+CSS 
+Rs./kWh  % % % Rs./kWh  Rs./kWh  Rs./kWh  Rs./kWh  Rs./kVAh  
+ LT Residential                      
+ LT I(A): LT - Residential -BPL  2.62 5.90 12.00%  3.20%  14.82%  2.43 -  NA NA 
+ LT I(B): LT - Residential            
+ 1-100 units  6.00 5.90 12.00%  3.20%  14.82%  2.43 -  NA NA 
+ 101-300 units  12.62  5.90 12.00%  3.20%  14.82%  2.43 3.27 1.98 1.98 1.88 
+ 301-500 units  16.35  5.90 12.00%  3.20%  14.82%  2.43 7.00 1.98 1.98 1.88 
+ Above 500 units  18.47  5.90 12.00%  3.20%  14.82%  2.43 9.12 1.98 1.98 1.88 
+ Three Phase Charges            
+ LT II: LT - Non-Residential            
+ (A) (i): 0 – 20 kW   12.74  5.90 12.00%  3.20%  14.82%  2.43 3.38 1.98 NA NA 
+ (B): >20 kW and ≤ 50 kW  16.41  5.90 12.00%  3.20%  14.82%  2.43 7.06 1.98 NA NA 
+ (C): >50 KW  18.77  5.90 12.00%  3.20%  14.82%  2.43 9.41 1.98 1.98 1.88 
+ LT III: LT - Public Water Works (PWW)            
+ (A): 0 -20 KW  5.87 5.90 12.00%  3.20%  14.82%  2.43 - 1.98 NA NA 
+ (B): > 20 kW and ≤ 40 kW  8.47 5.90 12.00%  3.20%  14.82%  2.43 - 1.98 NA NA 
+ (C): > 40 kW  10.98  5.90 12.00%  3.20%  14.82%  2.43 1.62 1.98 1.62 1.54 
+LT V(B): LT - Industry - General                    
+ (i): 0 -20 kW  8.31 5.90 12.00%  3.20%  14.82%  2.43 - 1.98 NA NA 
+ (ii): Above 20 kW  10.81  5.90 12.00%  3.20%  14.82%  2.43 1.45 1.98 1.45 1.38 
+ LT VI: LT - Street Light            
+ (A): Grampanchayat;  A B & C Class Municipal 
+Council  9.13 5.90 12.00%  3.20%  14.82%  2.43 - 1.98 - - 
+ (B): Municipal corporation Area  11.25  5.90 12.00%  3.20%  14.82%  2.43 1.90 1.98 1.90 1.80 
+ LT X (A) - Public Services Government             
+ (i): ≤ 20 kW   11.53  5.90 12.00%  3.20%  14.82%  2.43 2.17 2.12 NA NA 
+ (ii): >20 - ≤ 50 kW  8.93 5.90 12.00%  3.20%  14.82%  2.43 - 2.12 NA NA 
+ iii): >50 kW  9.86 5.90 12.00%  3.28%  14.89%  2.43 0.50 2.12 0.50 0.47 
+ LT X (B) - Public Services Government             
+ (i): ≤ 20 kW       9.15    5.90  12.00%  3.20%  14.82%           2.43                  -          2.12  NA NA 
+ (ii): >20 - ≤ 50 kW    13.63    5.90  12.00%  3.20%  14.82%           2.43               4.27        2.12  NA NA 
+ iii): >50 kW    13.28    5.90  12.00%  3.28%  14.89%           2.43               3.91        2.12             2.12            2.02  
+ LT XI – Electric Vehicle Charging Station  9.91 5.90 12.00%  3.20%  14.82%  2.43 0.55 1.98 0.55 0.52 
+ 
+  
+--- Page 114 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 114 of 123 Annexure IV: Monthly Power Purchase Expenses  
+A) For FY 2025 -26 
+Particulars  VC per 
+unit 
+(Rs./kWh)  Apr-25 May -25 Jun-25 Jul-25 Aug-25 Sep-25 Oct-25 Nov-25 Dec-25 Jan-26 Feb-26 Mar -26 
+Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  
+Must Run 
+Generating Stations                                                    
+KAPP  4.01 85 34.2 88 35.3 85 34.2 88 35.3 88 35.3 85 34.2 88 35.3 85 34.2 88 35.3 88 35.3 80 31.9 88 35.3 
+KAPP 3 & 4  4.01 256 102.8  265 106.2  256 102.8  265 106.2  265 106.2  256 102.8  265 106.2  256 102.8  265 106.2  265 106.2  239 95.9 265 106.2  
+TAPP 1 & 2  4.60 95 43.7 98 45.1 95 43.7 98 45.1 98 45.1 95 43.7 98 45.1 95 43.7 98 45.1 98 45.1 89 40.8 98 45.1 
+TAPP 3 & 4  3.69 248 91.8 257 94.8 248 91.8 257 94.8 257 94.8 248 91.8 257 94.8 248 91.8 257 94.8 257 94.8 232 85.7 257 94.8 
+SSP 2.05 80 16.4 83 16.9 80 16.4 83 16.9 83 16.9 80 16.4 83 16.9 80 16.4 83 16.9 83 16.9 75 15.3 83 16.9 
+Pench  2.05 11 2.3 11 2.3 11 2.3 11 2.3 11 2.3 11 2.3 11 2.3 11 2.3 11 2.3 11 2.3 10 2.1 11 2.3 
+Dodson II  0.00 10 0.0 10 0.0 10 0.0 10 0.0 10 0.0 10 0.0 10 0.0 10 0.0 10 0.0 10 0.0 9 0.0 10 0.0 
+Subhansari 
+Hydro  5.00 37 18.4 38 19.0 37 18.4 38 19.0 38 19.0 37 18.4 38 19.0 37 18.4 38 19.0 38 19.0 34 17.1 38 19.0 
+Hydro  0.00 426 0.0 540 0.0 235 0.0 232 0.0 519 0.0 343 0.0 402 0.0 173 0.0 138 0.0 253 0.0 168 0.0 207 0.0 
+Total Solar    1680  566.6  2000  670.0  2054  684.7  1796  596.5  2421  801.3  2128  703.2  2848  940.1  2221  732.2  2618  862.0  2794  919.0  2998  985.1  3840  1261.0  
+Renewable - 
+Solar intra  3.20 1246  398.6  1547  494.9  1640  524.7  1471  470.5  2022  646.9  1792  573.3  2418  773.5  1899  607.4  2253  720.6  2419  773.7  2609  834.7  3358  1074.1  
+Renewable - 
+Solar inter (Loss 
+not applicable)  3.87 434 168.0  453 175.1  413 160.0  326 126.0  399 154.5  336 129.9  431 166.6  322 124.8  365 141.4  376 145.4  389 150.4  483 186.8  
+Renewable - 
+Solar inter  0.00                                                 
+Renewable - 
+Wind  4.47 364 162.8  652 291.7  1197  535.4  1486  664.6  1093  488.9  853 381.3  273 122.0  294 131.3  360 161.2  313 139.8  271 121.3  421 188.5  
+Renewable - 
+Bagasse based 
+Co-gen 6.01 207 124.4  113 68.2 35 21.1 17 10.5 7 4.1 16 9.8 31 18.9 530 318.9  743 446.7  777 466.9  698 419.6  611 367.2  
+Renewable - 
+Biomass  8.65 3 2.3 1 1.3 0 0.4 0 0.2 0 0.1 0 0.2 0 0.3 7 5.9 10 8.3 10 8.7 9 7.8 8 6.8 
+Renewable - 
+Small Hydro  3.34 62 20.7 79 26.3 34 11.4 34 11.3 76 25.2 50 16.7 59 19.6 25 8.4 20 6.7 37 12.3 24 8.2 30 10.1 
+Renewable - 
+MSW  4.88 0 0.1 0 0.1 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 1 0.4 1 0.5 1 0.5 1 0.5 1 0.4 
+Renewable - 
+Hybrid intra  2.56 50 12.7 59 15.1 70 18.0 70 18.0 66 16.9 54 13.8 47 12.0 37 9.6 43 11.1 43 11.0 43 11.0 56 14.2 
+Renewable - 
+PHSP (JSW, 
+Torrent, SSP 
+PHSP & 
+Ghatghar)  0.00 38 0.0 39 0.0 38 0.0 39 0.0 39 0.0 38 0.0 39 0.0 38 0.0 39 0.0 39 0.0 35 0.0 39 0.0 
+Short term  5.50 82 45.2 72 39.7 168 92.2 0 0.0 3 1.4 9 4.9 347 190.9  65 35.8 2 1.2 8 4.1 58 31.8 254 139.8  
+Stations under 
+MoD                                                    
+Lara 1.52 171 25.9 176 26.7 171 25.9 176 26.7 176 26.7 171 25.9 176 26.7 171 25.9 176 26.7 176 26.7 159 24.1 176 26.7 
+KSTPS III  1.72 79 13.6 82 14.1 79 13.6 82 14.1 82 14.1 79 13.6 82 14.1 79 13.6 81 14.0 82 14.1 74 12.7 82 14.0 
+KSTPS  1.74 399 69.5 413 71.8 399 69.5 413 71.8 413 71.8 399 69.5 413 71.8 399 69.5 411 71.6 413 71.8 373 64.9 412 71.7 
+SIPAT TPS 1  2.06 343 70.5 354 72.8 343 70.5 354 72.8 354 72.8 343 70.5 354 72.8 343 70.5 352 72.4 354 72.8 320 65.8 352 72.4 
+VSTP II  2.07 205 42.6 212 44.0 205 42.6 212 44.0 212 44.0 205 42.6 212 44.0 205 42.6 211 43.7 212 44.0 192 39.7 211 43.7 
+VSTP III  2.08 174 36.3 180 37.5 174 36.3 180 37.5 180 37.5 174 36.3 180 37.5 174 36.3 178 37.2 180 37.5 163 33.9 178 37.1 
+VSTP IV  2.12 185 39.2 191 40.5 185 39.2 191 40.5 190 40.4 185 39.2 190 40.4 185 39.2 189 40.0 191 40.4 172 36.6 188 39.8 
+VSTP V  2.15 100 21.4 103 22.2 100 21.4 103 22.2 103 22.1 100 21.4 103 22.1 100 21.4 102 21.8 103 22.1 93 20.0 101 21.7 
+ 
+ 
+  
+--- Page 115 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 115 of 123 Particulars  VC per 
+unit 
+(Rs./kW
+h) Apr-25 May -25 Jun-25 Jul-25 Aug-25 Sep-25 Oct-25 Nov-25 Dec-25 Jan-26 Feb-26 Mar -26 
+Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  Energy 
+(MU)  VC (Rs. 
+Crore)  
+Must Run Generating 
+Stations                                                    
+SIPAT TPS 2  2.16 174 37.5 180 38.7 174 37.5 180 38.7 179 38.6 174 37.5 178 38.5 174 37.5 176 38.0 179 38.6 162 35.0 174 37.6 
+VSTP I  2.18 253 55.3 262 57.2 253 55.3 262 57.2 260 56.9 253 55.3 259 56.7 253 55.3 255 55.8 261 57.0 235 51.4 250 54.7 
+RIPL 450 MW  2.64 271 71.6 280 74.0 271 71.6 280 73.9 278 73.4 271 71.6 276 72.9 270 71.4 273 72.0 279 73.7 252 66.5 263 69.4 
+RIPL 750 MW  2.64 452 119.4  467 123.3  452 119.4  464 122.6  460 121.5  451 119.2  458 120.9  449 118.6  450 119.0  462 122.0  412 108.9  422 111.3  
+KhSTPS -II 2.90 82 23.8 85 24.6 82 23.8 84 24.4 83 24.0 82 23.7 83 24.0 81 23.5 81 23.4 83 24.2 73 21.3 74 21.6 
+SWPGL 240 MW  3.12 145 45.1 149 46.6 145 45.1 148 46.1 146 45.5 144 44.8 146 45.4 143 44.5 142 44.2 145 45.3 128 40.0 131 40.7 
+GMR Energy  3.26 116 37.9 120 39.2 116 37.9 119 38.8 117 38.1 115 37.6 117 38.1 115 37.4 113 36.9 116 37.9 102 33.3 104 33.9 
+Koradi - 8 to 10  3.32 1005  333.8  1039  345.0  1004  333.5  1005  333.8  994 330.2  974 323.6  997 331.3  982 326.3  941 312.5  970 322.3  838 278.3  862 286.4  
+Khaparkheda - 5 3.33 271 90.1 280 93.1 269 89.5 260 86.6 261 86.7 254 84.7 266 88.6 261 86.9 244 81.3 249 82.9 216 72.0 224 74.5 
+CGPL  3.41 442 150.7  455 155.1  436 148.8  412 140.6  418 142.7  409 139.5  430 146.8  423 144.3  389 132.6  398 135.8  347 118.5  359 122.3  
+Bhusawal - 6 3.56 380 135.2  390 138.8  373 132.9  340 121.2  347 123.4  343 122.0  366 130.4  360 128.3  324 115.3  335 119.2  291 103.8  302 107.5  
+Koradi - 6 3.59 202 72.7 208 74.6 198 71.0 177 63.6 179 64.3 178 64.0 193 69.4 190 68.2 170 61.1 176 63.4 153 54.9 158 56.8 
+Chandrapur - 8 & 
+9 3.66 541 198.2  555 203.0  521 190.5  452 165.4  459 168.1  462 169.2  502 183.9  497 181.9  445 162.9  466 170.6  402 147.0  413 151.1  
+Khaparkheda - 1 
+to 4 3.73 406 151.5  416 155.1  380 141.6  319 119.0  334 124.6  337 125.5  361 134.5  361 134.5  329 122.6  341 127.3  295 110.1  304 113.3  
+Mauda I  3.99 244 97.1 248 98.8 223 89.0 184 73.5 195 77.8 197 78.5 211 84.0 211 84.0 195 77.7 200 79.7 173 69.0 180 71.9 
+Paras - 3 & 4  4.03 257 103.3  260 104.5  233 93.7 188 75.8 202 81.2 203 81.9 217 87.4 217 87.4 204 82.0 208 83.6 181 72.8 190 76.3 
+Mauda II  4.05 329 133.4  331 134.2  293 118.6  233 94.6 254 103.0  253 102.7  270 109.5  273 110.8  257 104.2  263 106.7  230 93.4 241 97.6 
+APML 1320 MW  4.27 784 334.8  745 318.4  655 279.6  503 215.0  577 246.4  583 249.2  628 268.3  632 270.0  600 256.1  620 264.8  540 230.4  569 243.1  
+Bhusawal - 4 & 5  4.28 547 233.8  485 207.4  430 183.9  299 127.7  375 160.2  401 171.5  433 184.9  424 181.3  419 179.1  438 187.3  377 161.4  402 171.8  
+Gadarwara  4.29 61 26.2 53 22.9 47 20.2 30 13.0 41 17.6 45 19.3 49 21.0 47 20.1 46 19.8 50 21.3 43 18.4 45 19.5 
+Khargone  4.44 52 23.2 45 20.1 40 17.8 25 11.2 35 15.5 38 17.1 42 18.6 40 17.9 39 17.4 42 18.8 37 16.4 39 17.3 
+APML 125 MW  4.46 68 30.4 59 26.5 53 23.4 32 14.5 46 20.4 51 22.6 55 24.5 53 23.6 51 22.7 56 24.9 49 21.7 51 22.7 
+APML 1200 MW  4.46 660 294.5  580 258.9  500 223.3  264 117.9  420 187.5  478 213.1  549 244.9  509 227.1  462 206.1  545 243.1  486 216.8  509 227.1  
+Chandrapur - 3 to 
+7 4.47 606 270.5  555 248.0  455 203.3  131 58.3 354 158.0  365 163.1  533 238.2  466 207.9  332 148.1  508 227.1  502 224.2  524 234.0  
+Short -term (100 
+MW)  4.50 4 1.9 2 1.1 2 1.0 0 0.1 1 0.6 2 0.9 3 1.3 3 1.3 3 1.5 5 2.4 4 2.0 3 1.3 
+Short -term (200 
+MW)  4.51 23 10.4 23 10.4 18 8.3 3 1.4 14 6.4 15 6.6 23 10.3 17 7.8 11 4.8 20 9.1 22 9.7 24 10.8 
+APML 440 MW  4.52 181 81.7 166 75.1 134 60.4 14 6.3 73 33.0 81 36.6 162 73.5 132 59.6 70 31.5 127 57.4 157 71.1 168 75.9 
+JSW  4.77 118 56.4 106 50.8 89 42.2 6 3.0 39 18.5 45 21.7 107 51.0 85 40.6 42 19.9 74 35.3 103 49.3 114 54.4 
+NVVNL Coal  4.77 7 3.5 7 3.1 6 2.7 0 0.2 2 1.1 3 1.2 7 3.3 5 2.5 2 1.2 4 2.1 6 3.1 7 3.5 
+NTPC Solapur  5.12 239 122.6  211 107.9  178 91.1 6 3.3 61 31.4 70 35.6 225 115.0  161 82.7 71 36.6 123 63.0 204 104.4  239 122.5  
+Bhusawal - 3 5.17 61 31.5 54 28.2 47 24.2 1 0.3 13 6.7 14 7.2 60 30.9 37 19.1 16 8.5 27 13.8 53 27.2 64 32.9 
+Parli Replacement 
+U 8 5.23 66 34.5 60 31.5 53 27.5 1 0.4 13 6.6 13 7.0 66 34.6 40 21.0 17 8.9 27 14.0 55 28.9 72 37.5 
+GTPS Uran  5.23 94 49.3 89 46.3 80 41.6 1 0.5 16 8.3 17 9.0 101 52.6 56 29.4 23 11.9 36 18.8 75 39.0 108 56.7 
+Nashik - 3,4 & 5  5.24 115 60.4 114 59.6 107 55.9 0 0.3 14 7.4 20 10.2 141 73.8 75 39.1 23 12.0 43 22.3 82 42.8 147 76.9 
+Parli - 6 & 7  5.37 72 38.6 79 42.3 77 41.3 0 0.1 6 3.3 13 6.8 107 57.4 49 26.4 10 5.5 26 14.0 50 27.0 106 56.9 
+Kawas  12.44  29 36.6 34 42.9 35 44.1 0 0.0 2 2.4 6 7.4 51 63.9 20 24.5 3 4.0 9 11.1 21 25.7 49 60.5 
+Gandhar  12.44  25 30.9 29 36.2 33 41.0 0 0.0 1 1.7 4 5.5 47 59.0 16 20.1 2 2.1 6 7.1 18 21.8 44 54.5 
+ 
+  
+--- Page 116 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 116 of 123  
+B) For FY 2026 -27 
+ 
+Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)
+ Must Run Generating Stations 
+KAPP 4.15 86 35.6 89 36.8 86 35.6 89 36.8 89 36.8 86 35.6 89 36.8 86 35.6 89 36.8 89 36.8 80 33.3 89 36.8
+KAPP 3 & 4 4.15 258 107.0 267 110.5 258 107.0 267 110.5 267 110.5 258 107.0 267 110.5 258 107.0 267 110.5 267 110.5 241 99.9 267 110.5
+TAPP 1 & 2 4.76 92 43.9 95 45.4 92 43.9 95 45.4 95 45.4 92 43.9 95 45.4 92 43.9 95 45.4 95 45.4 86 41.0 95 45.4
+TAPP 3 & 4 3.78 250 94.6 258 97.8 250 94.6 258 97.8 258 97.8 250 94.6 258 97.8 250 94.6 258 97.8 258 97.8 233 88.3 258 97.8
+SSP 2.05 20 4.2 14 2.9 19 3.8 104 21.3 225 46.2 152 31.2 131 26.8 51 10.4 53 10.9 70 14.3 54 11.1 33 6.8
+Pench 2.05 3 0.6 2 0.4 3 0.5 14 2.9 31 6.4 21 4.3 18 3.7 7 1.4 7 1.5 10 2.0 7 1.5 5 0.9
+Dodson II 0.00 19 0.0 15 0.0 6 0.0 3 0.0 9 0.0 5 0.0 3 0.0 8 0.0 9 0.0 17 0.0 18 0.0 20 0.0
+Subhansari Hydro 5.00 10 4.8 7 3.3 9 4.3 49 24.3 105 52.7 71 35.5 61 30.5 24 11.8 25 12.4 33 16.3 25 12.6 16 7.8
+Kiru HE Project 4.64 6 2.6 4 1.8 5 2.4 29 13.4 63 29.1 42 19.6 36 16.9 14 6.5 15 6.9 19 9.0 15 7.0 9 4.3
+ Hydro  0.00 632 0.0 561 0.0 232 0.0 154 0.0 175 0.0 162 0.0 162 0.0 165 0.0 166 0.0 235 0.0 278 0.0 532 0.0
+ Total Solar 3303 1041 3727 1170 3632 1138 2514 799 3871 1207 3074 964 4218 1317 3230 1008 3806 1186 4043 1257 4085 1272 4999 1558
+ Renewable - Solar intra 3.04 2847 864.3 3263 990.7 3209 974.3 2093 635.3 3486 1058.3 2708 822.2 3780 1147.5 2900 880.4 3439 1043.9 3690 1120.2 3702 1124.0 4514 1370.3
+ Renewable - Solar inter (Loss not applicable) 3.87 456 176.5 464 179.6 423 163.6 422 163.2 385 149.1 366 141.5 438 169.7 330 127.5 367 142.0 353 136.7 383 148.0 485 187.7
+ Renewable - Solar inter  2.67 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+ Renewable - Wind 4.37 358 156.5 639 279.3 1171 511.6 1453 634.9 1074 469.4 834 364.5 267 116.7 288 125.7 352 154.0 306 133.7 266 116.2 412 180.2
+ Renewable - Bagasse based Co-gen 5.54 235 130.2 129 71.4 40 22.1 20 11.0 8 4.3 18 10.2 36 19.8 603 333.9 845 467.7 883 488.9 794 439.3 694 384.4
+ Renewable - Biomass 9.07 3 2.5 1 1.3 0 0.4 0 0.2 0 0.1 0 0.2 0 0.4 7 6.3 10 8.8 10 9.2 9 8.3 8 7.2
+ Renewable - Small Hydro 3.34 70 23.5 46 15.5 34 11.5 54 17.9 71 23.8 63 20.9 48 16.1 51 17.0 47 15.5 59 19.7 59 19.8 54 17.9
+ Renewable - MSW 4.88 0 0.1 0 0.1 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 1 0.4 1 0.5 1 0.5 1 0.5 1 0.4
+ Renewable - Hybrid intra 2.56 49 12.5 59 15.0 71 18.1 65 16.6 68 17.4 52 13.4 47 12.0 37 9.6 43 11.1 45 11.5 44 11.2 56 14.4
+ Renewable - Hybrid Inter 3.43 168 57.6 211 72.4 187 64.1 184 63.1 240 82.2 163 56.0 145 49.9 123 42.1 146 50.1 121 41.4 138 47.3 169 58.1
+ Renewable - FDRE 4.46 747 333.1 922 411.3 1005 448.3 1053 469.7 1028 458.3 810 361.1 662 295.4 675 301.2 742 330.8 797 355.4 755 336.8 795 354.4
+ Renewable - BESS 0.00 83 0.0 71 0.0 83 0.0 82 0.0 80 0.0 74 0.0 99 0.0 85 0.0 86 0.0 95 0.0 61 0.0 72 0.0
+ Renewable - PHSP (JSW, Torrent, SSP PHSP & 
+Ghatghar) 0.00 39 0.0 40 0.0 41 0.0 41 0.0 41 0.0 40 0.0 42 0.0 41 0.0 41 0.0 46 0.0 39 0.0 41 0.0
+ Short term 5.50 27 14.6 2 1.1 5 2.7 13 6.9 19 10.5 23 12.9 0 0.2 10 5.3 22 11.9 10 5.3 17 9.2 15 8.2
+ Stations under MoD 
+ Lara 1.52 172.12 26.2 173 26.4 167 25.4 180 27.5 173 26.3 173 26.3 174 26.5 175 26.6 178 27.0 179 27.3 159 24.3 173 26.4
+ KSTPS III 1.74 75.22 13.1 76 13.1 73 12.7 79 13.7 75 13.1 76 13.1 76 13.2 76 13.2 78 13.5 78 13.6 70 12.1 76 13.1
+ KSTPS 1.76 381.11 67.1 384 67.7 370 65.0 399 70.3 383 67.4 383 67.4 387 68.0 387 68.1 395 69.4 398 70.0 353 62.2 384 67.6
+ VSTP II 2.02 202.06 40.9 204 41.3 196 39.6 212 42.9 203 41.2 203 41.1 205 41.5 205 41.5 209 42.4 211 42.7 187 37.9 204 41.2
+ VSTP III 2.04 167.80 34.3 169 34.6 162 33.2 176 36.0 169 34.5 168 34.4 170 34.8 170 34.8 174 35.5 175 35.8 155 31.8 169 34.6Nov Dec Jan Feb Mar
+ParticularsEnergy 
+Charge 
+(Rs./kWh)Apr May Jun Jul Aug Sep Oct
+--- Page 117 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 117 of 123  
+Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)
+ SIPAT TPS 1 2.08 341.97 71.2 346 72.1 332 69.2 359 74.7 345 71.9 345 71.7 348 72.5 349 72.6 356 74.1 358 74.6 318 66.2 345 71.9
+ VSTP I 2.13 252.54 53.8 256 54.4 245 52.3 264 56.1 255 54.3 255 54.2 257 54.7 257 54.6 263 56.0 264 56.2 235 50.0 254 54.1
+ VSTP IV 2.15 179.79 38.6 182 39.0 175 37.5 187 40.2 182 39.0 181 38.8 183 39.3 182 39.0 187 40.2 188 40.4 167 35.9 181 38.8
+ VSTP V 2.17 96.74 21.0 98 21.3 94 20.5 101 21.9 98 21.3 97 21.1 99 21.4 98 21.2 101 21.9 101 22.0 90 19.6 97 21.2
+ SIPAT TPS 2 2.18 165.51 36.1 168 36.6 161 35.2 172 37.6 167 36.5 166 36.3 169 36.8 167 36.5 173 37.7 174 37.9 154 33.7 167 36.4
+ RIPL 450 MW 2.68 258.71 69.4 262 70.2 252 67.6 268 71.8 262 70.3 260 69.6 264 70.8 260 69.7 270 72.4 271 72.8 242 64.8 261 69.9
+ RIPL 750 MW 2.68 431.33 115.7 437 117.1 419 112.5 447 119.9 437 117.2 432 115.9 440 117.9 434 116.3 451 121.0 452 121.2 402 107.7 435 116.6
+ KhSTPS-II 2.94 85.11 25.0 86 25.4 83 24.4 88 25.9 86 25.4 85 25.0 87 25.6 85 25.0 89 26.1 89 26.2 79 23.3 86 25.3
+ SWPGL 240 MW 3.14 132.26 41.6 137 43.0 132 41.6 137 43.0 137 43.0 132 41.6 137 43.0 132 41.6 137 43.0 137 43.0 123 38.8 137 43.0
+ GMR Energy 3.20 114.56 36.7 116 37.2 112 35.8 118 37.8 116 37.2 115 36.7 117 37.4 114 36.5 119 38.2 120 38.4 107 34.2 116 37.1
+ Koradi - 8 to 10  3.38 938.04 316.9 969 327.5 938 316.9 969 327.5 969 327.5 747 252.3 969 327.5 938 316.9 969 327.5 923 311.9 876 295.8 893 301.6
+ Khaparkheda - 5 3.43 275.12 94.3 284 97.5 275 94.3 284 97.5 284 97.5 275 94.3 284 97.5 275 94.3 284 97.5 284 97.5 257 88.0 284 97.5
+ CGPL 3.43 407.12 139.7 421 144.4 407 139.7 421 144.4 421 144.4 407 139.7 421 144.4 407 139.7 421 144.4 421 144.4 380 130.4 421 144.4
+ Chandrapur - 8 & 9 3.62 553.62 200.3 572 206.9 554 200.3 572 206.9 572 206.9 554 200.3 572 206.9 554 200.3 572 206.9 572 206.9 517 186.9 572 206.9
+ Bhusawal - 6 3.67 379.68 139.3 386 141.7 372 136.5 390 143.1 386 141.4 379 139.1 389 142.5 380 139.2 390 143.2 392 143.9 354 130.0 385 141.4
+ Koradi - 6 3.70 84.12 31.1 102 37.9 99 36.7 102 37.9 102 37.9 99 36.7 102 37.9 99 36.7 102 37.9 102 37.9 93 34.3 102 37.9
+ Khaparkheda - 1 to 4 3.84 352.81 135.5 362 138.9 406 156.0 420 161.2 420 161.2 406 156.0 420 161.2 406 156.0 420 161.2 420 161.2 379 145.6 420 161.2
+ Mauda I 3.95 228.76 90.4 231 91.3 223 88.2 232 91.8 229 90.7 227 89.9 233 92.2 227 89.9 218 86.1 235 92.8 214 84.6 232 91.5
+ Mauda II 4.09 314.29 128.6 318 130.2 307 125.8 221 90.4 309 126.3 313 128.0 322 131.8 313 128.2 294 120.4 322 132.0 295 120.8 320 130.9
+ Paras - 3 & 4 4.20 256.93 108.0 265 111.6 257 108.0 215 90.4 265 111.6 257 108.0 265 111.6 257 108.0 264 110.9 265 111.6 240 100.8 265 111.6
+ Gadarwara 4.35 63.07 27.4 63 27.3 58 25.4 14 5.9 45 19.6 56 24.1 64 27.9 48 20.7 29 12.5 41 18.0 59 25.8 64 28.1
+ Bhusawal - 4 & 5 4.40 554.98 244.4 573 252.5 549 241.9 130 57.2 550 242.3 437 192.3 573 252.5 555 244.4 522 229.9 558 245.6 518 228.1 573 252.5
+ APML 1320 MW 4.42 745.72 329.5 748 330.4 701 309.6 307 135.7 562 248.5 705 311.4 763 337.0 741 327.6 618 273.1 674 297.6 701 309.9 761 336.3
+ Khargone 4.50 18.64 8.4 44 19.7 41 18.4 11 4.8 0 0.0 11 5.1 55 24.8 33 14.6 21 9.3 13 5.7 11 5.1 30 13.7
+ APML 125 MW 4.52 70.13 31.7 70 31.7 64 29.1 14 6.3 32 14.5 45 20.5 72 32.4 65 29.5 13 6.1 48 21.6 49 22.3 72 32.6
+ APML 1200 MW 4.52 674.12 304.9 673 304.4 619 280.1 131 59.4 307 138.6 441 199.6 687 310.9 637 288.3 544 246.2 312 141.1 633 286.2 690 312.0
+ APML 440 MW 4.58 163.35 74.9 190 87.2 179 82.2 47 21.7 46 21.0 136 62.3 244 111.6 127 58.1 55 25.4 212 97.2 116 53.1 183 83.8
+ Chandrapur - 3 to 7 4.61 726.50 335.2 841 388.2 758 349.9 0 0.0 211 97.2 215 99.2 832 383.9 652 301.0 336 155.1 673 310.5 633 292.3 841 388.2
+ NVVNL Coal  4.76 7.45 3.5 9 4.1 8 3.8 2 1.0 0 0.0 2 1.1 11 5.2 6 3.1 0 0.0 2 1.0 0 0.0 4 1.7
+ JSW 4.99 111.06 55.4 92 45.7 121 60.4 32 15.8 0 0.0 33 16.6 163 81.4 51 25.6 0 0.0 34 17.0 33 16.6 54 26.9
+ NTPC Solapur 5.19 232.76 120.8 277 143.7 106 54.8 0 0.0 0 0.0 70 36.4 362 187.8 91 47.3 0 0.0 0 0.0 0 0.0 85 44.0
+ GTPS Uran  5.23 192.92 100.9 199 104.3 193 100.9 199 104.3 199 104.3 193 100.9 199 104.3 193 100.9 199 104.3 199 104.3 180 94.2 199 104.3
+ Bhusawal - 3 5.33 43.89 23.4 61 32.7 28 15.1 0 0.0 0 0.0 21 11.4 83 44.5 28 14.8 0 0.0 0 0.0 0 0.0 25 13.6
+ Parli Replacement U 8 5.39 44.69 24.1 31 16.6 30 16.2 0 0.0 0 0.0 52 28.0 97 52.3 0 0.0 0 0.0 26 14.3 0 0.0 31 16.6
+ Nashik- 3,4 & 5 5.40 98.34 53.1 76 40.9 73 39.5 0 0.0 0 0.0 62 33.7 320 173.0 0 0.0 0 0.0 63 34.0 0 0.0 67 36.4
+ Parli - 6 & 7 5.53 152.78 84.5 0 0.0 0 0.0 0 0.0 0 0.0 101 55.7 201 110.9 0 0.0 0 0.0 52 28.8 0 0.0 48 26.8
+ Kawas 12.00 12.98 15.6 48 57.0 50 60.3 14 17.0 13 16.0 17 20.5 28 33.8 2 3.0 2 2.9 4 4.2 4 4.7 5 5.4
+ Gandhar 12.00 12.65 15.2 47 56.5 49 59.1 14 16.9 13 15.5 16 19.3 27 32.1 3 3.3 2 2.5 3 3.9 3 4.1 4 5.3Nov Dec Jan Feb Mar
+ParticularsEnergy 
+Charge 
+(Rs./kWh)Apr May Jun Jul Aug Sep Oct
+--- Page 118 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 118 of 123 C) FY 2027 -28 
+ 
+Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)
+ Must Run Generating Stations 
+KAPP 4.29         86 36.9 89 38.1 86 36.9 89 38.1 89 38.1 86 36.9 89 38.1 86 36.9 89 38.1 89 38.1 80 34.4 89 38.1
+KAPP 3 & 4 4.29         258 110.7 267 114.4 258 110.7 267 114.4 267 114.4 258 110.7 267 114.4 258 110.7 267 114.4 267 114.4 241 103.3 267 114.4
+TAPP 1 & 2 4.93         92 45.4 95 46.9 92 45.4 95 46.9 95 46.9 92 45.4 95 46.9 92 45.4 95 46.9 95 46.9 86 42.4 95 46.9
+TAPP 3 & 4 3.88         250 96.9 258 100.2 250 96.9 258 100.2 258 100.2 250 96.9 258 100.2 250 96.9 258 100.2 258 100.2 233 90.5 258 100.2
+SSP 2.05         20 4.2 14 2.9 19 3.8 104 21.3 225 46.2 152 31.2 131 26.8 51 10.4 53 10.9 70 14.3 54 11.1 33 6.8
+Pench 2.05         3 0.6 2 0.4 3 0.5 14 2.9 31 6.4 21 4.3 18 3.7 7 1.4 7 1.5 10 2.0 7 1.5 5 0.9
+Dodson II -           19 0.0 15 0.0 6 0.0 3 0.0 9 0.0 5 0.0 3 0.0 8 0.0 9 0.0 17 0.0 18 0.0 20 0.0
+Subhansari Hydro 5.00         10 4.8 7 3.3 9 4.3 49 24.3 105 52.7 71 35.5 61 30.5 24 11.8 25 12.4 33 16.3 25 12.6 16 7.8
+Pakaldul HEP 4.28         5 2.2 4 1.5 5 2.0 27 11.4 58 24.6 39 16.6 33 14.3 13 5.5 14 5.8 18 7.6 14 5.9 9 3.6
+Ratle Hydroelectric Project 3.92         11 4.3 8 3.0 10 4.0 57 22.2 123 48.1 83 32.4 71 27.9 28 10.8 29 11.3 38 14.9 29 11.5 18 7.1
+Kiru HE Project 4.64         6 2.6 4 1.8 5 2.4 29 13.4 63 29.1 42 19.6 36 16.9 14 6.5 15 6.9 19 9.0 15 7.0 9 4.3
+ Hydro  -           632 0.0 561 0.0 232 0.0 154 0.0 175 0.0 162 0.0 162 0.0 165 0.0 167 0.0 235 0.0 278 0.0 532 0.0
+ Total Solar 4507 1406 4870 1517 4459 1389 2972 937 4506 1400 3474 1085 4653 1449 3474 1082 3977 1238 4227 1313 4269 1328 5223 1626
+ Renewable - Solar intra 3.04         4051 1229.7 4406 1337.5 4036 1225.4 2550 774.2 4120 1250.9 3108 943.6 4215 1279.5 3145 954.6 3610 1095.9 3874 1176.0 3887 1179.9 4738 1438.4
+ Renewable - Solar inter (Loss not applicable) 3.87         456 176.5 464 179.6 423 163.6 422 163.2 385 149.1 366 141.5 438 169.7 330 127.5 367 142.0 353 136.7 383 148.0 485 187.7
+ Renewable - Solar inter  2.66         0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+ Renewable - Wind 4.37         358 156.5 639 279.3 1171 511.6 1453 634.9 1074 469.4 834 364.5 267 116.7 288 125.7 352 154.0 306 133.7 266 116.2 412 180.2
+ Renewable - Bagasse based Co-gen 5.21         260 135.7 143 74.5 44 23.1 22 11.5 9 4.5 20 10.7 40 20.6 668 348.1 936 487.5 978 509.6 879 458.0 769 400.7
+ Renewable - Biomass 9.48         3 2.6 1 1.4 0 0.4 0 0.2 0 0.1 0 0.2 0 0.4 7 6.6 10 9.2 10 9.6 9 8.7 8 7.6
+ Renewable - Small Hydro 3.34         70 23.5 46 15.5 34 11.5 54 17.9 71 23.8 63 20.9 48 16.1 51 17.0 47 15.5 59 19.7 59 19.8 54 17.9
+ Renewable - MSW 4.88         0 0.1 0 0.1 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 1 0.4 1 0.5 1 0.5 1 0.5 1 0.4
+ Renewable - Hybrid intra 3.52         579 203.7 697 245.2 839 295.5 769 270.7 806 283.6 622 218.8 558 196.5 444 156.4 516 181.7 534 188.0 520 183.0 668 235.2
+ Renewable - Hybrid Inter 3.43         168 57.6 211 72.4 187 64.1 184 63.1 240 82.2 163 56.0 145 49.9 123 42.1 146 50.1 121 41.4 138 47.3 169 58.1
+ Renewable - FDRE 4.46         747 333.1 922 411.3 1005 448.3 1053 469.7 1028 458.3 810 361.1 662 295.4 675 301.2 742 330.8 797 355.4 755 336.8 795 354.4
+ Renewable - BESS -           71 0.0 65 0.0 70 0.0 91 0.0 76 0.0 61 0.0 104 0.0 77 0.0 103 0.0 92 0.0 90 0.0 63 0.0
+ Renewable - PHSP (JSW, Torrent, SSP PHSP & 
+Ghatghar) -           40 0.0 40 0.0 40 0.0 42 0.0 43 0.0 41 0.0 44 0.0 41 0.0 54 0.0 47 0.0 44 0.0 40 0.0
+ Short term 5.50         27 14.6 54 29.6 18 9.9 16 8.9 7 4.1 7 4.0 102 56.1 29 16.1 17 9.5 8 4.6 27 14.6 36 19.9
+ Stations under MoD 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+ Lara 1.58         168 26.5 171 27.1 165 26.1 178 28.1 171 27.1 171 27.1 173 27.4 173 27.4 178 28.1 179 28.4 160 25.3 173 27.4
+ KSTPS III 1.81         73 13.3 75 13.5 72 13.1 78 14.1 75 13.6 74 13.5 76 13.7 76 13.7 78 14.1 78 14.2 70 12.6 76 13.7
+ KSTPS 1.85         372 68.6 380 70.1 366 67.6 393 72.5 380 70.2 378 69.7 384 70.9 384 70.8 395 72.8 398 73.4 354 65.3 384 70.8
+ VSTP II 2.05         197 40.5 202 41.4 194 39.9 208 42.6 202 41.4 200 41.1 204 41.9 204 41.8 209 43.0 211 43.3 188 38.6 203 41.7Nov Dec Jan Feb Mar
+ParticularsEnergy 
+Charge 
+(Rs./kWh)Apr May Jun Jul Aug Sep Oct
+--- Page 119 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 119 of 123  
+ 
+Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)
+ VSTP III 2.08         164 34.1 168 34.8 162 33.6 172 35.8 168 34.9 166 34.6 169 35.2 169 35.1 174 36.1 175 36.5 156 32.4 169 35.1
+ VSTP I 2.15         248 53.3 253 54.5 245 52.6 261 56.1 254 54.5 251 54.0 256 55.1 255 54.9 263 56.5 265 57.1 236 50.7 256 55.0
+ SIPAT TPS 1 2.19         335 73.2 341 74.5 330 72.1 352 76.8 342 74.8 339 74.0 347 75.8 344 75.2 353 77.2 357 78.1 318 69.5 344 75.3
+ VSTP IV 2.25         176 39.7 179 40.4 173 39.0 185 41.6 180 40.5 178 40.1 182 41.0 181 40.7 184 41.6 188 42.4 168 37.8 181 40.7
+ VSTP V 2.28         95 21.7 96 22.0 93 21.2 99 22.7 97 22.1 96 21.8 98 22.3 97 22.2 99 22.6 101 23.1 90 20.6 97 22.2
+ SIPAT TPS 2 2.29         162 37.2 165 37.8 159 36.4 169 38.8 165 37.9 164 37.5 167 38.4 166 38.1 169 38.8 173 39.6 154 35.4 166 38.2
+ RIPL 450 MW 2.72         254 69.2 258 70.2 248 67.6 264 71.9 258 70.3 255 69.5 262 71.4 259 70.5 262 71.3 269 73.4 242 65.8 261 71.1
+ RIPL 750 MW 2.72         424 115.4 429 116.8 413 112.6 438 119.4 430 117.1 426 116.2 436 118.7 432 117.6 437 119.1 448 122.0 402 109.5 435 118.4
+ KhSTPS-II 3.09         84 25.8 85 26.1 82 25.2 86 26.6 84 25.9 84 25.9 86 26.6 85 26.3 85 26.4 88 27.3 79 24.5 86 26.6
+ SWPGL 240 MW 3.17         132 41.9 137 43.3 132 41.8 137 43.3 137 43.3 132 41.9 137 43.3 132 41.9 137 43.3 137 43.3 123 39.1 137 43.3
+ GMR Energy 3.26         113 36.7 114 37.1 110 35.7 115 37.5 113 36.8 113 36.7 116 37.8 114 37.3 113 36.9 119 38.7 107 34.8 116 37.7
+ Koradi - 8 to 10  3.42         938 320.8 969 331.5 938 320.8 969 331.5 969 331.5 865 295.8 969 331.5 938 320.8 969 331.5 969 331.5 796 272.2 969 331.5
+ Khaparkheda - 5 3.53         275 97.1 284 100.4 275 97.1 284 100.4 283 100.1 275 97.1 284 100.4 275 97.1 282 99.7 284 100.4 257 90.7 284 100.4
+ CGPL 3.57         407 145.5 421 150.3 407 145.5 420 149.9 419 149.8 407 145.5 421 150.3 407 145.5 403 143.9 421 150.3 380 135.8 421 150.3
+ Chandrapur - 8 & 9 3.58         554 198.2 572 204.8 552 197.7 566 202.6 561 200.9 554 198.2 572 204.8 554 198.2 552 197.5 572 204.8 517 185.0 572 204.8
+ Bhusawal - 6 3.78         375 141.8 379 143.3 362 136.8 361 136.4 365 137.9 369 139.4 387 146.1 379 143.1 348 131.4 392 148.2 354 133.7 386 145.9
+ Koradi - 6 3.81         99 37.8 102 39.1 99 37.8 102 39.1 102 39.1 99 37.8 102 39.1 99 37.8 102 39.1 102 39.1 93 35.3 102 39.1
+ Khaparkheda - 1 to 4 3.96         350 138.3 420 166.1 406 160.7 420 166.1 420 166.1 406 160.7 420 166.1 406 160.7 415 164.3 420 166.1 379 150.0 420 166.1
+ Mauda I 4.06         225 91.6 228 92.5 216 87.9 213 86.7 217 88.1 211 85.6 231 93.8 227 92.1 204 82.8 233 94.6 211 85.7 232 94.3
+ Mauda II 4.28         311 133.3 314 134.4 298 127.8 270 115.8 295 126.4 283 121.4 319 136.6 312 133.7 277 118.8 305 130.9 288 123.4 320 137.2
+ Paras - 3 & 4 4.33         257 111.2 265 114.9 257 111.2 255 110.4 264 114.4 255 110.6 265 114.9 257 111.2 248 107.4 265 114.9 240 103.8 265 114.9
+ Bhusawal - 4 & 5 4.54         555 251.7 569 258.2 539 244.5 279 126.4 526 238.7 500 227.0 573 260.1 555 251.7 476 215.8 538 243.8 488 221.4 573 260.1
+ Gadarwara 4.57         61 27.7 63 28.6 57 26.2 0 0.0 12 5.4 38 17.1 63 28.6 38 17.5 49 22.4 40 18.1 30 13.6 50 22.8
+ APML 1320 MW 4.57         737 336.9 574 262.3 693 316.5 141 64.6 511 233.3 484 221.3 757 345.8 704 321.9 608 277.6 664 303.3 606 277.1 761 347.5
+ APML 125 MW 4.59         69 31.8 70 32.2 64 29.5 0 0.0 46 21.0 58 26.6 71 32.7 62 28.4 56 25.9 60 27.5 55 25.4 70 32.2
+ APML 1200 MW 4.59         666 305.4 673 308.8 618 283.5 122 55.9 415 190.2 371 170.0 683 313.3 581 266.5 540 247.6 412 189.0 401 183.8 665 304.8
+ APML 440 MW 4.65         236 109.5 244 113.2 179 83.4 0 0.0 91 42.5 199 92.4 244 113.2 153 71.0 194 90.0 209 97.1 193 89.7 206 95.6
+ Khargone 4.73         55 25.9 57 26.7 41 19.4 0 0.0 0 0.0 34 15.9 55 25.9 24 11.5 0 0.0 25 11.6 22 10.6 33 15.4
+ Chandrapur - 3 to 7 4.77         814 388.3 810 386.1 759 362.0 0 0.0 191 90.8 388 185.2 821 391.6 630 300.4 537 256.3 473 225.7 760 362.4 811 386.7
+ NVVNL Coal  4.93         11 5.4 11 5.5 8 4.0 0 0.0 0 0.0 4 2.1 11 5.4 3 1.6 0 0.0 5 2.4 6 2.9 4 2.2
+ JSW 5.22         119 62.2 168 87.5 121 63.3 0 0.0 0 0.0 63 33.0 163 84.9 94 49.2 0 0.0 73 37.9 39 20.2 86 45.0
+ GTPS Uran  5.23         193 100.9 199 104.3 193 100.9 199 104.3 199 104.3 193 100.9 199 104.3 193 100.9 199 104.3 199 104.3 180 94.2 199 104.3
+ Parli Replacement U 8 5.38         97 52.4 106 57.2 99 53.4 0 0.0 0 0.0 55 29.5 129 69.5 41 22.0 0 0.0 45 24.3 27 14.4 43 23.3
+ NTPC Solapur 5.45         84 45.9 0 0.0 0 0.0 0 0.0 0 0.0 134 73.2 354 193.0 87 47.3 0 0.0 69 37.3 0 0.0 61 33.0
+ Bhusawal - 3 5.49         76 41.8 87 47.7 25 13.5 0 0.0 0 0.0 24 13.3 98 54.0 33 18.1 0 0.0 48 26.3 59 32.3 19 10.2
+ Nashik- 3,4 & 5 5.56         152 84.5 164 91.1 74 41.2 0 0.0 0 0.0 72 40.3 323 180.0 89 49.3 0 0.0 134 74.5 175 97.5 55 30.7
+ Parli - 6 & 7 5.70         0 0.0 0 0.0 60 34.2 0 0.0 0 0.0 97 55.1 254 144.6 62 35.5 0 0.0 0 0.0 0 0.0 0 0.0
+ Kawas 12.00      23 27.2 33 39.2 52 61.9 13 15.4 11 12.9 9 10.8 41 48.8 7 8.1 4 4.5 6 7.6 4 4.8 7 7.8
+ Gandhar 12.00      23      27.9 31      37.3 51      60.7 13      15.9 11      12.8 8         9.6 40      48.5 6         7.1 4         4.8 6         7.6 4 5.0 6 7.3Nov Dec Jan Feb Mar
+ParticularsEnergy 
+Charge 
+(Rs./kWh)Apr May Jun Jul Aug Sep Oct
+--- Page 120 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 120 of 123 D) FY 2028 -29 
+ 
+Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)
+ Must Run Generating Stations 
+KAPP 4.44           86 38.2 89 39.4 86 38.2 89 39.4 89 39.4 86 38.2 89 39.4 86 38.2 89 39.4 89 39.4 80 35.6 89 39.4
+KAPP 3 & 4 4.60           258 118.6 267 122.6 258 118.6 267 122.6 267 122.6 258 118.6 267 122.6 258 118.6 267 122.6 267 122.6 241 110.7 267 122.6
+TAPP 1 & 2 5.10           92 47.0 95 48.6 92 47.0 95 48.6 95 48.6 92 47.0 95 48.6 92 47.0 95 48.6 95 48.6 86 43.9 95 48.6
+TAPP 3 & 4 3.97           250 99.3 258 102.6 250 99.3 258 102.6 258 102.6 250 99.3 258 102.6 250 99.3 258 102.6 258 102.6 233 92.7 258 102.6
+SSP 2.05           20 4.2 14 2.9 19 3.8 104 21.3 225 46.2 152 31.2 131 26.8 51 10.4 53 10.9 70 14.3 54 11.1 33 6.8
+Pench 2.05           3 0.6 2 0.4 3 0.5 14 2.9 31 6.4 21 4.3 18 3.7 7 1.4 7 1.5 10 2.0 7 1.5 5 0.9
+Dodson II -             19 0.0 15 0.0 6 0.0 3 0.0 9 0.0 5 0.0 3 0.0 8 0.0 9 0.0 17 0.0 18 0.0 20 0.0
+Subhansari Hydro 5.00           10 4.8 7 3.3 9 4.3 49 24.3 105 52.7 71 35.5 61 30.5 24 11.8 25 12.4 33 16.3 25 12.6 16 7.8
+Pakaldul HEP 4.28           5 2.2 4 1.5 5 2.0 27 11.4 58 24.6 39 16.6 33 14.3 13 5.5 14 5.8 18 7.6 14 5.9 9 3.6
+Ratle Hydroelectric Project 3.92           11 4.3 8 3.0 10 4.0 57 22.2 123 48.1 83 32.4 71 27.9 28 10.8 29 11.3 38 14.9 29 11.5 18 7.1
+Kwar HEP 4.44           3 1.2 2 0.9 3 1.1 14 6.4 31 13.8 21 9.3 18 8.0 7 3.1 7 3.3 10 4.3 7 3.3 5 2.0
+Dugar HE Project 4.64           3 1.2 2 0.8 2 1.1 13 6.2 29 13.4 19 9.0 17 7.7 6 3.0 7 3.2 9 4.1 7 3.2 4 2.0
+Kiru HE Project 4.64           6 2.6 4 1.8 5 2.4 29 13.4 63 29.1 42 19.6 36 16.9 14 6.5 15 6.9 19 9.0 15 7.0 9 4.3
+ Hydro  -             632 0.0 561 0.0 232 0.0 154 0.0 175 0.0 162 0.0 162 0.0 165 0.0 167 0.0 235 0.0 278 0.0 532 0.0
+ Total Solar 4605 1438 4870 1519 4459 1391 2972 938 4506 1402 3474 1086 4653 1451 3474 1083 3977 1239 4227 1314 4269 1330 5223 1628
+ Renewable - Solar intra 3.04           4149 1261.3 4406 1339.3 4036 1227.0 2550 775.2 4120 1252.6 3108 944.8 4215 1281.2 3145 955.9 3610 1097.4 3874 1177.6 3887 1181.5 4738 1440.4
+ Renewable - Solar inter (Loss not applicable) 3.87           456 176.5 464 179.6 423 163.6 422 163.2 385 149.1 366 141.5 438 169.7 330 127.5 367 142.0 353 136.7 383 148.0 485 187.7
+ Renewable - Solar inter  2.67           0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+ Renewable - Wind 4.37           358 156.5 639 279.3 1171 511.6 1453 634.9 1074 469.4 834 364.5 267 116.7 288 125.7 352 154.0 306 133.7 266 116.2 412 180.2
+ Renewable - Bagasse based Co-gen 5.05           260 131.5 143 72.1 44 22.4 22 11.1 9 4.3 20 10.3 40 20.0 668 337.3 936 472.4 978 493.8 879 443.7 769 388.3
+ Renewable - Biomass 9.77           3 2.6 1 1.5 0 0.4 0 0.2 0 0.1 0 0.2 0 0.4 7 6.8 10 9.5 10 9.9 9 8.9 8 7.8
+ Renewable - Small Hydro 3.34           70 23.5 46 15.5 34 11.5 54 17.9 71 23.8 63 20.9 48 16.1 51 17.0 47 15.5 59 19.7 59 19.8 54 17.9
+ Renewable - MSW 4.88           0 0.1 0 0.1 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 1 0.4 1 0.5 1 0.5 1 0.5 1 0.4
+ Renewable - Hybrid intra 3.52           579 203.7 697 245.2 839 295.5 769 270.7 806 283.6 622 218.8 558 196.5 444 156.4 516 181.7 534 188.0 520 183.0 668 235.2
+ Renewable - Hybrid Inter 3.43           168 57.6 211 72.4 187 64.1 184 63.1 240 82.2 163 56.0 145 49.9 123 42.1 146 50.1 121 41.4 138 47.3 169 58.1
+ Renewable - FDRE 4.46           747 333.1 922 411.3 1005 448.3 1053 469.7 1028 458.3 810 361.1 662 295.4 675 301.2 742 330.8 797 355.4 755 336.8 795 354.4
+ Renewable - BESS -             82 0.0 64 0.0 68 0.0 65 0.0 83 0.0 72 0.0 73 0.0 77 0.0 87 0.0 85 0.0 59 0.0 61 0.0
+ Renewable - PHSP (JSW, Torrent, SSP 
+PHSP & Ghatghar) -             318 0.0 322 0.0 322 0.0 304 0.0 344 0.0 311 0.0 327 0.0 317 0.0 347 0.0 384 0.0 307 0.0 323 0.0
+ Short term 5.50           17 9.1 31 17.0 20 11.0 2 1.2 3 1.5 24 13.4 283 155.4 2 1.0 13 7.2 7 3.7 4 2.2 50 27.7
+ Stations under MoD 
+ Lara 1.65           172 28.2 173 28.6 169 27.8 182 30.0 173 28.4 174 28.6 176 28.9 177 29.1 181 29.7 181 29.8 161 26.5 175 28.8
+ Adani 1600 MW 1.72           0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 911 156.6 941 161.9 941 161.9 850 146.2 941 161.9
+ KSTPS III 1.89           75 14.2 76 14.3 74 13.9 80 15.1 75 14.3 76 14.3 77 14.5 78 14.7 79 14.9 79 15.0 70 13.3 76 14.4
+ KSTPS 1.93           380 73.4 385 74.5 374 72.3 403 78.0 383 74.2 384 74.4 390 75.4 395 76.5 400 77.4 402 77.8 357 69.1 388 75.0Nov Dec Jan Feb Mar
+ParticularsEnergy 
+Charge 
+(Rs./kWh)Apr May Jun Jul Aug Sep Oct
+--- Page 121 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 121 of 123  
+Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)
+ VSTP II 2.08           201 41.8 204 42.5 198 41.2 213 44.3 203 42.3 204 42.4 206 42.9 208 43.3 213 44.2 213 44.4 189 39.3 206 42.8
+ VSTP III 2.11           167 35.3 170 35.9 164 34.7 176 37.3 169 35.7 169 35.8 171 36.2 173 36.5 177 37.3 177 37.5 157 33.2 171 36.1
+ VSTP I 2.17           253 55.0 257 55.8 249 54.0 267 58.0 256 55.6 256 55.7 259 56.3 261 56.6 267 58.0 269 58.3 238 51.6 257 55.8
+ SIPAT TPS 1 2.30           341 78.3 346 79.5 335 77.0 360 82.6 346 79.3 346 79.4 350 80.2 351 80.6 360 82.7 363 83.3 321 73.8 345 79.1
+ VSTP IV 2.37           179 42.4 182 43.0 177 41.8 189 44.8 181 43.0 182 43.1 184 43.6 185 43.8 190 44.9 191 45.2 169 40.0 181 42.9
+ VSTP V 2.40           97 23.1 98 23.4 95 22.8 102 24.4 98 23.4 98 23.5 99 23.8 100 23.9 102 24.5 103 24.6 91 21.8 98 23.4
+ SIPAT TPS 2 2.41           165 39.8 167 40.2 163 39.2 174 42.0 167 40.2 167 40.2 170 40.9 170 41.0 175 42.1 176 42.4 155 37.4 167 40.2
+ RIPL 450 MW 2.77           259 71.6 261 72.1 254 70.3 272 75.3 262 72.5 261 72.2 266 73.6 263 72.8 272 75.3 272 75.3 243 67.2 262 72.4
+ RIPL 750 MW 2.77           431 119.2 434 120.2 423 117.1 454 125.5 437 120.8 435 120.3 443 122.4 439 121.4 454 125.5 454 125.5 405 112.2 436 120.6
+ SWPGL 240 MW 3.20           132 42.3 137 43.7 132 42.3 137 43.7 137 43.7 132 42.3 137 43.7 132 42.3 137 43.7 137 43.7 123 39.5 137 43.7
+ Chandrapur - 8 & 9 3.21           554 177.7 572 183.6 554 177.7 572 183.6 572 183.6 554 177.7 572 183.6 554 177.7 572 183.6 572 183.6 408 130.8 572 183.6
+ KhSTPS-II 3.24           85 27.5 86 27.8 82 26.7 90 29.1 86 28.0 86 27.8 87 28.3 88 28.5 90 29.3 91 29.5 80 26.0 86 28.0
+ Koradi - 8 to 10  3.30           835 275.3 969 319.5 857 282.6 969 319.5 969 319.5 938 309.2 915 301.6 938 309.2 969 319.5 969 319.5 876 288.6 969 319.5
+ GMR Energy 3.31           114 37.8 115 38.3 111 36.7 120 39.7 116 38.5 116 38.3 117 38.8 117 38.6 121 39.9 121 39.9 108 35.7 116 38.5
+ Khaparkheda - 5 3.68           275 101.3 284 104.7 275 101.3 284 104.7 284 104.7 214 78.9 284 104.7 275 101.3 284 104.7 284 104.7 257 94.6 284 104.7
+ CGPL 3.74           407 152.1 421 157.2 407 152.1 421 157.2 421 157.2 407 152.1 421 157.2 407 152.1 421 157.2 421 157.2 380 142.0 421 157.2
+ Bhusawal - 6 3.89           380 147.8 384 149.5 364 141.8 392 152.7 387 150.6 380 147.8 391 152.0 380 147.8 388 151.1 392 152.7 354 137.9 387 150.5
+ Koradi - 6 3.93           99 38.9 102 40.2 99 38.9 102 40.2 102 40.2 89 35.1 102 40.2 99 38.9 102 40.2 102 40.2 93 36.3 90 35.5
+ Khaparkheda - 1 to 4 4.07           336 137.1 359 146.4 406 165.6 420 171.1 420 171.1 406 165.6 420 171.1 406 165.6 420 171.1 420 171.1 379 154.5 420 171.1
+ Mauda I 4.18           228 95.1 230 96.3 217 90.6 234 97.6 232 97.0 230 96.2 235 98.2 232 97.1 229 95.6 245 102.6 215 90.0 232 97.1
+ Paras - 3 & 4 4.46           194 86.5 265 118.4 257 114.5 265 118.4 265 118.4 257 114.5 265 118.4 257 114.5 265 118.4 265 118.4 240 106.9 265 118.4
+ Mauda II 4.49           313 140.2 318 142.5 299 134.0 188 84.2 319 143.2 317 142.2 324 145.4 320 143.5 237 106.5 339 152.0 295 132.1 321 143.9
+ APML 125 MW 4.65           70 32.5 71 33.1 66 30.7 19 8.8 28 13.0 70 32.8 73 33.8 70 32.4 52 24.0 74 34.6 65 30.1 72 33.6
+ APML 1200 MW 4.65           671 312.3 684 318.3 635 295.3 330 153.3 536 249.4 678 315.3 700 325.5 671 311.9 440 204.7 719 334.3 622 289.2 693 322.5
+ Bhusawal - 4 & 5 4.70           555 260.9 571 268.4 527 247.9 240 112.8 447 210.3 555 260.9 573 269.6 542 254.6 410 192.5 569 267.4 501 235.8 573 269.6
+ APML 440 MW 4.71           236 111.1 244 114.8 228 107.4 48 22.5 193 91.1 236 111.1 244 114.8 226 106.6 155 72.9 100 47.0 213 100.5 188 88.6
+ Gadarwara 4.80           46 22.0 61 29.4 57 27.4 10 4.8 13 6.4 13 6.4 65 31.0 34 16.3 24 11.4 14 6.6 12 5.9 24 11.4
+ APML 1320 MW 4.91           735 360.7 741 363.6 543 266.5 138 67.6 534 261.8 724 355.2 765 375.6 441 216.2 270 132.5 482 236.7 618 303.3 317 155.8
+ Chandrapur - 3 to 7 4.93           814 401.3 796 392.5 763 376.1 180 88.7 227 111.7 233 114.8 841 414.7 639 315.0 195 96.0 268 132.2 407 200.5 792 390.5
+ Khargone 4.96           19 9.4 44 21.7 41 20.3 11 5.2 11 5.7 26 13.0 58 29.0 14 7.2 21 10.5 0 0.0 11 5.5 10 4.9
+ NVVNL Coal  5.10           4 2.3 9 4.4 8 4.1 0 0.0 0 0.0 2 1.2 12 5.9 3 1.5 4 2.2 0 0.0 0 0.0 4 1.9
+ GTPS Uran  5.23           193 100.9 199 104.3 193 100.9 199 104.3 199 104.3 193 100.9 199 104.3 193 100.9 199 104.3 199 104.3 180 94.2 199 104.3
+ JSW 5.46           117 63.7 129 70.5 121 66.2 0 0.0 0 0.0 36 19.4 168 91.8 43 23.3 33 18.0 0 0.0 0 0.0 29 15.8
+ Parli Replacement U 8 5.54           86 47.4 66 36.9 70 38.6 0 0.0 0 0.0 61 33.6 129 71.7 35 19.2 27 14.9 0 0.0 0 0.0 23 13.0
+ Bhusawal - 3 5.65           37 20.8 54 30.7 36 20.2 0 0.0 0 0.0 22 12.5 98 55.6 0 0.0 22 12.7 0 0.0 0 0.0 24 13.8
+ NTPC Solapur 5.72           233 133.6 0 0.0 80 46.0 0 0.0 0 0.0 0 0.0 367 210.2 0 0.0 73 41.5 0 0.0 0 0.0 0 0.0
+ Nashik- 3,4 & 5 5.73           110 63.3 117 67.1 168 96.4 0 0.0 0 0.0 66 37.8 339 194.1 0 0.0 0 0.0 0 0.0 0 0.0 54 31.2
+ Parli - 6 & 7 5.87           115 67.5 48 28.5 61 35.7 0 0.0 0 0.0 0 0.0 274 160.7 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+ Kawas 12.00         7 8.8 12 14.2 42 50.3 2 2.2 9 10.4 19 23.3 55 65.7 1 1.4 4 5.0 4 4.5 1 1.6 13 15.9
+Gandhar 12.00         7 8.8 11 13.6 41 49.7 2 2.1 8 9.3 18 22.1 54 64.5 1 1.1 4 4.5 3 3.3 1 1.1 13 15.2Nov Dec Jan Feb Mar
+ParticularsEnergy 
+Charge 
+(Rs./kWh)Apr May Jun Jul Aug Sep Oct
+--- Page 122 ---
+ 
+MERC Order - Case No. 75 of 20 25 - post remand proceedings            Page 122 of 123 E) FY 2029 -30 
+ 
+Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)
+ Must Run Generating Stations 
+KAPP 4.60 86 39.5 89 40.8 86 39.5 89 40.8 89 40.8 86 39.5 89 40.8 86 39.5 89 40.8 89 40.8 80 36.9 89 40.8
+KAPP 3 & 4 4.60 258 118.6 267 122.6 258 118.6 267 122.6 267 122.6 258 118.6 267 122.6 258 118.6 267 122.6 267 122.6 241 110.7 267 122.6
+TAPP 1 & 2 5.28 92 48.7 95 50.3 92 48.7 95 50.3 95 50.3 92 48.7 95 50.3 92 48.7 95 50.3 95 50.3 86 45.4 95 50.3
+TAPP 3 & 4 4.07 250 101.7 258 105.1 250 101.7 258 105.1 258 105.1 250 101.7 258 105.1 250 101.7 258 105.1 258 105.1 233 94.9 258 105.1
+SSP 2.05 20 4.2 14 2.9 19 3.8 104 21.3 225 46.2 152 31.2 131 26.8 51 10.4 53 10.9 70 14.3 54 11.1 33 6.8
+Pench 2.05 3 0.6 2 0.4 3 0.5 14 2.9 31 6.4 21 4.3 18 3.7 7 1.4 7 1.5 10 2.0 7 1.5 5 0.9
+Dodson II 0.00 19 0.0 15 0.0 6 0.0 3 0.0 9 0.0 5 0.0 3 0.0 8 0.0 9 0.0 17 0.0 18 0.0 20 0.0
+Subhansari Hydro 5.00 10 4.8 7 3.3 9 4.3 49 24.3 105 52.7 71 35.5 61 30.5 24 11.8 25 12.4 33 16.3 25 12.6 16 7.8
+Pakaldul HEP 4.28 5 2.2 4 1.5 5 2.0 27 11.4 58 24.6 39 16.6 33 14.3 13 5.5 14 5.8 18 7.6 14 5.9 9 3.6
+Ratle Hydroelectric Project 3.92 11 4.3 8 3.0 10 4.0 57 22.2 123 48.1 83 32.4 71 27.9 28 10.8 29 11.3 38 14.9 29 11.5 18 7.1
+Kwar HEP 4.44 3 1.2 2 0.9 3 1.1 14 6.4 31 13.8 21 9.3 18 8.0 7 3.1 7 3.3 10 4.3 7 3.3 5 2.0
+Dugar HE Project 4.46 3 1.2 2 0.8 2 1.1 13 5.9 29 12.8 19 8.7 17 7.4 6 2.9 7 3.0 9 4.0 7 3.1 4 1.9
+Kiru HE Project 4.64 6 2.6 4 1.8 5 2.4 29 13.4 63 29.1 42 19.6 36 16.9 14 6.5 15 6.9 19 9.0 15 7.0 9 4.3
+ Hydro  0.00 632 0.0 561 0.0 232 0.0 154 0.0 175 0.0 162 0.0 162 0.0 165 0.0 166 0.0 235 0.0 278 0.0 532 0.0
+ Total Solar 4703 0.0 5079 0.0 4746 0.0 3214 0.0 4974 0.0 3827 0.0 5132 0.0 3832 0.0 4387 0.0 4667 0.0 4711 0.0 5762 0.0
+ Renewable - Solar intra 3.04 4247 1291.2 4614 1402.8 4323 1314.2 2792 848.7 4589 1395.1 3462 1052.3 4694 1427.0 3502 1064.7 4020 1222.2 4314 1311.5 4329 1315.9 5277 1604.2
+ Renewable - Solar inter (Loss not applicable) 3.87 456 176.5 464 179.6 423 163.6 422 163.2 385 149.1 366 141.5 438 169.7 330 127.5 367 142.0 353 136.7 383 148.0 485 187.7
+ Renewable - Solar inter  2.67 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+ Renewable - Wind 4.37 358 156.5 639 279.3 1171 511.6 1453 634.9 1074 469.4 834 364.5 267 116.7 288 125.7 352 154.0 306 133.7 266 116.2 412 180.2
+ Renewable - Bagasse based Co-gen 4.90 260 127.5 143 69.9 44 21.7 22 10.8 9 4.2 20 10.0 40 19.3 668 327.0 936 458.0 978 478.7 879 430.2 769 376.4
+ Renewable - Biomass 10.22 3 2.8 1 1.5 0 0.5 0 0.2 0 0.1 0 0.2 0 0.4 7 7.1 10 9.9 10 10.4 9 9.3 8 8.2
+ Renewable - Small Hydro 3.34 70 23.5 46 15.5 34 11.5 54 17.9 71 23.8 63 20.9 48 16.1 51 17.0 47 15.5 59 19.7 59 19.8 54 17.9
+ Renewable - MSW 4.88 0 0.1 0 0.1 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 1 0.4 1 0.5 1 0.5 1 0.5 1 0.4
+ Renewable - Hybrid intra 3.52 579 203.7 697 245.2 839 295.5 769 270.7 806 283.6 622 218.8 558 196.5 444 156.4 516 181.7 534 188.0 520 183.0 668 235.2
+ Renewable - Hybrid Inter 3.43 168 57.6 211 72.4 187 64.1 184 63.1 240 82.2 163 56.0 145 49.9 123 42.1 146 50.1 121 41.4 138 47.3 169 58.1
+ Renewable - FDRE 4.46 747 333.1 922 411.3 1005 448.3 1053 469.7 1028 458.3 810 361.1 662 295.4 675 301.2 742 330.8 797 355.4 755 336.8 795 354.4
+ Renewable - BESS 0.00 59 0.0 59 0.0 58 0.0 61 0.0 67 0.0 56 0.0 63 0.0 74 0.0 78 0.0 79 0.0 64 0.0 61 0.0
+ Renewable - PHSP (JSW, Torrent, SSP 
+PHSP & Ghatghar) 0.00 613 0.0 656 0.0 635 0.0 582 0.0 658 0.0 606 0.0 658 0.0 618 0.0 704 0.0 698 0.0 606 0.0 666 0.0
+ Short term 5.50 12 6.8 17 9.4 4 2.4 4 2.3 36 20.0 1 0.3 12 6.4 2 1.3 13 7.2 1 0.7 1 0.5 10 5.4
+ Stations under MoD 
+ Lara - 2 1.29 131 17.0 136 17.5 131 17.0 136 17.5 136 17.5 131 17.0 136 17.5 131 17.0 136 17.5 136 17.5 122 15.8 136 17.5
+ SIPAT TPS 3 1.47 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 157 23.1 152 22.3 157 23.1 157 23.1 142 20.8 157 23.1
+ Lara 1.71 174 29.7 175 30.0 170 29.1 183 31.3 175 29.9 175 29.9 175 30.0 177 30.3 183 31.3 183 31.3 162 27.7 175 29.9
+ Adani 1600 MW 1.72 911 156.6 941 161.9 911 156.6 941 161.9 941 161.9 911 156.6 941 161.9 911 156.6 941 161.9 941 161.9 850 146.2 941 161.9
+ KSTPS III 1.97 76 15.0 77 15.1 74 14.7 81 16.1 76 15.0 76 15.1 76 15.1 80 15.7 80 15.8 80 15.7 71 14.0 76 15.1
+ KSTPS 2.03 386 78.2 389 78.9 377 76.5 413 83.8 386 78.4 387 78.6 388 78.8 403 81.8 407 82.5 405 82.2 360 72.9 387 78.6Nov Dec Jan Feb Mar
+ParticularsEnergy 
+Charge 
+(Rs./kWh)Apr May Jun Jul Aug Sep Oct
+--- Page 123 ---
+ 
+MERC Order - Case No. 75 of 202 5            Page 123 of 123  
+Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)Energy 
+(MU)VC (Rs. 
+Crore)
+ VSTP II 2.11 205 43.2 206 43.5 200 42.1 219 46.2 205 43.2 205 43.3 206 43.4 213 44.9 216 45.5 215 45.3 191 40.2 205 43.3
+ VSTP III 2.15 170 36.6 172 36.9 166 35.6 182 39.1 170 36.6 171 36.7 171 36.8 178 38.2 179 38.5 179 38.4 158 34.1 171 36.7
+ VSTP I 2.19 258 56.5 260 57.0 250 54.9 272 59.6 257 56.4 258 56.7 259 56.8 263 57.6 271 59.5 271 59.3 240 52.6 256 56.2
+ MBPL 2.22 273 60.5 282 62.5 273 60.5 282 62.5 281 62.3 273 60.5 282 62.5 273 60.5 282 62.5 282 62.5 255 56.5 280 62.0
+ SIPAT TPS 1 2.41 348 83.9 348 83.9 338 81.4 368 88.6 345 83.0 348 84.0 349 84.2 356 85.7 366 88.3 365 87.9 323 77.9 343 82.7
+ VSTP IV 2.48 183 45.5 181 45.0 178 44.1 196 48.7 181 45.1 183 45.5 184 45.7 191 47.5 192 47.8 192 47.8 170 42.3 181 44.9
+ VSTP V 2.52 98 24.7 97 24.5 96 24.1 106 26.6 98 24.6 98 24.8 99 24.9 103 26.0 103 26.0 103 26.0 92 23.1 97 24.5
+ SIPAT TPS 2 2.53 168 42.5 166 42.0 163 41.1 181 45.7 167 42.3 168 42.6 169 42.8 176 44.4 177 44.7 177 44.7 157 39.6 166 42.1
+ RIPL 450 MW 2.81 262 73.7 260 73.1 254 71.4 272 76.5 261 73.5 263 73.9 263 73.9 263 74.0 272 76.5 272 76.5 245 68.8 261 73.3
+ RIPL 750 MW 2.81 438 123.0 433 121.6 423 118.9 454 127.4 435 122.3 438 123.2 439 123.2 439 123.3 454 127.4 454 127.4 408 114.7 434 122.0
+ Chandrapur - 8 & 9 3.07 554 170.2 572 175.9 554 170.2 572 175.9 572 175.9 554 170.2 572 175.9 554 170.2 572 175.9 572 175.9 517 158.8 572 175.9
+ Koradi - 8 to 10  3.10 938 291.1 891 276.4 858 266.1 969 300.8 894 277.4 938 291.1 969 300.8 925 286.9 969 300.8 958 297.2 876 271.7 897 278.3
+ SWPGL 240 MW 3.23 132 42.7 137 44.1 132 42.7 137 44.1 137 44.1 132 42.7 137 44.1 132 42.7 137 44.1 137 44.1 123 39.9 137 44.1
+ GMR Energy 3.37 116 39.0 115 38.6 108 36.4 121 40.6 115 38.6 116 39.2 117 39.4 117 39.3 121 40.6 121 40.6 109 36.7 116 38.9
+ KhSTPS-II 3.40 86 29.2 85 28.9 80 27.3 92 31.5 85 29.0 86 29.4 87 29.5 89 30.5 91 31.1 91 31.1 81 27.5 86 29.2
+ Khaparkheda - 5 3.79 275 104.4 284 107.9 272 103.3 284 107.9 284 107.9 275 104.4 284 107.9 275 104.4 284 107.9 284 107.9 257 97.4 284 107.9
+ CGPL 3.90 407 158.7 421 164.0 404 157.5 421 164.0 421 164.0 407 158.7 421 164.0 407 158.7 421 164.0 421 164.0 380 148.1 339 132.3
+ Bhusawal - 6 4.01 380 152.2 381 152.6 357 143.1 392 157.3 382 152.9 380 152.2 388 155.6 380 152.2 392 157.3 392 157.3 354 142.0 385 154.3
+ Koradi - 6 4.05 99 40.1 102 41.4 99 40.1 102 41.4 102 41.4 99 40.1 102 41.4 93 37.6 102 41.4 96 38.8 82 33.0 102 41.4
+ Khaparkheda - 1 to 4 4.20 406 170.5 420 176.2 406 170.5 340 142.8 357 149.9 406 170.5 420 176.2 372 156.0 420 176.2 420 176.2 379 159.1 420 176.2
+ Mauda I 4.30 230 98.6 228 98.0 213 91.4 103 44.4 175 75.0 232 99.7 233 100.1 237 101.7 247 106.0 245 105.4 218 93.6 231 99.4
+ Paras - 3 & 4 4.59 257 118.0 217 99.6 257 118.0 133 61.2 214 98.2 257 118.0 265 121.9 257 118.0 265 121.9 265 121.9 240 110.1 265 121.9
+ Mauda II 4.70 311 146.1 308 144.6 150 70.3 58 27.4 65 30.5 228 107.2 319 149.6 249 117.0 0 0.0 335 157.3 148 69.7 319 149.8
+ APML 125 MW 4.72 71 33.4 71 33.4 52 24.5 25 11.8 52 24.5 71 33.5 72 34.2 72 33.9 74 35.1 74 35.1 67 31.7 72 34.0
+ APML 1200 MW 4.72 681 321.2 681 321.4 498 235.2 302 142.7 496 233.9 524 247.3 695 328.0 703 332.0 737 347.7 730 344.4 649 306.3 692 326.4
+ APML 440 MW 4.78 236 112.7 190 90.7 182 87.2 62 29.8 117 56.0 236 112.7 244 116.4 197 94.0 244 116.4 244 116.4 220 105.1 244 116.4
+ Bhusawal - 4 & 5 4.84 435 210.6 563 272.6 418 202.5 123 59.4 264 127.7 555 268.8 573 277.7 555 268.8 573 277.7 573 277.7 406 196.7 573 277.7
+ Gadarwara 5.03 22 10.9 23 11.7 13 6.8 0 0.0 0 0.0 25 12.7 61 30.8 17 8.7 0 0.0 0 0.0 0 0.0 0 0.0
+ APML 1320 MW 5.07 343 173.9 407 206.2 501 253.7 0 0.0 147 74.4 166 84.1 751 380.7 543 275.4 0 0.0 281 142.6 328 166.1 752 381.3
+ Chandrapur - 3 to 7 5.08 719 365.2 775 393.4 757 384.4 0 0.0 260 131.8 206 104.6 833 422.7 573 290.9 0 0.0 200 101.7 502 255.0 450 228.5
+ Khargone 5.21 21 10.8 11 5.7 25 12.9 0 0.0 0 0.0 23 11.8 55 28.8 14 7.3 0 0.0 0 0.0 0 0.0 0 0.0
+ GTPS Uran  5.23 193 100.9 199 104.3 193 100.9 199 104.3 199 104.3 193 100.9 199 104.3 193 100.9 199 104.3 199 104.3 180 94.2 199 104.3
+ NVVNL Coal  5.28 4 2.0 2 1.1 5 2.6 0 0.0 0 0.0 4 2.4 11 5.8 3 1.5 0 0.0 0 0.0 0 0.0 0 0.0
+ JSW 5.71 56 32.3 0 0.0 36 20.6 0 0.0 0 0.0 32 18.0 130 74.2 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+ Parli Replacement U 8 5.72 21 12.1 0 0.0 30 16.9 0 0.0 0 0.0 26 14.7 107 60.9 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+ Bhusawal - 3 5.82 27 15.8 22 12.7 24 14.0 0 0.0 0 0.0 23 13.5 55 32.2 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+ Nashik- 3,4 & 5 5.90 67 39.4 0 0.0 72 42.7 0 0.0 0 0.0 0 0.0 166 98.0 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+NTPC Solapur 6.01 67 40.3 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0 86 51.6 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+Parli - 6 & 7 6.04 0 0.0 0 0.0 59 35.5 0 0.0 0 0.0 0 0.0 135 81.5 0 0.0 0 0.0 0 0.0 0 0.0 0 0.0
+Kawas 12.00 8 9.0 16 19.6 47 56.9 5 6.4 37 43.9 17 20.0 56 66.7 8 9.4 63 75.4 0 0.2 45 54.2 13 15.8
+Gandhar 12.00 8 9.1 16 18.7 45 54.4 6 6.7 36 43.6 17 21.0 54 65.4 8 9.8 62 73.9 0 0.1 44 53.3 14 16.2Nov Dec Jan Feb Mar
+ParticularsEnergy 
+Charge 
+(Rs./kWh)Apr May Jun Jul Aug Sep Oct

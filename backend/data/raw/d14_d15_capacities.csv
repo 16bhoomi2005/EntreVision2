@@ -1,0 +1,7 @@
+facility_id,facility_name,type,location,daily_capacity_mt,total_area_acres,notes
+M01,Kalamna APMC,Agricultural Market Yard,Nagpur City,300.0,0,Peak season handles up to 300 MT/day. General warehouse capacity of 3300 MT.
+M02,Katol APMC,Agricultural Market Yard,Katol,150.0,0,Major rural mandi for freshly harvested oranges.
+I01,MIDC Hingna,Industrial Zone,Hingna,0,2500,Fully occupied traditional industrial hub.
+I02,MIDC Kalmeshwar,Industrial Zone,Kalmeshwar,0,290,Expanding zone specifically allocating 117 Hectares for new chemical/coal projects.
+I03,MIHAN (SEZ),Special Economic Zone,Nagpur South,0,4000,Mega zone housing Patanjali Food Park and export-oriented units.
+I04,MIDC Butibori,Industrial Zone,Butibori,0,5000,Five-Star industrial estate; largest in Asia by area.

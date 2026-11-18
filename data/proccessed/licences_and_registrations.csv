@@ -1,0 +1,7 @@
+Licence_ID,Name,Issuing_Authority,Applicability,Cost_INR,Validity,Processing_Time_Days,URL
+LIC001,Udyam Registration (MSME),Ministry of MSME,"All Micro, Small and Medium Enterprises",0,Lifetime,3,https://udyamregistration.gov.in
+LIC002,FSSAI Basic Registration,Food Safety and Standards Authority of India,"Food businesses with turnover < Rs 12 Lakhs (e.g. Nutri-jelly, small juice units)",100,1 to 5 Years,7,https://foscos.fssai.gov.in
+LIC003,FSSAI State Licence,"State FDA, Maharashtra",Food businesses with turnover Rs 12 Lakhs to Rs 20 Crores,2000,1 to 5 Years,30,https://foscos.fssai.gov.in
+LIC004,GST Registration,CBIC / State GST,"Mandatory for inter-state sales, or turnover > Rs 40 Lakhs (goods)",0,Until cancelled,7,https://gst.gov.in
+LIC005,APEDA RCMC,APEDA,Mandatory for exporting citrus and processed food products,5000,5 Years,15,https://apeda.gov.in
+LIC006,MPCB Consent to Establish/Operate,Maharashtra Pollution Control Board,"Processing plants, packing lines generating affluent (Orange/Green category)",5000,3 to 5 Years,45,https://mpcb.gov.in

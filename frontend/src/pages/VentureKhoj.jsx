@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchSkills, fetchResources, fetchLocations, getRecommendations } from "../services/api";
+import { fetchSkills, fetchResources, fetchLocations, getRecommendations, fetchUserProfile, saveUserProfile } from "../services/api";
+import { useAuth, persistUserAssessmentToStorage } from "../context/AuthContext";
 import { Sparkles, MapPin, CheckCircle, ArrowRight, ArrowLeft, Building2, Store, Snowflake, FlaskConical, Award, ShieldCheck, HelpCircle } from "lucide-react";
 import OpportunityWizardTracker from "../components/opportunity/OpportunityWizardTracker";
 import AboutMeStep from "../components/opportunity/AboutMeStep";
@@ -12,72 +13,9 @@ import FinanceStep, { DEFAULT_FINANCE_STATE } from "../components/opportunity/Fi
 import BusinessPreferencesStep, { DEFAULT_PREFERENCES_STATE } from "../components/opportunity/BusinessPreferencesStep";
 import AnalysisScreen from "../components/opportunity/AnalysisScreen";
 
-// Ecosystem mapping per micro-location
-const LOCATION_ECOSYSTEM = {
-  Katol: {
-    research: "Regional Citrus Nursery & ICAR-CCRI Outreach Centre",
-    market: "Katol APMC Orange Sub-Market Yard",
-    storage: "Katol Farm-Gate Pre-Cooling & Chilling Units (350 MT)",
-    industrial: "Katol Agro-Processing Cluster & MIDC Zone",
-  },
-  Narkhed: {
-    research: "Citrus Disease Surveillance Cell (CCRI Network)",
-    market: "Narkhed APMC Fruit Market (Direct Rail Loading)",
-    storage: "Narkhed Cold Chain Staging Yard (1,200 MT)",
-    industrial: "Amravati-Nagpur Border Agro Highway Corridor",
-  },
-  "Warud-Morshi": {
-    research: "Horticulture Training Institute & CCRI Demonstration Plots",
-    market: "Warud APMC Mandi (High-volume Mandarin Trading)",
-    storage: "Warud Regional Packhouse & Shellac Waxing Line (2,000 MT)",
-    industrial: "Warud Food Processing Industrial Cluster",
-  },
-  Kalmeshwar: {
-    research: "MIDC Agro Testing & Soil Chemistry Lab",
-    market: "Kalmeshwar APMC & Direct Wholesale Stalls",
-    storage: "Kalmeshwar Multi-Commodity Cold Room (800 MT)",
-    industrial: "Kalmeshwar MIDC Industrial Zone",
-  },
-  "Kalamna APMC": {
-    research: "APEDA Export Certification & Quality Lab",
-    market: "Central Kalamna APMC Fruit & Veg Yard (Asia's Top Mandi)",
-    storage: "Kailasya Agro Industries & Multi-Chamber Storage (5,000 MT)",
-    industrial: "Nagpur Central Logistics & Wholesale Hub",
-  },
-  "Hingna MIDC": {
-    research: "VNIT & MSME Technology Incubation Centre",
-    market: "Direct Nagpur Urban FMCG & Retail Distribution",
-    storage: "B.K. Spices & Flowers Cold Storage (733.64 MT)",
-    industrial: "Five Star Industrial Area, MIDC Hingna",
-  },
-  "Butibori MIDC": {
-    research: "Central Food Technological Testing Labs",
-    market: "National Highway FMCG Freight Network",
-    storage: "Ras Frozen Foods IQF & Cold Chain (3,500 MT)",
-    industrial: "Butibori 5-Star Industrial Estate (Large Scale Manufacturing)",
-  },
-  MIHAN: {
-    research: "APEDA & Export Inspection Council Facility",
-    market: "Air Cargo & Multimodal International Freight Hub",
-    storage: "MIHAN Air-Cargo Perishable Handling Center (1,500 MT)",
-    industrial: "Special Economic Zone (SEZ) & Global Logistics",
-  },
-  Mohpa: {
-    research: "Katol-Mohpa Agro Advisory Centre",
-    market: "Mohpa Primary Farm-Gate Collection Center",
-    storage: "Farm-Level Zero Energy Cool Chambers (ZECC)",
-    industrial: "Mohpa Rural Micro-Enterprise Belt",
-  },
-  Ramtek: {
-    research: "Krishi Vigyan Kendra (KVK) Ramtek",
-    market: "Ramtek Agro Mandi & Pilgrim Tourism Market",
-    storage: "Ramtek Horticulture Packhouse (500 MT)",
-    industrial: "Ramtek-Mansar Industrial Link",
-  },
-};
-
 export default function VentureKhoj() {
   const navigate = useNavigate();
+  const { user, setActiveVenture } = useAuth();
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [dataLoading, setDataLoading] = useState(true);
@@ -87,67 +25,38 @@ export default function VentureKhoj() {
   const [resourcesList, setResourcesList] = useState([]);
   const [locationsList, setLocationsList] = useState([]);
 
+  const getUserKey = (key) => (user?.id ? `ev_${user.id}_${key}` : `ev_guest_${key}`);
+
   // Step 1 (About Me) State
   const [aboutMe, setAboutMe] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_about_me");
+      const uKey = user?.id ? `ev_${user.id}_about_me` : "ev_guest_about_me";
+      const saved = localStorage.getItem(uKey);
       if (saved) return JSON.parse(saved);
     } catch {}
     return {
-      fullName: "",
-      ageGroup: "18–25",
+      fullName: user?.full_name || "",
+      ageGroup: "",
       education: "",
-      currentSituation: "looking_opportunity",
+      currentSituation: "",
       existingBusinessType: "",
       existingBusinessGoal: "",
-      goals: ["first_business", "explore_local"],
+      goals: [],
     };
   });
 
-  // Step 2 (Skills & Experience) State
+  // Step 2 (Skills & Experience) State - Clean empty array by default
   const [selectedSkillsData, setSelectedSkillsData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_skills_data");
+      const uKey = user?.id ? `ev_${user.id}_skills_data` : "ev_guest_skills_data";
+      const saved = localStorage.getItem(uKey);
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed)) return parsed;
         if (parsed && typeof parsed === "object" && Array.isArray(parsed.skills)) return parsed.skills;
       }
     } catch {}
-    return [
-      {
-        skillId: "SKL05",
-        name: "Food Processing",
-        icon: "🥤",
-        proficiency: "Expert",
-        yearsExperience: "2 years",
-        howAcquired: "Training / certification",
-        certificateName: "ICAR-CCRI Fruit Processing & Debittering",
-        issuingOrg: "ICAR-CCRI Nagpur",
-        certYear: "2023",
-        certFileName: "ccri_debittering_cert.pdf",
-        orgName: "",
-        role: "",
-        expDuration: "",
-        expFileName: "",
-      },
-      {
-        skillId: "SKL01",
-        name: "Farming",
-        icon: "🌱",
-        proficiency: "Beginner",
-        yearsExperience: "1 year",
-        howAcquired: "Family business",
-        certificateName: "",
-        issuingOrg: "",
-        certYear: "",
-        certFileName: "",
-        orgName: "",
-        role: "",
-        expDuration: "",
-        expFileName: "",
-      },
-    ];
+    return [];
   });
 
   const [willingnessToLearn, setWillingnessToLearn] = useState("willing_to_learn");
@@ -155,7 +64,8 @@ export default function VentureKhoj() {
   // Step 3 (Certificates & Documents) State
   const [documents, setDocuments] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_documents");
+      const uKey = user?.id ? `ev_${user.id}_user_documents` : "ev_guest_user_documents";
+      const saved = localStorage.getItem(uKey);
       if (saved) return JSON.parse(saved);
     } catch {}
     return DEFAULT_DOCUMENTS;
@@ -164,7 +74,8 @@ export default function VentureKhoj() {
   // Step 4 (Resources & Existing Setup) State
   const [resourcesData, setResourcesData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_resources");
+      const uKey = user?.id ? `ev_${user.id}_user_resources` : "ev_guest_user_resources";
+      const saved = localStorage.getItem(uKey);
       if (saved) return JSON.parse(saved);
     } catch {}
     return DEFAULT_RESOURCE_STATE;
@@ -173,16 +84,22 @@ export default function VentureKhoj() {
   // Step 5 (Location & Local Ecosystem) State
   const [locationData, setLocationData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_location");
+      const uKey = user?.id ? `ev_${user.id}_user_location` : "ev_guest_user_location";
+      const saved = localStorage.getItem(uKey);
       if (saved) return JSON.parse(saved);
     } catch {}
-    return DEFAULT_LOCATION_STATE;
+    return {
+      ...DEFAULT_LOCATION_STATE,
+      selectedCluster: user?.tehsil || "Katol",
+      operatingArea: user?.district || "Nagpur District",
+    };
   });
 
   // Step 6 (Financial Capacity) State
   const [financeData, setFinanceData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_finances");
+      const uKey = user?.id ? `ev_${user.id}_user_finances` : "ev_guest_user_finances";
+      const saved = localStorage.getItem(uKey);
       if (saved) return JSON.parse(saved);
     } catch {}
     return DEFAULT_FINANCE_STATE;
@@ -191,7 +108,8 @@ export default function VentureKhoj() {
   // Step 7 (Business Preferences) State
   const [preferencesData, setPreferencesData] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_user_preferences");
+      const uKey = user?.id ? `ev_${user.id}_user_preferences` : "ev_guest_user_preferences";
+      const saved = localStorage.getItem(uKey);
       if (saved) return JSON.parse(saved);
     } catch {}
     return DEFAULT_PREFERENCES_STATE;
@@ -202,10 +120,11 @@ export default function VentureKhoj() {
   const [analysisResultData, setAnalysisResultData] = useState(null);
 
   // Fallback states for API compatibility
-  const [location, setLocation] = useState("Katol");
+  const [location, setLocation] = useState(user?.tehsil || "Katol");
   const [budget, setBudget] = useState(300000);
   const [fundingPref, setFundingPref] = useState("subsidy_and_loan");
   const [riskTolerance, setRiskTolerance] = useState("moderate");
+
 
   useEffect(() => {
     async function loadInitialData() {
@@ -230,11 +149,64 @@ export default function VentureKhoj() {
     loadInitialData();
   }, []);
 
+  // Sync state when authenticated user changes or loads
+  useEffect(() => {
+    if (!user?.id) return;
+    fetchUserProfile(user.id)
+      .then((res) => {
+        if (res?.assessment_data) {
+          const ad = res.assessment_data;
+          if (ad.about_me) setAboutMe(ad.about_me);
+          if (Array.isArray(ad.skills_detailed)) setSelectedSkillsData(ad.skills_detailed);
+          if (ad.willingness_to_learn) setWillingnessToLearn(ad.willingness_to_learn);
+          if (ad.documents) setDocuments(ad.documents);
+          if (ad.resources_detailed) setResourcesData(ad.resources_detailed);
+          if (ad.location_detailed) {
+            setLocationData(ad.location_detailed);
+            if (ad.location_detailed.selectedCluster) setLocation(ad.location_detailed.selectedCluster);
+          }
+          if (ad.finance_detailed) {
+            setFinanceData(ad.finance_detailed);
+            if (ad.finance_detailed.availableCapitalINR) setBudget(ad.finance_detailed.availableCapitalINR);
+          }
+          if (ad.business_preferences) {
+            setPreferencesData(ad.business_preferences);
+            if (ad.business_preferences.riskTolerance) setRiskTolerance(ad.business_preferences.riskTolerance);
+          }
+        } else {
+          // Fresh user with no saved assessment — reset to clean defaults
+          setAboutMe({
+            fullName: user.full_name || "",
+            ageGroup: "18–25",
+            education: "",
+            currentSituation: "looking_opportunity",
+            existingBusinessType: "",
+            existingBusinessGoal: "",
+            goals: ["first_business", "explore_local"],
+          });
+          setSelectedSkillsData([]);
+          setWillingnessToLearn("willing_to_learn");
+          setDocuments(DEFAULT_DOCUMENTS);
+          setResourcesData(DEFAULT_RESOURCE_STATE);
+          setLocationData({
+            ...DEFAULT_LOCATION_STATE,
+            selectedCluster: user.tehsil || "Katol",
+            operatingArea: user.district || "Nagpur District",
+          });
+          setFinanceData(DEFAULT_FINANCE_STATE);
+          setPreferencesData(DEFAULT_PREFERENCES_STATE);
+        }
+      })
+      .catch((err) => {
+        console.warn("Could not load backend user profile:", err);
+      });
+  }, [user?.id]);
+
   const handleAboutMeChange = (updates) => {
     setAboutMe((prev) => {
       const next = { ...prev, ...updates };
       try {
-        localStorage.setItem("ev_about_me", JSON.stringify(next));
+        localStorage.setItem(getUserKey("about_me"), JSON.stringify(next));
       } catch {}
       return next;
     });
@@ -244,7 +216,7 @@ export default function VentureKhoj() {
     if (updates.selectedSkillsData) {
       setSelectedSkillsData(updates.selectedSkillsData);
       try {
-        localStorage.setItem("ev_skills_data", JSON.stringify(updates.selectedSkillsData));
+        localStorage.setItem(getUserKey("skills_data"), JSON.stringify(updates.selectedSkillsData));
       } catch {}
     }
     if (updates.willingnessToLearn) {
@@ -256,7 +228,7 @@ export default function VentureKhoj() {
     if (updates.documents) {
       setDocuments(updates.documents);
       try {
-        localStorage.setItem("ev_user_documents", JSON.stringify(updates.documents));
+        localStorage.setItem(getUserKey("user_documents"), JSON.stringify(updates.documents));
       } catch {}
     }
   };
@@ -265,7 +237,7 @@ export default function VentureKhoj() {
     if (updates.resourcesData) {
       setResourcesData(updates.resourcesData);
       try {
-        localStorage.setItem("ev_user_resources", JSON.stringify(updates.resourcesData));
+        localStorage.setItem(getUserKey("user_resources"), JSON.stringify(updates.resourcesData));
       } catch {}
     }
   };
@@ -276,7 +248,7 @@ export default function VentureKhoj() {
       const chosenCluster = updates.locationData.selectedCluster || "Katol";
       setLocation(chosenCluster);
       try {
-        localStorage.setItem("ev_user_location", JSON.stringify(updates.locationData));
+        localStorage.setItem(getUserKey("user_location"), JSON.stringify(updates.locationData));
       } catch {}
     }
   };
@@ -293,7 +265,7 @@ export default function VentureKhoj() {
         setFundingPref("subsidy_and_loan");
       }
       try {
-        localStorage.setItem("ev_user_finances", JSON.stringify(updates.financeData));
+        localStorage.setItem(getUserKey("user_finances"), JSON.stringify(updates.financeData));
       } catch {}
     }
   };
@@ -308,7 +280,7 @@ export default function VentureKhoj() {
         setWillingnessToLearn(updates.preferencesData.willingnessToLearn);
       }
       try {
-        localStorage.setItem("ev_user_preferences", JSON.stringify(updates.preferencesData));
+        localStorage.setItem(getUserKey("user_preferences"), JSON.stringify(updates.preferencesData));
       } catch {}
     }
   };
@@ -320,21 +292,61 @@ export default function VentureKhoj() {
       const extractedSkillIds = selectedSkillsData.map((s) => s.skillId);
       const activeLocation = locationData.selectedCluster || location || "Katol";
       const activeBudget = financeData.availableCapitalINR || budget || 300000;
+
+      const extractedResourceIds = [];
+      if (resourcesData.hasLand) extractedResourceIds.push("RES01");
+      if (resourcesData.waterSources?.some((w) => ["borewell", "drip_irrigation", "canal"].includes(w))) extractedResourceIds.push("RES02");
+      if (resourcesData.transportModes?.some((t) => t.type === "tractor")) extractedResourceIds.push("RES03");
+      if (resourcesData.equipmentList?.some((e) => e.id === "polyhouse")) extractedResourceIds.push("RES04");
+      if (resourcesData.hasWorkspace) extractedResourceIds.push("RES05");
+      if (resourcesData.powerType === "three_phase") extractedResourceIds.push("RES06");
+      if (resourcesData.equipmentList?.some((e) => e.id === "dry_storage")) extractedResourceIds.push("RES07");
+      if (resourcesData.equipmentList?.some((e) => e.id === "juice_extractor")) extractedResourceIds.push("RES08");
+      if (resourcesData.equipmentList?.some((e) => e.id === "peel_oil_unit")) extractedResourceIds.push("RES09");
+      if (resourcesData.transportModes?.some((t) => ["mini_truck", "freight_truck", "reefer"].includes(t.type))) extractedResourceIds.push("RES10");
+      if (resourcesData.equipmentList?.some((e) => e.id === "grading_line")) extractedResourceIds.push("RES11");
+      if (resourcesData.equipmentList?.some((e) => e.id === "cold_storage")) extractedResourceIds.push("RES12");
+
+      const parsedCapital = parseFloat(activeBudget) || 200000;
+      let calculatedLabel = "₹1–5 Lakh";
+      if (parsedCapital < 100000) calculatedLabel = "Below ₹1 Lakh";
+      else if (parsedCapital <= 500000) calculatedLabel = "₹1–5 Lakh";
+      else if (parsedCapital <= 1000000) calculatedLabel = "₹5–10 Lakh";
+      else if (parsedCapital <= 2500000) calculatedLabel = "₹10–25 Lakh";
+      else calculatedLabel = "₹25 Lakh+";
+
+      const enrichedFinanceData = {
+        ...financeData,
+        availableCapitalINR: parsedCapital,
+        personalSavings: parsedCapital,
+        rangeLabel: calculatedLabel,
+        borrowingComfort: financeData.borrowingComfort || "open_to_loans",
+        borrowingPreference: financeData.borrowingComfort || "open_to_loans",
+        fundingSources: Array.isArray(financeData.fundingSources) && financeData.fundingSources.length > 0 ? financeData.fundingSources : ["Personal Savings", "PMFME 35% Subsidy"],
+        investmentHorizon: financeData.investmentHorizon || "within_3_months",
+      };
+
       const payload = {
+        user_id: user?.id,
         about_me: aboutMe,
         skills: extractedSkillIds,
         skills_detailed: selectedSkillsData,
         willingness_to_learn: preferencesData.willingnessToLearn || willingnessToLearn,
         documents: documents,
+        resources: extractedResourceIds,
         resources_detailed: resourcesData,
         has_land: resourcesData.hasLand,
         land_acres: resourcesData.hasLand ? parseFloat(resourcesData.landAcres) : 0.0,
         location: activeLocation,
         location_detailed: locationData,
-        budget_inr: parseFloat(activeBudget),
-        finance_detailed: financeData,
+        budget_inr: parsedCapital,
+        finance_detailed: enrichedFinanceData,
         business_preferences: preferencesData,
-        needs_funding: financeData.borrowingComfort !== "no_loan",
+        interests: preferencesData.businessTypes || [],
+        risk_tolerance: preferencesData.riskTolerance || riskTolerance || "moderate_risk",
+        business_scale: preferencesData.businessScale || "small",
+        time_commitment: preferencesData.timeCommitment || "full_time",
+        needs_funding: enrichedFinanceData.borrowingComfort !== "no_loan",
         funding_preference: fundingPref,
         preferences: {
           risk_tolerance: preferencesData.riskTolerance || riskTolerance,
@@ -346,11 +358,34 @@ export default function VentureKhoj() {
       const results = await getRecommendations(payload);
       setAnalysisResultData({ results, userInput: payload });
       try {
-        localStorage.setItem("ev_assessment_results", JSON.stringify({ results, userInput: payload }));
+        localStorage.setItem(getUserKey("assessment_results"), JSON.stringify({ results, userInput: payload }));
       } catch (e) {}
+
+      if (user?.id) {
+        const assessmentPayload = {
+          about_me: aboutMe,
+          skills_detailed: selectedSkillsData,
+          willingness_to_learn: preferencesData.willingnessToLearn || willingnessToLearn,
+          documents: documents,
+          resources_detailed: resourcesData,
+          finance_detailed: enrichedFinanceData,
+          location_detailed: locationData,
+          business_preferences: preferencesData,
+          latest_recommendations: results,
+        };
+        persistUserAssessmentToStorage(user.id, assessmentPayload, null);
+        saveUserProfile({
+          user_id: user.id,
+          profile: {
+            full_name: aboutMe.fullName || user.full_name,
+            district: locationData.operatingArea || user.district,
+            tehsil: activeLocation || user.tehsil,
+          },
+          assessment_data: assessmentPayload,
+        }).catch((err) => console.warn("Failed to backup saveUserProfile:", err));
+      }
     } catch (err) {
       console.error("Error calculating recommendations:", err);
-      // Fallback in case of backend delay
     } finally {
       setLoading(false);
     }
@@ -362,13 +397,6 @@ export default function VentureKhoj() {
       userInput: { location: locationData.selectedCluster || "Katol", budget_inr: financeData.availableCapitalINR },
     };
     navigate("/results", { state: dataToPass });
-  };
-
-  const currentEco = LOCATION_ECOSYSTEM[location] || {
-    research: "ICAR-CCRI Research & Nursery Lab",
-    market: "Kalamna APMC Market Yard",
-    storage: "Nagpur Regional Cold Storage Network",
-    industrial: "Nagpur Agro Industrial Zone",
   };
 
   if (dataLoading) {

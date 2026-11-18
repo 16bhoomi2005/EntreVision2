@@ -25,19 +25,19 @@ import {
 export const DEFAULT_FINANCE_STATE = {
   // 1. Available Liquid Capital
   budgetTier: "1_to_5_lakh", // "below_1_lakh" | "1_to_5_lakh" | "5_to_10_lakh" | "10_to_25_lakh" | "above_25_lakh"
-  availableCapitalINR: 300000, // Exact amount
+  availableCapitalINR: 200000, // Baseline equity input
 
   // 2. Funding Sources
-  fundingSources: ["personal_savings", "govt_subsidy", "bank_loan"],
+  fundingSources: [],
 
   // 3. Borrowing Preference
-  borrowingComfort: "open_to_loans", // "no_loan" | "small_loan" | "open_to_loans" | "significant_financing"
+  borrowingComfort: "", // "no_loan" | "small_loan" | "open_to_loans" | "significant_financing"
 
   // 4. Investment Horizon
-  investmentHorizon: "within_3_months", // "immediately" | "within_3_months" | "within_6_months" | "within_1_year" | "exploring"
+  investmentHorizon: "", // "immediately" | "within_3_months" | "within_6_months" | "within_1_year" | "exploring"
 
   // 5. Expected Investment Comfort
-  comfortLevel: "moderate", // "low" | "moderate" | "large" | "not_sure"
+  comfortLevel: "", // "low" | "moderate" | "large" | "not_sure"
 
   // 6. Existing Commitments
   existingLoans: "no", // "no" | "moderate" | "significant"

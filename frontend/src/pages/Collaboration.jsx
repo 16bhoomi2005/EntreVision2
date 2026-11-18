@@ -33,6 +33,9 @@ import {
   Plus
 } from "lucide-react";
 
+import { useAuth } from "../context/AuthContext";
+import { fetchCollaborationNetwork, sendCollaborationConnect, fetchCollaborationRequests } from "../services/api";
+
 // ============================================================================
 // 1. MASTER COLLABORATION NETWORK DATASET (NAGPUR CITRUS ECOSYSTEM)
 // ============================================================================
@@ -203,6 +206,7 @@ const ENTREPRENEUR_PROFILES = [
 // ============================================================================
 export default function Collaboration() {
   const navigate = useNavigate();
+  const { user, activeVenture } = useAuth();
 
   // Active view: "explore" | "needs_config" (8.1) | "profile" (8.2) | "my_collabs" (8.6)
   const [activeTab, setActiveTab] = useState("explore");
@@ -220,42 +224,64 @@ export default function Collaboration() {
   const [requestMessage, setRequestMessage] = useState("");
   const [requestSentNotice, setRequestSentNotice] = useState(false);
 
+  const [networkProfiles, setNetworkProfiles] = useState(ENTREPRENEUR_PROFILES);
+  const [currentUserCard, setCurrentUserCard] = useState(null);
+  const [networkLoading, setNetworkLoading] = useState(false);
+
   // User's Collaboration Profile & Visibility State (8.2)
   const [myCollabProfile, setMyCollabProfile] = useState(() => {
-    let name = "Bhoomika V.";
-    let locationStr = "Katol / Nagpur Region";
-    let business = "Citrus Value-Added Products & Nursery";
-    let capital = "₹2.5 Lakhs";
+    let name = user?.full_name || "Agro-Entrepreneur";
+    let locationStr = user?.tehsil ? `${user.tehsil}, Nagpur District` : "Katol, Nagpur Region";
+    let business = activeVenture?.name || "Citrus Commercial Value Addition";
+    let capital = activeVenture?.own_equity
+      ? `₹${(Number(activeVenture.own_equity) / 100000).toFixed(1)} Lakhs`
+      : "₹2.5 Lakhs";
+    let landOffer = `Agro Space in ${user?.tehsil || "Katol"}`;
+    let userOffers = [];
 
     try {
-      const savedAbout = localStorage.getItem("ev_about_me");
+      const uId = user?.id;
+      const savedAbout = (uId && localStorage.getItem(`ev_${uId}_about_me`)) || localStorage.getItem("ev_about_me");
       if (savedAbout) {
         const p = JSON.parse(savedAbout);
-        if (p.fullName) name = p.fullName;
-        if (p.targetLocation) locationStr = p.targetLocation;
+        if (p.fullName && !user?.full_name) name = p.fullName;
+        if (p.targetLocation && !user?.tehsil) locationStr = p.targetLocation;
       }
-      const savedFin = localStorage.getItem("ev_user_finances");
+      const savedFin = (uId && localStorage.getItem(`ev_${uId}_user_finances`)) || localStorage.getItem("ev_user_finances");
       if (savedFin) {
         const p = JSON.parse(savedFin);
-        if (p.personalSavings) capital = `₹${(Number(p.personalSavings) / 100000).toFixed(1)} Lakhs`;
+        if (p.personalSavings && !activeVenture?.own_equity) capital = `₹${(Number(p.personalSavings) / 100000).toFixed(1)} Lakhs`;
+      }
+      const savedRes = (uId && localStorage.getItem(`ev_${uId}_user_resources`)) || localStorage.getItem("ev_user_resources");
+      if (savedRes) {
+        const r = JSON.parse(savedRes);
+        if (r.landAcres > 0) landOffer = `${r.landAcres} Acres Farm Land in ${user?.tehsil || "Katol"}`;
+        else if (r.hasWorkspace) landOffer = `Covered Processing Shed in ${user?.tehsil || "Katol"}`;
       }
     } catch (e) {}
+
+    userOffers = [
+      `Promoter Capital (${capital})`,
+      landOffer,
+      `Local Sourcing & Mandi Linkages in ${user?.tehsil || "Katol"}`
+    ];
+
+    let userLookingFor = [
+      "Commercial Processing / Machinery Partner",
+      "Certified Food Technologist / Nursery Specialist",
+      "Business Co-Founder / Joint Venture"
+    ];
+    if (activeVenture?.missing_skills && activeVenture.missing_skills.length > 0) {
+      userLookingFor[1] = `Specialist for: ${activeVenture.missing_skills[0]}`;
+    }
 
     return {
       name,
       location: locationStr,
       businessInterest: business,
-      offers: [
-        "Capital Contribution (" + capital + ")",
-        "Technology & Digital Marketing",
-        "Agri Land Access in Katol (2.5 Acres)",
-      ],
-      lookingFor: [
-        "Certified Food Technologist / Nursery Grafter",
-        "Commercial Processing Machinery Partner",
-        "Business Partner / Joint Venture",
-      ],
-      visibility: "relevant_matches", // "everyone" | "relevant_matches" | "private"
+      offers: userOffers,
+      lookingFor: userLookingFor,
+      visibility: "relevant_matches",
     };
   });
 
@@ -276,49 +302,63 @@ export default function Collaboration() {
   // Active & Pending Collaborations (8.6)
   const [myCollaborations, setMyCollaborations] = useState(() => {
     try {
-      const saved = localStorage.getItem("ev_active_collaborations");
+      const uId = user?.id;
+      const saved = (uId && localStorage.getItem(`ev_${uId}_active_collaborations`)) || localStorage.getItem("ev_active_collaborations");
       if (saved) return JSON.parse(saved);
     } catch (e) {}
     return {
-      pending: [
-        {
-          id: "COL-REQ-101",
-          sender: "Rajesh Deshmukh",
-          avatarIcon: "👨‍🌾",
-          location: "Katol",
-          topic: "Joint Venture for Juice Extractor Unit",
-          message:
-            "Namaskar! I saw your profile and capital capability. I have 5 acres with borewell on Katol bypass and assured orange fruit harvest. Let's discuss a shared PMFME application.",
-          date: "26/09/2026",
-          status: "Pending Your Response",
-        },
-      ],
-      sent: [
-        {
-          id: "COL-SENT-202",
-          recipient: "Pooja Thakare",
-          avatarIcon: "👩‍🔬",
-          topic: "Formulation & FSSAI Collaboration",
-          date: "28/09/2026",
-          status: "Pending Recipient Review",
-        },
-      ],
-      active: [
-        {
-          id: "COL-ACT-303",
-          partner: "Suresh Wankhede",
-          avatarIcon: "👨‍🌾",
-          location: "Warud-Morshi",
-          role: "Nursery Propagator",
-          business: "Disease-Free Certified Citrus Nursery",
-          collabType: "Technical Partnership",
-          status: "Exploring Joint Venture & Polyhouse Lease",
-          establishedDate: "20/09/2026",
-          milestone: "Prepare joint ICAR-CCRI accreditation audit dossier",
-        },
-      ],
+      pending: [],
+      sent: [],
+      active: [],
     };
   });
+
+  // Fetch real collaboration network & requests from PostgreSQL backend
+  useEffect(() => {
+    let mounted = true;
+    setNetworkLoading(true);
+    fetchCollaborationNetwork(user?.id)
+      .then((data) => {
+        if (!mounted) return;
+        if (data?.network && Array.isArray(data.network) && data.network.length > 0) {
+          setNetworkProfiles(data.network);
+        }
+        if (data?.current_user_profile) {
+          setCurrentUserCard(data.current_user_profile);
+          setMyCollabProfile((prev) => ({
+            ...prev,
+            name: data.current_user_profile.name || prev.name,
+            location: data.current_user_profile.location || prev.location,
+            businessInterest: data.current_user_profile.primaryInterest || prev.businessInterest,
+            offers: data.current_user_profile.offers?.map((o) => o.title) || prev.offers,
+            lookingFor: data.current_user_profile.needs?.map((n) => n.title) || prev.lookingFor,
+          }));
+        }
+      })
+      .catch((err) => {
+        console.warn("Could not load network from backend:", err);
+      })
+      .finally(() => {
+        if (mounted) setNetworkLoading(false);
+      });
+
+    if (user?.id) {
+      fetchCollaborationRequests(user.id)
+        .then((res) => {
+          if (!mounted) return;
+          if (res && (res.sent?.length > 0 || res.received?.length > 0)) {
+            setMyCollaborations((prev) => ({
+              ...prev,
+              sent: res.sent && res.sent.length > 0 ? res.sent : prev.sent,
+              pending: res.received && res.received.length > 0 ? res.received : prev.pending
+            }));
+          }
+        })
+        .catch(() => {});
+    }
+
+    return () => { mounted = false; };
+  }, [user?.id]);
 
   // Sync needs config changes to localStorage
   const toggleNeedItem = (category, item) => {
@@ -336,51 +376,54 @@ export default function Collaboration() {
     });
   };
 
-  // Filter profiles
+  // Filter profiles excluding the current logged-in user
   const filteredProfiles = useMemo(() => {
-    return ENTREPRENEUR_PROFILES.filter((p) => {
+    return networkProfiles.filter((p) => {
+      if (user?.id && (p.id === user.id || p.id === user?.email)) return false;
+
       const matchSearch =
-        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.primaryInterest.toLowerCase().includes(searchQuery.toLowerCase());
+        p.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.location?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.role?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.primaryInterest?.toLowerCase().includes(searchQuery.toLowerCase());
 
       if (!matchSearch) return false;
 
       if (activeFilter === "skills") {
-        return p.offers.some((o) => o.type === "skills");
+        return (p.offers || []).some((o) => o.type === "skills");
       }
       if (activeFilter === "funding") {
-        return p.needs.some((n) => n.type === "capital") || p.offers.some((o) => o.type === "capital");
+        return (p.needs || []).some((n) => n.type === "capital") || (p.offers || []).some((o) => o.type === "capital");
       }
       if (activeFilter === "resources") {
-        return p.offers.some((o) => o.type === "infrastructure" || o.type === "equipment" || o.type === "land");
+        return (p.offers || []).some((o) => o.type === "infrastructure" || o.type === "equipment" || o.type === "land" || o.type === "resource");
       }
       if (activeFilter === "partner") {
-        return p.collaborationTypes.some((c) => c.toLowerCase().includes("partner") || c.toLowerCase().includes("joint"));
+        return (p.collaborationTypes || []).some((c) => c.toLowerCase().includes("partner") || c.toLowerCase().includes("joint"));
       }
       return true;
     });
-  }, [searchQuery, activeFilter]);
+  }, [networkProfiles, searchQuery, activeFilter, user?.id, user?.email]);
 
   // Handle open request modal
   const handleOpenRequestModal = (profile) => {
     setRequestRecipient(profile);
     setRequestTopic("Business Idea & Joint Venture");
     setRequestMessage(
-      `Hi ${profile.name},\n\nI reviewed your profile on EntreVision. I am setting up a citrus agro-enterprise in the Nagpur cluster. Your background in "${profile.role}" and available resources (${profile.offers.map((o) => o.title).slice(0, 2).join(", ")}) strongly complement my project requirements. I would love to explore a potential collaboration.`
+      `Hi ${profile.name},\n\nI reviewed your profile on EntreVision. I am setting up a citrus agro-enterprise in the Nagpur cluster. Your background in "${profile.role}" and available resources (${(profile.offers || []).map((o) => o.title).slice(0, 2).join(", ")}) strongly complement my project requirements. I would love to explore a potential collaboration.`
     );
   };
 
   // Handle send request
-  const handleSendCollaborationRequest = () => {
+  const handleSendCollaborationRequest = async () => {
     if (!requestRecipient) return;
 
     const newSent = {
       id: `COL-SENT-${Date.now()}`,
       recipient: requestRecipient.name,
-      avatarIcon: requestRecipient.avatarIcon,
+      avatarIcon: requestRecipient.avatarIcon || "🤝",
       topic: requestTopic,
+      message: requestMessage,
       date: new Date().toLocaleDateString("en-GB"),
       status: "Pending Recipient Review",
     };
@@ -391,10 +434,27 @@ export default function Collaboration() {
         sent: [newSent, ...prev.sent],
       };
       try {
+        const uId = user?.id;
+        if (uId) localStorage.setItem(`ev_${uId}_active_collaborations`, JSON.stringify(updated));
         localStorage.setItem("ev_active_collaborations", JSON.stringify(updated));
       } catch (e) {}
       return updated;
     });
+
+    // Call backend API to record the collaboration connection
+    if (user?.id) {
+      try {
+        await sendCollaborationConnect({
+          sender_id: user.id,
+          recipient_id: requestRecipient.id,
+          recipient_name: requestRecipient.name,
+          topic: requestTopic,
+          message: requestMessage,
+        });
+      } catch (err) {
+        console.warn("Failed to persist connection to backend API:", err);
+      }
+    }
 
     setRequestSentNotice(true);
     setTimeout(() => {
@@ -533,7 +593,7 @@ export default function Collaboration() {
             className={`pill-option-btn ${activeTab === "explore" ? "active" : ""}`}
             style={{ fontSize: "0.86rem", padding: "10px", fontWeight: 800 }}
           >
-            🔍 Explore Matches ({ENTREPRENEUR_PROFILES.length})
+            🔍 Explore Matches ({filteredProfiles.length})
           </button>
 
           <button
@@ -625,9 +685,109 @@ export default function Collaboration() {
             </div>
           </div>
 
+          {/* Current User's Live Collaboration Card */}
+          <div
+            className="card"
+            style={{
+              background: "linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(6, 182, 212, 0.06) 100%)",
+              border: "1px solid var(--electric-blue)",
+              padding: "20px 24px",
+              borderRadius: 16,
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 14 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+                <div
+                  style={{
+                    width: 52,
+                    height: 52,
+                    borderRadius: 16,
+                    background: "rgba(99, 102, 241, 0.2)",
+                    border: "2px solid var(--electric-blue)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "1.8rem",
+                    flexShrink: 0,
+                  }}
+                >
+                  {user?.avatar || "🍊"}
+                </div>
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                    <span className="badge-verified" style={{ fontSize: "0.72rem", background: "var(--electric-blue)", color: "#fff" }}>
+                      ⭐ Your Live Profile in the Network
+                    </span>
+                    <span style={{ fontSize: "0.75rem", color: "var(--ok)", fontWeight: 700 }}>
+                      ● Active & Discoverable
+                    </span>
+                  </div>
+                  <h3 style={{ margin: "4px 0 2px", fontSize: "1.25rem", fontWeight: 800, color: "var(--text-heading)" }}>
+                    {myCollabProfile.name}
+                  </h3>
+                  <div style={{ fontSize: "0.82rem", color: "var(--muted)" }}>
+                    📍 {myCollabProfile.location} • 🏢 {myCollabProfile.businessInterest}
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+                <button
+                  type="button"
+                  onClick={() => navigate("/profile")}
+                  className="btn-secondary-gloss"
+                  style={{ padding: "8px 14px", fontSize: "0.82rem", display: "inline-flex", gap: 6 }}
+                >
+                  <Briefcase size={14} /> ✏️ Edit Profile & Assets
+                </button>
+              </div>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 14, marginTop: 16, paddingTop: 14, borderTop: "1px dashed var(--line)" }}>
+              <div style={{ background: "var(--panel-solid)", padding: 12, borderRadius: 12, border: "1px solid var(--line)" }}>
+                <span style={{ fontSize: "0.75rem", fontWeight: 800, color: "var(--ok)", textTransform: "uppercase" }}>
+                  ✓ What You Offer to Partners
+                </span>
+                <ul style={{ margin: "6px 0 0 16px", padding: 0, fontSize: "0.83rem", color: "var(--text)", lineHeight: 1.5 }}>
+                  {myCollabProfile.offers.map((o, idx) => (
+                    <li key={idx}>{o}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div style={{ background: "var(--panel-solid)", padding: 12, borderRadius: 12, border: "1px solid var(--line)" }}>
+                <span style={{ fontSize: "0.75rem", fontWeight: 800, color: "var(--cyan)", textTransform: "uppercase" }}>
+                  🔍 What You Are Looking For
+                </span>
+                <ul style={{ margin: "6px 0 0 16px", padding: 0, fontSize: "0.83rem", color: "var(--text)", lineHeight: 1.5 }}>
+                  {myCollabProfile.lookingFor.map((n, idx) => (
+                    <li key={idx}>{n}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 4 }}>
+            <h2 style={{ fontSize: "1.2rem", fontWeight: 800, color: "var(--text-heading)", margin: 0 }}>
+              🌐 Entrepreneur Matches & Partners ({filteredProfiles.length})
+            </h2>
+            {networkLoading && (
+              <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>🔄 Syncing with network...</span>
+            )}
+          </div>
+
           {/* Complementary Connection Cards Grid */}
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {filteredProfiles.map((profile) => (
+            {filteredProfiles.length === 0 ? (
+              <div className="card" style={{ textAlign: "center", padding: "36px 20px" }}>
+                <p className="muted" style={{ margin: "0 0 12px" }}>No matching entrepreneurs found for current filter.</p>
+                <button type="button" onClick={() => { setSearchQuery(""); setActiveFilter("all"); }} className="btn-secondary-gloss">
+                  Reset Search & Filters
+                </button>
+              </div>
+            ) : (
+              filteredProfiles.map((profile) => (
               <div
                 key={profile.id}
                 className="card"
@@ -819,7 +979,7 @@ export default function Collaboration() {
                   </div>
                 </div>
               </div>
-            ))}
+            )))}
           </div>
         </div>
       )}
@@ -1289,52 +1449,66 @@ export default function Collaboration() {
             </h3>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {myCollaborations.sent.map((sent) => (
-                <div
-                  key={sent.id}
-                  style={{
-                    background: "var(--panel-subtle)",
-                    padding: "12px 16px",
-                    borderRadius: 12,
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    flexWrap: "wrap",
-                    gap: 8,
-                  }}
-                >
-                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <span style={{ fontSize: "1.3rem" }}>{sent.avatarIcon}</span>
-                    <div>
-                      <strong style={{ fontSize: "0.88rem", color: "var(--text-heading)" }}>
-                        To: {sent.recipient}
-                      </strong>
-                      <span style={{ fontSize: "0.76rem", color: "var(--muted)", marginLeft: 8 }}>
-                        Topic: {sent.topic} • Sent: {sent.date}
+              {myCollaborations.sent.length === 0 ? (
+                <p className="muted" style={{ fontSize: "0.85rem", margin: 0 }}>
+                  You have not sent any collaboration proposals yet. Connect with entrepreneurs in the Explore tab.
+                </p>
+              ) : (
+                myCollaborations.sent.map((sent) => (
+                  <div
+                    key={sent.id}
+                    style={{
+                      background: "var(--panel-subtle)",
+                      padding: "12px 16px",
+                      borderRadius: 12,
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      flexWrap: "wrap",
+                      gap: 8,
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <span style={{ fontSize: "1.3rem" }}>{sent.avatarIcon || "🤝"}</span>
+                      <div>
+                        <strong style={{ fontSize: "0.88rem", color: "var(--text-heading)" }}>
+                          To: {sent.recipient}
+                        </strong>
+                        <span style={{ fontSize: "0.76rem", color: "var(--muted)", marginLeft: 8 }}>
+                          Topic: {sent.topic} • Sent: {sent.date}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <span style={{ fontSize: "0.74rem", color: "#f59e0b", fontWeight: 700 }}>
+                        ● {sent.status}
                       </span>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setMyCollaborations((prev) => {
+                            const updated = {
+                              ...prev,
+                              sent: prev.sent.filter((s) => s.id !== sent.id),
+                            };
+                            try {
+                              const uId = user?.id;
+                              if (uId) localStorage.setItem(`ev_${uId}_active_collaborations`, JSON.stringify(updated));
+                              localStorage.setItem("ev_active_collaborations", JSON.stringify(updated));
+                            } catch (e) {}
+                            return updated;
+                          });
+                        }}
+                        className="btn-secondary-gloss"
+                        style={{ fontSize: "0.72rem", padding: "4px 8px" }}
+                      >
+                        Withdraw
+                      </button>
                     </div>
                   </div>
-
-                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <span style={{ fontSize: "0.74rem", color: "#f59e0b", fontWeight: 700 }}>
-                      ● {sent.status}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setMyCollaborations((prev) => ({
-                          ...prev,
-                          sent: prev.sent.filter((s) => s.id !== sent.id),
-                        }));
-                      }}
-                      className="btn-secondary-gloss"
-                      style={{ fontSize: "0.72rem", padding: "4px 8px" }}
-                    >
-                      Withdraw
-                    </button>
-                  </div>
-                </div>
-              ))}
+                ))
+              )}
             </div>
           </div>
         </div>

@@ -1,0 +1,268 @@
+{
+  "benchmarks": {
+    "Logistic Regression": {
+      "accuracy": 96.8,
+      "precision": 95.21,
+      "recall": 96.8,
+      "f1_score": 95.91,
+      "confusion_matrix": [
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          54,
+          0
+        ],
+        [
+          0,
+          3,
+          188
+        ]
+      ],
+      "dataset_split": {
+        "train_samples": 750,
+        "test_samples": 250,
+        "features_count": 9
+      }
+    },
+    "Random Forest Classifier": {
+      "accuracy": 97.6,
+      "precision": 97.84,
+      "recall": 97.6,
+      "f1_score": 97.4,
+      "confusion_matrix": [
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          0,
+          54,
+          0
+        ],
+        [
+          0,
+          3,
+          188
+        ]
+      ],
+      "dataset_split": {
+        "train_samples": 750,
+        "test_samples": 250,
+        "features_count": 9
+      }
+    },
+    "Gradient Boosting Classifier": {
+      "accuracy": 96.4,
+      "precision": 96.53,
+      "recall": 96.4,
+      "f1_score": 96.44,
+      "confusion_matrix": [
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          3,
+          51,
+          0
+        ],
+        [
+          0,
+          3,
+          188
+        ]
+      ],
+      "dataset_split": {
+        "train_samples": 750,
+        "test_samples": 250,
+        "features_count": 9
+      }
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "capital_ratio",
+      "label": "Capital Ratio",
+      "importance_pct": 37.56
+    },
+    {
+      "feature": "equipment_offset_lakhs",
+      "label": "Equipment Offset Lakhs",
+      "importance_pct": 27.23
+    },
+    {
+      "feature": "land_acres",
+      "label": "Land Acres",
+      "importance_pct": 18.03
+    },
+    {
+      "feature": "regulatory_readiness",
+      "label": "Regulatory Readiness",
+      "importance_pct": 6.69
+    },
+    {
+      "feature": "raw_material_density",
+      "label": "Raw Material Density",
+      "importance_pct": 3.11
+    },
+    {
+      "feature": "has_workspace",
+      "label": "Has Workspace",
+      "importance_pct": 2.45
+    },
+    {
+      "feature": "experience_years",
+      "label": "Experience Years",
+      "importance_pct": 2.42
+    },
+    {
+      "feature": "risk_tolerance",
+      "label": "Risk Tolerance",
+      "importance_pct": 1.66
+    },
+    {
+      "feature": "mobility_radius_km",
+      "label": "Mobility Radius Km",
+      "importance_pct": 0.85
+    }
+  ],
+  "cluster_profiles": [
+    {
+      "cluster_id": 1,
+      "persona_name": "Asset-Rich Orchard Cultivator & Farm-Gate Aggregator",
+      "description": "Large citrus landowner with established orchards, tractor equipment, and farm-gate supply capacity.",
+      "cluster_size": 247,
+      "centroid": {
+        "avg_capital_lakhs": 22.01,
+        "avg_land_acres": 13.9,
+        "avg_skills_score": 3.0,
+        "avg_infrastructure_score": 1.78,
+        "avg_equipment_lakhs": 7.42
+      },
+      "recommended_sectors": [
+        "Hi-Tech Citrus Nursery",
+        "Primary Sorting, Grading & Waxing",
+        "Integrated Packhouse",
+        "Organic Citrus Cultivation"
+      ],
+      "primary_policy_leverage": "MIDH Capital Subsidy for Commercial Horticulture & Nurseries"
+    },
+    {
+      "cluster_id": 2,
+      "persona_name": "Commercial Cold-Chain & Industrial Processing Aggregator",
+      "description": "Capitalized investor or large operator equipped with commercial infrastructure and logistics reach.",
+      "cluster_size": 246,
+      "centroid": {
+        "avg_capital_lakhs": 71.88,
+        "avg_land_acres": 8.4,
+        "avg_skills_score": 3.86,
+        "avg_infrastructure_score": 3.41,
+        "avg_equipment_lakhs": 16.02
+      },
+      "recommended_sectors": [
+        "Controlled Atmosphere Cold Storage",
+        "Solar Cold Room",
+        "Industrial RTS Bottling Plant",
+        "Citrus Pectin Recovery"
+      ],
+      "primary_policy_leverage": "MIDH & PMKSY Cold Chain Infrastructure Capital Subsidy"
+    },
+    {
+      "cluster_id": 3,
+      "persona_name": "Capital-Light Micro Artisan & SHG Food Processor",
+      "description": "Micro entrepreneur, SHG member, or rural food artisan with high kitchen/product formulation skills but low initial capex.",
+      "cluster_size": 252,
+      "centroid": {
+        "avg_capital_lakhs": 3.82,
+        "avg_land_acres": 0.7,
+        "avg_skills_score": 3.62,
+        "avg_infrastructure_score": 0.98,
+        "avg_equipment_lakhs": 0.86
+      },
+      "recommended_sectors": [
+        "Micro Citrus Jam & Marmalade",
+        "Artisan RTS Juice & Squash",
+        "Citrus Peel Candy & Pickle",
+        "Cold-Pressed Essential Oil Extraction"
+      ],
+      "primary_policy_leverage": "PMFME 35% Credit-Linked Capital Subsidy (Up to \u20b910 Lakhs)"
+    },
+    {
+      "cluster_id": 4,
+      "persona_name": "Tech-Forward Value-Added Citrus Agro-Entrepreneur",
+      "description": "Technical graduate or agri-entrepreneur with specialized formulation skills and covered workspace.",
+      "cluster_size": 255,
+      "centroid": {
+        "avg_capital_lakhs": 16.25,
+        "avg_land_acres": 2.1,
+        "avg_skills_score": 4.37,
+        "avg_infrastructure_score": 3.02,
+        "avg_equipment_lakhs": 4.0
+      },
+      "recommended_sectors": [
+        "Solar Dehydration & Peel Powder",
+        "Automated RTS Beverage Line",
+        "Commercial Essential Oil Distillation",
+        "Bio-Fertilizer from Pomace"
+      ],
+      "primary_policy_leverage": "PMFME Individual Micro Unit Scheme & PMEGP Margin Money"
+    }
+  ],
+  "kmeans_evaluation": {
+    "k_comparisons": [
+      {
+        "k": 2,
+        "inertia": 3100.85,
+        "silhouette_score": 0.3938
+      },
+      {
+        "k": 3,
+        "inertia": 1912.31,
+        "silhouette_score": 0.4381
+      },
+      {
+        "k": 4,
+        "inertia": 1239.01,
+        "silhouette_score": 0.4891
+      },
+      {
+        "k": 5,
+        "inertia": 1085.71,
+        "silhouette_score": 0.4667
+      }
+    ],
+    "optimal_k": 4,
+    "scaler": "StandardScaler (Zero-Mean, Unit-Variance)",
+    "silhouette_score_k4": 0.4891
+  },
+  "best_model": "Random Forest Classifier",
+  "feature_names": [
+    "capital_ratio",
+    "land_acres",
+    "experience_years",
+    "risk_tolerance",
+    "equipment_offset_lakhs",
+    "has_workspace",
+    "regulatory_readiness",
+    "raw_material_density",
+    "mobility_radius_km"
+  ],
+  "clustering_features": [
+    "capital_lakhs",
+    "land_acres",
+    "skills_score",
+    "infrastructure_score",
+    "equipment_offset_lakhs"
+  ],
+  "class_labels": {
+    "0": "High Risk / Resource Deficit",
+    "1": "Moderately Viable (Requires Capital Stack)",
+    "2": "Highly Viable (Ready for Immediate Launch)"
+  }
+}

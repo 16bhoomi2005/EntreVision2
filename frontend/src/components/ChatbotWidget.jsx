@@ -1,33 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MessageSquare, X, Send, Sparkles, Bot, User, Sparkle } from "lucide-react";
 
-const KNOWLEDGE_RESPONSES = [
-  {
-    keywords: ["pmfme", "subsidy", "35%", "grant", "funding", "assistance"],
-    answer: "Under the PMFME scheme, Nagpur Mandarin is the notified ODOP commodity. Individual micro-enterprises receive a 35% credit-linked capital subsidy up to ₹10 Lakhs. The promoter contributes 10% equity, with the balance financed via a bank term loan."
-  },
-  {
-    keywords: ["katol", "narkhed", "location", "best business"],
-    answer: "Katol and Narkhed are high-density citrus production belts in Vidarbha. Top recommended opportunities include: 1) Disease-Free Citrus Mother Nursery (MIDH 50% subsidy), 2) Farm-gate Sorting & Shellac Waxing Packhouse, and 3) Cold-Pressed Citrus Peel Oil Extraction."
-  },
-  {
-    keywords: ["cold storage", "storage", "kalamna", "infrastructure", "facility"],
-    answer: "Major accredited cold chain facilities in Nagpur include: 1) Kailasya Agro Industries (Kalamna Yard, 5,000 MT), 2) Meghvya Cold Chain (Kamthi, 5,000 MT), and 3) Ras Frozen Foods IQF (Butibori MIDC, 3,500 MT). Optimal storage is 5°C–7°C with 90–95% RH."
-  },
-  {
-    keywords: ["bahar", "season", "ambiya", "mrig", "harvest", "mandi"],
-    answer: "Nagpur mandarin has two crops: 1) Ambiya Bahar (Flowering Jan–Feb, Harvest Sept–Dec, Mandi ₹25–₹45/kg) and 2) Mrig Bahar (Flowering June–July, Harvest Feb–April, Mandi ₹35–₹60/kg, 42% juice yield, premium export value)."
-  },
-  {
-    keywords: ["nursery", "planting", "budwood", "rootstock", "ccri"],
-    answer: "ICAR-CCRI recommends Rangpur Lime and Rough Lemon rootstocks budded with virus-free scions. Accredited mother nurseries receive up to 50% MIDH capital assistance."
-  },
-  {
-    keywords: ["juice", "beverage", "processing", "peel", "rts"],
-    answer: "ICAR-CCRI technology debitters juice using enzymatic debittering (limonin reduction). 1 MT fruit yields ~400 L juice, 50 kg essential oil, and 200 kg pectin-rich pomace. CapEx ranges from ₹8L to ₹45L, eligible for PMFME 35% subsidy."
-  }
-];
-
+// Live API Integration ONLY
 export default function ChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
@@ -44,7 +18,7 @@ export default function ChatbotWidget() {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
-  const handleSend = (textToSend) => {
+  const handleSend = async (textToSend) => {
     const query = textToSend || input;
     if (!query.trim()) return;
 
@@ -53,19 +27,38 @@ export default function ChatbotWidget() {
     if (!textToSend) setInput("");
     setIsTyping(true);
 
-    setTimeout(() => {
-      const lower = query.toLowerCase();
-      let matched = KNOWLEDGE_RESPONSES.find((item) =>
-        item.keywords.some((kw) => lower.includes(kw))
-      );
+    try {
+      const response = await fetch("http://127.0.0.1:8000/dss/advisor/search", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: query, top_k: 3 }),
+      });
 
-      let reply = matched
-        ? matched.answer
-        : "Based on ICAR-CCRI and MoFPI data, Nagpur mandarin enterprises range from ₹50,000 to ₹50 Lakhs CapEx. Explore our 4-step decision framework on the home page for tailored guidance.";
+      if (!response.ok) throw new Error("Failed to connect to backend");
 
-      setMessages((prev) => [...prev, { sender: "bot", text: reply }]);
+      const data = await response.json();
+      
+      let reply = data.answer || "I could not find an answer in the official guidelines.";
+      
+      // If it returned raw context instead of an LLM answer (no API key)
+      if (data.llm_prompt_context && !data.answer) {
+         reply = "Here is what the official guidelines say:\n\n" + 
+                 data.top_chunks.map(c => `• ${c.Text}`).join("\n\n");
+      }
+
+      setMessages((prev) => [...prev, { sender: "bot", text: reply, citations: data.citations || [] }]);
+    } catch (error) {
+      console.error("Chatbot Error:", error);
+      setMessages((prev) => [
+        ...prev,
+        {
+          sender: "bot",
+          text: "Sorry, I am having trouble connecting to the AI brain. Ensure the FastAPI backend is running!",
+        },
+      ]);
+    } finally {
       setIsTyping(false);
-    }, 600);
+    }
   };
 
   return (
@@ -213,7 +206,34 @@ export default function ChatbotWidget() {
                     boxShadow: "var(--shadow-sm)",
                   }}
                 >
-                  {m.text}
+                  <div style={{ whiteSpace: "pre-line" }}>{m.text}</div>
+                  {m.citations && m.citations.length > 0 && (
+                    <div style={{ marginTop: 10, paddingTop: 8, borderTop: "1px dashed var(--line)", display: "flex", flexWrap: "wrap", gap: 6 }}>
+                      <span style={{ fontSize: "0.7rem", color: "var(--muted)", width: "100%", fontWeight: 600 }}>
+                        📚 Official Provenance Citations:
+                      </span>
+                      {m.citations.slice(0, 3).map((cit, idx) => (
+                        <a
+                          key={idx}
+                          href={cit.source_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            fontSize: "0.7rem",
+                            color: "var(--cyan)",
+                            background: "rgba(6, 182, 212, 0.12)",
+                            padding: "3px 8px",
+                            borderRadius: 12,
+                            textDecoration: "none",
+                            border: "1px solid rgba(6, 182, 212, 0.3)",
+                            display: "inline-block"
+                          }}
+                        >
+                          📄 {cit.document_title} ({cit.page_number}, {cit.clause_number})
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

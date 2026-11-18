@@ -1,0 +1,6 @@
+tehsil_id,tehsil_name,groundwater_status,avg_depth_mbgl_pre_monsoon,avg_depth_mbgl_post_monsoon,notes
+T02,Katol,Safe,8.5,3.2,Water levels highly responsive to monsoon; generally safe for extraction.
+T03,Narkhed,Semi-Critical,12.4,5.1,Deeper water tables; requires careful borewell planning.
+T04,Kalmeshwar,Safe,9.0,4.0,Good aquifer recharge rates.
+T07,Hingna,Safe,7.5,2.8,Industrial zone; groundwater is stable but monitored heavily.
+T08,Savner,Safe,10.2,4.5,Stable water tables for agriculture.

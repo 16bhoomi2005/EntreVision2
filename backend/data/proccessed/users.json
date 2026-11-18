@@ -1,0 +1,2614 @@
+[
+  {
+    "id": "usr_bhoomi",
+    "email": "bhoomika@entrevision.in",
+    "full_name": "Bhoomika Vaishya",
+    "password_hash": "b0e0ed39237e153e52569a3bfaae11eae8937a6f6761e3b52a547778fdc193d6",
+    "role": "Agro-Entrepreneur",
+    "tehsil": "Katol",
+    "district": "Nagpur",
+    "phone": "+91 98765 43210",
+    "avatar": "\ud83c\udf4a",
+    "created_at": "2026-10-18T10:00:00Z",
+    "assessment_data": {
+      "user_id": "usr_bhoomi",
+      "about_me": {
+        "fullName": "Bhoomika Vaishya",
+        "education": "Bachelor of Science (Agriculture / Food Tech)",
+        "currentSituation": "looking_opportunity",
+        "goals": [
+          "first_business"
+        ]
+      },
+      "skills": [
+        "SKL15",
+        "SKL14",
+        "SKL12"
+      ],
+      "skills_detailed": [
+        {
+          "skillId": "SKL15",
+          "name": "Selling products directly to customers",
+          "icon": "\ud83c\udf31",
+          "proficiency": "Beginner",
+          "yearsExperience": "2 years",
+          "howAcquired": "Self-taught",
+          "certificateName": "",
+          "issuingOrg": "",
+          "certYear": "",
+          "certFileName": "",
+          "orgName": "",
+          "role": "",
+          "expDuration": "2 years",
+          "expFileName": "",
+          "notes": ""
+        },
+        {
+          "skillId": "SKL14",
+          "name": "Buying & selling in wholesale markets",
+          "icon": "\ud83c\udf31",
+          "proficiency": "Beginner",
+          "yearsExperience": "1 year",
+          "howAcquired": "Self-taught",
+          "certificateName": "",
+          "issuingOrg": "",
+          "certYear": "",
+          "certFileName": "",
+          "orgName": "",
+          "role": "",
+          "expDuration": "2 years",
+          "expFileName": "",
+          "notes": ""
+        },
+        {
+          "skillId": "SKL12",
+          "name": "Working with biological products",
+          "icon": "\ud83c\udf31",
+          "proficiency": "Intermediate",
+          "yearsExperience": "2 years",
+          "howAcquired": "Formal education",
+          "certificateName": "",
+          "issuingOrg": "",
+          "certYear": "",
+          "certFileName": "",
+          "orgName": "",
+          "role": "",
+          "expDuration": "2 years",
+          "expFileName": "",
+          "notes": ""
+        }
+      ],
+      "willingness_to_learn": "practical_affordable",
+      "documents": {
+        "certificates": [
+          {
+            "id": "cert-1",
+            "name": "ICAR-CCRI Food Processing & Debittering Certificate",
+            "org": "ICAR-Central Citrus Research Institute, Nagpur",
+            "year": "2023",
+            "skill": "Food Processing",
+            "fileName": "ccri_debittering_cert.pdf",
+            "status": "added"
+          },
+          {
+            "id": "cert-2",
+            "name": "Horticulture Propagation & Budwood Training",
+            "org": "Krishi Vigyan Kendra (KVK)",
+            "year": "2022",
+            "skill": "Nursery",
+            "fileName": "kvk_horticulture_training.pdf",
+            "status": "added"
+          }
+        ],
+        "experience": [
+          {
+            "id": "exp-1",
+            "org": "Vidarbha Agro Packhouse & Cold Store",
+            "role": "Quality Sorting & Shellac Line Supervisor",
+            "duration": "2 years",
+            "type": "Post-Harvest Handling & Cold Chain",
+            "fileName": "experience_letter_vidarbha_agro.pdf",
+            "status": "added"
+          }
+        ],
+        "licenses": [
+          {
+            "id": "lic-1",
+            "name": "FSSAI Food Safety Registration",
+            "regNo": "21523089000123",
+            "authority": "Food Safety and Standards Authority of India",
+            "fileName": "fssai_registration_cert.pdf",
+            "status": "added"
+          },
+          {
+            "id": "lic-2",
+            "name": "Udyam MSME Registration",
+            "regNo": "UDYAM-MH-20-0019283",
+            "authority": "Ministry of MSME, Govt of India",
+            "fileName": "udyam_registration.pdf",
+            "status": "added"
+          }
+        ],
+        "otherDocs": [
+          {
+            "id": "oth-1",
+            "title": "Land Ownership Document (7/12 Extract)",
+            "desc": "Katol Taluka, 2.5 Acres Agricultural Land",
+            "fileName": "satbara_extract_katol.pdf",
+            "status": "needs_verification"
+          }
+        ]
+      },
+      "resources": [
+        "RES01",
+        "RES02",
+        "RES03",
+        "RES05",
+        "RES06",
+        "RES07",
+        "RES08",
+        "RES10",
+        "RES11",
+        "RES12"
+      ],
+      "resources_detailed": {
+        "hasLand": true,
+        "landAcres": 2.5,
+        "landOwnership": "owned",
+        "waterSources": [
+          "borewell",
+          "drip_irrigation"
+        ],
+        "landLocationNote": "Katol Taluka, Nagpur",
+        "hasWorkspace": true,
+        "workspaceType": "shed",
+        "workspaceAreaSqFt": 1500,
+        "powerType": "three_phase",
+        "transportModes": [
+          {
+            "type": "tractor",
+            "label": "Farm Tractor & Trolley",
+            "availability": "owned"
+          },
+          {
+            "type": "mini_truck",
+            "label": "Mini-Truck (Bolero/Ace)",
+            "availability": "rent"
+          }
+        ],
+        "equipmentList": [
+          {
+            "id": "dry_storage",
+            "name": "Dry Storage Godown / Shed",
+            "availability": "owned",
+            "icon": "\ud83c\udfe0"
+          },
+          {
+            "id": "cold_storage",
+            "name": "Cold Storage & Pre-Cooling",
+            "availability": "nearby",
+            "icon": "\u2744\ufe0f"
+          },
+          {
+            "id": "grading_line",
+            "name": "Sorting & Shellac Waxing Line",
+            "availability": "nearby",
+            "icon": "\ud83d\udce6"
+          },
+          {
+            "id": "juice_extractor",
+            "name": "Juice Extractor / Pulper",
+            "availability": "can_acquire",
+            "icon": "\ud83e\udd64"
+          }
+        ],
+        "existingSetupStatus": "active_business",
+        "existingBusinessDesc": "Nagpur mandarin orchard (400 trees) with seasonal mandi sales",
+        "existingBusinessStage": "expanding"
+      },
+      "has_land": true,
+      "land_acres": 2.5,
+      "location": "Katol",
+      "location_detailed": {
+        "residenceLocation": "Nagpur Urban",
+        "residencePinCode": "440001",
+        "operatingLocationMode": "same",
+        "selectedCluster": "Katol",
+        "customSpecificLocation": "",
+        "locationFlexibility": "preferred_cluster",
+        "locationPriorities": [
+          "raw_material",
+          "mandi_access",
+          "cold_storage",
+          "logistics_highway"
+        ],
+        "operatingArea": "Nagpur"
+      },
+      "budget_inr": 600000,
+      "finance_detailed": {
+        "budgetTier": "5_to_10_lakh",
+        "availableCapitalINR": 600000,
+        "fundingSources": [
+          "personal_savings",
+          "govt_subsidy",
+          "bank_loan",
+          "other"
+        ],
+        "borrowingComfort": "open_to_loans",
+        "investmentHorizon": "within_3_months",
+        "comfortLevel": "moderate",
+        "existingLoans": "no"
+      },
+      "business_preferences": {
+        "businessTypes": [
+          "food_processing",
+          "trading_selling"
+        ],
+        "businessScale": "small_enterprise",
+        "timeCommitment": "full_time",
+        "startTimeline": "within_3_months",
+        "riskTolerance": "moderate",
+        "startingApproach": "on_my_own",
+        "corePriorities": [
+          "existing_resources",
+          "existing_skills",
+          "steady_income",
+          "local_market"
+        ],
+        "willingnessToLearn": "practical_affordable"
+      },
+      "interests": [
+        "food_processing",
+        "trading_selling"
+      ],
+      "risk_tolerance": "moderate",
+      "business_scale": "small_enterprise",
+      "time_commitment": "full_time",
+      "needs_funding": true,
+      "funding_preference": "subsidy_and_loan",
+      "preferences": {
+        "risk_tolerance": "moderate",
+        "business_types": [
+          "food_processing",
+          "trading_selling"
+        ],
+        "scale": "small_enterprise",
+        "time_commitment": "full_time"
+      }
+    },
+    "latest_results": {
+      "user_summary": {
+        "location": "Katol",
+        "budget": "\u20b96.00 Lakhs",
+        "selected_skills_count": 3,
+        "selected_resources_count": 10,
+        "land_acres": 2.5,
+        "funding_preference": "subsidy_and_loan",
+        "top_match_score": 98,
+        "market_intelligence": {
+          "location": "Katol",
+          "citrus_production": {
+            "estimated_area_hectares": 36000.0,
+            "estimated_production_mt": 270000.0,
+            "estimated_yield_mt_per_ha": 7.5,
+            "raw_material_density_verdict": "Tier-1 Citrus Hub (270,000 MT Annual Harvest)"
+          },
+          "mandi_market_dynamics": {
+            "benchmark_commodity": "Nagpur Mandarin (Orange)",
+            "average_wholesale_price_inr_qtl": 3761.4,
+            "price_per_kg": 37.6,
+            "price_range_30d": "\u20b933.0 - \u20b941.5 / kg",
+            "market_status": "Active Harvesting Window (High Trading Volume)"
+          },
+          "nearby_infrastructure": [
+            {
+              "name": "Dr. PDKV Regional Fruit Research Station",
+              "type": "Rootstock & Demonstration Farm",
+              "capacity": "Demonstration MT",
+              "key_relevance": "Certified rootstock saplings & field training"
+            }
+          ],
+          "training_institutions": [
+            {
+              "name": "ICAR-Central Citrus Research Institute (CCRI)",
+              "location": "Amravati Road, Nagpur",
+              "programs": "Shoot Tip Grafting, Micro-budding, Citrus Pathology, RTS Processing",
+              "url": "https://ccri.org.in"
+            },
+            {
+              "name": "Krishi Vigyan Kendra (KVK) Nagpur",
+              "location": "CICR Campus, Wardha Road, Nagpur",
+              "programs": "Farmer training, orchard management, IPM demonstrations",
+              "url": "https://kvknagpur.icar.gov.in/"
+            },
+            {
+              "name": "Dr. PDKV Regional Fruit Research Station",
+              "location": "Katol, Nagpur",
+              "programs": "Rootstock propagation, Mrig bahar management, local farmer outreach",
+              "url": "https://www.pdkv.ac.in"
+            }
+          ],
+          "regulatory_licences": [
+            {
+              "name": "Udyam Registration (MSME)",
+              "authority": "Ministry of MSME",
+              "turnaround_days": 3,
+              "cost_inr": "0",
+              "url": "https://udyamregistration.gov.in"
+            },
+            {
+              "name": "FSSAI Basic Registration",
+              "authority": "Food Safety and Standards Authority of India",
+              "turnaround_days": 7,
+              "cost_inr": "100",
+              "url": "https://foscos.fssai.gov.in"
+            },
+            {
+              "name": "FSSAI State Licence",
+              "authority": "State FDA, Maharashtra",
+              "turnaround_days": 30,
+              "cost_inr": "2000",
+              "url": "https://foscos.fssai.gov.in"
+            },
+            {
+              "name": "GST Registration",
+              "authority": "CBIC / State GST",
+              "turnaround_days": 7,
+              "cost_inr": "0",
+              "url": "https://gst.gov.in"
+            }
+          ]
+        }
+      },
+      "recommendations": [
+        {
+          "opportunity_id": 36,
+          "name": "Citrus Bio-Enzyme Multi-Purpose Cleaning Solutions",
+          "category": "By-Products & Bio-Economy",
+          "subcategory": "Green Homecare",
+          "investment_level": "\u20b92.00 Lakhs",
+          "technology_level": "Low",
+          "target_market": "Eco-conscious Urban Consumers (D2C)",
+          "location_relevance": "High (Nagpur City)",
+          "status": "candidate",
+          "source": "Green Startups Feasibility Studies",
+          "source_url": "https://startupindia.gov.in",
+          "description": "Eco-friendly fermentation of fresh orange peels with jaggery and water to produce all-natural, chemical-free enzymes for home cleaning, floor washes, and grease removal.",
+          "skill_match": 1.0,
+          "resource_match": 1.0,
+          "location_match": 0.9,
+          "financial_match": 1.0,
+          "intent_match": 0.95,
+          "overall_match": 0.98,
+          "suitability_score": 98,
+          "skill_match_pct": 100,
+          "est_capex_formatted": "\u20b92.00 Lakhs",
+          "est_margin": "~75.0% Net",
+          "setup_timeline": "1 Month",
+          "training_recommendation": "Anaerobic Citrus Enzyme Fermentation & Eco-Cleaner Formulation Workshop",
+          "risk_level": "Low",
+          "scale": "Micro",
+          "radar_scores": {
+            "investment": 100,
+            "roi": 100,
+            "subsidy": 85,
+            "resource": 100,
+            "skills": 100
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 100.0% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83d\udcbc Commercial Alignment: Driven by hands-on execution and local farmer relations across all education levels.",
+            "\ud83d\udcb0 100% Capital Ready: Your available equity of \u20b96.00 Lakhs fully funds this venture.",
+            "\ud83d\udcdc Udyam MSME Registered: Unlocks collateral-free CGTMSE bank loan guarantee."
+          ],
+          "matched_skills": [
+            "Selling products directly to customers",
+            "Working with biological products"
+          ],
+          "missing_skills": [],
+          "matched_resources": [
+            "Storage or packing space",
+            "Work shed / Room for business"
+          ],
+          "missing_resources": [],
+          "financial_breakdown": {
+            "total_project_cost": 200000.0,
+            "eligible_scheme": "PMEGP MSME Margin Money Subsidy",
+            "subsidy_amount": 50000.0,
+            "subsidy_percentage": "25% (Rural) / 15% (Urban)",
+            "farmer_equity_required": 20000.0,
+            "bank_loan_required": 130000.0,
+            "user_budget": 600000.0,
+            "funding_gap": 0.0,
+            "budget_status": "100% Self-Funded (Zero Loan Strain)"
+          },
+          "nearby_infrastructure": [
+            "Dr. PDKV Regional Fruit Research Station (Rootstock & Demonstration Farm in Wandali Farm)"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 100.0,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 0.0,
+              "highly_viable": 100.0
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 105.0,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 22.5,
+                "positive": true
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 24,
+                "positive": true
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": false,
+            "total_gaps_count": 0,
+            "items": [],
+            "skill_gap": {
+              "status": "Verified",
+              "missing": [],
+              "prescribed_training": "Anaerobic Citrus Enzyme Fermentation & Eco-Cleaner Formulation Workshop",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified By-Products",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Obtain CCRI certification via Anaerobic Citrus Enzyme Fermentation & Eco-Cleaner Formulation Workshop",
+              "Apply for PMEGP MSME Margin Money Subsidy at local bank branch / DIC",
+              "Begin procurement of core machinery & site commissioning"
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Direct Skill Match",
+            "capital_alignment": "100% Capital Ready"
+          }
+        },
+        {
+          "opportunity_id": 17,
+          "name": "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+          "category": "Cultivation & Production",
+          "subcategory": "Orchard Development",
+          "investment_level": "\u20b91.75 Lakhs",
+          "technology_level": "Medium (Drip Fertigation)",
+          "target_market": "APMC Mandis, Processors & Gulf Export",
+          "location_relevance": "High (Katol, Narkhed, Kalmeshwar, Saoner)",
+          "status": "validated",
+          "source": "National Horticulture Board (NHB) - 1 Acre Bankable Model",
+          "source_url": "http://nhb.gov.in",
+          "description": "High-quality commercial cultivation of Nagpur Mandarin (120 trees/acre at 6mx6m spacing) with drip fertigation and Mrig Bahar crop regulation. Total project cost: Rs 1.75L/acre. Financially viable with 18.1% IRR, 2.35 DSCR, 35% capital subsidy, and Rs 30k/yr intercropping income during gestation.",
+          "skill_match": 0.65,
+          "resource_match": 1.0,
+          "location_match": 1.0,
+          "financial_match": 1.0,
+          "intent_match": 0.95,
+          "overall_match": 0.95,
+          "suitability_score": 95,
+          "skill_match_pct": 65,
+          "est_capex_formatted": "\u20b91.75 Lakhs",
+          "est_margin": "~28.0% Net",
+          "setup_timeline": "1\u20132 Months",
+          "training_recommendation": "CCRI 3-Day Mandarin High-Density Canopy & Drip Fertigation Training",
+          "risk_level": "Low",
+          "scale": "Micro",
+          "radar_scores": {
+            "investment": 100,
+            "roi": 42,
+            "subsidy": 85,
+            "resource": 100,
+            "skills": 65
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 99.2% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83c\udf31 Land Ready: Your 2.5 acres fully satisfies the required 1.0-acre footprint.",
+            "\ud83d\udcda Skill Gap Prescribed: Bridge capabilities via CCRI 3-Day Mandarin High-Density Canopy & Drip Fertigation Training.",
+            "\ud83d\udcb0 100% Capital Ready: Your available equity of \u20b96.00 Lakhs fully funds this venture."
+          ],
+          "matched_skills": [],
+          "missing_skills": [
+            "Growing plants / managing a nursery",
+            "Managing irrigation and water",
+            "Managing crop pests and diseases",
+            "Taking care of fruit trees"
+          ],
+          "matched_resources": [
+            "Farm land (1 Acre or more)",
+            "Reliable water supply"
+          ],
+          "missing_resources": [],
+          "financial_breakdown": {
+            "total_project_cost": 175000.0,
+            "eligible_scheme": "MIDH / NHM Commercial Horticulture Subsidy",
+            "subsidy_amount": 61249.99999999999,
+            "subsidy_percentage": "50% (Accredited Nurseries) / 35% (Standard)",
+            "farmer_equity_required": 35000.0,
+            "bank_loan_required": 78750.0,
+            "user_budget": 600000.0,
+            "funding_gap": 0.0,
+            "budget_status": "100% Self-Funded (Zero Loan Strain)"
+          },
+          "nearby_infrastructure": [
+            "Dr. PDKV Regional Fruit Research Station (Rootstock & Demonstration Farm in Wandali Farm)"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 99.2,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 0.8,
+              "highly_viable": 99.2
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 105.0,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 20.0,
+                "positive": true
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 24,
+                "positive": true
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": true,
+            "total_gaps_count": 1,
+            "items": [
+              {
+                "gap_type": "skill",
+                "title": "Skill Gap: Growing plants / managing a nursery, Managing irrigation and water, Managing crop pests and diseases, Taking care of fruit trees",
+                "missing": "Missing operational training in Growing plants / managing a nursery, Managing irrigation and water, Managing crop pests and diseases, Taking care of fruit trees",
+                "solution": "Enroll in CCRI 3-Day Mandarin High-Density Canopy & Drip Fertigation Training (1\u20132 Months duration)."
+              }
+            ],
+            "skill_gap": {
+              "status": "Missing Skills",
+              "missing": [
+                "Growing plants / managing a nursery",
+                "Managing irrigation and water",
+                "Managing crop pests and diseases",
+                "Taking care of fruit trees"
+              ],
+              "prescribed_training": "CCRI 3-Day Mandarin High-Density Canopy & Drip Fertigation Training",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified Cultivation",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Enroll in CCRI 3-Day Mandarin High-Density Canopy & Drip Fertigation Training (1\u20132 Months duration)."
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Disqualified by Current Skills",
+            "capital_alignment": "100% Capital Ready"
+          }
+        },
+        {
+          "opportunity_id": 20,
+          "name": "Certified Citrus Rootstock Seed Supply",
+          "category": "Propagation & Nursery",
+          "subcategory": "Rootstock Seeds",
+          "investment_level": "\u20b93.00 Lakhs",
+          "technology_level": "Low",
+          "target_market": "Commercial Nurseries in Central India",
+          "location_relevance": "High (Katol & Saoner)",
+          "status": "validated",
+          "source": "ICAR-CCRI QRT Report",
+          "source_url": "https://ccri.org.in",
+          "description": "Harvesting, extraction, testing and sale of certified Phytophthora-tolerant rootstock seeds (Rangpur Lime, Rough Lemon, Carrizo) for commercial citrus nurseries.",
+          "skill_match": 0.65,
+          "resource_match": 1.0,
+          "location_match": 1.0,
+          "financial_match": 1.0,
+          "intent_match": 0.95,
+          "overall_match": 0.94,
+          "suitability_score": 94,
+          "skill_match_pct": 65,
+          "est_capex_formatted": "\u20b93.00 Lakhs",
+          "est_margin": "~50.0% Net",
+          "setup_timeline": "1\u20132 Months",
+          "training_recommendation": "Phytophthora-Tolerant Rootstock Extraction & Germination Testing (CCRI/KVK)",
+          "risk_level": "Low",
+          "scale": "Micro",
+          "radar_scores": {
+            "investment": 100,
+            "roi": 75,
+            "subsidy": 85,
+            "resource": 100,
+            "skills": 65
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 99.2% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83d\udcda Skill Gap Prescribed: Bridge capabilities via Phytophthora-Tolerant Rootstock Extraction & Germination Testing (CCRI/KVK).",
+            "\ud83d\udcb0 100% Capital Ready: Your available equity of \u20b96.00 Lakhs fully funds this venture.",
+            "\ud83d\udcdc Udyam MSME Registered: Unlocks collateral-free CGTMSE bank loan guarantee."
+          ],
+          "matched_skills": [],
+          "missing_skills": [
+            "Growing plants / managing a nursery",
+            "Harvesting and handling fruits"
+          ],
+          "matched_resources": [
+            "Storage or packing space",
+            "Farm land (1 Acre or more)"
+          ],
+          "missing_resources": [],
+          "financial_breakdown": {
+            "total_project_cost": 300000.0,
+            "eligible_scheme": "MIDH / NHM Commercial Horticulture Subsidy",
+            "subsidy_amount": 105000.0,
+            "subsidy_percentage": "50% (Accredited Nurseries) / 35% (Standard)",
+            "farmer_equity_required": 60000.0,
+            "bank_loan_required": 135000.0,
+            "user_budget": 600000.0,
+            "funding_gap": 0.0,
+            "budget_status": "100% Self-Funded (Zero Loan Strain)"
+          },
+          "nearby_infrastructure": [
+            "Dr. PDKV Regional Fruit Research Station (Rootstock & Demonstration Farm in Wandali Farm)"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 99.2,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 0.8,
+              "highly_viable": 99.2
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 70.0,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 18.8,
+                "positive": false
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 24,
+                "positive": true
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": true,
+            "total_gaps_count": 1,
+            "items": [
+              {
+                "gap_type": "skill",
+                "title": "Skill Gap: Growing plants / managing a nursery, Harvesting and handling fruits",
+                "missing": "Missing operational training in Growing plants / managing a nursery, Harvesting and handling fruits",
+                "solution": "Enroll in Phytophthora-Tolerant Rootstock Extraction & Germination Testing (CCRI/KVK) (1\u20132 Months duration)."
+              }
+            ],
+            "skill_gap": {
+              "status": "Missing Skills",
+              "missing": [
+                "Growing plants / managing a nursery",
+                "Harvesting and handling fruits"
+              ],
+              "prescribed_training": "Phytophthora-Tolerant Rootstock Extraction & Germination Testing (CCRI/KVK)",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified Propagation",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Enroll in Phytophthora-Tolerant Rootstock Extraction & Germination Testing (CCRI/KVK) (1\u20132 Months duration)."
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Disqualified by Current Skills",
+            "capital_alignment": "100% Capital Ready"
+          }
+        },
+        {
+          "opportunity_id": 23,
+          "name": "Trichoderma & Bio-Formulations Manufacturing Unit",
+          "category": "Agricultural Inputs",
+          "subcategory": "Bio-Pesticides & Inoculants",
+          "investment_level": "\u20b98.00 Lakhs",
+          "technology_level": "Medium",
+          "target_market": "Citrus Farmers & Organic Growers",
+          "location_relevance": "High (Hingna MIDC & Kalmeshwar)",
+          "status": "validated",
+          "source": "ICAR-CCRI Formulation Licensing",
+          "source_url": "https://ccri.org.in",
+          "description": "Commercial production of Trichoderma harzianum and microbial antagonists developed by CCRI for biological control of root rot and Phytophthora gummosis.",
+          "skill_match": 1.0,
+          "resource_match": 1.0,
+          "location_match": 0.85,
+          "financial_match": 0.9500000000000001,
+          "intent_match": 0.85,
+          "overall_match": 0.94,
+          "suitability_score": 94,
+          "skill_match_pct": 100,
+          "est_capex_formatted": "\u20b98.00 Lakhs",
+          "est_margin": "~50.0% Net",
+          "setup_timeline": "3\u20134 Months",
+          "training_recommendation": "CCRI Biocontrol Agent Mass Multiplication & Formulation Course",
+          "risk_level": "Medium",
+          "scale": "Small",
+          "radar_scores": {
+            "investment": 95,
+            "roi": 75,
+            "subsidy": 85,
+            "resource": 100,
+            "skills": 100
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 87.3% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83c\udf93 Educational Foundation: Your formal education/technical background matches this process engineering.",
+            "\ud83d\udcb0 Highly Bankable: Your equity of \u20b96.00 Lakhs meets promoter minimums backed by PMFME/MIDH capital subsidy.",
+            "\ud83d\udcdc Udyam MSME Registered: Unlocks collateral-free CGTMSE bank loan guarantee."
+          ],
+          "matched_skills": [
+            "Working with biological products"
+          ],
+          "missing_skills": [],
+          "matched_resources": [
+            "Work shed / Room for business",
+            "Reliable electricity supply"
+          ],
+          "missing_resources": [],
+          "financial_breakdown": {
+            "total_project_cost": 800000.0,
+            "eligible_scheme": "PMEGP MSME Margin Money Subsidy",
+            "subsidy_amount": 200000.0,
+            "subsidy_percentage": "25% (Rural) / 15% (Urban)",
+            "farmer_equity_required": 80000.0,
+            "bank_loan_required": 520000.0,
+            "user_budget": 600000.0,
+            "funding_gap": 200000.0,
+            "budget_status": "Highly Bankable (Assisted by PMEGP MSME Margin Money Subsidy)"
+          },
+          "nearby_infrastructure": [
+            "Dr. PDKV Regional Fruit Research Station (Rootstock & Demonstration Farm in Wandali Farm)"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 87.3,
+            "class_probabilities": {
+              "high_risk": 0.4,
+              "moderately_viable": 12.3,
+              "highly_viable": 87.3
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 26.2,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 18.8,
+                "positive": false
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 24,
+                "positive": true
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": false,
+            "total_gaps_count": 0,
+            "items": [],
+            "skill_gap": {
+              "status": "Verified",
+              "missing": [],
+              "prescribed_training": "CCRI Biocontrol Agent Mass Multiplication & Formulation Course",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified Agricultural Inputs",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Obtain CCRI certification via CCRI Biocontrol Agent Mass Multiplication & Formulation Course",
+              "Apply for PMEGP MSME Margin Money Subsidy at local bank branch / DIC",
+              "Begin procurement of core machinery & site commissioning"
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Direct Skill Match",
+            "capital_alignment": "100% Capital Ready"
+          }
+        },
+        {
+          "opportunity_id": 41,
+          "name": "Citrus Disease Diagnostic & Leaf Analysis Mobile Clinic",
+          "category": "Agritech Services",
+          "subcategory": "Diagnostic Services",
+          "investment_level": "\u20b96.00 Lakhs",
+          "technology_level": "High",
+          "target_market": "Citrus Orchardists in Vidarbha",
+          "location_relevance": "High (Katol & Nagpur)",
+          "status": "candidate",
+          "source": "ICAR-CCRI Diagnostic Kit Commercialization",
+          "source_url": "https://ccri.org.in",
+          "description": "Mobile testing van equipped with LAMP/PCR diagnostic kits and soil sensors to provide rapid on-farm diagnostics for Phytophthora, greening (HLB), and micro-nutrient deficiencies.",
+          "skill_match": 0.65,
+          "resource_match": 1.0,
+          "location_match": 1.0,
+          "financial_match": 1.0,
+          "intent_match": 0.95,
+          "overall_match": 0.94,
+          "suitability_score": 94,
+          "skill_match_pct": 65,
+          "est_capex_formatted": "\u20b96.00 Lakhs",
+          "est_margin": "~55.0% Net",
+          "setup_timeline": "1\u20132 Months",
+          "training_recommendation": "Citrus Greening (HLB) PCR Testing & Leaf Nutritional Profiling (CCRI)",
+          "risk_level": "Low",
+          "scale": "Micro",
+          "radar_scores": {
+            "investment": 100,
+            "roi": 82,
+            "subsidy": 85,
+            "resource": 100,
+            "skills": 65
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 98.3% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83d\udcbc Commercial Alignment: Driven by hands-on execution and local farmer relations across all education levels.",
+            "\ud83d\udcda Skill Gap Prescribed: Bridge capabilities via Citrus Greening (HLB) PCR Testing & Leaf Nutritional Profiling (CCRI).",
+            "\ud83d\udcb0 100% Capital Ready: Your available equity of \u20b96.00 Lakhs fully funds this venture."
+          ],
+          "matched_skills": [],
+          "missing_skills": [
+            "Managing crop pests and diseases"
+          ],
+          "matched_resources": [
+            "Vehicle for transporting goods"
+          ],
+          "missing_resources": [],
+          "financial_breakdown": {
+            "total_project_cost": 600000.0,
+            "eligible_scheme": "PMEGP MSME Margin Money Subsidy",
+            "subsidy_amount": 150000.0,
+            "subsidy_percentage": "25% (Rural) / 15% (Urban)",
+            "farmer_equity_required": 60000.0,
+            "bank_loan_required": 390000.0,
+            "user_budget": 600000.0,
+            "funding_gap": 0.0,
+            "budget_status": "100% Self-Funded (Zero Loan Strain)"
+          },
+          "nearby_infrastructure": [
+            "Dr. PDKV Regional Fruit Research Station (Rootstock & Demonstration Farm in Wandali Farm)"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 98.3,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 1.7,
+              "highly_viable": 98.3
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 35.0,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 21.2,
+                "positive": true
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 24,
+                "positive": true
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": true,
+            "total_gaps_count": 1,
+            "items": [
+              {
+                "gap_type": "skill",
+                "title": "Skill Gap: Managing crop pests and diseases",
+                "missing": "Missing operational training in Managing crop pests and diseases",
+                "solution": "Enroll in Citrus Greening (HLB) PCR Testing & Leaf Nutritional Profiling (CCRI) (1\u20132 Months duration)."
+              }
+            ],
+            "skill_gap": {
+              "status": "Missing Skills",
+              "missing": [
+                "Managing crop pests and diseases"
+              ],
+              "prescribed_training": "Citrus Greening (HLB) PCR Testing & Leaf Nutritional Profiling (CCRI)",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified Agritech Services",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Enroll in Citrus Greening (HLB) PCR Testing & Leaf Nutritional Profiling (CCRI) (1\u20132 Months duration)."
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Disqualified by Current Skills",
+            "capital_alignment": "100% Capital Ready"
+          }
+        }
+      ],
+      "ml_model_summary": {
+        "best_model": "Random Forest Classifier",
+        "benchmarks": {
+          "Logistic Regression": {
+            "accuracy": 96.4,
+            "precision": 95.94,
+            "recall": 96.4,
+            "f1_score": 96.17,
+            "confusion_matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                18,
+                5
+              ],
+              [
+                0,
+                3,
+                223
+              ]
+            ],
+            "dataset_split": {
+              "train_samples": 750,
+              "test_samples": 250,
+              "features_count": 9
+            }
+          },
+          "Random Forest Classifier": {
+            "accuracy": 94.4,
+            "precision": 93.66,
+            "recall": 94.4,
+            "f1_score": 93.96,
+            "confusion_matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                14,
+                9
+              ],
+              [
+                0,
+                4,
+                222
+              ]
+            ],
+            "dataset_split": {
+              "train_samples": 750,
+              "test_samples": 250,
+              "features_count": 9
+            }
+          },
+          "Gradient Boosting Classifier": {
+            "accuracy": 92.4,
+            "precision": 91.87,
+            "recall": 92.4,
+            "f1_score": 92.13,
+            "confusion_matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                13,
+                10
+              ],
+              [
+                0,
+                8,
+                218
+              ]
+            ],
+            "dataset_split": {
+              "train_samples": 750,
+              "test_samples": 250,
+              "features_count": 9
+            }
+          }
+        },
+        "feature_importances": [
+          {
+            "feature": "capital_ratio",
+            "label": "Capital Ratio",
+            "importance_pct": 48.83
+          },
+          {
+            "feature": "land_acres",
+            "label": "Land Acres",
+            "importance_pct": 15.96
+          },
+          {
+            "feature": "raw_material_density",
+            "label": "Raw Material Density",
+            "importance_pct": 9.61
+          },
+          {
+            "feature": "experience_years",
+            "label": "Experience Years",
+            "importance_pct": 9.52
+          },
+          {
+            "feature": "equipment_offset_lakhs",
+            "label": "Equipment Offset Lakhs",
+            "importance_pct": 4.59
+          },
+          {
+            "feature": "risk_tolerance",
+            "label": "Risk Tolerance",
+            "importance_pct": 4.15
+          },
+          {
+            "feature": "regulatory_readiness",
+            "label": "Regulatory Readiness",
+            "importance_pct": 2.95
+          },
+          {
+            "feature": "mobility_radius_km",
+            "label": "Mobility Radius Km",
+            "importance_pct": 2.25
+          },
+          {
+            "feature": "has_workspace",
+            "label": "Has Workspace",
+            "importance_pct": 2.14
+          }
+        ]
+      },
+      "hierarchical_funnel": {
+        "total_initial_businesses": 26,
+        "strict_matches_count": 3,
+        "has_strict_match": true,
+        "bottleneck_level": null,
+        "bottleneck_name": null,
+        "bottleneck_message": null,
+        "steps": [
+          {
+            "level": 1,
+            "name": "Age Group Eligibility",
+            "criterion": "Age Group: 26\u201335",
+            "passed_count": 26,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 2,
+            "name": "Education Qualification",
+            "criterion": "Education: Bachelor of Science (Agriculture / Food Tech)",
+            "passed_count": 26,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 3,
+            "name": "Goals & Current Situation",
+            "criterion": "Goals: first_business",
+            "passed_count": 26,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 4,
+            "name": "Skills & Practical Experience",
+            "criterion": "Skills (3 selected) \u2022 Willing to Learn",
+            "passed_count": 26,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 5,
+            "name": "Land Footprint & Space",
+            "criterion": "Land Available: 2.5 Acres (Owned)",
+            "passed_count": 26,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 6,
+            "name": "Covered Workspace & Storage Shed",
+            "criterion": "Covered Shed / Godown: Available",
+            "passed_count": 26,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 7,
+            "name": "Logistics & Vehicle Access",
+            "criterion": "Vehicle Access: No Tractor / Freight Vehicle",
+            "passed_count": 25,
+            "dropped_count": 1,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 8,
+            "name": "Existing Business / Orchard Setup",
+            "criterion": "Setup: Unused Land/Assets",
+            "passed_count": 25,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 9,
+            "name": "Region & Cluster Specificity",
+            "criterion": "Region Cluster: Katol Citrus Belt",
+            "passed_count": 13,
+            "dropped_count": 12,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 10,
+            "name": "Budget & Loan Feasibility",
+            "criterion": "Budget: \u20b9600,000 \u2022 Cap: \u20b94,000,000",
+            "passed_count": 10,
+            "dropped_count": 3,
+            "status": "PASSED",
+            "passed_sample": [
+              "Micro-Budding Commercial Citrus Propagation Unit",
+              "Certified Citrus Rootstock Seed Supply",
+              "Farm-Gate Solar Cold Rooms (10 MT Micro-Cold Storage)"
+            ]
+          },
+          {
+            "level": 11,
+            "name": "Sector Interests",
+            "criterion": "Sectors: food_processing, trading_selling",
+            "passed_count": 3,
+            "dropped_count": 7,
+            "status": "PASSED",
+            "passed_sample": [
+              "Acid Lime Nutri-Jelly & Vitamin-C Fruit Spreads",
+              "Gourmet Nagpur Orange Marmalade & Artisanal Jams",
+              "Solar Citrus Fruit Dehydration & Fruit Leather Unit"
+            ]
+          }
+        ],
+        "strict_matching_opportunities": [
+          "Acid Lime Nutri-Jelly & Vitamin-C Fruit Spreads",
+          "Gourmet Nagpur Orange Marmalade & Artisanal Jams",
+          "Solar Citrus Fruit Dehydration & Fruit Leather Unit"
+        ]
+      }
+    },
+    "active_venture": {
+      "id": "OPP36",
+      "name": "Citrus Bio-Enzyme Multi-Purpose Cleaning Solutions",
+      "category": "By-Products & Bio-Economy",
+      "location": "Katol, Nagpur District",
+      "suitability_score": 98,
+      "ml_viability_confidence": "97.5%",
+      "total_cost": 200000.0,
+      "own_equity": 20000.0,
+      "subsidy_amount": 50000.0,
+      "subsidy_scheme": "PMEGP MSME Margin Money Subsidy",
+      "bank_loan": 130000.0,
+      "journey_phase": 1,
+      "current_task": "Review Bankable DPR & Prescribed Training",
+      "next_deadline": "Next 7 Days"
+    }
+  },
+  {
+    "id": "usr_ramesh",
+    "email": "ramesh.patil@vidarbhaagro.org",
+    "full_name": "Ramesh Patil",
+    "password_hash": "26c07fc7be1668f8ea7e3801d4ffdbf33de487a593a69028936ec49f2c89f6ab",
+    "role": "Farmer / FPO Member",
+    "tehsil": "Warud",
+    "district": "Amravati / Nagpur Border",
+    "phone": "+91 94221 88321",
+    "avatar": "\ud83c\udf3e",
+    "created_at": "2026-10-18T10:00:00Z",
+    "assessment_data": {
+      "user_id": "usr_ramesh",
+      "about_me": {
+        "fullName": "Ramesh Patil",
+        "education": "10th / 12th Pass",
+        "currentSituation": "looking_opportunity",
+        "goals": [
+          "expand_farm",
+          "explore_local",
+          "new_idea"
+        ]
+      },
+      "skills": [
+        "SKL01"
+      ],
+      "skills_detailed": [
+        {
+          "skillId": "SKL01",
+          "name": "Farming",
+          "proficiency": "Expert"
+        }
+      ],
+      "willingness_to_learn": "practical_affordable",
+      "documents": {
+        "certificates": [],
+        "experience": [],
+        "licenses": [],
+        "otherDocs": []
+      },
+      "resources": [
+        "RES01",
+        "RES02",
+        "RES03",
+        "RES06",
+        "RES07",
+        "RES10"
+      ],
+      "resources_detailed": {
+        "hasLand": true,
+        "landAcres": 2.5,
+        "landOwnership": "owned",
+        "waterSources": [
+          "borewell",
+          "rainfed"
+        ],
+        "landLocationNote": "Narkhed Taluka, Nagpur",
+        "hasWorkspace": false,
+        "workspaceType": "shed",
+        "workspaceAreaSqFt": 1500,
+        "powerType": "three_phase",
+        "transportModes": [
+          {
+            "type": "tractor",
+            "label": "Farm Tractor & Trolley",
+            "availability": "owned"
+          },
+          {
+            "type": "mini_truck",
+            "label": "Mini-Truck (Bolero/Ace)",
+            "availability": "owned"
+          }
+        ],
+        "equipmentList": [
+          {
+            "id": "dry_storage",
+            "name": "Dry Storage Godown / Shed",
+            "availability": "accessible",
+            "icon": "\ud83c\udfe0"
+          }
+        ],
+        "existingSetupStatus": "equipment_only",
+        "existingBusinessDesc": "Nagpur mandarin orchard (400 trees) with seasonal mandi sales",
+        "existingBusinessStage": "expanding"
+      },
+      "has_land": true,
+      "land_acres": 2.5,
+      "location": "Narkhed",
+      "location_detailed": {
+        "residenceLocation": "Nagpur Urban",
+        "residencePinCode": "440001",
+        "operatingLocationMode": "same",
+        "selectedCluster": "Narkhed",
+        "customSpecificLocation": "",
+        "locationFlexibility": "preferred_cluster",
+        "locationPriorities": [
+          "raw_material",
+          "mandi_access",
+          "cold_storage",
+          "logistics_highway"
+        ],
+        "operatingArea": "Amravati / Nagpur Border"
+      },
+      "budget_inr": 500000,
+      "finance_detailed": {
+        "budgetTier": "1_to_5_lakh",
+        "availableCapitalINR": 500000,
+        "fundingSources": [
+          "personal_savings",
+          "govt_subsidy",
+          "bank_loan"
+        ],
+        "borrowingComfort": "open_to_loans",
+        "investmentHorizon": "within_3_months",
+        "comfortLevel": "moderate",
+        "existingLoans": "no"
+      },
+      "business_preferences": {
+        "businessTypes": [
+          "trading_selling",
+          "agriculture",
+          "manufacturing"
+        ],
+        "businessScale": "small_enterprise",
+        "timeCommitment": "full_time",
+        "startTimeline": "within_3_months",
+        "riskTolerance": "moderate",
+        "startingApproach": "on_my_own",
+        "corePriorities": [
+          "existing_resources",
+          "existing_skills",
+          "steady_income",
+          "local_market"
+        ],
+        "willingnessToLearn": "practical_affordable"
+      },
+      "interests": [
+        "trading_selling",
+        "agriculture",
+        "manufacturing"
+      ],
+      "risk_tolerance": "moderate",
+      "business_scale": "small_enterprise",
+      "time_commitment": "full_time",
+      "needs_funding": true,
+      "funding_preference": "subsidy_and_loan",
+      "preferences": {
+        "risk_tolerance": "moderate",
+        "business_types": [
+          "trading_selling",
+          "agriculture",
+          "manufacturing"
+        ],
+        "scale": "small_enterprise",
+        "time_commitment": "full_time"
+      }
+    },
+    "latest_results": {
+      "user_summary": {
+        "location": "Narkhed",
+        "budget": "\u20b95.00 Lakhs",
+        "selected_skills_count": 1,
+        "selected_resources_count": 6,
+        "land_acres": 2.5,
+        "funding_preference": "subsidy_and_loan",
+        "top_match_score": 96,
+        "market_intelligence": {
+          "location": "Narkhed",
+          "citrus_production": {
+            "estimated_area_hectares": 30000.0,
+            "estimated_production_mt": 225000.0,
+            "estimated_yield_mt_per_ha": 7.5,
+            "raw_material_density_verdict": "Tier-1 Citrus Hub (225,000 MT Annual Harvest)"
+          },
+          "mandi_market_dynamics": {
+            "benchmark_commodity": "Nagpur Mandarin (Orange)",
+            "average_wholesale_price_inr_qtl": 3761.4,
+            "price_per_kg": 37.6,
+            "price_range_30d": "\u20b933.0 - \u20b941.5 / kg",
+            "market_status": "Active Harvesting Window (High Trading Volume)"
+          },
+          "nearby_infrastructure": [
+            {
+              "name": "Kailasya Agro Cold Storage (APMC Kalamna Yard)",
+              "type": "Cold Storage & Pre-Cooling",
+              "capacity": "5,000 MT",
+              "key_relevance": "Citrus wholesale market storage & trading"
+            },
+            {
+              "name": "ICAR-CCRI Agri-Business Incubator (ABI)",
+              "type": "Testing & Pilot Processing Lab",
+              "capacity": "Pilot Processing Line",
+              "key_relevance": "Technology transfer & FSSAI product testing"
+            }
+          ],
+          "training_institutions": [
+            {
+              "name": "ICAR-Central Citrus Research Institute (CCRI)",
+              "location": "Amravati Road, Nagpur",
+              "programs": "Shoot Tip Grafting, Micro-budding, Citrus Pathology, RTS Processing",
+              "url": "https://ccri.org.in"
+            },
+            {
+              "name": "Krishi Vigyan Kendra (KVK) Nagpur",
+              "location": "CICR Campus, Wardha Road, Nagpur",
+              "programs": "Farmer training, orchard management, IPM demonstrations",
+              "url": "https://kvknagpur.icar.gov.in/"
+            },
+            {
+              "name": "Dr. PDKV Regional Fruit Research Station",
+              "location": "Katol, Nagpur",
+              "programs": "Rootstock propagation, Mrig bahar management, local farmer outreach",
+              "url": "https://www.pdkv.ac.in"
+            }
+          ],
+          "regulatory_licences": [
+            {
+              "name": "Udyam Registration (MSME)",
+              "authority": "Ministry of MSME",
+              "turnaround_days": 3,
+              "cost_inr": "0",
+              "url": "https://udyamregistration.gov.in"
+            },
+            {
+              "name": "FSSAI Basic Registration",
+              "authority": "Food Safety and Standards Authority of India",
+              "turnaround_days": 7,
+              "cost_inr": "100",
+              "url": "https://foscos.fssai.gov.in"
+            },
+            {
+              "name": "FSSAI State Licence",
+              "authority": "State FDA, Maharashtra",
+              "turnaround_days": 30,
+              "cost_inr": "2000",
+              "url": "https://foscos.fssai.gov.in"
+            },
+            {
+              "name": "GST Registration",
+              "authority": "CBIC / State GST",
+              "turnaround_days": 7,
+              "cost_inr": "0",
+              "url": "https://gst.gov.in"
+            }
+          ]
+        }
+      },
+      "recommendations": [
+        {
+          "opportunity_id": 19,
+          "name": "Micro-Budding Commercial Citrus Propagation Unit",
+          "category": "Propagation & Nursery",
+          "subcategory": "Micro-Budding",
+          "investment_level": "\u20b98.00 Lakhs",
+          "technology_level": "Medium",
+          "target_market": "Citrus Nursery Owners & Farmers",
+          "location_relevance": "High (Katol & Narkhed)",
+          "status": "validated",
+          "source": "ICAR-CCRI Commercialization Agreement",
+          "source_url": "https://ccri.org.in",
+          "description": "Fast-track multiplication of commercial citrus cultivars using CCRI micro-budding protocol. Reduces nursery gestation from 18 to 12 months and cuts sapling production cost by 30%.",
+          "skill_match": 1.0,
+          "resource_match": 0.5,
+          "location_match": 0.95,
+          "financial_match": 0.88,
+          "intent_match": 1.0,
+          "overall_match": 0.96,
+          "suitability_score": 96,
+          "skill_match_pct": 100,
+          "est_capex_formatted": "\u20b98.00 Lakhs",
+          "est_margin": "~40.0% Net",
+          "setup_timeline": "2\u20134 Months",
+          "training_recommendation": "CCRI Micro-Budding & Rapid Sapling Multiplication Course",
+          "risk_level": "Low",
+          "scale": "Small",
+          "radar_scores": {
+            "investment": 88,
+            "roi": 60,
+            "subsidy": 85,
+            "resource": 50,
+            "skills": 100
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 79.4% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83c\udf31 Land Ready: Your 2.5 acres fully satisfies the required 0.25-acre footprint.",
+            "\ud83d\udcbc Commercial Alignment: Driven by hands-on execution and local farmer relations across all education levels.",
+            "\ud83d\ude80 First-Time Founder Fit: Turnkey modular setup with rapid commissioning and high PMFME subsidy access."
+          ],
+          "matched_skills": [
+            "Growing plants / managing a nursery"
+          ],
+          "missing_skills": [],
+          "matched_resources": [
+            "Reliable water supply"
+          ],
+          "missing_resources": [
+            "Nursery or greenhouse structure"
+          ],
+          "financial_breakdown": {
+            "total_project_cost": 800000.0,
+            "eligible_scheme": "MIDH / NHM Commercial Horticulture Subsidy",
+            "subsidy_amount": 280000.0,
+            "subsidy_percentage": "50% (Accredited Nurseries) / 35% (Standard)",
+            "farmer_equity_required": 160000.0,
+            "bank_loan_required": 360000.0,
+            "user_budget": 500000.0,
+            "funding_gap": 300000.0,
+            "budget_status": "Highly Bankable (Assisted by MIDH / NHM Commercial Horticulture Subsidy)"
+          },
+          "nearby_infrastructure": [
+            "Kalamna APMC Market Yard & Cold Chain Hub"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 79.4,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 20.5,
+              "highly_viable": 79.4
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 21.9,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 17.5,
+                "positive": false
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 0,
+                "positive": false
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": false,
+            "total_gaps_count": 0,
+            "items": [],
+            "skill_gap": {
+              "status": "Verified",
+              "missing": [],
+              "prescribed_training": "CCRI Micro-Budding & Rapid Sapling Multiplication Course",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified Propagation",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Obtain CCRI certification via CCRI Micro-Budding & Rapid Sapling Multiplication Course",
+              "Apply for MIDH / NHM Commercial Horticulture Subsidy at local bank branch / DIC",
+              "Begin procurement of core machinery & site commissioning"
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Direct Skill Match",
+            "capital_alignment": "Bankable via PMFME 35%"
+          }
+        },
+        {
+          "opportunity_id": 20,
+          "name": "Certified Citrus Rootstock Seed Supply",
+          "category": "Propagation & Nursery",
+          "subcategory": "Rootstock Seeds",
+          "investment_level": "\u20b93.00 Lakhs",
+          "technology_level": "Low",
+          "target_market": "Commercial Nurseries in Central India",
+          "location_relevance": "High (Katol & Saoner)",
+          "status": "validated",
+          "source": "ICAR-CCRI QRT Report",
+          "source_url": "https://ccri.org.in",
+          "description": "Harvesting, extraction, testing and sale of certified Phytophthora-tolerant rootstock seeds (Rangpur Lime, Rough Lemon, Carrizo) for commercial citrus nurseries.",
+          "skill_match": 0.75,
+          "resource_match": 1.0,
+          "location_match": 0.9,
+          "financial_match": 1.0,
+          "intent_match": 1.0,
+          "overall_match": 0.95,
+          "suitability_score": 95,
+          "skill_match_pct": 75,
+          "est_capex_formatted": "\u20b93.00 Lakhs",
+          "est_margin": "~50.0% Net",
+          "setup_timeline": "1\u20132 Months",
+          "training_recommendation": "Phytophthora-Tolerant Rootstock Extraction & Germination Testing (CCRI/KVK)",
+          "risk_level": "Low",
+          "scale": "Micro",
+          "radar_scores": {
+            "investment": 100,
+            "roi": 75,
+            "subsidy": 85,
+            "resource": 100,
+            "skills": 75
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 98.5% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83d\ude80 First-Time Founder Fit: Turnkey modular setup with rapid commissioning and high PMFME subsidy access.",
+            "\ud83c\udf31 Direct Skill Mastery: Matches your verified background in Citrus Farming & Agronomy.",
+            "\ud83d\udcb0 100% Capital Ready: Your available equity of \u20b95.00 Lakhs fully funds this venture."
+          ],
+          "matched_skills": [
+            "Growing plants / managing a nursery"
+          ],
+          "missing_skills": [
+            "Harvesting and handling fruits"
+          ],
+          "matched_resources": [
+            "Storage or packing space",
+            "Farm land (1 Acre or more)"
+          ],
+          "missing_resources": [],
+          "financial_breakdown": {
+            "total_project_cost": 300000.0,
+            "eligible_scheme": "MIDH / NHM Commercial Horticulture Subsidy",
+            "subsidy_amount": 105000.0,
+            "subsidy_percentage": "50% (Accredited Nurseries) / 35% (Standard)",
+            "farmer_equity_required": 60000.0,
+            "bank_loan_required": 135000.0,
+            "user_budget": 500000.0,
+            "funding_gap": 0.0,
+            "budget_status": "100% Self-Funded (Zero Loan Strain)"
+          },
+          "nearby_infrastructure": [
+            "Kalamna APMC Market Yard & Cold Chain Hub"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 98.5,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 1.5,
+              "highly_viable": 98.5
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 58.3,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 18.8,
+                "positive": false
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 0,
+                "positive": false
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": false,
+            "total_gaps_count": 0,
+            "items": [],
+            "skill_gap": {
+              "status": "Missing Skills",
+              "missing": [
+                "Harvesting and handling fruits"
+              ],
+              "prescribed_training": "Phytophthora-Tolerant Rootstock Extraction & Germination Testing (CCRI/KVK)",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified Propagation",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Obtain CCRI certification via Phytophthora-Tolerant Rootstock Extraction & Germination Testing (CCRI/KVK)",
+              "Apply for MIDH / NHM Commercial Horticulture Subsidy at local bank branch / DIC",
+              "Begin procurement of core machinery & site commissioning"
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Disqualified by Current Skills",
+            "capital_alignment": "100% Capital Ready"
+          }
+        },
+        {
+          "opportunity_id": 30,
+          "name": "Acid Lime Nutri-Jelly & Vitamin-C Fruit Spreads",
+          "category": "Food & Beverage",
+          "subcategory": "Value-Added Confectionery",
+          "investment_level": "\u20b95.00 Lakhs",
+          "technology_level": "Low",
+          "target_market": "Children & Health-Conscious Consumers",
+          "location_relevance": "High (Nagpur Agri-Business Incubator)",
+          "status": "validated",
+          "source": "ICAR-CCRI Incubation with Ashok Agro",
+          "source_url": "https://ccri.org.in",
+          "description": "Value-added pectin-gelled fruit confectionery enriched with natural citrus Vitamin C, targeting healthy school-snack and functional confectionery segments.",
+          "skill_match": 0.65,
+          "resource_match": 0.2,
+          "location_match": 0.85,
+          "financial_match": 1.0,
+          "intent_match": 1.0,
+          "overall_match": 0.94,
+          "suitability_score": 94,
+          "skill_match_pct": 65,
+          "est_capex_formatted": "\u20b95.00 Lakhs",
+          "est_margin": "~35.0% Net",
+          "setup_timeline": "1\u20132 Months",
+          "training_recommendation": "Artisanal Jelly, Pectin Formulations & Retail Packaging (MCED/CCRI)",
+          "risk_level": "Low",
+          "scale": "Micro",
+          "radar_scores": {
+            "investment": 100,
+            "roi": 52,
+            "subsidy": 100,
+            "resource": 20,
+            "skills": 65
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 96.1% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83d\udcbc Commercial Alignment: Driven by hands-on execution and local farmer relations across all education levels.",
+            "\ud83d\ude80 First-Time Founder Fit: Turnkey modular setup with rapid commissioning and high PMFME subsidy access.",
+            "\ud83d\udcda Skill Gap Prescribed: Bridge capabilities via Artisanal Jelly, Pectin Formulations & Retail Packaging (MCED/CCRI)."
+          ],
+          "matched_skills": [],
+          "missing_skills": [
+            "Making fruit drinks & food products",
+            "Maintaining food hygiene & safety"
+          ],
+          "matched_resources": [],
+          "missing_resources": [
+            "Food-processing equipment",
+            "Work shed / Room for business"
+          ],
+          "financial_breakdown": {
+            "total_project_cost": 500000.0,
+            "eligible_scheme": "PMFME (MoFPI 35% Credit-Linked Capital Subsidy)",
+            "subsidy_amount": 175000.0,
+            "subsidy_percentage": "35% (Capped at \u20b910 Lakhs)",
+            "farmer_equity_required": 50000.0,
+            "bank_loan_required": 275000.0,
+            "user_budget": 500000.0,
+            "funding_gap": 0.0,
+            "budget_status": "100% Self-Funded (Zero Loan Strain)"
+          },
+          "nearby_infrastructure": [
+            "Kalamna APMC Market Yard & Cold Chain Hub"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 96.1,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 3.9,
+              "highly_viable": 96.1
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 35.0,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 21.2,
+                "positive": true
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 0,
+                "positive": false
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": true,
+            "total_gaps_count": 1,
+            "items": [
+              {
+                "gap_type": "skill",
+                "title": "Skill Gap: Making fruit drinks & food products, Maintaining food hygiene & safety",
+                "missing": "Missing operational training in Making fruit drinks & food products, Maintaining food hygiene & safety",
+                "solution": "Enroll in Artisanal Jelly, Pectin Formulations & Retail Packaging (MCED/CCRI) (1\u20132 Months duration)."
+              }
+            ],
+            "skill_gap": {
+              "status": "Missing Skills",
+              "missing": [
+                "Making fruit drinks & food products",
+                "Maintaining food hygiene & safety"
+              ],
+              "prescribed_training": "Artisanal Jelly, Pectin Formulations & Retail Packaging (MCED/CCRI)",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified Food",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Enroll in Artisanal Jelly, Pectin Formulations & Retail Packaging (MCED/CCRI) (1\u20132 Months duration)."
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Disqualified by Current Skills",
+            "capital_alignment": "100% Capital Ready"
+          }
+        },
+        {
+          "opportunity_id": 36,
+          "name": "Citrus Bio-Enzyme Multi-Purpose Cleaning Solutions",
+          "category": "By-Products & Bio-Economy",
+          "subcategory": "Green Homecare",
+          "investment_level": "\u20b92.00 Lakhs",
+          "technology_level": "Low",
+          "target_market": "Eco-conscious Urban Consumers (D2C)",
+          "location_relevance": "High (Nagpur City)",
+          "status": "candidate",
+          "source": "Green Startups Feasibility Studies",
+          "source_url": "https://startupindia.gov.in",
+          "description": "Eco-friendly fermentation of fresh orange peels with jaggery and water to produce all-natural, chemical-free enzymes for home cleaning, floor washes, and grease removal.",
+          "skill_match": 0.65,
+          "resource_match": 0.5,
+          "location_match": 0.9,
+          "financial_match": 1.0,
+          "intent_match": 1.0,
+          "overall_match": 0.94,
+          "suitability_score": 94,
+          "skill_match_pct": 65,
+          "est_capex_formatted": "\u20b92.00 Lakhs",
+          "est_margin": "~75.0% Net",
+          "setup_timeline": "1 Month",
+          "training_recommendation": "Anaerobic Citrus Enzyme Fermentation & Eco-Cleaner Formulation Workshop",
+          "risk_level": "Low",
+          "scale": "Micro",
+          "radar_scores": {
+            "investment": 100,
+            "roi": 100,
+            "subsidy": 85,
+            "resource": 50,
+            "skills": 65
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 98.1% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83d\udcbc Commercial Alignment: Driven by hands-on execution and local farmer relations across all education levels.",
+            "\ud83d\ude80 First-Time Founder Fit: Turnkey modular setup with rapid commissioning and high PMFME subsidy access.",
+            "\ud83d\udcda Skill Gap Prescribed: Bridge capabilities via Anaerobic Citrus Enzyme Fermentation & Eco-Cleaner Formulation Workshop."
+          ],
+          "matched_skills": [],
+          "missing_skills": [
+            "Selling products directly to customers",
+            "Working with biological products"
+          ],
+          "matched_resources": [
+            "Storage or packing space"
+          ],
+          "missing_resources": [
+            "Work shed / Room for business"
+          ],
+          "financial_breakdown": {
+            "total_project_cost": 200000.0,
+            "eligible_scheme": "PMEGP MSME Margin Money Subsidy",
+            "subsidy_amount": 50000.0,
+            "subsidy_percentage": "25% (Rural) / 15% (Urban)",
+            "farmer_equity_required": 20000.0,
+            "bank_loan_required": 130000.0,
+            "user_budget": 500000.0,
+            "funding_gap": 0.0,
+            "budget_status": "100% Self-Funded (Zero Loan Strain)"
+          },
+          "nearby_infrastructure": [
+            "Kalamna APMC Market Yard & Cold Chain Hub"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 98.1,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 1.9,
+              "highly_viable": 98.1
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 87.5,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 22.5,
+                "positive": true
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 0,
+                "positive": false
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": true,
+            "total_gaps_count": 1,
+            "items": [
+              {
+                "gap_type": "skill",
+                "title": "Skill Gap: Selling products directly to customers, Working with biological products",
+                "missing": "Missing operational training in Selling products directly to customers, Working with biological products",
+                "solution": "Enroll in Anaerobic Citrus Enzyme Fermentation & Eco-Cleaner Formulation Workshop (1 Month duration)."
+              }
+            ],
+            "skill_gap": {
+              "status": "Missing Skills",
+              "missing": [
+                "Selling products directly to customers",
+                "Working with biological products"
+              ],
+              "prescribed_training": "Anaerobic Citrus Enzyme Fermentation & Eco-Cleaner Formulation Workshop",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified By-Products",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Enroll in Anaerobic Citrus Enzyme Fermentation & Eco-Cleaner Formulation Workshop (1 Month duration)."
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Disqualified by Current Skills",
+            "capital_alignment": "100% Capital Ready"
+          }
+        },
+        {
+          "opportunity_id": 42,
+          "name": "Solar Citrus Fruit Dehydration & Fruit Leather Unit",
+          "category": "Food Processing & Value Addition",
+          "subcategory": "Dried Snacks & Confectionery",
+          "investment_level": "\u20b94.50 Lakhs",
+          "technology_level": "Medium",
+          "target_market": "Regional Market",
+          "location_relevance": "Warud-Morshi, Katol",
+          "status": "validated",
+          "source": "User Custom Opportunity",
+          "source_url": "https://ccri.org.in",
+          "description": "Artisanal solar tunnel drying of Nagpur mandarin slices and pectin-rich fruit leather rolls with zero preservative sugar.",
+          "skill_match": 0.65,
+          "resource_match": 0.5,
+          "location_match": 0.75,
+          "financial_match": 1.0,
+          "intent_match": 1.0,
+          "overall_match": 0.93,
+          "suitability_score": 93,
+          "skill_match_pct": 65,
+          "est_capex_formatted": "\u20b94.50 Lakhs",
+          "est_margin": "~42.0% Net",
+          "setup_timeline": "1\u20132 Months",
+          "training_recommendation": "ICAR-CCRI Solar Drying & Fruit Bar Processing Workshop",
+          "risk_level": "Low",
+          "scale": "Micro",
+          "radar_scores": {
+            "investment": 100,
+            "roi": 63,
+            "subsidy": 100,
+            "resource": 50,
+            "skills": 65
+          },
+          "match_reasons": [
+            "\ud83e\udd16 Random Forest ML Viability: 97.7% confidence (Highly Viable (Ready for Immediate Launch))",
+            "\ud83d\udcbc Commercial Alignment: Driven by hands-on execution and local farmer relations across all education levels.",
+            "\ud83d\ude80 First-Time Founder Fit: Turnkey modular setup with rapid commissioning and high PMFME subsidy access.",
+            "\ud83d\udcda Skill Gap Prescribed: Bridge capabilities via ICAR-CCRI Solar Drying & Fruit Bar Processing Workshop."
+          ],
+          "matched_skills": [],
+          "missing_skills": [
+            "Managing cold storage",
+            "Sorting and packing fruits"
+          ],
+          "matched_resources": [
+            "Storage or packing space"
+          ],
+          "missing_resources": [
+            "Work shed / Room for business"
+          ],
+          "financial_breakdown": {
+            "total_project_cost": 450000.0,
+            "eligible_scheme": "PMFME (MoFPI 35% Credit-Linked Capital Subsidy)",
+            "subsidy_amount": 157500.0,
+            "subsidy_percentage": "35% (Capped at \u20b910 Lakhs)",
+            "farmer_equity_required": 45000.0,
+            "bank_loan_required": 247500.0,
+            "user_budget": 500000.0,
+            "funding_gap": 0.0,
+            "budget_status": "100% Self-Funded (Zero Loan Strain)"
+          },
+          "nearby_infrastructure": [
+            "Kalamna APMC Market Yard & Cold Chain Hub"
+          ],
+          "ml_prediction": {
+            "model_used": "Random Forest Classifier (Ensemble)",
+            "predicted_class_id": 2,
+            "predicted_class_label": "Highly Viable (Ready for Immediate Launch)",
+            "confidence_score": 97.7,
+            "class_probabilities": {
+              "high_risk": 0.0,
+              "moderately_viable": 2.3,
+              "highly_viable": 97.7
+            },
+            "explainable_ai_factors": [
+              {
+                "factor": "Capital to Capex Ratio",
+                "impact": 38.9,
+                "positive": true
+              },
+              {
+                "factor": "Raw Material Proximity",
+                "impact": 18.8,
+                "positive": false
+              },
+              {
+                "factor": "Owned Machinery & Land Offset",
+                "impact": 10.0,
+                "positive": true
+              },
+              {
+                "factor": "Regulatory / FSSAI Readiness",
+                "impact": 0,
+                "positive": false
+              },
+              {
+                "factor": "Domain Experience & Mobility",
+                "impact": 6.6,
+                "positive": true
+              }
+            ]
+          },
+          "gap_analysis": {
+            "has_gaps": true,
+            "total_gaps_count": 1,
+            "items": [
+              {
+                "gap_type": "skill",
+                "title": "Skill Gap: Managing cold storage, Sorting and packing fruits",
+                "missing": "Missing operational training in Managing cold storage, Sorting and packing fruits",
+                "solution": "Enroll in ICAR-CCRI Solar Drying & Fruit Bar Processing Workshop (1\u20132 Months duration)."
+              }
+            ],
+            "skill_gap": {
+              "status": "Missing Skills",
+              "missing": [
+                "Managing cold storage",
+                "Sorting and packing fruits"
+              ],
+              "prescribed_training": "ICAR-CCRI Solar Drying & Fruit Bar Processing Workshop",
+              "duration": "3 to 5 Days (Subsidized batch)",
+              "certification": "ICAR-CCRI Certified Food Processing",
+              "contact": "Director, ICAR-CCRI Nagpur (citrus.icar@gov.in)"
+            },
+            "land_deficit": null,
+            "capital_shortfall": null,
+            "action_plan": [
+              "Enroll in ICAR-CCRI Solar Drying & Fruit Bar Processing Workshop (1\u20132 Months duration)."
+            ],
+            "education_alignment": "Optimal Foundation",
+            "situation_alignment": "High Enterprise Synergy",
+            "land_alignment": "Land Footprint Satisfied",
+            "skills_alignment": "Disqualified by Current Skills",
+            "capital_alignment": "100% Capital Ready"
+          }
+        }
+      ],
+      "ml_model_summary": {
+        "best_model": "Random Forest Classifier",
+        "benchmarks": {
+          "Logistic Regression": {
+            "accuracy": 96.4,
+            "precision": 95.94,
+            "recall": 96.4,
+            "f1_score": 96.17,
+            "confusion_matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                18,
+                5
+              ],
+              [
+                0,
+                3,
+                223
+              ]
+            ],
+            "dataset_split": {
+              "train_samples": 750,
+              "test_samples": 250,
+              "features_count": 9
+            }
+          },
+          "Random Forest Classifier": {
+            "accuracy": 94.4,
+            "precision": 93.66,
+            "recall": 94.4,
+            "f1_score": 93.96,
+            "confusion_matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                14,
+                9
+              ],
+              [
+                0,
+                4,
+                222
+              ]
+            ],
+            "dataset_split": {
+              "train_samples": 750,
+              "test_samples": 250,
+              "features_count": 9
+            }
+          },
+          "Gradient Boosting Classifier": {
+            "accuracy": 92.4,
+            "precision": 91.87,
+            "recall": 92.4,
+            "f1_score": 92.13,
+            "confusion_matrix": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                13,
+                10
+              ],
+              [
+                0,
+                8,
+                218
+              ]
+            ],
+            "dataset_split": {
+              "train_samples": 750,
+              "test_samples": 250,
+              "features_count": 9
+            }
+          }
+        },
+        "feature_importances": [
+          {
+            "feature": "capital_ratio",
+            "label": "Capital Ratio",
+            "importance_pct": 48.83
+          },
+          {
+            "feature": "land_acres",
+            "label": "Land Acres",
+            "importance_pct": 15.96
+          },
+          {
+            "feature": "raw_material_density",
+            "label": "Raw Material Density",
+            "importance_pct": 9.61
+          },
+          {
+            "feature": "experience_years",
+            "label": "Experience Years",
+            "importance_pct": 9.52
+          },
+          {
+            "feature": "equipment_offset_lakhs",
+            "label": "Equipment Offset Lakhs",
+            "importance_pct": 4.59
+          },
+          {
+            "feature": "risk_tolerance",
+            "label": "Risk Tolerance",
+            "importance_pct": 4.15
+          },
+          {
+            "feature": "regulatory_readiness",
+            "label": "Regulatory Readiness",
+            "importance_pct": 2.95
+          },
+          {
+            "feature": "mobility_radius_km",
+            "label": "Mobility Radius Km",
+            "importance_pct": 2.25
+          },
+          {
+            "feature": "has_workspace",
+            "label": "Has Workspace",
+            "importance_pct": 2.14
+          }
+        ]
+      },
+      "hierarchical_funnel": {
+        "total_initial_businesses": 26,
+        "strict_matches_count": 1,
+        "has_strict_match": true,
+        "bottleneck_level": null,
+        "bottleneck_name": null,
+        "bottleneck_message": null,
+        "steps": [
+          {
+            "level": 1,
+            "name": "Age Group Eligibility",
+            "criterion": "Age Group: 26\u201335",
+            "passed_count": 26,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 2,
+            "name": "Education Qualification",
+            "criterion": "Education: 10th / 12th Pass",
+            "passed_count": 21,
+            "dropped_count": 5,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 3,
+            "name": "Goals & Current Situation",
+            "criterion": "Goals: expand_farm, explore_local, new_idea",
+            "passed_count": 21,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 4,
+            "name": "Skills & Practical Experience",
+            "criterion": "Skills (1 selected) \u2022 Willing to Learn",
+            "passed_count": 21,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 5,
+            "name": "Land Footprint & Space",
+            "criterion": "Land Available: 2.5 Acres (Owned)",
+            "passed_count": 21,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 6,
+            "name": "Covered Workspace & Storage Shed",
+            "criterion": "Covered Shed / Godown: Not Available",
+            "passed_count": 12,
+            "dropped_count": 9,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 7,
+            "name": "Logistics & Vehicle Access",
+            "criterion": "Vehicle Access: No Tractor / Freight Vehicle",
+            "passed_count": 11,
+            "dropped_count": 1,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 8,
+            "name": "Existing Business / Orchard Setup",
+            "criterion": "Setup: Unused Land/Assets",
+            "passed_count": 11,
+            "dropped_count": 0,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 9,
+            "name": "Region & Cluster Specificity",
+            "criterion": "Region Cluster: Narkhed Citrus Belt",
+            "passed_count": 4,
+            "dropped_count": 7,
+            "status": "PASSED",
+            "passed_sample": [
+              "Commercial Mandarin Orange Cultivation (1-Acre High-Density Model)",
+              "Disease-Free Certified Citrus Nursery",
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          },
+          {
+            "level": 10,
+            "name": "Budget & Loan Feasibility",
+            "criterion": "Budget: \u20b9500,000 \u2022 Cap: \u20b93,333,333",
+            "passed_count": 2,
+            "dropped_count": 2,
+            "status": "PASSED",
+            "passed_sample": [
+              "Micro-Budding Commercial Citrus Propagation Unit",
+              "Citrus Disease Diagnostic & Leaf Analysis Mobile Clinic"
+            ]
+          },
+          {
+            "level": 11,
+            "name": "Sector Interests",
+            "criterion": "Sectors: trading_selling, agriculture, manufacturing",
+            "passed_count": 1,
+            "dropped_count": 1,
+            "status": "PASSED",
+            "passed_sample": [
+              "Micro-Budding Commercial Citrus Propagation Unit"
+            ]
+          }
+        ],
+        "strict_matching_opportunities": [
+          "Micro-Budding Commercial Citrus Propagation Unit"
+        ]
+      }
+    },
+    "active_venture": {
+      "id": "OPP19",
+      "name": "Micro-Budding Commercial Citrus Propagation Unit",
+      "category": "Propagation & Nursery",
+      "location": "Narkhed, Nagpur District",
+      "suitability_score": 96,
+      "ml_viability_confidence": "95.5%",
+      "total_cost": 800000.0,
+      "own_equity": 160000.0,
+      "subsidy_amount": 280000.0,
+      "subsidy_scheme": "MIDH / NHM Commercial Horticulture Subsidy",
+      "bank_loan": 360000.0,
+      "journey_phase": 1,
+      "current_task": "Review Bankable DPR & Prescribed Training",
+      "next_deadline": "Next 7 Days"
+    }
+  },
+  {
+    "id": "usr_officer",
+    "email": "aniruddha.deshmukh@sbi.co.in",
+    "full_name": "Dr. Aniruddha Deshmukh",
+    "password_hash": "63fa63251956349e4500f7b45c95d16ec5d5c29152553376309ae1790f4cf9f2",
+    "role": "Agri-Bank Nodal Officer",
+    "tehsil": "Nagpur Urban",
+    "district": "Nagpur",
+    "phone": "+91 98230 11234",
+    "avatar": "\ud83c\udfdb\ufe0f",
+    "created_at": "2026-10-18T10:00:00Z"
+  },
+  {
+    "id": "usr_2b2b2520",
+    "email": "aniket.test@gmail.com",
+    "full_name": "Aniket Raut",
+    "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "role": "Agro-Entrepreneur",
+    "tehsil": "Katol",
+    "district": "Nagpur",
+    "phone": "",
+    "avatar": "\ud83c\udf4a",
+    "created_at": "2026-10-19T00:00:00Z"
+  },
+  {
+    "id": "usr_ada3442a",
+    "email": "bhoomivaishya@gmail.com",
+    "full_name": "Bhoomi Vaishya",
+    "password_hash": "332d9c733e158b769b0c4cc7481a408011c312ad97d8cb8427b3e985d8573f76",
+    "role": "Agro-Entrepreneur",
+    "tehsil": "Nagpur Rural",
+    "district": "Nagpur",
+    "phone": "",
+    "avatar": "\ud83c\udf4a",
+    "created_at": "2026-10-19T00:00:00Z"
+  },
+  {
+    "id": "usr_6db40e87",
+    "email": "aarti@gmail.com",
+    "full_name": "Aarti",
+    "password_hash": "40fc31b4586f1741c7c609747e6b322af54ae4eb9837ca6e275b0e0dccba130e",
+    "role": "Agro-Entrepreneur",
+    "tehsil": "Narkhed",
+    "district": "Nagpur",
+    "phone": "",
+    "avatar": "\ud83c\udf4a",
+    "created_at": "2026-10-19T00:00:00Z"
+  }
+]

@@ -31,12 +31,12 @@ const GOAL_OPTIONS = [
 export default function AboutMeStep({ data, onChange, onNext }) {
   const {
     fullName = "",
-    ageGroup = "18–25",
+    ageGroup = "",
     education = "",
-    currentSituation = "looking_opportunity",
+    currentSituation = "",
     existingBusinessType = "",
     existingBusinessGoal = "",
-    goals = ["first_business", "explore_local"],
+    goals = [],
   } = data;
 
   const toggleGoal = (goalId) => {

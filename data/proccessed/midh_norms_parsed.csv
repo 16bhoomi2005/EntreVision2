@@ -1,0 +1,370 @@
+norm_id,component,cost_norm,subsidy_rate,source_text
+MIDH0001,General,,60%,"Government of India (GOI) contributes 60%, of total outlay for developmental"
+MIDH0002,General,,40% ,"programmes in all the States except States in North East and Himalayas, 40% share"
+MIDH0003,General,,90% ,"States, GOI contribution will be 90% and 10% share is contributed by these States."
+MIDH0004,General,,100%,(NLA) and UTs without legislature GOI contribution will be 100%. Guidelines
+MIDH0005,General,,50% ,States where total area under horticulture is less than 50% of agricultural
+MIDH0006,General,,125% ,Mission upto 125% of the tentative allocation within the allocated sum. The States
+MIDH0007,General,,60%,60%
+MIDH0008,General,,90%,90%
+MIDH0009,General,,100%,DA&FW/ 100%
+MIDH0010,General,,100%,100%
+MIDH0011,General,,100%,100%
+MIDH0012,General,,100%,I100%
+MIDH0013,General,,100% ,accreditation with 100% assistance to public sector as per norms given in Annexure
+MIDH0014,General,,60% ,balance 60% of the cost of machines and tools is borne by such groups. SHM will
+MIDH0015,General,,75% of cost,locations in farmer's field for which assistance will be limited to 75% of cost. For
+MIDH0016,General,,100% ,"Front Line Demonstrations, for which 100% assistance will be provided, and"
+MIDH0017,General,,5% ,"level, project preparation, computerization, contingency etc.2.5% of total annual"
+MIDH0018,General,,10 %,1 Nursery & Planting Material 5 to 10 %
+MIDH0019,General,,20 %,2. Area Expansion 15 to 20 %
+MIDH0020,General,,20 %,3. Protected Cultivation 15 to 20 %
+MIDH0021,General,,30 %,4. PHM 25 to 30 %
+MIDH0022,General,,25%,First Year 25%
+MIDH0023,General,,25%,Second Year 25%
+MIDH0024,General,,25%,First Year 25%
+MIDH0025,General,,25%,Second Year 25%
+MIDH0026,General,,100% ,with 100% assistance.
+MIDH0027,General,,100% ,i. Large Nursery Upto Rs. 30 lakhs/ Ha. Assistance @ 100% to public sector and @ 40%
+MIDH0028,General,,100% ,ii. Small Nursery Rs. 20 lakhs/Ha. Assistance @ 100% to public sector and @ 50%
+MIDH0029,General,,100% ,iii. Upgrading Need based upto a Assistance @ 100% to public sector and @ 50%
+MIDH0030,General,,100% ,iv. Setting up new Project based upto Assistance @ 100% to public sector and in case
+MIDH0031,General,,40% ,project for a capacity assistance @ 40% as project based activity.
+MIDH0032,General,,100% ,v. Hi-tech Plug Project based for an Assistance @ 100% to public sector and in case
+MIDH0033,General,,50% ,under controlled ha. @ Rs. 1200 per assistance @ 50% as project based activity.
+MIDH0034,General,,100% ,"a) Open pollinated Rs 50,000 /ha. Assistance @ 100% to public sector and in case"
+MIDH0035,General,,35% ,crops of private sector assistance @ 35% in general
+MIDH0036,General,,50% ,"(1 to 2 ha) areas and 50% in NE & Himalayan States,"
+MIDH0037,General,,100% ,b) Hybrid Rs. 1.80 lakh/ha Assistance @ 100% to public sector and in case
+MIDH0038,General,,35% ,Seeds of private sector assistance @ 35% in general
+MIDH0039,General,,50% ,"(1 to 2 ha) areas and 50% in NE & Himalayan States,"
+MIDH0040,General,,100% ,vii. Import of Project based for a Assistance @ 100% to State Govt. / Public Sector
+MIDH0041,General,,50% ,mother block for 150 lakh/year. Cooperatives credit linked subsidy @ 50% to
+MIDH0042,General,,100% ,viii. Production of Project based for a Assistance @ 100% to State Govt. / Public Sector
+MIDH0043,General,,50% ,"Planting Material 300 lakh/year. @ 50% including FPOs, FIGs, SHGs and"
+MIDH0044,General,,40% ,Without drip I. Strawberry Assistance @ 40% in general areas for an area
+MIDH0045,General,,50% ,will be @ 50% for an area upto 2 ha. on pro rata
+MIDH0046,General,,40% ,"II. Kiwi, Passion Assistance @40% in general areas for an area"
+MIDH0047,General,,80% ,Dragon fruit 80% in 2nd year.
+MIDH0048,General,,50% ,Rs. 2.50 lakh/ha for will be @ 50% for an area upto 2 ha. on pro rata
+MIDH0049,General,,40% ,III. Grape Assistance @ 40% in general areas for an area
+MIDH0050,General,,80% ,system of 60:40 subject to survival rate of 80% in 2nd
+MIDH0051,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0052,General,,40% ,IV. Datepalm Assistance @40% in general areas for an area
+MIDH0053,General,,80% ,subject to survival rate of 80% in 2nd year. The
+MIDH0054,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0055,General,,40% ,a) Without drip Rs. 1.10 Lakh/ha Assistance @40% in general areas for an area
+MIDH0056,General,,80% ,other schemes) rate of 80% in 2nd year.
+MIDH0057,General,,50% ,will be @ 50% for an area upto 2 ha. on pro rata
+MIDH0058,General,,40% ,a) Without Rs. 1.75 lakh/ha Assistance @40% in general area for an area
+MIDH0059,General,,80% ,other schemes) rate of 80% in 2nd year. The planting material
+MIDH0060,General,,50% ,will be @ 50% for an area upto 2 ha. on pro rata
+MIDH0061,General,,40% ,a) Without drip Rs. 1.25 lakh/ha Assistance @40% in general area for an area
+MIDH0062,General,,80% ,other schemes) rate of 80% in 2nd year.
+MIDH0063,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0064,General,,40% ,"a) Without drip Rs. 75,000/ha Assistance @40% in general area for an area"
+MIDH0065,General,,80% ,other schemes) rate of 80% in 2nd year.
+MIDH0066,General,,50% ,will be @ 50% for an area upto 2 ha. on pro rata
+MIDH0067,General,,40% ,(i). Regular Rs. 1.25lakh/ha. Assistance @ 40% in general area for an area
+MIDH0068,General,,80% ,(Other than Apple) rate of 80% in 2nd year.
+MIDH0069,General,,50% ,plants per ha. will be @ 50% for an area upto 2 ha. on pro-rata
+MIDH0070,General,,40% ,"Hybrid vegetables Rs.60,000/-ha Assistance @ 40% in general areas for an area"
+MIDH0071,General,,50%,"Bitter Gourd, Lakshadweep Islands, assistance will be @ 50%"
+MIDH0072,General,,80% ,"sprouts, French 80% of the maximum cost."
+MIDH0073,General,,40% ,"i. Onion and Garlic Rs. 50,000/ ha. Assistance @ 40% in general areas for an area"
+MIDH0074,General,,50% ,will be @ 50% for an area upto 2 ha. on pro rata
+MIDH0075,General,,80% ,80% of the maximum cost.
+MIDH0076,General,,100% ,(a) Production Unit Rs. 30 lakh/uDnit 100% of the cost to public sector and 40% of cost
+MIDH0077,General,,50%,will be @ 50%
+MIDH0078,General,,100% ,(b)Spawn making Rs. 20 lakh/unit 100% of the cost to public sector and 40% of cost
+MIDH0079,General,,50%,will be @ 50%
+MIDH0080,General,,100% ,(c) Compost Rs. 30 lakh/unit 100% of the cost to public sector and 40% of cost
+MIDH0081,General,,50%,will be @ 50%.
+MIDH0082,General,,50% ,(d) Low Cost/ Small Rs. 2.00 Lakhs per Assistance @ 50% per unit for meeting
+MIDH0083,General,,40% ,i. Cut Flowers Rs. 1.25 lakh/ha Assistance @ 40% in general areas for an area
+MIDH0084,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0085,General,,40% ,ii)Bulbous and Rs. 2.50 lakh/ha Assistance @ 40% in general areas for an area
+MIDH0086,General,,50% ,will be @ 50% for an area upto 2 ha. on pro rata
+MIDH0087,General,,40% ,"iii) Loose Flowers Rs. 50,000 /hDa Assistance @ 40% in general area for an area"
+MIDH0088,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0089,General,,40% ,"i. Seed Spices Rs. 50,000/ha Assistance @ 40% in general areas for an area"
+MIDH0090,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0091,General,,40% ,ii. Rhizomatic and Rs. 1.00 Lakh/ ha. Assistance @ 40% in general areas for an area
+MIDH0092,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0093,General,,40% ,iii. Perennial Rs. 1.00 lakh/ha Assistance @ 40% in general areas for an area
+MIDH0094,General,,50%,"Curry leaf, Star 50%for an area upto 2 ha. on pro-rata basis."
+MIDH0095,General,,40% ,(i) Cost intensive Rs1.25 lakh/ha Assistance @ 40% in general areas for an area
+MIDH0096,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0097,General,,40% ,"(ii) Other aromatic Rs 50,000/ha Assistance @ 40% in general areas for an area"
+MIDH0098,General,,50%,"Lakshadweep Islands, assistance will be @ 50%"
+MIDH0099,General,,40% ,(iii) Medicinal plants Rs. 1.5 lakh/ha Assistance @ 40% in general areas for an area
+MIDH0100,General,,50%,"Vidarikand, Pippali, Lakshadweep Islands, assistance will be @ 50%"
+MIDH0101,General,,40% ,"(a) Without drip Rs 75,000 /ha. Assistance @40% in general areas for an area"
+MIDH0102,General,,80% ,survival rate of 80% in 2nd year.
+MIDH0103,General,,50% ,will be @ 50% for an area upto2 ha. on pro rata
+MIDH0104,General,,40% ,"(b) With Rs 50,000 /ha. Assistance @40% in general areas for an area"
+MIDH0105,General,,80% ,survival rate of 80% in 2nd year.
+MIDH0106,General,,50% ,will be @ 50% for an area upto2 ha. on pro rata
+MIDH0107,General,,40% ,(ii) High Density Rs. 1.5 lakh/ha Assistance @40% in general areas for an area
+MIDH0108,General,,80% ,(Cashew Only) survival rate of 80% in 2nd year.
+MIDH0109,General,,50% ,will be @ 50% for an area upto 2 ha. on pro-rata
+MIDH0110,General,,40% ,a) Without drip Almond: Rs. 3.00 Assistance @ 40% in general areas for an area
+MIDH0111,General,,80% ,converged with lakh/ha. survival rate of 80% in 2nd year.
+MIDH0112,General,,50% ,will be @ 50% for an area upto 2 ha. on pro rata
+MIDH0113,General,,40% ,"(i) Removal of Rs. 10,000/ha Assistance @ 40% in general areas for an area"
+MIDH0114,General,,50%,"gap filling with new Lakshadweep Islands, assistance will be @ 50%"
+MIDH0115,General,,75% ,a) Water Harvesting Rs. 24.00 lakh per Assistance @ 75% to irrigate 10 ha of command
+MIDH0116,General,,30% ,Andaman & Nicobar cotton soils) will be 30% less.
+MIDH0117,General,,50 % ,d) Flexible Water At the rate of Rs. Assistance @ 50 % as per prescribed norms for
+MIDH0118,General,,50% ,(a) Fan & Pad Rs. 1800/Sq.m(up to Assistance @ 50% for a maximum area of 2500
+MIDH0119,General,,15% ,15% higher in the case
+MIDH0120,General,,50% ,i. Tubular/ Rs.1200/Sq.m(up to Assistance @ 50% for a maximum area of
+MIDH0121,General,,15% ,15% higher in the case H
+MIDH0122,General,,50% ,ii. Bamboo/Cable Rs 450/Sq.mt. Assistance @ 50% for a maximum area of 2500
+MIDH0123,General,,15% ,15% higher in the case
+MIDH0124,General,,50% ,(a) Tubular Rs 710/sq m Assistance @ 50% for a maximum area of 2500
+MIDH0125,General,,15% ,15% higher in the case
+MIDH0126,General,,50% ,(b) Bamboo /Cable Rs. 450/sq. m. Assistance @ 50% for a maximum area of 2500
+MIDH0127,General,,15% ,15% higher in the case
+MIDH0128,General,,50% ,3. Plastic/Non Rs. 80/sqm Assistance @ 50% for a maximum area of
+MIDH0129,General,,15% ,15% higher in the case
+MIDH0130,General,,50% ,4. Walk in tunnels Rs. 720/sqm Assistance @ 50% for a maximum of 3 units per
+MIDH0131,General,,15% ,15% higher in the case
+MIDH0132,General,,50% ,5. Anti Bird/Anti Rs. 50/ Sqm Assistance @ 50% for a maximum area of 10000
+MIDH0133,General,,15% ,M15% higher in the case
+MIDH0134,General,,50% ,6. Cost of planting Rs 150/ Sqm Assistance @ 50% for a maximum area of 2500
+MIDH0135,General,,15% ,value fruits and 15% higher in the case
+MIDH0136,General,,50% ,7. Cost of planting Rs 700/ Sqm Assistance @ 50% for a maximum area of 2500
+MIDH0137,General,,15% ,Orchid (net house) 15% higher in the case
+MIDH0138,General,,50% ,8. Cost of planting Rs. 600/Sq.mt. Assistance @ 50% for a maximum area of 2500
+MIDH0139,General,,15% ,Carnation & 15% higher in the case
+MIDH0140,General,,50% ,9. Cost of planting Rs 450/ Sqm Assistance @ 50% for a maximum area of 2500
+MIDH0141,General,,15% ,Chrysanthemum 15% higher in the case
+MIDH0142,General,,50% ,"10. Mulching Rs 40,000/ha Assistance @ 50% subject to a maximum of 2 ha"
+MIDH0143,General,,15% ,biodegradable 15% higher in the case
+MIDH0144,General,,50% ,i. Hydroponics and Rs. 350/- per Sq.mt. Assistance @ 50% for a maximum area of 1000
+MIDH0145,General,,15% ,15% higher in the case
+MIDH0146,General,,50% ,ii. Circulation Fans Rs. 5000 per fan. Assistance @ 50% for a maximum of 6 fans for a
+MIDH0147,General,,15% ,15% higher in the case
+MIDH0148,General,,50% ,iii. Sensor based Rs. 4 lakh/unit Assistance @ 50% per unit per beneficiary for
+MIDH0149,General,,15% ,15% higher in the case
+MIDH0150,General,,50% ,iv. Support system Rs. 0.20 Lakhs per Assistance @ 50% for all farmers for a maximum
+MIDH0151,General,,15% ,15% higher in the case
+MIDH0152,General,,50% ,v. Permanent Rs. 20 per Sq.mt. of Assistance @ 50% for a maximum area of 2 ha.
+MIDH0153,General,,15% ,15% higher in the case
+MIDH0154,General,,50% ,vi. Fencing (This Rs. 300 per running Assistance @ 50% subject to a maximum of 1000
+MIDH0155,General,,15% ,15% higher in the case
+MIDH0156,General,,50% ,vii. Fruit/Bunch Rs. 0.50 lakh/ha Assistance @ 50% for all farmers for maximum
+MIDH0157,General,,15% ,bags etc 15% higher in the case
+MIDH0158,General,,50% ,viii. Weed Mat Rs. 50 per Sq.mt. Assistance @ 50% for all farmers for maximum
+MIDH0159,General,,15% ,15% higher in the case
+MIDH0160,General,,100% ,B. 6 PFDCs Project bIased Assistance @ 100% to PFDCs
+MIDH0161,General,,30% ,i) Promotion of Rs. 5000/ha. Assistance @ 30% for an area upto 2 ha. per
+MIDH0162,General,,100% ,ii) Plant Health Rs. 25.00 lakh/unit Assistance @ 100% to Public sector and @ 50%
+MIDH0163,General,,50% ,"iii. Vermi compost Rs.1,00,000/ unit for Assistance @ 50% conforming to the size of the"
+MIDH0164,General,,50% ,"for HDPE Vermibed. For HDPE Vermibed, @ 50% conforming to the"
+MIDH0165,General,,50% ,"B.9 Adoption and Rs. 20,000/ha. Assistance @ 50% subject to a maximum of 2 ha/"
+MIDH0166,General,,100% ,B.10 Centre of Rs 1500.00 Lakh/ Assistance @ 100% to public sector. This can be
+MIDH0167,General,,100% ,i. Production of Rs. 20.00 Lakh 100% of the cost
+MIDH0168,General,,40% of cost,ii. Production of bee Rs. 10.00 Lakh 40% of cost for producing min. of 2000 colonies /
+MIDH0169,General,,40% of cost,iii. One unit of Bee Rs. 4000/unit 40% of cost limited to 50 colonies / beneficiary.
+MIDH0170,General,,40% of cost,iv. Bee Hive Rs. 2000 per hive 40% of cost limited to 50 colonies / beneficiary
+MIDH0171,General,,40% ,"v. Equipment Rs. 20,000/set 40% of the cost limited to one set per beneficiary."
+MIDH0172,General,,100% ,iv) Import of new Upto a maximum of Assistance @ 100% of the total cost only to
+MIDH0173,General,,50% ,machines &tools Rs. 100.00 lakh per public sector and 50% for private sector for
+MIDH0174,General,,75 % ,B. 13. Technology Rs. 25.00 lakh Assistance @ 75 % in farmers field and @ 100%
+MIDH0175,General,,100% ,i) HRD for Rs. 15.00 lakh/unit 100% of the cost.
+MIDH0176,General,,100% ,ii) Training for Assistance @ 100% Assistance @ 100% as per cost norms of
+MIDH0177,General,,100% ,a) Within State Rs. 1000/day per Assistance @100% of the prescribed cost norms.
+MIDH0178,General,,100% ,b) Outside State Project based as per Assistance @ 100% as per actuals.
+MIDH0179,General,,100% ,c) Outside India Upto a maximum of Project Based. Assistance @ 100% of economic
+MIDH0180,General,,100% ,a) Within the State Rs.300/day per Assistance @ 100% of the prescribed cost
+MIDH0181,General,,100% ,b) Study tour to Rs.1000/day per Assistance @ 100% of the prescribed cost
+MIDH0182,General,,100% ,c) Outside India Upto a maximum of Project Based. Assistance @ 100% of economic
+MIDH0183,General,,50% ,C.1 FARM GATE Upto a maximum of Assistance @ 50% admissible only.
+MIDH0184,General,,35% ,C.2 INTEGRATED Upto a maximum of Credit linked back-ended assistance @ 35% in
+MIDH0185,General,,50% ,PACK HOUSE with Rs 160.00 lakh per General areas and 50% in the case of NE &
+MIDH0186,General,,35% ,C.3. COLLECTION Upto a maximum of Credit linked back-ended assistance @ 35% in
+MIDH0187,General,,50% ,AGGREGATION Rs 320.0 lakh per General areas and 50% in the case of NE &
+MIDH0188,General,,35% ,C.4 Pre-cooling unit Upto a maximum cost Back-ended assistance @ 35% in General areas
+MIDH0189,General,,50% ,"of Rs. 5 Lakh/MT. and 50% in the case of NE & Himalayan States,"
+MIDH0190,General,,35% ,C.5 Mobile pre- Rs. 30.00 lakh Credit linked back-ended assistance @ 35% in
+MIDH0191,General,,50% ,cooling unit General areas and 50% in the case of NE &
+MIDH0192,General,,35% ,i. Cold Rooms Upto a maximum cost Back-ended assistance @ 35% in General areas
+MIDH0193,General,,50% ,"(Staging) of Rs. 52.00 lakh. and 50% in the case of NE & Himalayan States,"
+MIDH0194,General,,35% ,ii. Solar Power Cold May be taken on Back-ended assistance @ 35% in General areas
+MIDH0195,General,,50% ,"Room standalone basis as and 50% in the case of NE & Himalayan States,"
+MIDH0196,General,,35% ,"i) Cold Storage Type- Rs. 9600/MT, (Max Credit linked back-ended assistance @ 35% in"
+MIDH0197,General,,50% ,"I is defined as CS-1 5,000 MT capacity) General areas and 50% in the case of NE &"
+MIDH0198,General,,35% ,"ii) Cold Storage Rs. 12000/MT, (Max Credit linked back-ended assistance @ 35% in"
+MIDH0199,General,,50% ,"Type-I is defined as 5,000 MT capacity) General areas and 50% in the case of NE &"
+MIDH0200,General,,35% ,iii) CO2 scrubber Upto Max cost of Rs. Credit linked back-ended assistance @ 35% in
+MIDH0201,General,,50% ,(need/produce 50.0 lakh/ project. General areas and 50% in the case of NE &
+MIDH0202,General,,35% ,"i) Cold Storage Type- Rs. 9600/MT, (Max Credit linked back-ended assistance @ 35% in"
+MIDH0203,General,,50% ,"I-Onion is defined as 5,000 MT capacity) General areas and 50% in the case of NE &"
+MIDH0204,General,,35% ,"ii) Cold Storage Rs. 12000/MT, (Max Credit linked back-ended assistance @ 35% in"
+MIDH0205,General,,50% ,"Type-I-Onion is 5,000 MT capacity) GHeneral areas and 50% in the case of NE &"
+MIDH0206,General,,35% ,"iii) CO2 scrubber, Upto Max cost of Rs. Credit linked back-ended assistance @ 35% in"
+MIDH0207,General,,50% ,unified control 278.00 lakh/ project. General areas and 50% in the case of NE &
+MIDH0208,General,,35% ,"i) Cold Storage Type- Rs. 12000/MT, (Max Credit linked back-ended assistance @ 35% in"
+MIDH0209,General,,50% ,"II is defined as CS-2 5,000 MT capacity) General areas and 50% in the case of NE &"
+MIDH0210,General,,35% ,ii) CO2 scrubber Upto Max cost of Rs. Credit linked back-ended assistance @ 35% in
+MIDH0211,General,,50% ,(need/produce 49.00 lakh/ project. General areas and 50% in the case of NE &
+MIDH0212,General,,35% ,v) Cold Storage Additional Rs. Credit linked back-ended assistance @ 35% in
+MIDH0213,General,,50% ,Type-II with CA is 12000/MT for a General areas and 50% in the case of NE &
+MIDH0214,General,,35% ,ii) CA Add-on: Details Upto Max cost of Rs. Credit linked back-ended assistance @ 35% in
+MIDH0215,General,,50% ,of the components 1345 lakhs/project General areas and 50% in the case of NE &
+MIDH0216,General,,35% ,"i)Cold Storage for dry Rs. 9600/MT, (Max Credit linked back-ended assistance @ 35% in"
+MIDH0217,General,,50% ,"spices & raisins is 5,000 MT capacity) General areas and 50% in the case of NE &"
+MIDH0218,General,,35% ,"ii) Cold Storage for Rs. 12000/MT, (Max Credit linked back-ended assistance @ 35% in"
+MIDH0219,General,,50% ,"dry spices & raisins, 5,000 MT capacity) General areas and 50% in the case of NE &"
+MIDH0220,General,,35% ,iii) Unified control Upto Max cost of Rs. Credit linked back-ended assistance @ 35% in
+MIDH0221,General,,50% ,"system, material 31.00 lakh/ project. General areas and 50% in the case of NE &"
+MIDH0222,General,,35% ,C.12 Technology Max. Rs. 125lakh but Credit linked back-ended assistance @ 35% in
+MIDH0223,General,,50% ,induction/ not more than Rs. General areas and 50% in the case of NE &
+MIDH0224,General,,35% ,C.13 Refrigerated Rs. 31.00 lakh for Credit linked back-ended assistance @ 35% in
+MIDH0225,General,,50% ,Transport vehicles upto max. capacity of General areas and 50% in the case of NE &
+MIDH0226,General,,35% ,C.14 Primary/ Rs. 35.00 lakh/unit Credit linked back-ended assistance @ 35% in
+MIDH0227,General,,50% ,Minimal Processing General areas and 50% in the case of NE &
+MIDH0228,General,,35% ,i) Non-Pressurised Rs 1.00 lakh/MT Credit linked back-ended assistance @ 35% in
+MIDH0229,General,,50% ,Ripening Chamber General areas and 50% in the case of NE &
+MIDH0230,General,,35% ,ii) Pressurised Rs. 1.20 lakh/MT Credit linked back-ended assistance @ 35% in
+MIDH0231,General,,50% ,Ripening Chamber General areas and 50% in the case of NE &
+MIDH0232,General,,50 % ,C.16 Low-cost Rs. 7000/MT Back-ended assistance @ 50 % for a unit of the
+MIDH0233,General,,50 % ,C.17 Pusa Zero Rs 4000 per unit 50 % of the total cost
+MIDH0234,General,,40% ,C. 18 Solar Crop Rs. 2.50 lakh/unit of Assistance @ 40% in General areas and 55% in
+MIDH0235,General,,35% ,C.19 Integrated Cold Upto a max. cost of Credit linked back-ended assistance @ 35% in
+MIDH0236,General,,50% ,Chain Project Rs. 1000.00 lakh/per General areas and 50% in the case of NE &
+MIDH0237,General,,40% ,C.20 Integrated Upto a maximum cost Credit linked back-ended assistance @ 40% of
+MIDH0238,General,,55%,Supply Chain Project of Rs. 2000 lakh eligible cost of project in General areas and 55%
+MIDH0239,General,,40% ,Upto a maximum cost Credit linked back-ended assistance @ 40% of
+MIDH0240,General,,55%,of Rs. 2000 lakh eligible cost of project in General areas and 55%
+MIDH0241,General,,40% ,D.1 Rural Rs. 25.00 Lakh Back-ended assistance @ 40% of the capital cost
+MIDH0242,General,,55% ,Markets/Apnimandis/ of project in general areas and 55% in the case of
+MIDH0243,General,,35% ,D.2 Retail markets/ Rs. 20.00 Lakh/unit Assistance @ 35% in General areas and 50% in
+MIDH0244,General,,50% ,"D.3 Static/Mobile Rs. 30,000/unit 50% of total cost."
+MIDH0245,General,,35% ,D.4 Rs. 20 Lakhs with Assistance @ 35% in General areas and 50% in
+MIDH0246,General,,100% ,(i) Quality control Rs 200.00 lakh Assistance @ 100% of the total cost to public
+MIDH0247,General,,50% of cost,50% of cost to private sector to check Maximum
+MIDH0248,General,,50% of cost,assistance of 50% of cost in the NE and Himalaya
+MIDH0249,General,,35% ,E.2 Secondary Rs. 100 lakhD/unit Assistance @ 35% in General areas and 50% in
+MIDH0250,General,,10% ,F.1 Innovative 10% of outlay Assistance @ 50% of cost as a project based
+MIDH0251,General,,50% of cost,F.2 Tackling of Upto a maximum of Assistance @ 50% of cost based on project
+MIDH0252,General,,5% ,G.1 State & Districts 2.5% of total annual 100% assistance
+MIDH0253,General,,100% ,G.2 Institutional Need based 100% assistance
+MIDH0254,General,,100% ,a) International level Rs 7.50 lakh per Assistance @ 100% to public sector and @ 50%
+MIDH0255,General,,100% ,b) National level Rs 5.00 lakh per Assistance @ 100% to public sector and @ 50%
+MIDH0256,General,,100% ,c) State level Rs 3.00 lakh per Assistance @ 100% to public sector and @ 50%
+MIDH0257,General,,100% ,d) District level Rs 2.00 lDakh per Assistance @ 100% to public sector and @ 50%
+MIDH0258,General,,100% of cost,G.4 Information Rs 1.00 lakh/ district Assistance @ 100% of cost
+MIDH0259,General,,100% of cost,G.5 Technical Project based subject 100% of cost should not exceed the ceiling per
+MIDH0260,General,,100% of cost,G.6 Baseline survey Project based subject Assistance @ 100% of cost as one time grant for
+MIDH0261,General,,100% of cost,G.7 Technical Support 100% of cost.
+MIDH0262,General,,5% ,for hiring experts/ 2.5% of BE per annum
+MIDH0263,General,,100% of cost,G.8 Technical Project based. On 100% of cost
+MIDH0264,General,,40% of project,Horticulture project for projects 40% of project cost in general area and
+MIDH0265,General,,50% of project,Development in open covering area over 2 @ 50% of project cost for NER and
+MIDH0266,General,,40% of project,open field cultivation of project for projects 40% of project cost in general area
+MIDH0267,General,,50% of project,identified high value covering area over and @ 50% of project cost for NER
+MIDH0268,General,,50% ,1 (iii) Commercial Project based as Credit linked subsidy @ 50% of
+MIDH0269,General,,50% ,1 (iv) Hi-tech Plug Type Project based as Credit linked subsidy @ 50% of
+MIDH0270,General,,40% ,1 (vi) Integrated Mushroom As per MIDH norms Credit linked subsidy @ 40% of
+MIDH0271,General,,50% ,project mode installed capacity and @ 50% of eligible project cost for
+MIDH0272,General,,35% ,vehicles 80.00 lakh/ project @ 35% in General areas and 50% in
+MIDH0273,General,,35% ,1 (ix) Secondary Processing Rs. 100 lakh/unit (as Assistance @ 35% in General areas
+MIDH0274,General,,50% ,units for Value addition per MIDH cost and 50% in the case of NE &
+MIDH0275,General,,35% ,Ripening Chamber also @ 35% in General areas and 50% in
+MIDH0276,General,,35% ,Chamber also termed @ 35% in General areas and 50% in
+MIDH0277,General,,35% ,"civil including PUF/PIR panels, MT and upto 20,000 MT 35% in General"
+MIDH0278,General,,50% ,"Doors and Ante-rooms, as per following rates: areas and 50% in"
+MIDH0279,General,,35% ,"Construction in combination of MT and upto 20,000 MT 35% in General"
+MIDH0280,General,,50% ,civil & PEB including PUF/PIR as per following rates: areas and 50% in
+MIDH0281,General,,35% ,material conveying/hoist actual cost would be 35% in General
+MIDH0282,General,,50% ,"system, Automated derived based on the areas and 50% in"
+MIDH0283,General,,35% ,"Construction in civil including MT and upto 20,000 MT 35% in General"
+MIDH0284,General,,50% ,"PUF/PIR panels, Doors and as per following rates: areas and 50% in"
+MIDH0285,General,,35% ,"Construction in combination of MT and upto 20,000 MT 35% in General"
+MIDH0286,General,,50% ,civil & PEB including PUF/PIR as per following rates: areas and 50% in
+MIDH0287,General,,35% ,"conveying/hoist system, However, actual cost 35% in General"
+MIDH0288,General,,50% ,Automated computerised would be derived based areas and 50% in
+MIDH0289,General,,35% ,"Construction in combination of MT and upto 20,000 MT 35% in General"
+MIDH0290,General,,50% ,civil & PEB including PUF/PIR as per following rates: areas and 50% in
+MIDH0291,General,,35% ,"material conveying/hoist However, actual cost 35% in General"
+MIDH0292,General,,50% ,"system, HPT, BOPT and dock would be derived based areas and 50% in"
+MIDH0293,General,,35% ,"Construction in combination of MT and upto 20,000 MT 35% in General"
+MIDH0294,General,,50% ,as per following rates: areas and 50% in
+MIDH0295,General,,35% ,NCCD guidelines. 35% in General
+MIDH0296,General,,50% ,(Max. subsidy for CA store areas and 50% in
+MIDH0297,General,,35% ,"Construction in civil including MT and upto 20,000 MT 35% in General"
+MIDH0298,General,,50% ,"PUF/PIR panels, Doors and as per following rates: areas and 50% in"
+MIDH0299,General,,35% ,"CS-4 with Construction in MT and upto 20,000 MT 35% in General"
+MIDH0300,General,,50% ,combination of civil & PEB as per following rates: areas and 50% in
+MIDH0301,General,,35% ,"dock leveller system However, actual cost 35% in General"
+MIDH0302,General,,50% ,would be derived based areas and 50% in
+MIDH0303,General,,35% ,of Cold Storage the cold store capacity for 35% in General
+MIDH0304,General,,50% ,refrigeration and Max. Rs. areas and 50% in
+MIDH0305,General,,100% ,3 (iv) Import of new Machines and Rs. 50.00 lakh/machine 100% of total cost
+MIDH0306,General,,100% of cost,3 (ix) Visits of Govt officials Rs. 6.00 lakh per participant 100% of cost on
+MIDH0307,General,,50% of cost,3 (x) Organization/ Participation in Rs. 10.00 lakh for 50% of cost on
+MIDH0308,General,,100% ,Rs. 3.00 lakh for State Level 100% for NHB’s
+MIDH0309,General,,10 % ,I Cost of Land*# Admissible only if Actual or up to 10 % of Eligible Project
+MIDH0310,General,,15% ,I(i) Land Includes cost of Land Actual or up to 15% of Eligible Project
+MIDH0311,General,,30% ,30% less.
+MIDH0312,General,Cost Rs. Lakh,,Cost Rs. Lakh per acre
+MIDH0313,General,,100% ,i. Setting up new DSP Farms Rs. 30.00 lakh / farm 100% to CDB
+MIDH0314,General,,100% ,ii. (To be renamed as onwards till yield 100% to CDB
+MIDH0315,General,,50% of cost,b. Rs. D40.00 per seedling 50% of cost
+MIDH0316,General,,25% of cost,"I 25% of cost, for a maximum of"
+MIDH0317,General,,25% of cost,Establishment of Nucleus Rs. 7.2 lakh per ha for a 25% of cost to a max. of Rs. 20 lakh
+MIDH0318,General,,100% of cost,100% of cost for Public sector and
+MIDH0319,General,,50% ,e. 50% for Private sector
+MIDH0320,General,,100% of cost,Max. Rs. 1.50 lakh for a 100% of cost for Public sector and
+MIDH0321,General,,25% ,Assistance @ 25% of the cost for
+MIDH0322,General,,40 % ,40 % of the cost subject to a max.
+MIDH0323,General,,50 % ,50 % of the cost subject to a max.
+MIDH0324,General,,100% ,A.4. Quality Testing lab 100% toCDB
+MIDH0325,General,,100 % ,A.5. 100 % to CDB
+MIDH0326,General,,100 % ,A.6. Awareness programmes and 100 % to CDB
+MIDH0327,General,,100 % ,development& Technical On need basis 100 % to CDB
+MIDH0328,General,,100 % ,Development/ DemonstrationI 100 % cost to public sector to a
+MIDH0329,General,,25 % ,25 % of the cost (Rs. 0.40 lakh per
+MIDH0330,General,,100 % ,100 % cost to public sector to a
+MIDH0331,General,,25 % ,limited to 25 % of the project cost in
+MIDH0332,General,,50 % ,Adoption of technologies general and 50 % for higher cost
+MIDH0333,General,,50% of cost,Assistance for replanting 50% of cost subject to maximum of
+MIDH0334,General,,25% of cost,"coconut gardens through Rs. 70,000 / ha 25% of cost in two equal"
+MIDH0335,General,,100% of cost,i Hi-tech (2 ha) Rs. 60 Lakhs/Unit 100% of cost to Govt. sector
+MIDH0336,General,,50% of cost,iii Small (0.5 ha) Rs. 10 Lakhs/Unit assistance @ 50% of cost.
+MIDH0337,General,,100% ,iv New Tissue Culture Unit Rs. 250 Lakhs/Unit Assistance @ 100% to public
+MIDH0338,General,,40% ,ended assistance @ 40% as
+MIDH0339,General,,100% of cost,v Raising of Saplings in existing Rs 35/- per sapling 100% of cost to Govt. sector.
+MIDH0340,General,,100% of cost,2 Plantation Rs. 1.20 Lakhs per 100% of cost to Govt. sector.
+MIDH0341,General,,50% ,(Using planting material from ha (equivalent to For private sector 50% of the
+MIDH0342,General,,10%,nurseries) (60:40). Additional 10%
+MIDH0343,General,,100% of cost,3 Integrated Plantation with drip Rs 1.20 Lakhs per 100% of cost to Govt. sector.
+MIDH0344,General,,50% ,irrigation facility (using ha (equivalent to For private sector 50% of the
+MIDH0345,General,,10%,accredited nurseries) (60:40). Additional 10%
+MIDH0346,General,,100%,"4 Stock Improvement Rs. 30,000 per ha For Government 100%. For"
+MIDH0347,General,,50% ,private 50% limited to 2 ha per
+MIDH0348,General,,100% of cost,B Primary Processing and Project Based 100% of cost to Govt. sector
+MIDH0349,General,,50% of cost,assistance @ 50% of cost.
+MIDH0350,General,,10% ,Additional 10% assistance for
+MIDH0351,General,,100% of cost,C Innovative Interventions Project Based 100% of cost to Govt. sector
+MIDH0352,General,,50% of cost,assistance @ 50% of cost.
+MIDH0353,General,,10% ,Additional 10% assistance for
+MIDH0354,General,,100% of cost,D Promotion and Project Based 100% of cost in Govt. sector.
+MIDH0355,General,,25% ,Development of 25% assistance in private
+MIDH0356,General,,33% ,Market$ upto indicative cost. (33% for
+MIDH0357,General,,100% ,1 Technological enhancement Project based 100% grant to Govt.
+MIDH0358,General,,50% ,"equipment & machinery design etc., 50% grant to those"
+MIDH0359,General,,100% ,2 Import of technological Project based 100% grant to Govt.
+MIDH0360,General,,50% ,"machinery in Common design etc., 50% grant to those"
+MIDH0361,General,,100% ,3 Centre of Excellence in Project Based 100% cost to public sector.
+MIDH0362,General,,100% ,training / visit for exposure of Skill India program. 100% to
+MIDH0363,General,,100% ,"G IEC. (Information, Project Based 100% for Govt."
+MIDH0364,General,,100% ,"market survey, certification, lakhs. 100% for Government"
+MIDH0365,General,,100 % ,2 Maintenance of BIamboo Project based 100 % for Government Sector
+MIDH0366,General,,100 % ,3 Bamboo based Business Project based 100 % for Government Sector
+MIDH0367,General,,5% ,I Project Management (upto 2.5% of allocation)
+MIDH0368,General,,5%,i State/ BTSG Level :- Project Proposal based Upto 2.5%
+MIDH0369,General,,100% ,J Technical Cooperation Project Based (On 100% Cost

@@ -1,0 +1,16 @@
+﻿Table,Columns (suggested),Primary key / unique rule,Loaded from dataset(s)
+mandi_prices,"price_date, state, district, market, commodity, variety, arrivals_t, min_price, max_price, modal_price, source_id, fetched_at","(price_date, market, commodity, variety)","D01, D02"
+tehsil_crop_stats,"tehsil_id, year, crop, area_ha, production_t, yield_t_ha, is_estimated, source_id","(tehsil_id, year, crop)","D05, D06"
+tehsils,"tehsil_id, tehsil_name, district, geometry, centroid_lat, centroid_lon",tehsil_id,D13
+climate_monthly,"tehsil_id, year_month, rainfall_mm, tmax_c, tmin_c, groundwater_depth_m, risk_index","(tehsil_id, year_month)","D10, D11, D12"
+infrastructure_sites,"site_id, type (midc/apmc/cold_store/packhouse/processing/kvk), name, tehsil_id, lat, lon, capacity, contact, verified, source_id",site_id,"D14-D17, D20"
+distances,"from_tehsil_id, to_site_id, km, minutes","(from_tehsil_id, to_site_id)",D18
+scheme_rules,"rule_id, scheme, condition_field, operator, threshold, outcome, subsidy_pct, cap_amount, clause_ref, guideline_version, source_id",rule_id,"D21-D24, D27"
+cost_items,"item_id, business_model, category, item_name, low, base, high, unit, quote_date, source_id",item_id,"D26, D19, D29"
+process_params,"param_id, parameter, low, base, high, unit, source_id",param_id,"D07, D08"
+loan_products,"product_id, lender/scheme, rate_pct, tenure_months, margin_pct, moratorium_months, effective_date, source_id",product_id,"D23, D25"
+reference_projects,"project_id, business_model, capacity, capex, revenue, margin_pct, irr_pct, dscr, source_id",project_id,D28
+personas,"persona_id, capital, land_acres, water, skills, tehsil_id, risk, time_commitment, intent",persona_id,D32
+benchmark_rankings,"persona_id, expert_id, rank, business_model_id, rationale","(persona_id, expert_id, rank)",D33
+sources,"source_id, title, publisher, url, date_published, date_accessed, licence_note",source_id,All
+rag_chunks,"chunk_id, doc_title, section, page, text, source_id, doc_version",chunk_id,D35

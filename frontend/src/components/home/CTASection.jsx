@@ -7,7 +7,7 @@ export default function CTASection() {
     <section className="cta-banner-card">
       <div className="glowing-pill" style={{ margin: "0 auto", borderColor: "var(--line-glow)" }}>
         <Sparkles size={14} color="var(--cyan)" />
-        <span style={{ color: "#fff", fontWeight: 800 }}>READY TO BUILD?</span>
+        <span style={{ color: "var(--text-heading)", fontWeight: 800 }}>READY TO BUILD?</span>
       </div>
 
       <h2 className="cta-banner-title">

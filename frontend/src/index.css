@@ -594,3 +594,149 @@ body {
   font-size: 0.85rem;
   margin-top: auto;
 }
+
+/* ==========================================================================
+   BANK-GRADE DETAILED PROJECT REPORT (DPR) MULTI-PAGE PRINT STYLING
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 14mm 14mm 14mm;
+  }
+
+  html,
+  body,
+  #root,
+  .app-layout,
+  main,
+  .content-area {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Completely suppress all web UI chrome */
+  nav,
+  header,
+  footer,
+  .footer,
+  .navbar,
+  .sidebar,
+  .dpr-screen-toolbar,
+  .chatbot-widget,
+  .chatbot-toggle-btn,
+  button,
+  .btn-primary-gloss,
+  .btn-secondary-gloss {
+    display: none !important;
+  }
+
+  /* Unroll the modal container so browser generates all pages */
+  .dpr-modal-overlay {
+    position: static !important;
+    display: block !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    inset: auto !important;
+    backdrop-filter: none !important;
+    z-index: auto !important;
+  }
+
+  .dpr-modal-container {
+    position: static !important;
+    display: block !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+  }
+
+  #dpr-printable-content {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Force clean page breaks between major report chapters */
+  .dpr-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+    padding-top: 24px !important;
+    display: block !important;
+  }
+
+  /* Orphan heading prevention: Keep chapter headings glued to subsequent content */
+  .dpr-chapter-header,
+  #dpr-printable-content h1,
+  #dpr-printable-content h2,
+  #dpr-printable-content h3 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .dpr-section-block,
+  .dpr-no-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #dpr-printable-content * {
+    color: #111827 !important;
+    background: transparent !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #dpr-printable-content h1,
+  #dpr-printable-content h2,
+  #dpr-printable-content h3,
+  #dpr-printable-content th {
+    color: #0f172a !important;
+  }
+
+  #dpr-printable-content table {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 14px !important;
+  }
+
+  #dpr-printable-content tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #dpr-printable-content th,
+  #dpr-printable-content td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 6px 8px !important;
+  }
+}
+

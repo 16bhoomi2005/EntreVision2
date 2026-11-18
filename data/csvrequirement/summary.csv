@@ -1,0 +1,23 @@
+﻿Collection progress (auto-calculated from the Datasets sheet),,,
+Status,Count,Share,
+Not started,30,0.857142857142857,
+In progress,4,0.114285714285714,
+Collected,1,0.0285714285714286,
+Cleaned,0,0,
+Loaded in DB,0,0,
+Blocked,0,0,
+Total datasets,35,,
+Ready for use (Cleaned + Loaded in DB),0,0,
+By priority,,,
+Priority,Total,Ready,% ready
+P1,17,0,0
+P2,12,0,0
+P3,6,0,0
+By category,,,
+Category,Total,Ready,% ready
+Market & Commodity,4,0,0
+Agro-Climatic & Crop,8,0,0
+Geospatial & Infrastructure,8,0,0
+Financial & Institutional,9,0,0
+Context & Demand,2,0,0
+Primary & User Data,4,0,0

@@ -22,36 +22,28 @@ import {
 
 export const DEFAULT_RESOURCE_STATE = {
   // 1. Land & Agro Space
-  hasLand: true,
-  landAcres: 2.5,
+  hasLand: false,
+  landAcres: 0,
   landOwnership: "owned", // owned | family | leased | shared
-  waterSources: ["borewell", "drip_irrigation"], // borewell | drip_irrigation | canal | rainfed
-  landLocationNote: "Katol Taluka, Nagpur",
+  waterSources: [], // borewell | drip_irrigation | canal | rainfed
+  landLocationNote: "",
 
   // 2. Workspace & Building
-  hasWorkspace: true,
+  hasWorkspace: false,
   workspaceType: "shed", // shed | shop | workshop | factory | farm_structure
-  workspaceAreaSqFt: 1500,
-  powerType: "three_phase", // three_phase | solar | single_phase | off_grid
+  workspaceAreaSqFt: 0,
+  powerType: "", // three_phase | solar | single_phase | off_grid
 
   // 3. Transport
-  transportModes: [
-    { type: "tractor", label: "Farm Tractor & Trolley", availability: "owned" },
-    { type: "mini_truck", label: "Mini-Truck (Bolero/Ace)", availability: "rent" },
-  ],
+  transportModes: [],
 
   // 4. Equipment & Storage
-  equipmentList: [
-    { id: "dry_storage", name: "Dry Storage Godown / Shed", availability: "owned", icon: "🏠" },
-    { id: "cold_storage", name: "Cold Storage & Pre-Cooling", availability: "nearby", icon: "❄️" },
-    { id: "grading_line", name: "Sorting & Shellac Waxing Line", availability: "nearby", icon: "📦" },
-    { id: "juice_extractor", name: "Juice Extractor / Pulper", availability: "can_acquire", icon: "🥤" },
-  ],
+  equipmentList: [],
 
   // 5. Existing Business / Setup
-  existingSetupStatus: "active_business", // none | active_business | equipment_only
-  existingBusinessDesc: "Nagpur mandarin orchard (400 trees) with seasonal mandi sales",
-  existingBusinessStage: "expanding", // operating | starting | expanding | seasonal_inactive
+  existingSetupStatus: "none", // none | active_business | equipment_only
+  existingBusinessDesc: "",
+  existingBusinessStage: "", // operating | starting | expanding | seasonal_inactive
 };
 
 const WATER_OPTIONS = [

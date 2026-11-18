@@ -1,0 +1,6 @@
+tehsil_id,tehsil_name,primary_soil_type,drainage_quality,citrus_suitability,notes
+T02,Katol,Deep Black (Vertisol),Moderate,Highly Suitable,Traditional citrus belt; fine-grained clayey soil with high moisture retention.
+T03,Narkhed,Deep Black (Vertisol),Moderate,Highly Suitable,Requires calcium carbonate (CaCO3) management.
+T04,Kalmeshwar,Kali (Deep Black),Poor,Moderately Suitable,Heavy clay can cause root rot (Phytophthora) if drainage is not managed.
+T08,Savner,Kali (Deep Black),Poor,Moderately Suitable,Deep soils but prone to waterlogging in monsoons.
+T09,Ramtek,Khardi / Wardi (Loamy),Good,Marginally Suitable,"Shallower, sand-mixed soils; requires high irrigation."

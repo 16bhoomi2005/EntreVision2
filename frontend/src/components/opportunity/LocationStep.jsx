@@ -22,10 +22,10 @@ import {
 } from "lucide-react";
 
 export const DEFAULT_LOCATION_STATE = {
-  residenceLocation: "Nagpur Urban",
-  residencePinCode: "440001",
-  operatingLocationMode: "same", // "same" | "specific_cluster"
-  selectedCluster: "Katol",
+  residenceLocation: "",
+  residencePinCode: "",
+  operatingLocationMode: "specific_cluster", // "same" | "specific_cluster"
+  selectedCluster: "",
   customSpecificLocation: "",
   locationFlexibility: "preferred_cluster", // "fixed_site" | "preferred_cluster" | "district_wide" | "vidarbha_belt" | "anywhere_relocate"
   locationPriorities: [

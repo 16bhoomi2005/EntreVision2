@@ -1,0 +1,10 @@
+﻿EntreVision - Data Requirements & Collection Plan,
+Purpose,"Lists every dataset the EntreVision DSS needs, where to get it, how to collect it, which model/UI feature it feeds, and a tracker to record progress."
+Sheets,Datasets (master list + tracker) | Collection Methods (how-to per method) | Primary Research (surveys/interviews) | Model-Data Map | Target Schema | Summary (auto-calculated progress)
+Yellow cells,"Cells with a yellow fill (Status, Owner, Target date, Notes on the Datasets sheet) are for you to edit. Everything else is reference content."
+Priority,P1 = needed for the core demo | P2 = strengthens accuracy/visuals | P3 = nice to have
+Difficulty,"Easy = direct download/API | Medium = needs cleaning, PDF extraction or geocoding | Hard = scattered sources, gaps, or manual compilation"
+Access method,API | Download | PDF extract | Scrape | Manual (curate by hand) | Survey/Interview | Derived (computed from other datasets) | Synthetic
+Important,"URLs and portal names are starting points. Portals change; verify each link and check its terms of use before relying on it. Keep a 'source, date accessed' column in every table you load (see Target Schema)."
+Key tip,"Start the Agmarknet daily collector first. Live APIs usually expose only the current day's prices, so the history you want in 3 months only exists if you begin saving it now."
+Example row,"On Datasets, row D01 (Agmarknet daily prices) shows the level of detail expected in each field. Set its Status to 'In progress' once your collector is running."
